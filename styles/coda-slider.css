@@ -1,0 +1,30 @@
+#slider {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.scroll {
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    clear: left;
+}
+
+.scrollButtons {
+    position: absolute;
+    top: 150px;
+    cursor: pointerg
+}
+
+.scrollButtons.left {
+    left: -50px;
+}
+
+.scrollButtons.right {
+    right: -50px;
+}
+
+.hide {
+    display: none;
+}
