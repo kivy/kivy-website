@@ -5,24 +5,32 @@
   src: local('Nobile'), url('nobile.ttf') format('truetype');
 }
 
+body, html {
+	height: 100%;
+}
+
 body { 
-    margin: 10px;
+    margin: 0;
     padding: 0; 
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    background-color: #2a2422;
+    font-size: .9em;
+    background: #2a2422 url('background.png') top left repeat-x;
 }
 
 #wrapper {
     width: 760px;
-    margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -380px;
 }
 
 .scrollContainer div.panel {
     padding: 20px;
     height: 400px;
     width: 580px;
-	background: #292522 url('content.png') top left no-repeat;
+	background: transparent url('content.png') top left no-repeat;
 }
 
 .scroll {
@@ -31,7 +39,7 @@ body {
 }
 
 #shade {
-	background: #292522 url('shade.png') top left no-repeat;
+	background: transparent url('shade.png') top left no-repeat;
 	height: 50px;
 	width: 620px;
 }
@@ -59,11 +67,18 @@ ul.navigation {
 
 ul.navigation li a {
 	float: left;
-    margin-right: 10px;
-	padding: 2px 10px 2px 10px;
+    margin-right: 5px;
+	padding: 2px 8px 2px 8px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	border-bottom: 3px solid transparent;
 	outline: 0;
+	font-size: 14px;
+}
+
+ul.navigation li img {
+	float: left;
+	margin-right: 10px;
 }
 
 ul.navigation li a {
