@@ -39,7 +39,7 @@ $(document).ready(function () {
             .addClass('selected');
     }
 
-    $('#slider .navigation').find('a').click(selectNav);
+	$('#slider .navigation').find('a').click(selectNav);
 
     // go find the navigation link that has this target and select the nav
     function trigger(data) {

@@ -69,7 +69,7 @@ ul.navigation li a {
 	float: left;
     margin-right: 5px;
 	padding: 2px 8px 2px 8px;
-	margin-top: 10px;
+	margin-top: 15px;
 	margin-bottom: 10px;
 	border-bottom: 3px solid transparent;
 	outline: 0;
@@ -83,14 +83,40 @@ a.logo img {
 	margin-bottom: 10px;
 }
 
+a {
+	color: #0065b0;
+}
+
 ul.navigation li a {
-	color: #6d6b68;
+	color: #adaba8;
 	text-decoration: none;
 }
 
 ul.navigation li a.selected,
 ul.navigation li a:hover {
-	border-bottom: 3px solid #6d6b68;
-	color: #e0e0e0;
+	border-bottom: 3px solid #0065b0;
+	color: #f0f0f0;
 }
 
+/** Downloads
+ */
+ul.platforms {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.platforms li a {
+	width: 130px;
+	float: left;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	line-height: 40px;
+	display: block;
+	text-decoration: none;
+}
+
+ul.platforms li img {
+	vertical-align: middle;
+	margin: 0 10px;
+}
