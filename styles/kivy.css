@@ -129,5 +129,7 @@ ul.platforms li img {
 }
 
 div.panel {
+    text-align: justify;
 	padding-top: 180px;
+    max-width: 86%;
 }
