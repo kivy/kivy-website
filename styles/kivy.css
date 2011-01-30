@@ -14,7 +14,7 @@ body {
     padding: 0; 
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
     font-size: .9em;
-    background: #2a2422 url('background.png') top left repeat-x;
+    background: #2a2422 url('background.jpg') center center repeat;
 }
 
 #wrapper {
@@ -38,7 +38,7 @@ body {
     width: 620px;
 }
 
-#shade {
+##shade {
 	background: transparent url('shade.png') top left no-repeat;
 	height: 50px;
 	width: 620px;
@@ -76,9 +76,11 @@ ul.navigation li a {
 	font-size: 14px;
 }
 
-ul.navigation li img {
+a.logo img {
 	float: left;
+	border: none;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 ul.navigation li a {

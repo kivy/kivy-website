@@ -13,16 +13,16 @@
 
 .scrollButtons {
     position: absolute;
-    top: 150px;
+    top: 220px;
     cursor: pointerg
 }
 
 .scrollButtons.left {
-    left: -50px;
+    left: -70px;
 }
 
 .scrollButtons.right {
-    right: -50px;
+    right: -70px;
 }
 
 .hide {
