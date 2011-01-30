@@ -5,53 +5,63 @@
   src: local('Nobile'), url('nobile.ttf') format('truetype');
 }
 
-body, html {
-	height: 100%;
-}
-
 body { 
     margin: 0;
     padding: 0; 
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
     font-size: .9em;
-    background: #2a2422 url('background.jpg') center center repeat;
 }
 
+a {
+	outline: 0;
+}
+
+a img {
+	border: none;
+}
+
+#logo,
+#menu,
 #wrapper {
     width: 760px;
+	margin: 0 auto;
+}
+
+#logo a {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -250px;
-	margin-left: -380px;
+	margin-top: 8px;
 }
 
-.scrollContainer div.panel {
-    padding: 20px;
-    height: 400px;
-    width: 580px;
-	background: transparent url('content.png') top left no-repeat;
+/** Header
+ */
+#topbar {
+	position: fixed;
+	height: 160px;
+	width: 100%;
+	top: 0px;
+	z-index: 2;
+    background: #fcfaf0 url('background.png') top left repeat-x;
 }
 
-.scroll {
-    height: 400px;
-    width: 620px;
+#topbar a img {
+	border: none;
 }
 
-##shade {
-	background: transparent url('shade.png') top left no-repeat;
-	height: 50px;
-	width: 620px;
+/** Menu
+ */
+
+#menu {
+	line-height: 33px;
+	margin-top: 119px;
 }
+
+/** Content
+ */
 
 h2 {
     margin: 0;
     margin-bottom: 14px;
     padding: 0;
-}
-
-#header a img {
-	border: none;
 }
 
 /* Navigation
@@ -61,19 +71,14 @@ ul.navigation {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-bottom: 20px;
 	margin-left: 5px;
 }
 
 ul.navigation li a {
 	float: left;
-    margin-right: 5px;
-	padding: 2px 8px 2px 8px;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	border-bottom: 3px solid transparent;
+    margin-right: 20px;
 	outline: 0;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 a.logo img {
@@ -94,7 +99,7 @@ ul.navigation li a {
 
 ul.navigation li a.selected,
 ul.navigation li a:hover {
-	border-bottom: 3px solid #0065b0;
+	background: transparent url('highlight.png') center top no-repeat;
 	color: #f0f0f0;
 }
 
@@ -119,4 +124,8 @@ ul.platforms li a {
 ul.platforms li img {
 	vertical-align: middle;
 	margin: 0 10px;
+}
+
+div.panel {
+	padding-top: 180px;
 }
