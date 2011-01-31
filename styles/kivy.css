@@ -204,7 +204,7 @@ div.panel {
  */
 .devprofile {
 	float: left;
-	font-size: 13px;
+	font-size: 12px;
 	display: block;
 	width: 200px;
 	height: 200px;
@@ -222,6 +222,20 @@ div.panel {
 	-webkit-border-radius-topright: 15px;
 }
 
+.devprofile .social,
+.devprofile .name {
+	display: block;
+	text-align: center;
+}
+
+.devprofile .name {
+	font-size: 18px;
+}
+
+.devprofile .social {
+	margin-top: 5px;
+}
+
 .devprofile a {
 	color: #ef7600;
 	text-decoration: none;
@@ -236,6 +250,6 @@ div.panel {
 	margin-top: 10px;
 }
 
-.devcontact .ircnick {
+.ircnick {
 	font-style: italic;
 }
