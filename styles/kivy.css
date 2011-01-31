@@ -15,6 +15,7 @@ body {
 }
 
 a {
+	color: #0065b0;
 	outline: 0;
 }
 
@@ -25,7 +26,7 @@ a img {
 #logo,
 #menu,
 #wrapper {
-    width: 760px;
+    width: 740px;
 	margin: 0 auto;
 }
 
@@ -41,7 +42,7 @@ a img {
 	height: 160px;
 	width: 100%;
 	top: 0px;
-	z-index: 2;
+	z-index: 1000;
     background: #fcfaf0 url('background.png') top left repeat-x;
 }
 
@@ -90,10 +91,6 @@ a.logo img {
 	margin-bottom: 10px;
 }
 
-a {
-	color: #0065b0;
-}
-
 ul.navigation li a {
 	color: #adaba8;
 	text-decoration: none;
@@ -116,11 +113,23 @@ ul.platforms {
 ul.platforms li a {
 	width: 130px;
 	float: left;
-	margin-left: 50px;
-	margin-bottom: 10px;
+	margin-left: 40px;
+	margin-bottom: 20px;
 	line-height: 40px;
 	display: block;
 	text-decoration: none;
+    color: #fcfaf0;
+    background-color: #2a2522;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-radius-topleft: 15px;
+	-webkit-border-radius-topright: 15px;
+}
+
+ul.platforms li a:hover {
+	background-color: #3a3532;
 }
 
 ul.platforms li img {
@@ -131,5 +140,108 @@ ul.platforms li img {
 div.panel {
     text-align: justify;
 	padding-top: 180px;
-    max-width: 86%;
+}
+
+/** Slides
+ */
+#frame {
+	width:739px;
+	height:341px;
+	position: absolute;
+}
+
+#slides {
+	width: 570px;
+	height: 341px;
+	margin: 0 auto;
+	padding: 18px 85px 0px 85px;
+	background: transparent url('slide-frame.png') 0px 0px no-repeat;
+}
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:107px;
+	left:-39px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+
+.slides_container {
+	width:570px;
+	height:270px;
+	overflow:hidden;
+	position:relative;
+}
+
+#slides .next {
+	left:585px;
+}
+
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+	list-style: none;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+
+/** About US
+ */
+.devprofile {
+	float: left;
+	font-size: 13px;
+	display: block;
+	width: 200px;
+	height: 200px;
+	background: red;
+	padding: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+    color: #fcfaf0;
+    background-color: #2a2522;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-radius-topleft: 15px;
+	-webkit-border-radius-topright: 15px;
+}
+
+.devprofile a {
+	color: #ef7600;
+	text-decoration: none;
+}
+
+.devpic {
+	float: left;
+	margin-right: 10px;
+}
+
+.devcontact {
+	margin-top: 10px;
+}
+
+.devcontact .ircnick {
+	font-style: italic;
 }

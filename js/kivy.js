@@ -1,4 +1,19 @@
 $(document).ready(function () {
+	//
+	// SLIDES
+	//
+
+	$('#slides').slides({
+		preload: true,
+		preloadImage: 'img/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true
+	});
+
+	//
+	// PANELS
+	//
 	$('div.panel').hide()
 
     // handle nav selection
