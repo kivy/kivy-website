@@ -222,6 +222,10 @@ div.panel {
 	-webkit-border-radius-topright: 15px;
 }
 
+.devdesc {
+    clear: left;
+}
+
 .devprofile .social,
 .devprofile .name {
 	display: block;
