@@ -101,34 +101,56 @@ ul.platforms {
 	list-style: none;
 	margin-top: 40px;
 	padding: 0;
-	height: 80px;
+	width: 150px;
+	height: 180px;
+	display: block;
 }
 
-ul.platforms li a {
-	width: 130px;
+ul.platforms li {
+	width: 150px;
 	float: left;
-	margin-left: 40px;
-	margin-bottom: 20px;
 	line-height: 40px;
 	display: block;
 	text-decoration: none;
     color: #fcfaf0;
     background-color: #2a2522;
-	border-top-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	-moz-border-radius-topleft: 15px;
-	-moz-border-radius-bottomright: 15px;
-	-webkit-border-radius-topleft: 15px;
-	-webkit-border-radius-topright: 15px;
+	cursor: pointer;
 }
 
-ul.platforms li a:hover {
-	background-color: #3a3532;
+ul.platforms li.first {
+	border-top-left-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-webkit-border-radius-topleft: 15px;
+}
+
+ul.platforms li.selected {
+	background-color: #4a4542;
 }
 
 ul.platforms li img {
 	vertical-align: middle;
 	margin: 0 10px;
+}
+
+#platforms .contentwrapper {
+	height: 160px;
+	margin-left: 150px;
+	margin-top: -194px;
+	float: left;
+	width: 570px;
+	border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-radius-topright: 15px;
+    background-color: #dcdad0;
+}
+
+#platforms .platform-content {
+	padding: 10px 10px;
+}
+
+#platforms .platform-content ul {
+	margin: 0px !important;
+	padding-left: 20px;
 }
 
 div.panel {

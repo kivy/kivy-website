@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="styles/kivy.css" type="text/css" media="screen" title="no title" charset="utf-8"> 
 	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.client.js"></script>
 	<script type="text/javascript" src="js/kivy.js"></script>
 </head>
 <body>
@@ -68,7 +69,7 @@
           <li>Supports most <span class="hl">input devices</span></li>
           <li>Easy to use <span class="hl">graphics API</span></li>
           <li>Hardware-accelerated through <span class="hl">OpenGL</span></li>
-          <li>Same code for <span class="hl">Windows</span>, <span class="hl">Mac OS X</span>, <span class="hl">Linux</span> & <span class="hl">Android</span></li>
+          <li>Same code for <span class="hl">Windows</span>, <span class="hl">Mac OS X</span>, <span class="hl">Linux</span> &amp; <span class="hl">Android</span></li>
           <li>Professionally developed</li>
           <li>Community-influenced</li>
           <li>Commercially backed and used</li>
@@ -90,32 +91,69 @@
 				the <a href="http://kivy.org/docs/guide/installation.html"
 				rel="external">Installation</a> guide.
 			</p>
-			<ul class="platforms">
-				<li>
-					<a href="#">
+			<div id="platforms">
+				<ul class="platforms">
+					<li class="first" rel="window">
 						<img src="styles/os_windows7.png"/>
 						Windows
-					</a>
-				</li>
-				<li>
-					<a href="#">
+					</li>
+					<li rel="macosx">
 						<img src="styles/os_macosx.png"/>
 						Mac OS X
-					</a>
-				</li>
-				<li>
-					<a href="#">
+					</li>
+					<li rel="linux">
 						<img src="styles/os_linux.png"/>
 						Linux
-					</a>
-				</li>
-				<li>
-					<a href="#">
+					</li>
+					<li rel="android">
 						<img src="styles/os_android.png"/>
 						Android
-					</a>
-				</li>
-			</ul>
+					</li>
+				</ul>
+				<div class="contentwrapper">
+					<div id="platform-choose" class="platform-content">
+						&laquo; Please select one platform
+					</div>
+					<div id="platform-window" class="platform-content">
+						<ul>
+							<li>File:
+							<a href="http://kivy.googlecode.com/files/Kivy-1.0.0-alpha-w32.zip">
+								Kivy-1.0.0-alpha-w32.zip
+							</a>
+							</li>
+							<li>Size: 47.7 Mb</li>
+							<li>Req: Windows Seven (32/64 bits)</li>
+						</ul>
+						<p>Follow our <a href="#">Installation for Windows</a></p>
+					</div>
+					<div id="platform-macosx" class="platform-content">
+						<ul>
+							<li>File:
+							<a href="http://kivy.googlecode.com/files/Kivy-1.0.0-alpha-osx.zip">
+								Kivy-1.0.0-alpha-osx.zip
+							</a>
+							</li>
+							<li>Size: 51.1 Mb</li>
+							<li>Req: MacOSX 10.4</li>
+						</ul>
+						<p>Follow our <a href="#">Installation for MacOSX</a></p>
+					</div>
+					<div id="platform-linux" class="platform-content">
+						<ul>
+							<li>File:
+							<a href="http://pypi.python.org/packages/source/K/Kivy/Kivy-1.0.0-alpha.tar.gz#md5=4769c7fcf721d365daf95a246944d710">
+								Kivy-1.0.0-alpha.tar.gz
+							</a>
+							</li>
+							<li>Size: 1.2 Mb</li>
+						</ul>
+						<p>Follow our <a href="#">Installation for Linux</a></p>
+					</div>
+					<div id="platform-android" class="platform-content">
+						Package for android platform will be available very soon.
+					</div>
+				</div>
+			</div>
 
 			<h2 style="clear: left;">Source code</h2>
 			We use <a href="http://github.com/" rel="external">Github</a>
