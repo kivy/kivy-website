@@ -158,6 +158,32 @@ div.panel {
 	padding-top: 180px;
 }
 
+/** Highlight
+ */
+
+.highlight pre {
+    background-color: #eceae0;
+	padding: 10px;
+	font-size: 14px;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-radius-topleft: 15px;
+	-webkit-border-radius-topright: 15px;
+}
+
+.highlight .k,
+.highlight .kn {
+	font-weight: bold;
+}
+
+.highlight .nc,
+.highlight .nf {
+	color: #af5600;
+	color: #db6500;
+}
+
 /** Slides
  */
 #frame {
@@ -278,4 +304,19 @@ div.panel {
 
 .ircnick {
 	font-style: italic;
+}
+
+/** Footer
+ */
+#footer {
+	margin: 20px auto;
+	text-align: center;
+	font-size: 10px;
+	border-top: 1px dotted #dad5d2;
+	padding-top: 10px;
+}
+
+#footer p {
+	margin: 0px;
+    color: #8a8582;
 }

@@ -42,6 +42,7 @@
         applications that make use of innovative user interfaces, such as multi-touch
         apps.
       </p>
+	  <!-- Temporary disable slides
 			<div id="slides">
 			  <div class="slides_container">
 				<div>
@@ -56,40 +57,63 @@
 			  </div>
 			</div>
 			<div style="clear: left;"></div>
-
+		-->
       <p>
         Let's whet your appetite! Kivy is:
         <ul id="features">
           <li>100% <span class="hl">free</span> to use</li>
-          <li>Actively developed</li>
-          <li>Stable and documented API</li>
-          <li><span class="hl">Fast</span>: Many parts written in <span class="hl">C</span></li>
-          <li><span class="hl">Easy</span>: API in <span class="hl">Python</span></li>
-          <li>Easy to <span class="hl">extend</span></li>
-          <li>Supports most <span class="hl">input devices</span></li>
-          <li>Easy to use <span class="hl">graphics API</span></li>
-          <li>Hardware-accelerated through <span class="hl">OpenGL</span></li>
+          <li>Business friendly <a
+			  href="https://github.com/tito/kivy/raw/81ab01b0ddc3ec560215388bdb7b866ae16bbe59/COPYING">LGPL
+			  3</a></span> license</li>
+          <li>Running for <span class="hl">Windows</span>, <span class="hl">Mac OS X</span>, <span class="hl">Linux</span> &amp; <span class="hl">Android</span></li>
           <li>Same code for <span class="hl">Windows</span>, <span class="hl">Mac OS X</span>, <span class="hl">Linux</span> &amp; <span class="hl">Android</span></li>
-          <li>Professionally developed</li>
-          <li>Community-influenced</li>
-          <li>Commercially backed and used</li>
+		  <li>Stable and <a
+			  href="http://kivy.org/docs/api-index.html">documented API</a></li>
+          <li>Hardware-accelerated through <a
+			  href="http://www.khronos.org/opengles/2_X/">OpenGL ES 2.0</a></li>
+		  <li>Supports most <span class="hl">input protocol / devices</span> natively:
+		  <ul>
+			  <li><a href="http://tuio.org/">Tuio</a></li>
+			  <li>WM_Touch, WM_Pen</li>
+			  <li>MacOSX Multitouch support</li>
+			  <li><a href="http://bitmath.org/code/mtdev/">mtdev</a>, <a href="http://linuxwacom.sourceforge.net/">Linux Wacom</a>, Kernel HID Input</li>
+			</ul>
+		  <li><span class="hl">Easy</span>: API in <a
+			  href="http://python.org/">Python</a></li>
+          <li><span class="hl">Fast</span>: Many parts written in <span
+			  class="hl">C</span> using <a href="http://cython.org">Cython</a></li>
+          <li><span class="hl">Solid</span>: <a
+			  href="http://kivy.org:8010/waterfall">Regression tests</a></li>
           <li><span class="hl">Clean</span>: Styleguide checks</li>
-          <li><span class="hl">Solid</span>: Regression tests</li>
-          <li>Business friendly <span class="hl">LGPL</span> license</li>
+          <li>Actively developed</li>
+          <li>Community-influenced</li>
+          <li>Easy to <span class="hl">extend</span></li>
+          <li>Easy to use <span class="hl">graphics API</span></li>
+          <li>Professionally developed</li>
+          <li>Commercially backed and used</li>
         </ul>
 			</p>
-      <p>
-        TODO: Add code sample
-      </p>
+
+		<h2>Usage example</h2>
+
+		<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span> 
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span> 
+
+<span class="k">class</span> <span class="nc">MyApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="k">return</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span> 
+
+<span class="n">MyApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span> 
+</pre></div></div>
+
+
 		</div>
 
 		<div class="panel" id="downloads">
 			<h2>Downloads</h2>
 			<p>
 				The current version is 1.0 Alpha, released on Februrary, 1st 2011.
-				<br>See the <a href="#">Release Notes</a> for more details and check
-				the <a href="http://kivy.org/docs/guide/installation.html"
-				rel="external">Installation</a> guide.
+				This release is intended to a developer audience.
 			</p>
 			<div id="platforms">
 				<ul class="platforms">
@@ -161,7 +185,9 @@
 			<h2 style="clear: left;">Source code</h2>
 			We use <a href="http://github.com/" rel="external">Github</a>
 			for hosting our code. Take a look at our instructions
-			on <a href="#">How to grab the source code</a>.
+			on <a
+				href="http://kivy.org/docs/guide/installation.html#development-version">Installation
+				of Development version</a>
 		</div>
 
 		<div class="panel" id="documentation">
@@ -193,9 +219,11 @@
 					</a>
 				</li>
 			</ul>
+			<!-- No PDF yet.
 			<p>
 				The documentation is also available in <a href="#">PDF</a> format.
 			</p>
+			-->
 		</div>
 
 		<div class="panel" id="support">
@@ -302,6 +330,12 @@
 
 	</div>
 
+</div>
+
+<div id="footer">
+	<p>Logo made by Vincent Autin</p>
+	<p>Hosted by <a href="http://ikse.net">Ikse</a>, thanks a lot Alexx!</p>
+	<p><a href="http://kivy.org/docs/contact.html">Contact us</a></p>
 </div>
 
 </body>
