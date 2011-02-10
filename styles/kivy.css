@@ -320,3 +320,22 @@ div.panel {
 	margin: 0px;
     color: #8a8582;
 }
+
+/** QRCode
+ */
+.qrcode {
+	width: 125px;
+	height: 125px;
+	float: left;
+	margin-right: 10px;
+}
+
+/** Notice text
+ */
+.notice {
+	font-size: 90%;
+}
+
+.nomargin {
+	margin: 0;
+}
