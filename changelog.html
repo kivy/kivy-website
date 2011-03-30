@@ -1,0 +1,264 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head> 
+	<title>Kivy: a crossplatform framework for creating NUI applications</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="robots" content="index, follow"/> 
+	<link rel="stylesheet" href="styles/kivy.css" type="text/css" media="screen" title="no title" charset="utf-8"> 
+</head>
+<body>
+<div id="topbar">
+	<div id="logo">
+		<a href="http://kivy.org/">
+			<img src="styles/logo.png" alt="Kivy logo"/>
+		</a>
+	</div>
+	<div id="menu">
+		<ul class="navigation">
+			<li><a href="http://kivy.org/">&laquo; Back to kivy.org</a></li>
+		</ul>
+	</div>
+</div>
+<div id="wrapper">
+	<div id="content">
+		<div class="panel" id="home">
+<h2>Changelog</h2>
+
+<h3>1.0.4-beta (March 20, 2011)</h3>
+<pre>
+Core
+----
+
+    - [#70] Fixes for video_gstreamer to prevent memory leak
+    - [#78] Fixes for ListProperty: correctly observe inplace changes
+    - New Window.request_keyboard / Window.release_keyboard
+    - New kv lang callback: <event> or on_<propname> will be binded
+      as a callback of the widget
+    - Fixes for 1 sec video/audio delay issue
+    - Fixes to allow Animation on a subset of a dict
+    - Fixes to make AliasProperty.dispatch working properly
+    - Fixes for kv lang to correctly inherith rules from an Widget
+      with multiples bases
+    - Fixes on App to add the root widget before dispatching on_start
+
+Graphics
+--------
+
+    - [#76, #77] Fixes to prevent blank screen
+    - Fixes for glReadPixels to prevent reading outside the bounds
+    - New BindTexture.index to allow binding on another unit
+    - New Callback() instruction, to call a Python func
+    - New Canvas.ask_update() to force update of the Canvas
+    - New minimal opengl version check
+    - New StencilPush, StencilUse, StencilPop instructions
+    - Rework and speedup Buffer/VBO internals
+
+Input
+-----
+
+    - Fixes for dejitter postproc
+
+Widget
+------
+
+    - [#71] Fix Image ratio calculation
+    - [#74] New GridLayout widget
+    - [#75] Fix Label.font_color
+    - Fixes for Video.volume to make it work
+    - Fixes in BoxLayout
+    - Fixes Label.font_name attribute to use resource_find()
+    - New ScrollView widget
+    - New TextInput widget
+    - New TreeView widget
+    - New Label.text_size: control the size of the text texture
+    - New Video.eos property: control if the video should be
+      paused or loop at the end
+
+Examples
+--------
+
+    - New demo/pictures example (photo viewer)
+    - New kinect example (linux only, need libfreenect)
+    - New widgets/stencilcanvas example
+    - New widgets/videoplayer example
+    - Updated demo/showcase to use TreeView
+
+Documentation
+-------------
+
+    - New PDF version of the documentation, generated with buildbot
+      and published at http://kivy.org/docs/pdf/Kivy-latest.pdf
+    - New "Your First Widget" section in the Programming Guide
+    - Severals part of the documentation have been fixed and reworded
+
+Others
+------
+
+    - [#81] Add missing gstreamer binaries to the Windows build
+    - [#82] Fixes to remove all unused and obsolete modules
+    - New OpenGL debug compilation now print arguments
+    - Fixes for opengl debug compilation on MacOSX
+    - Fixes for Windows crash if the icon is not found
+    - Fixes for Windows glitch on touchtracer
+
+</pre>
+
+<h3>1.0.3-alpha (Feb 22, 2011)</h3>
+<a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/72dd6615d10faff2">Announcement</a>
+<pre>
+Core
+----
+
+    - [#34] Fixes lang for invalid detection of floating number
+    - [#45] New clearcolor property in Window
+    - [#55] New CMD+Q and CMD+W support in OSX
+    - [#61] ListProperty is now able to observe inplace changes
+    - [#63] Fixes for PIL loader
+    - Fixes for AliasProperty: dispatch the observer set return True
+    - Fixes for Camera and Video, reporting an error with Texture
+    - Fixes on Window dispatch on_close event when the window is closed
+    - Fixes to use the user canvas if it's set
+    - New Clock.get_boottime()
+    - New kivy.tools.report tools, can be used for debugging install
+    - Removed old attributes in Label
+    - Removed setuptools and nose dependencies in setup.py
+
+Graphics
+--------
+
+    - [#46] No more glitch when the Label have no text
+    - [#56, #44] Fixes for adding/removing BindTexture automatically
+    - [#57] Texture min/mag_filter and wrap are string, not gl const
+    - Canvas.clear() don't clear before and after context now
+    - New error checking for Shader compilation and linking
+    - New RenderContext.shader to access on internal shader class
+    - New Shader fs, vs and success to change glsl source code
+    - Reduce shader header, and removing unused varying + uniform
+
+Input
+-----
+
+    - [#59] Fixes for Tuio, 2Dcur wasn't accepted as a Touch
+
+Widget
+------
+
+    - New center_x, center_y value for Widget.pos_hint
+    - New design (button, slider and fonts)
+
+Examples
+--------
+
+    - Add shader/plasma.py for an example of custom shader usage
+    - Add shader/treeshader.py for an example of custom shader for
+      widget rendering.
+
+Documentation
+-------------
+
+    - Various fixes everywhere
+    - Add working devices for android
+    - Add a section about how to report an issue
+
+Android
+-------
+
+    - Fix crash for devices with more than 4 touches
+
+Others
+------
+
+    - [#50] Versionning portable-deps for OSX
+    - Add unit tests for Point and Ellipse
+    - New keybinding module, with only F12 to take screenshot
+
+</pre>
+
+<h3>1.0.2-alpha (Feb 10, 2011)</h3>
+<a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/eccaaf38fdf84a17">Announcement</a>
+<pre>
+Core
+----
+
+    - New kivy.require() method to require a minimum kivy version
+    - New App.stop() method
+    - [#22] Autodetection of GLES2 support
+    - Speedup Kivy language callbacks
+    - Reduce text memory footprint using new luminance_alpha format
+    - Remove old vsync/fps token in Configuration, use maxfps.
+    - FPS is limited to 60 by default now.
+    - Fixes for pip installer
+
+Graphics
+--------
+
+    - New Ellipse.segments property
+    - Support of luminance + luminance_alpha color format in texture
+    - Speedup of internals classes (VBO, VertexBatch, Buffer)
+    - [#42, #48] Fixes and activate graphics compiler
+    - Fixes compilation for Linux + ATI card
+
+Documentation
+-------------
+
+    - [#54] Enhance Vector documentation
+    - Installation for Windows, MacOSX, Linux and Android
+    - Fixes Quickstart
+
+Widgets
+-------
+
+    - New layouts: FloatLayout, GridLayout and AnchorLayout
+
+Examples
+--------
+
+    - Fixes for touchtracer to make it run on android
+
+Android
+-------
+
+    - Initial release of Android Kivy launcher.
+    - You need Android 2.2 + OpenGL ES 2.0 support
+    - Tested on Motorola Droid 1, Motorola Droid 2, Samsung Galaxy Tab,
+      Xperia 10.
+</pre>
+
+<h3>1.0.0 (Feb 1, 2011)</h3>
+<a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/631a838dcbd8e654">Announcement</a>
+<pre>
+* Running on Windows, MacOSX, Linux and Android
+* Same application code for all platforms
+* Graphics API on top of OpenGL ES 2.0
+* Uniform access to Audio, Camera, Video, Text rendering, Spelling
+* Native input support: Tuio, WM_Touch, MacOSX MT, mtdev, wacom...
+* Multitouch widgets: Label, Button, Image, Scatter, Video, Camera...
+* Stable and documented API
+* Extensive documentation at http://kivy.org/docs/
+* Continuous integration via buildbot (coverage and gl unit tests)
+</pre>
+
+
+</div>
+</div>
+</div>
+
+<div id="footer">
+	<p>Logo made by Vincent Autin</p>
+	<p>Hosted by <a href="http://ikse.net">Ikse</a>, thanks a lot Alexx!</p>
+	<p><a href="http://kivy.org/docs/contact.html">Contact us</a></p>
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://txzone.net/piwik/" : "http://txzone.net/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 7);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://txzone.net/piwik/piwik.php?idsite=7" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+</body>
+</html>
