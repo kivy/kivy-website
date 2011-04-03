@@ -186,18 +186,12 @@ div.panel {
 
 /** Slides
  */
-#frame {
-	width:739px;
-	height:341px;
-	position: absolute;
-}
-
 #slides {
-	width: 570px;
-	height: 341px;
-	margin: 0 auto;
+	width: 877px;
+	height: 373px;
 	padding: 18px 85px 0px 85px;
 	background: transparent url('slide-frame.png') 0px 0px no-repeat;
+	margin-left: -70px;
 }
 
 #slides .next,#slides .prev {
@@ -211,8 +205,8 @@ div.panel {
 }
 
 .slides_container {
-	width:570px;
-	height:270px;
+	width:709px;
+	height:309px;
 	overflow:hidden;
 	position:relative;
 }
@@ -222,7 +216,7 @@ div.panel {
 }
 
 .pagination {
-	margin:26px auto 0;
+	margin:26px 285px 0;
 	width:100px;
 	list-style: none;
 }
