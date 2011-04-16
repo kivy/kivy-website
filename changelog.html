@@ -23,6 +23,74 @@
 		<div class="panel" id="home">
 <h2>Changelog</h2>
 
+<h3>1.0.5 (April 16, 2011)</h3>
+<pre>
+Core
+----
+
+	- [#106] New title/icon properties in App class to set title/icon
+	  of the Windows
+	- [#92] Fixes to detect recursion in Kivy language
+	- [#52] Update Kivy icon for 512, 256, 128, 64, 32 pixels size
+	- [#49, 41] Add videocapture support for Windows platform
+	- [#17] New template support in Kivy language
+	- [#6] New lang directive: #:import <alias> <package>
+	- Clean setup.py and update packages
+	- Disable gstreamer/camera on Mac OSX
+	- Enhance and speedup Clock internals
+	- Enhance properties exception message with its name
+	- Fixes for logger with ascii/unicore
+	- Fixes for OpenCV Camera provider on Mac OSX
+	- Fixes many part of lang / widget related to properties
+	- Fixes python path on Mac OSX
+	- Fixes to support jpeg extension in Pygame image loader
+	- Fixes to support only extensions with read support in PIL image
+	  loader
+	- New -c/--config section:key:value to change the configuration
+	- New Clock.create_trigger (replace unschedule/schedule_once)
+	- New exception if Python 32 bits is used on Mac OSX
+	- New extensions system (experimental)
+	- Removed kivy.utils.curry, use functools.partial instead.
+
+Graphics
+--------
+
+	- [#89] Add documentation for Color class
+	- Fixes for bgr-&gt;rgb conversion
+	- Fixes for matrix multiplication order and matrix internals
+
+Input
+-----
+
+	- [#87] Fix retaintouch postproc
+	- Fixes for the mouse provider using disable_on_activity
+
+Widget
+------
+
+	- [#40] Fixes for scatter.[center_x, center_y, top, right]
+	- [#47] Fixes for scatter usage inside scatter
+	- [#79] Correctly update child when size_hint/pos_hint is updated
+	- [#94] Fixes graphicals glitch when using Layout*
+	- Clean hacks for add_widget/remove_widget in Widget
+	- Fixes for correctly honnor Scatter.do_scale
+	- Fixes for ScrollView.scroll_timeout
+	- New alternating line colors for TreeView
+	- New FileChooser widget (experimental)
+	- New on_text_validate event for TextInput
+	- New shorten property for Label
+	- New StackLayout widget (experimental)
+
+Documentation
+-------------
+
+    - [#69, #88] Fix ubuntu installation and installation execution
+	- [#86] New FAQ entry: pip installation failed
+	- [#98] New FAQ entry: undefined symbol: glGenerateMipmap
+    - Reword kivy language API
+
+</pre>
+
 <h3>1.0.4-beta (March 20, 2011)</h3>
 <a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/bb5734e29f23683e">Announcement</a>
 <pre>
