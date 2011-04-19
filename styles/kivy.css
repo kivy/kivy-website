@@ -12,6 +12,7 @@ body {
     font-size: .92em;
     background-color: #fcfaf0;
     color: #2a2522;
+	text-align: center;
 }
 
 a {
@@ -28,7 +29,10 @@ a img {
 #wrapper {
     width: 740px;
 	margin: 0 auto;
+	display: block;
+	text-align: left;
 }
+
 
 #logo a {
 	position: absolute;
@@ -75,6 +79,10 @@ ul.navigation {
     margin: 0;
     padding: 0;
 	margin-left: 5px;
+}
+
+ul.navigation li {
+	float: left;
 }
 
 ul.navigation li a {
@@ -332,4 +340,8 @@ div.panel {
 
 .nomargin {
 	margin: 0;
+}
+
+.clear {
+	clear: both;
 }

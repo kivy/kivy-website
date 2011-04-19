@@ -1,0 +1,24 @@
+#platforms .platform-content {
+	margin-top: 14px;
+	height: 160px;
+    background-color: #dcdad0;
+}
+
+#platforms .contentwrapper {
+	background-color: transparent;
+}
+
+ul.platforms {
+	margin: 40px 0 0 0;
+}
+
+ul.platforms li {
+	height: 40px;
+	padding-top: 10px;
+}
+
+div.panel {
+    text-align: justify;
+	margin-top: -180px;
+	padding-top: 200px;
+}
