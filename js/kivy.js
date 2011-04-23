@@ -7,7 +7,7 @@ $(document).ready(function () {
 		preload: true,
 		preloadImage: 'img/loading.gif',
 		play: 5000,
-		pause: 2500,
+		pause: 10000000,
 		hoverPause: true
 	});
 
