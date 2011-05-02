@@ -1,0 +1,4 @@
+# 10 minutes
+<FilesMatch "\.(html,js,css)$">
+    Header set Cache-Control "max-age=600"
+</FilesMatch>
