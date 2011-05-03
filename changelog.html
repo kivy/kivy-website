@@ -23,6 +23,95 @@
 		<div class="panel" id="home">
 <h2>Changelog</h2>
 
+<h3>1.0.6 (May 3, 2011)</h3>
+<pre>
+Core
+----
+
+    - [#109] Logger write stderr to his file now
+    - [#113] Support window resizing
+    - [#115] Correctly parse 'OpenGL ES 2.0' now
+    - [#62] Add kv_directory to load kv from another directory in App
+    - [#66] Take care of dependencies for Makefile and setup.py
+    - Bump initial width/height to 800x600
+    - Fix test of callback for Clock.unschedule
+    - Speedup logger trace call using __debug__
+    - Speedup Widget creation by caching properties attributes
+
+Graphics
+--------
+
+    - [#129] Fixes stencil usage in another stencil
+    - [#28] Fixes to enable canvas drawing only when something changes
+    - Allow to retrigger event inside a callback in Clock
+    - Fixes in Fbo to not create Fbo with depthbuffer by default
+    - Fixes in shader to prevent too much name lookup with matrix
+    - Fixes memory leak and use __dealloc__ instead of __del__ in python
+    - Fixes to reduce OpenGL call (test down from 644 to 495 gl call)
+    - Fixes to reduce python overhead in Shader
+    - Fixes to use trigger for releasing texture
+
+Input
+-----
+
+    - [#132] Fixes for WM_Touch
+
+Lang
+----
+
+    - [#131] Allow the usage of "id" in template
+    - Add #:set <key> <expr> directive, can be used for global const
+    - Better exception when a class cannot be instanciate in Kv lang
+
+Widget
+------
+
+    - [#107] Fixes for win32/shortcuts textinput widget
+    - [#116] Fixes in filechooser to avoid crashing on unreadable dir
+    - Add "color" property for Image, to tint the source image
+    - Change "orientation" for Stacklayout + implement lr-tb, tb-lr
+    - Fixes FloatLayout for handling child's position changes
+    - Fixes for stacklayout calculation when padding is used
+    - Fixes for usage of minimum_size in layout
+    - Fixes for win32 platform in filechooser
+
+Examples
+--------
+
+    - Add Scatter examples in showcase
+    - Rework demos to have the same background + icon + title bar
+
+Documentation
+-------------
+
+    - [#122, #136] Add missing documentation for treeview, allownone
+    - [#124] Add send-to method for starting kivy app on Windows
+    - [#126] Cleanup old documentation
+    - [#127] Add jinja2 as deps for android
+    - Add "Designing with kv" in user guide
+    - Add instructions for packaging app on Android
+    - Fixes on_touch_down in architecture documentation
+
+Windows platform
+----------------
+
+    - [#137] Improve kivy.bat to execute kivy file or cmd (thx remip)
+    - Add win32file as a dependency, needed for filechooser
+
+Android platform
+-----------------
+
+    - [#119] Move configuration into the directory of the application
+    - [#121] Fixes for black screen on some device at start
+    - [#128] Fixes to not handle input before application start
+    - [#134] Fixes to correctly show splashscreen
+    - Avoid the dispatch of touches if they don't move
+    - Support of {request,release}_keyboard on Window
+    - Temporary disable glColorMask call for android,
+      unexpected crash happen in the internals of android gl
+
+</pre>
+
 <h3>1.0.5 (April 16, 2011)</h3>
 <a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/5e6aba158671722f">Announcement</a>
 <pre>
