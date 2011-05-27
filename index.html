@@ -1,14 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head> 
+<head>
 	<title>Kivy: a crossplatform framework for creating NUI applications</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	<meta name="robots" content="index, follow"/> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="index, follow"/>
 	<link rel="icon" href="styles/favicon.png" type="image/png" />
 	<link rel="shortcut icon" href="favicon.ico" />
 
-	<link rel="stylesheet" href="styles/kivy.css" type="text/css" media="screen" title="no title" charset="utf-8"> 
+	<link rel="stylesheet" href="styles/kivy.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<!--[if IE]>
-	<link rel="stylesheet" href="styles/kivy-ie.css" type="text/css" media="screen" title="no title" charset="utf-8"> 
+	<link rel="stylesheet" href="styles/kivy-ie.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<![endif]-->
 	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
@@ -94,6 +94,7 @@
 			  <li>WM_Touch, WM_Pen (Most windows devices)</li>
 			  <li>Mac OS X multitouch peripherals (Trackpad, Magic Mouse)</li>
 			  <li><a href="http://bitmath.org/code/mtdev/">mtdev</a>, <a href="http://linuxwacom.sourceforge.net/">Linux Wacom</a>, Kernel HID Input</li>
+			  <li>Multi-Touch mouse simulator included</li>
 			</ul>
 		  <li><span class="hl">Easy</span>: API in <a
 			  href="http://python.org/">Python</a></li>
@@ -114,14 +115,14 @@
 		<h2>Usage example</h2>
     <p>See how easy it is to create a simple <em>Hello World</em> application that just shows a clickable button:</p>
 
-		<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span> 
-<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span> 
+		<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
 
-<span class="k">class</span> <span class="nc">MyApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span> 
-    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-        <span class="k">return</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span> 
+<span class="k">class</span> <span class="nc">MyApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
 
-<span class="n">MyApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span> 
+<span class="n">MyApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div></div>
 
 
