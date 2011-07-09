@@ -223,6 +223,29 @@ div.panel {
 	left:585px;
 }
 
+.caption {
+	z-index:50000;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:30px;
+	padding:5px 20px 0 20px;
+	background:#000;
+	background:rgba(0,0,0,.5);
+	width:585px;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#fff;
+	border-top:1px solid #000;
+	text-shadow:none;
+}
+
+.caption a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 .pagination {
 	margin:26px 285px 0;
 	width:100px;
