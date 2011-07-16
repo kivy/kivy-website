@@ -23,6 +23,110 @@
 		<div class="panel" id="home">
 <h2>Changelog</h2>
 
+<h3>1.0.7 (Jul 16, 2011)</h3>
+<pre>
+Core
+----
+
+	- [#32] Implement window rotation (0,90,180,270)
+    - [#150] Fix to prevent gcc bug on Mageia
+	- [#153] Add packaging doc and hooks for Windows and MacOSX
+	- [#155] Replaced import in class methods with late binding
+	- [#157] Implement Label.valign support
+	- [#166] Prevent to open too many fonts at the same time
+    - [#184] Remove unlink() in properties, not needed anymore
+    - [#186] Fixes extension support for MacOSX
+	- Disable window resizing until we are OpenGL context resistant
+	- Enhance extensions wizard and auto-created setup.py
+	- Enhance pixels from pygame surface
+	- Enhance properties list to prevent memory leak
+	- Enhance properties to store data inside Widget class
+	- Fixes for Audio class creation
+	- Fixes for Clock dictionnary crashes
+	- Fixes for volume usage on gstreamer video implementation
+	- Fixes infinite loop when we hit max iteration
+	- Fixes ordering of Window.add_widget
+	- Fixes to avoid resync error with gstreamer
+	- New DDS Image loader using new S3TC support
+	- New DictProperty property
+
+Graphics
+--------
+
+	- [#27] Implement mipmap support
+	- [#130] Implement caching for Shader source/compilation result
+    - [#161] Prevent to upload texture twice when NPOT is supported
+	- [#182] Fix Rotation.angle caching with degrees/radians
+	- [#190] Fix crash when too many vertices are pushed in VBO
+	- Enhance Ellipse to add angle_start/angle_end properties
+	- Enhance GridLayout to have minimum and default size per col/row
+	- Enhance logging of OpenGL capabilities
+	- Enhance texture memory by using native NPOT if available
+	- Enhance texture upload by using the best pixel packing
+	- Fixes Color.hsv property crashes
+	- Fixes for GLES2 by using GL_UNSIGNED_SHORT in VBO
+	- Fixes some typo on OpenGL wrapper
+	- New $HEADER$ token that can be used in fragment/vertex shader code
+	- New OpenGL Utils module for checking texture capabilities and others
+	- New S3TC texture support
+	- New Texture.colorfmt property
+
+Input
+-----
+
+	- Enhance Wacom support on linux platform
+	- Fix leak/slowdown in MouseMotionEvent
+
+Lang
+----
+
+    - [#189] Fixes for not allowing dot in properties name
+	- Concat property value when the value is shifted to one level
+	- Enhance key resolution ([x for x in list] can be used now.)
+	- Enhance module/class resolution at import
+
+Widget
+------
+
+	- [#139] Add TreeView.remove_node()
+	- [#143] Fix crash when group is changing on ToggleButton
+    - [#146] Fix invalid calculation for Image.norm_image_size
+	- [#152] Fix Camera.play property
+	- [#160] Prevent label creation until text is set
+	- [#178] Set default values only on properties
+	- Enhance ScrollView to have kind of kinetic movement
+	- Fixes calculation of Stacklayout.size with padding
+	- Fixes FloatLayout relayout when children size* is changing
+	- Fixes for initial Label.font_name assignement
+	- Fixes to prevent call of on_release twice
+	- Fix ScrollView with grab events
+	- New Image.allow_stretch property
+	- New Popup (modal popup) widget
+	- New Settings widget
+	- New Switch widget
+	- New Widget.uid property
+
+Examples
+--------
+
+    - New tiny shader editor demo
+
+Documentation
+-------------
+
+	- [#17] Enhance all cythonized classes documentation
+	- [#84] Add previous/next link in the bottom of the documentation
+    - [#153] Enhance Environment documentation
+	- [#159] Remove warning on unimplemented Template in lang
+	- [#191] Fix logo link to go to http://kivy.org/
+	- [#192] Add PDF download link in sidebar
+	- Added vim highlighter
+	- Enhanced documentation widget with images
+	- Enhance OpenGL wrapper documentation with Kronos website links
+	- Rework documentation for Graphics part
+	- Several typo fixes
+</pre>
+
 <h3>1.0.6 (May 3, 2011)</h3>
 <pre>
 Core
