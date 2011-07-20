@@ -1,97 +1,124 @@
 $(document).ready(function () {
-	//
-	// SLIDES
-	//
-
-	$('#slides').slides({
-		preload: true,
-		preloadImage: 'img/loading.gif',
-		play: 5000,
-		pause: 10000000,
-		hoverPause: true,
-	    animationStart: function(current){
-			$('.caption').animate({
-				top:-35
-			},100);
-			if (window.console && console.log) {
-				// example return of current slide number
-				console.log('animationStart on slide: ', current);
-			};
-		},
-		animationComplete: function(current){
-			$('.caption').animate({
-				top:0
-			},200);
-			if (window.console && console.log) {
-				// example return of current slide number
-				console.log('animationComplete on slide: ', current);
-			};
-		},
-		slidesLoaded: function() {
-			$('.caption').animate({
-				top:0
-			},200);
-		}
-	});
+	jQuery.fn.exists = function(){return jQuery(this).length>0;}
 
 	//
 	// PANELS
 	//
 	$('div.panel').hide()
 
-    // handle nav selection
-    function selectNav() {
-        $(this)
-            .parents('ul:first')
-                .find('a')
-                    .removeClass('selected')
-                .end()
-            .end()
-            .addClass('selected');
+	// select panel
+	function selectPanel(name) {
+		var panelname = 'panel-' + name;
+		var panelid = '#' + panelname;
 
-		$('div.panel').hide()
-		$($(this).attr('href')).show();
-    }
+		if ( name == 'home' ) {
+			$('.slideshow-shadow').show();
+			$('#header').css({
+					'height': '440px'
+			});
+		} else {
+			$('.slideshow-shadow').hide();
+			$('#header').css({
+					'height': '120px'
+			});
+		}
 
-	$('#menu .navigation').find('a').click(selectNav);
+		if ( $(panelid).exists() ) {
+			$(panelid).show();
+			$('div.panel:not('+panelid+')').hide();
+		} else {
+			var panel = $('<div class="panel"></div>').attr('id', panelid);
+			$('#content .wrapper').append(panel);
+			panel.load('./panel-' + name + '.html', function() {
+				$('div.panel:not('+panelid+')').hide();
+				panel.show();
+			});
+		}
+	}
 
-    function trigger(data) {
-        var el = $('#menu .navigation').find('a[href$="' + data.id + '"]').get(0);
-        selectNav.call(el);
-    }
+	// handle nav selection
+	function selectNav(event) {
+			var href = $(this).attr('href');
+			var name = 'home';
+			if ( href )
+					name = href.substring(1);
 
-    if (window.location.hash) {
-        trigger({ id : window.location.hash.substr(1) });
-    } else {
-        $('ul.navigation a:first').click();
-    }
+			window.location.hash = '#' + name;
+
+			if (event)
+					event.preventDefault();
+
+			if ( $(this).hasClass('selected') )
+					return;
+
+			$(this)
+				.parents('ul:first')
+						.find('a')
+						.removeClass('selected')
+						.end()
+				.end()
+				.addClass('selected');
+
+			selectPanel(name);
+	}
+
+	$('#menu .navigation').find('a[href^="#"]').click(selectNav);
+	$("a[rel^='panel']").click(selectNav);
+
+	function trigger(data) {
+		var el = $('#menu .navigation').find('a[href$="' + data.id + '"]').get(0);
+		if ( el )
+			selectNav.call(el);
+		else
+			selectPanel(data.id);
+	}
+
+	if (window.location.hash) {
+		trigger({ id : window.location.hash.substr(1) });
+	} else {
+		$('ul.navigation a:first').click();
+	}
 
 
 	//
 	// Platforms
 	//
-	$('ul.platforms .content').hide();
-	$('ul.platforms li').mouseenter(function() {
-		$('.platform-content').hide();
-		$('#platform-' + $(this).attr('rel')).show();
-		$('ul.platforms li').removeClass('selected')
-		$(this).addClass('selected');
-	});
-
-	$('.platform-content').hide();
+	$('table.downloads tr').removeClass('selected')
 
 	var dos = $.client.os;
 	if ( dos == 'Windows' ) {
-		$('#platform-window').show();
-		$('ul.platforms li[rel=window]').addClass('selected');
+		$('tr[rel=window]').addClass('selected');
 	} else if ( dos == 'Mac' ) {
-		$('#platform-macosx').show();
-		$('ul.platforms li[rel=macosx]').addClass('selected');
+		$('tr[rel=macosx]').addClass('selected');
 	} else if ( dos == 'Linux' ) {
-		$('#platform-linux').show();
-		$('ul.platforms li[rel=linux]').addClass('selected');
-	} else {
-		$('#platform-choose').show();
+		$('tr[rel=linux]').addClass('selected');
 	}
+
+	//
+	// Socials
+	//
+
+	// Facebook / Like button
+	$('.facebook_like').socialbutton('facebook_like', {
+		url: 'https://www.facebook.com/kivysoftware',
+		show_faces: false,
+		locale: 'en_US',
+		button: 'box_count'
+	});
+
+	// Google / Google +1 Button
+	/**
+	$('.google_plusone').socialbutton('google_plusone', {
+		url: 'http://kivy.org/',
+		lang: 'en-US'
+	});
+	**/
+
+	// Twitter / Tweet Button
+	$('.twitter').socialbutton('twitter', {
+		url: 'http://kivy.org/',
+		lang: 'en'
+	});
+
 
 });

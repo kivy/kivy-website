@@ -3,234 +3,246 @@
 	<title>Kivy: a crossplatform framework for creating NUI applications</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="index, follow"/>
-	<link rel="icon" href="styles/favicon.png" type="image/png" />
+	<link rel="icon" href="images/favicon.png" type="image/png" />
 	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/kivy.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300&v2' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="styles/kivy.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<!--[if IE]>
-	<link rel="stylesheet" href="styles/kivy-ie.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<![endif]-->
 	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
-	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.lite.js"></script>
 	<script type="text/javascript" src="js/jquery.client.js"></script>
+	<script type="text/javascript" src="js/jquery.socialbutton-1.8.0.js"></script>
 	<script type="text/javascript" src="js/kivy.js"></script>
 </head>
 <body>
-<div id="topbar">
+<div id="header">
+	<div class="wrapper">
 	<div id="logo">
 		<a href="http://kivy.org/">
-			<img src="styles/logo.png" alt="Kivy logo"/>
+			<img src="images/logo_kivy.png" alt="Kivy logo" title="Kivy"/>
 		</a>
 	</div>
 	<div id="menu">
-    <a href="http://github.com/tito/kivy">
-      <img
-        style="position: absolute; top: 0; right: 0; border: 0;"
-        src="https://assets2.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_orange_ff7600.png&path="
-        alt="Fork me on GitHub" />
-    </a>
-    <!-- Facebook Like Button. If you click it, you actually like the facebook page, not the kivy.org link. -->
-    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FKivy%2F200088713358456&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=dark&amp;height=21"
-            scrolling="no"
-            frameborder="0"
-            style="border:none; overflow:hidden; width:450px; height:21px; position: absolute; top: 127px; right: -340px;"
-            allowTransparency="true">
-    </iframe>
 		<ul class="navigation">
 			<li><a class="piwik_link" href="#home">Home</a></li>
-			<li><a class="piwik_link" href="#downloads">Downloads</a></li>
-			<li><a class="piwik_link" href="#documentation">Documentation</a></li>
+			<li><a class="piwik_link" href="#download">Download</a></li>
+			<li><a class="piwik_link" href="#gallery">Gallery</a></li>
 			<li><a class="piwik_link" href="#support">Support</a></li>
-			<li><a class="piwik_link" href="#aboutus">About us</a></li>
-			<li><a>|</a></li>
-			<li><a class="piwik_link" href="http://kivy.org/planet">Community News</a></li>
+			<li><a class="piwik_link" href="#aboutus">About</a></li>
+			<li><a class="piwik_link" href="http://kivy.org/planet">Blog</a></li>
 		</ul>
-	</div>
+</div>
+</div>
 </div>
 
-<div id="wrapper">
-	<div id="content">
-		<div class="panel" id="home">
-			<h2>Welcome to Kivy</h2>
-			<p>
-        Kivy is an open source software library for rapid development of
-        applications that make use of innovative user interfaces, such as multi-touch
-        apps.
-      </p>
-		<div id="slides">
-		  <div class="slides_container">
-			<div>
-				<iframe src="http://www.youtube.com/embed/pI635uAppoU?wmode=transparent" width="709" height="309" frameborder="0"></iframe>
-			</div>
-			<div>
-				<iframe src="http://player.vimeo.com/video/22725621?title=0&amp;byline=0&amp;portrait=0" width="709" height="309" frameborder="0"></iframe>
-				<div class="caption">
-					Kivy demo on Android
-				</div>
-			</div>
-			<div>
-				<img src="slides/slide4.jpg"/>
-				<div class="caption">
-					<a href="http://github.com/tito/presemt">PreseMT</a> - A presentation software
-				</div>
-			</div>
-			<div>
-				<img src="slides/slide2.jpg"/>
-				<div class="caption">
-					Touchtracer - Native multitouch tester
-				</div>
-			</div>
-			<div>
-				<img src="slides/slide1.jpg"/>
-				<div class="caption">
-					Pictures - Multitouch media browser
-				</div>
-			</div>
-			<div>
-				<img src="slides/slide3.jpg"/>
-				<div class="caption">
-					Showcase - Demonstration of all available widgets
-				</div>
-			</div>
-		  </div>
-		</div>
-		<div style="clear: left;"></div>
-      <p>
-        Let's whet your appetite! Kivy is:
-        <ul id="features">
-          <li>100% <span class="hl">free</span> to use</li>
-          <li>Business friendly: <a
-			  href="https://github.com/tito/kivy/raw/81ab01b0ddc3ec560215388bdb7b866ae16bbe59/COPYING">LGPL
-			  3</a></span> license</li>
-          <li>Available for <span class="hl">Windows</span>, <span class="hl">Mac OS X</span>, <span class="hl">Linux</span> &amp; <span class="hl">Android</span></li>
-          <li>Able to run the same code on all supported platforms</li>
-		  <li>Stable and has a <a
-			  href="http://kivy.org/docs/api-index.html">documented API</a></li>
-          <li>Hardware-accelerated through <a
-			  href="http://www.khronos.org/opengles/2_X/">OpenGL ES 2.0</a></li>
-		  <li>Compatible with most <span class="hl">input protocols / devices</span> natively:
-		  <ul>
-			  <li><a href="http://tuio.org/">Tuio</a></li>
-			  <li>WM_Touch, WM_Pen (Most windows devices)</li>
-			  <li>Mac OS X multitouch peripherals (Trackpad, Magic Mouse)</li>
-			  <li><a href="http://bitmath.org/code/mtdev/">mtdev</a>, <a href="http://linuxwacom.sourceforge.net/">Linux Wacom</a>, Kernel HID Input</li>
-			  <li>Multi-Touch mouse simulator included</li>
-			</ul>
-		  <li><span class="hl">Easy</span>: API in <a
-			  href="http://python.org/">Python</a></li>
-          <li><span class="hl">Fast</span>: Many parts written in <span
-			  class="hl">C</span> using <a href="http://cython.org">Cython</a></li>
-          <li><span class="hl">Solid</span>: <a
-			  href="http://kivy.org:8010/waterfall">Regression tests</a></li>
-          <li><span class="hl">Clean</span>: Styleguide checks</li>
-          <li>Actively developed</li>
-          <li>Community-influenced</li>
-          <li>Easy to <span class="hl">extend</span></li>
-          <li>Easy to use through a <span class="hl">graphics API</span></li>
-          <li>Professionally developed</li>
-          <li>Commercially backed and used</li>
-        </ul>
-			</p>
+<div id="content">
+	<div class="slideshow-shadow"></div>
 
-		<h2>Usage example</h2>
-    <p>See how easy it is to create a simple <em>Hello World</em> application that just shows a clickable button:</p>
+	<!-- global wrapper -->
+	<div class="wrapper">
 
-		<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+		<!--
+		
+			Home panel
+		
+		-->
+		<div class="panel" id="slide-home">
+			<div class="clear"></div>
+			<div id="slides" class="slideshow">
+				<div>
+						<div class="caption">
+								<h3>The noBOOTH</h3>
+								<p>
+									Interactive touchscreen using Kivy for taking<br/>pictures
+									and customize the photo with some gadgets.
+								</p>
+								<p>
+									<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
+								</p>
+						</div>
+						<a href="http://vimeo.com/25680681" rel="prettyPhoto[featured]"><img src="slides/thenobooth-featured.jpg"/></a>
+				</div>
+
+				<!-- right now, just show one project.
+				<div>
+						<div class="caption">
+								<h3>PlaneWhite</h3>
+								<p>Interactive white surface for discovering art exhibition.</p>
+								<p><a href="http://www.youtube.com/watch?v=pI635uAppoU">Video</a></p>
+						</div>
+						<a href="http://www.youtube.com/watch?v=pI635uAppoU" rel="prettyPhoto[gallery1]" title="Test slide2"><img src="slides/planewhite-thumb.jpg"/></a>
+				</div>
+				-->
+			</div>
+
+			<h2 class="featured-description">
+				Kivy - Open source library for rapid development of applications<br/>
+				that make use of innovative user interfaces, such as multi-touch apps.
+			</h2>
+
+			<div class="featured-space"></div>
+
+			<div class="features">
+				<div class="feature-item">
+					<h2 class="icon icon-platform">Cross platform</h2>
+					<p>
+						Kivy is running on Linux, Windows, MacOSX and Android. You can
+						run the same code on all supported platforms.
+					</p>
+					<p>
+						He's can use natively most inputs protocols and devices like
+						WM_Touch, WM_Pen, Mac OS X Trackpad and Magic Mouse, Mtdev, Linux
+						Kernel HID, TUIO. A multi-touch mouse simulator is included.
+					</p>
+				</div>
+				<div class="feature-item">
+					<h2 class="icon icon-buisness">Buisness Friendly</h2>
+					<p>
+						Kivy is 100% free to use, under LGPL 3 licence. The toolkit is
+						profesionnally developed, backed and used. You can use it in a
+						product and sell your product.
+					</p>
+					<p>
+						The framework is stable and has a documented API, plus a
+						programming guide to help for in the first step.
+					</p>
+				</div>
+				<div class="feature-item last">
+					<h2 class="icon icon-gpu">GPU Accelerated</h2>
+					<p>
+						The graphics engine is built over OpenGL ES 2, using modern and
+						fast way of doing graphics.
+					</p>
+					<p>
+						The toolkit is comming with more than 20 widgets designed to be
+						extensible. Many parts are written in C using Cython, tested with
+						regression tests.
+					</p>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+			<h2>Be social !</h2>
+			<div>
+				<!--
+				<div class="google_plusone"></div>
+				-->
+				<div class="social facebook_like"></div>
+				<div class="social twitter"></div>
+			</div>
+
+			<div class="clear"></div>
+			<div class="features">
+				<div class="feature-item item-2-col">
+					<h2>Usage example</h2>
+					<p>See how easy it is to create a simple <em>Hello World</em> application that just shows a clickable button:</p>
+
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
 <span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
 
-<span class="k">class</span> <span class="nc">MyApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">TestApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
 
-<span class="n">MyApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">TestApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div></div>
+				</div>
+				<div class="feature-item last">
+					<h2>Result</h2>
+					<img src="images/helloworld.png"/>
+				</div>
+			</div>
 
-
+			<div style="clear: both;"></div>
 		</div>
 
-		<div class="panel" id="downloads">
-			<h2>Downloads</h2>
+		<!--
+		
+			Download panel
+		
+		-->
+		<div class="panel" id="slide-download">
+			<h2>Download</h2>
 			<p>
-				The current version is 1.0.7, released on Jul 16th, 2011.
-				<a href="changelog.html">Read the Changelog</a>.
+			The current version is <span class="hl">1.0.7</span>, released on Jul 16th, 2011.
+				<a href="#changelog" rel="panel">Read the Changelog</a>.
 			</p>
-			<div id="platforms">
-				<ul class="platforms">
-					<li class="first" rel="window">
-						<img src="styles/os_windows7.png"/>
-						Windows
-					</li>
-					<li rel="macosx">
-						<img src="styles/os_macosx.png"/>
-						Mac OS X
-					</li>
-					<li rel="linux">
-						<img src="styles/os_linux.png"/>
-						Linux
-					</li>
-					<li rel="android">
-						<img src="styles/os_android.png"/>
-						Android
-					</li>
-				</ul>
-				<div class="contentwrapper">
-					<div id="platform-choose" class="platform-content">
-						&laquo; Please select one platform
-					</div>
-					<div id="platform-window" class="platform-content">
-						<ul>
-							<li>File:
+
+			<table class="downloads">
+				<tr>
+					<th>Operating System</th>
+					<th>File</th>
+					<th>Instructions</th>
+					<th>Size</th>
+				</tr>
+				<tr rel="window">
+					<td>
+						<img src="images/os_windows7.png"/>
+						Windows Seven (32/64 bits)
+					</td>
+					<td>
 							<a href="http://kivy.googlecode.com/files/Kivy-1.0.7-w32.zip">
 								Kivy-1.0.7-w32.zip
 							</a>
-							</li>
-							<li>Size: 69.8 Mb</li>
-							<li>Required: Windows Seven (32/64 bits)</li>
-						</ul>
-						<p>Follow our <a
-							href="http://kivy.org/docs/installation/installation-windows.html">Installation for Windows</a></p>
-					</div>
-					<div id="platform-macosx" class="platform-content">
-						<ul>
-							<li>File:
-							<a href="http://kivy.googlecode.com/files/Kivy-1.0.7-osx.dmg">
-								Kivy-1.0.7-osx.dmg
-							</a>
-							</li>
-							<li>Size: 50.0 Mb (uncompressed)</li>
-							<li>Required: MacOSX 10.6</li>
-						</ul>
-						<p>Follow our <a href="http://kivy.org/docs/installation/installation-macosx.html">Installation for MacOSX</a></p>
-					</div>
-					<div id="platform-linux" class="platform-content">
-						<ul>
-							<li>File:
-							<a href="http://pypi.python.org/packages/source/K/Kivy/Kivy-1.0.7.tar.gz">
-								Kivy-1.0.7.tar.gz
-							</a>
-							</li>
-							<li>Size: 5 Mb</li>
-						</ul>
-						<p>Follow our <a
-							href="http://kivy.org/docs/installation/installation-ubuntu.html">Installation
-							for Ubuntu</a></p>
-					</div>
-					<div id="platform-android" class="platform-content">
-						<p class="nomargin">
-						Demo examples are published on the Android market:
-						<ul>
-							<li><a class="piwik_download" href="https://market.android.com/details?id=org.kivy.touchtracer">Touchtracer</a></li>
-							<li><a class="piwik_download" href="https://market.android.com/details?id=org.kivy.showcase">Showcase</a></li>
-							<li><a class="piwik_download" href="https://market.android.com/details?id=org.kivy.pictures">Pictures</a></li>
-						</ul>
+					</td>
+					<td>
+						<a href="http://kivy.org/docs/installation/installation-windows.html">Installation for Windows</a>
+					</td>
+					<td>
+						69.8 Mb
+					</td>
+				</tr>
+				<tr rel="macosx">
+					<td>
+						<img src="images/os_macosx.png"/>
+						Mac OS X 10.6
+					</td>
+					<td>
+						<a href="http://kivy.googlecode.com/files/Kivy-1.0.7-osx.dmg">
+							Kivy-1.0.7-osx.dmg
+						</a>
+					</td>
+					<td>
+						<a href="http://kivy.org/docs/installation/installation-macosx.html">Installation for MacOSX</a>
+					</td>
+					<td>
+						50.0 Mb
+					</td>
+				</tr>
+				<tr rel="linux">
+					<td>
+						<img src="images/os_linux.png"/>
+						Linux (Ubuntu 10.4, 10.10)
+					</td>
+					<td>
+						<a href="http://pypi.python.org/packages/source/K/Kivy/Kivy-1.0.7.tar.gz">
+							Kivy-1.0.7.tar.gz
+						</a>
+					</td>
+					<td>
+						<a href="http://kivy.org/docs/installation/installation-ubuntu.html">Installation for Ubuntu</a>
+					</td>
+					<td>
+						5 Mb
+					</td>
+				</tr>
+			</table>
 
-						Check the <a class="piwik_download" href="https://market.android.com/details?id=org.kivy.pygame">Generic launcher</a>
-						if you want to execute application without creating APK: check <a href="http://kivy.org/docs/installation/installation-android.html">Installation for Android</a>
+			<h2>Android</h2>
+			<p class="nomargin">
+			Demo examples are published on the Android market:
+			<ul>
+				<li><a class="piwik_download" href="https://market.android.com/details?id=org.kivy.touchtracer">Touchtracer</a></li>
+				<li><a class="piwik_download" href="https://market.android.com/details?id=org.kivy.showcase">Showcase</a></li>
+				<li><a class="piwik_download" href="https://market.android.com/details?id=org.kivy.pictures">Pictures</a></li>
+			</ul>
 
-						</p>
-					</div>
-				</div>
-			</div>
+			Check the <a class="piwik_download" href="https://market.android.com/details?id=org.kivy.pygame">Generic launcher</a>
+			if you want to execute application without creating APK: check <a href="http://kivy.org/docs/installation/installation-android.html">Installation for Android</a>
+
+			</p>
 
 			<h2 style="clear: left;">Source code</h2>
 			We use <a href="http://github.com/" rel="external">Github</a>
@@ -240,41 +252,12 @@
 				of Development version</a>
 		</div>
 
-		<div class="panel" id="documentation">
-			<h2>Documentation</h2>
-			<p>
-				Browse the <a href="http://kivy.org/docs/" rel="external">
-				full Kivy documentation</a> online or refer to commonly read pages
-        directly:
-			</p>
-			<ul>
-				<li>
-					<a href="http://kivy.org/docs/guide-index.html" rel="external">
-						Programming Guide
-					</a>
-				</li>
-				<li>
-					<a href="http://kivy.org/docs/api-index.html" rel="external">
-						API Reference
-					</a>
-				</li>
-				<li>
-					<a href="http://kivy.org/docs/faq.html" rel="external">
-						Frequently Asked Questions
-					</a>
-				</li>
-				<li>
-					<a href="http://kivy.org/docs/contribute.html" rel="external">
-						Contributing
-					</a>
-				</li>
-			</ul>
-			<p>
-				The documentation is also available in <a href="http://kivy.org/docs/pdf/Kivy-latest.pdf">PDF</a> format.
-			</p>
-		</div>
+		<!--
 
-		<div class="panel" id="support">
+			Support panel
+
+		-->
+		<div class="panel" id="slide-support">
 			<h2>Community Support</h2>
 			<ul>
 				<li>
@@ -306,86 +289,116 @@
 			</p>
 		</div>
 
-		<div class="panel" id="aboutus">
+		<div class="panel" id="slide-aboutus">
 			<h2>About us</h2>
 			<p>
-			Kivy is a community project, led by professional software developers. We are
-			responsible for developing and supporting Kivy, alongside of the community.
-			We also work for companies that use Kivy for their professional products.
+				Kivy is a community project, led by professional software developers.
+				We are responsible for developing and supporting Kivy, alongside of the
+				community.  We also work for companies that use Kivy for their
+				professional products.
 			</p>
 			<div class="devprofile">
-				<img class="devpic" src="styles/mathieu.png">
+				<img class="devpic" src="images/mathieu.png">
 				<div class="devinfo">
 					<a href="http://txzone.net/"<span class="name">Mathieu Virbel</span></a>
 					<span class="social">
-						<a href="mailto:mat@kivy.org"><img src="styles/icon-mail.png"/></a>
-						<a href="http://facebook.com/mathieu.virbel"><img src="styles/icon-facebook.png"/></a>
-						<a href="http://twitter.com/mathieuvirbel"><img src="styles/icon-twitter.png"/></a>
+						<a href="mailto:mat@kivy.org"><img src="images/icon-mail.png"/></a>
+						<a href="http://facebook.com/mathieu.virbel"><img src="images/icon-facebook.png"/></a>
+						<a href="http://twitter.com/mathieuvirbel"><img src="images/icon-twitter.png"/></a>
 					</span>
-          <div class="devdesc">
-            He became a programming expert from working in IT for
-            years before starting with Kivy. He's french.
-            On IRC he's <span class="ircnick">tito</span>.
-          </div>
+					<div class="devdesc">
+						He became a programming expert from working in IT for
+						years before starting with Kivy. He's french. <br/>
+						On IRC he's <span class="ircnick">tito</span>.
+					</div>
 				</div>
 			</div>
 			<div class="devprofile">
-				<img class="devpic" src="styles/thomas.png">
+				<img class="devpic" src="images/thomas.png">
 				<div class="devinfo">
 					<a href="http://blog.tehansen.de/"><span class="name">Thomas Hansen</span></a>
 					<span class="social">
-						<a href="mailto:thomas@kivy.org"><img src="styles/icon-mail.png"/></a>
-						<a href="http://facebook.com/thomas.e.hansen"><img src="styles/icon-facebook.png"/></a>
-						<a href="http://twitter.com/hansent"><img src="styles/icon-twitter.png"/></a>
+						<a href="mailto:thomas@kivy.org"><img src="images/icon-mail.png"/></a>
+						<a href="http://facebook.com/thomas.e.hansen"><img src="images/icon-facebook.png"/></a>
+						<a href="http://twitter.com/hansent"><img src="images/icon-twitter.png"/></a>
 					</span>
-          <div class="devdesc">
-            He holds a BSc in <em>Computer Science</em>, pursues a PhD and co-founded <a
-            href="http://www.fresk.co/">fresk</a>, a company using Kivy.
-            He lives in the US.
-            On IRC he's <span class="ircnick">hansent</span>.
-          </div>
+					<div class="devdesc">
+						He holds a BSc in <em>Computer Science</em>, pursues a PhD and co-founded <a
+							href="http://www.fresk.co/">fresk</a>, a company using Kivy.
+						He lives in the US.<br/>
+						On IRC he's <span class="ircnick">hansent</span>.
+					</div>
 				</div>
 			</div>
 			<div class="devprofile">
-				<img class="devpic" src="styles/dennda.png">
+				<img class="devpic" src="images/dennda.png">
 				<div class="devinfo">
 					<a href="http://the-space-station.com"><span class="name">Christopher Denter</span></a>
 					<span class="social">
-						<a href="mailto:christopher@kivy.org"><img src="styles/icon-mail.png"/></a>
-						<a href="http://facebook.com/christopher.denter"><img src="styles/icon-facebook.png"/></a>
-						<a href="http://twitter.com/cdntr"><img src="styles/icon-twitter.png"/></a>
+						<a href="mailto:christopher@kivy.org"><img src="images/icon-mail.png"/></a>
+						<a href="http://facebook.com/christopher.denter"><img src="images/icon-facebook.png"/></a>
+						<a href="http://twitter.com/cdntr"><img src="images/icon-twitter.png"/></a>
 					</span>
-          <div class="devdesc">
-            He holds a BSc in <em>Computational Visualistics</em> and is doing his MSc. He's from Germany.
-            His IRC nickname is <span class="ircnick">dennda</span>.
-          </div>
+					<div class="devdesc">
+						He holds a BSc in <em>Computational Visualistics</em> and is doing his MSc. He's from Germany.<br/>
+						On IRC he's <span class="ircnick">dennda</span>.
+					</div>
 				</div>
 			</div>
-	  <div class="clear"></div>
-      <p>One thing we all have in common is that we love Python, programming in
-        general and japanese food. :-)</p>
-		<p>A big <em>thanks</em> goes to Vincent Autin for his work as a designer for the project,
-		  he did the graphics from the logo to the standard application theme.</p>
+			<div class="clear"></div>
+			<p>
+				One thing we all have in common is that we love Python, programming in
+				general and japanese food. :-)
+			</p>
+			<p>
+				A big <em>thanks</em> goes to Vincent Autin for his work as a designer
+				for the project, he did the graphics from the logo to the standard
+				application theme.
+			</p>
 			<div style="clear: left;"></div>
-	  <h2>Community</h2>
-      <p>
-        Many people have contributed to Kivy and we're always interested in
-        growing our community. If you want to help in terms of writing code,
-        improving documentation, testing, etc. or simply making a donation,
-        please do not hesitate to <a
-        href="http://kivy.org/docs/contact.html">contact us</a>!
-      </p>
+			<h2>Community</h2>
+			<p>
+				Many people have contributed to Kivy and we're always interested in
+				growing our community. If you want to help in terms of writing code,
+				improving documentation, testing, etc. or simply making a donation,
+				please do not hesitate to
+				<a href="http://kivy.org/docs/contact.html">contact us</a>!
+			</p>
 		</div>
 
 	</div>
-
 </div>
 
 <div id="footer">
-	<p>Logo made by Vincent Autin</p>
-	<p>Hosted by <a href="http://ikse.net">Ikse</a>, thanks a lot Alexx!</p>
-	<p><a href="http://kivy.org/docs/contact.html">Contact us</a></p>
+	<div class="wrapper">
+		<div class="col1">
+			<p>
+				Get the <a href="http://github.com/kivy/website/">kivy.org source code</a>
+			</p>
+			<p>
+				<a href="http://kivy.org/docs/contact.html">Contact us</a>
+			</p>
+		</div>
+		<div class="col2">
+			<p>
+				Logo made by Vincent Autin
+			</p>
+			<p>
+				Hosted by <a href="http://ikse.net">Ikse</a>, thanks a lot Alexx!
+			</p>
+		</div>
+	</div>
+	<div class="clear"></div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				overlay_gallery: false,
+				deeplinking: false
+			});
+  });
+</script>
 
 <!-- Piwik -->
 <script type="text/javascript">
