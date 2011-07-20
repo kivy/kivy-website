@@ -87,11 +87,11 @@ $(document).ready(function () {
 
 	var dos = $.client.os;
 	if ( dos == 'Windows' ) {
-		$('tr[rel=window]').addClass('selected');
+		$('tr[class=os-window]').addClass('selected');
 	} else if ( dos == 'Mac' ) {
-		$('tr[rel=macosx]').addClass('selected');
+		$('tr[class=os-macosx]').addClass('selected');
 	} else if ( dos == 'Linux' ) {
-		$('tr[rel=linux]').addClass('selected');
+		$('tr[class=os-linux]').addClass('selected');
 	}
 
 	//
