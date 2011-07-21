@@ -43,13 +43,13 @@ $(document).ready(function () {
 			if ( href )
 					name = href.substring(1);
 
-			window.location.hash = '#' + name;
-
 			if (event)
 					event.preventDefault();
 
-			if ( $(this).hasClass('selected') )
+			if ( $(this).hasClass('selected') && window.location.hash == '#' + name)
 					return;
+
+			window.location.hash = '#' + name;
 
 			$(this)
 				.parents('ul:first')
