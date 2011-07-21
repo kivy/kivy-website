@@ -54,29 +54,31 @@
 			<div class="clear"></div>
 			<div id="slides" class="slideshow">
 				<div>
-						<div class="caption">
-								<h3>The noBOOTH</h3>
-								<p>
-									Interactive touchscreen using Kivy for taking<br/>pictures
-									and customize the photo with some gadgets.
-								</p>
-								<p>
-									<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
-								</p>
-						</div>
-						<a href="http://vimeo.com/25680681" rel="prettyPhoto[featured]"><img src="slides/thenobooth-featured.jpg" alt="The noBOOTH"/></a>
+					<div class="caption">
+						<h3>The noBOOTH</h3>
+						<p>
+							Interactive touchscreen using Kivy for taking<br/>pictures
+							and customize the photo with some gadgets.
+						</p>
+						<p>
+							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
+						</p>
+					</div>
+					<a href="http://vimeo.com/25680681" rel="prettyPhoto[featured]"><img src="slides/thenobooth-featured.jpg" alt="The noBOOTH"/></a>
 				</div>
 
-				<!-- right now, just show one project.
 				<div>
-						<div class="caption">
-								<h3>PlaneWhite</h3>
-								<p>Interactive white surface for discovering art exhibition.</p>
-								<p><a href="http://www.youtube.com/watch?v=pI635uAppoU">Video</a></p>
-						</div>
-						<a href="http://www.youtube.com/watch?v=pI635uAppoU" rel="prettyPhoto[gallery1]" title="Test slide2"><img src="slides/planewhite-thumb.jpg"/></a>
+					<div class="caption">
+						<h3>PlaneWhite</h3>
+						<p>
+							Interactive white surface for discovering art exhibition.
+						</p>
+						<p>
+							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
+						</p>
+					</div>
+					<a href="http://www.youtube.com/watch?v=pI635uAppoU" rel="prettyPhoto[gallery1]" title="Test slide2"><img src="slides/planewhite-featured.jpg"/></a>
 				</div>
-				-->
 			</div>
 
 			<h2 class="featured-description">
@@ -395,12 +397,17 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
-  $(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto({
-				overlay_gallery: false,
-				deeplinking: false
-			});
-  });
+$(document).ready(function(){
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		overlay_gallery: false,
+		deeplinking: false
+	});
+
+	$(".slideshow").cycle({
+		timeout: 8000,
+		speed: 1000
+	});
+});
 </script>
 
 <!-- Piwik -->
