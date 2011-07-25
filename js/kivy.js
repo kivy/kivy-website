@@ -27,7 +27,7 @@ $(document).ready(function () {
 			$(panelid).show();
 			$('div.panel:not('+panelid+')').hide();
 		} else {
-			var panel = $('<div class="panel"></div>').attr('id', panelid);
+			var panel = $('<div class="panel"></div>').attr('id', panelname);
 			$('#content .wrapper').append(panel);
 			panel.load('./panel-' + name + '.html', function() {
 				$('div.panel:not('+panelid+')').hide();
