@@ -390,6 +390,14 @@ body {
 	text-align: left;
 }
 
-.social {
-	float: left;
+/** Changelog
+ */
+#panel-changelog h3 {
+	background-color: #eeeeee;
+	border-bottom: 1px solid #cccccc;
+	padding: 10px;
+}
+div.changelog h4 {
+	font-size: 20px;
+	margin: 10px 0px;
 }

@@ -1,7 +1,8 @@
 <h2>Changelog</h2>
 
 <h3>1.0.7 (Jul 16, 2011)</h3>
-<pre>
+<a href="https://groups.google.com/d/topic/kivy-dev/feofn6ebhSs/discussion">Announcement</a>
+<pre class="changelog">
 Core
 ----
 
@@ -105,7 +106,8 @@ Documentation
 </pre>
 
 <h3>1.0.6 (May 3, 2011)</h3>
-<pre>
+<a href="https://groups.google.com/d/topic/kivy-dev/E6pbzLxWFgg/discussion">Announcement</a>
+<pre class="changelog">
 Core
 ----
 
@@ -195,7 +197,7 @@ Android platform
 
 <h3>1.0.5 (April 16, 2011)</h3>
 <a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/5e6aba158671722f">Announcement</a>
-<pre>
+<pre class="changelog">
 Core
 ----
 
@@ -203,7 +205,7 @@ Core
     of the Windows
   - [#92] Fixes to detect recursion in Kivy language
   - [#52] Update Kivy icon for 512, 256, 128, 64, 32 pixels size
-  - [#49, 41] Add videocapture support for Windows platform
+  - [#49, #41] Add videocapture support for Windows platform
   - [#17] New template support in Kivy language
   - [#6] New lang directive: #:import <alias> <package>
   - Clean setup.py and update packages
@@ -264,7 +266,7 @@ Documentation
 
 <h3>1.0.4-beta (March 20, 2011)</h3>
 <a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/bb5734e29f23683e">Announcement</a>
-<pre>
+<pre class="changelog">
 Core
 ----
 
@@ -344,7 +346,7 @@ Others
 
 <h3>1.0.3-alpha (Feb 22, 2011)</h3>
 <a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/72dd6615d10faff2">Announcement</a>
-<pre>
+<pre class="changelog">
 Core
 ----
 
@@ -415,7 +417,7 @@ Others
 
 <h3>1.0.2-alpha (Feb 10, 2011)</h3>
 <a href="http://groups.google.com/group/kivy-dev/browse_thread/thread/eccaaf38fdf84a17">Announcement</a>
-<pre>
+<pre class="changelog">
 Core
 ----
 
@@ -477,3 +479,52 @@ Android
 * Continuous integration via buildbot (coverage and gl unit tests)
 </pre>
 
+<script type="text/javascript">
+$('pre.changelog').each(function (i1, elem) {
+	var html = $(elem).html();
+	var output = new Array();
+
+	output.push('<div class="changelog">');
+	html = html.replace(/\#(\d+)/g, '<a href="http://github.com/tito/kivy/issues/$1">#$1</a>');
+
+	// replace with github links
+	var lines = html.split('\n');
+	var gotlist = false;
+	for ( var i = 0; i < lines.length; i++ ) {
+		var line = lines[i];
+		var firstchar = line.substr(0, 1);
+		var data = null
+
+		if ( firstchar == ' ' ) {
+			line = line.substr(2);
+			if ( line.substr(0, 1) != '-' ) {
+				// append to previous element
+				var l2 = output.pop();
+				console.log(l2.substr(0, l2.length-5));
+				line = l2.substr(4, l2.length-5) + ' ' + line;
+			} else {
+				line = line.substr(2);
+			}
+			if ( gotlist == false ) {
+				output.push('<ul>');
+				gotlist = true;
+			}
+			output.push('<li>' + line + '</li>');
+		} else if ( firstchar != '-' && firstchar != '\t'  && firstchar != '' ) {
+			if ( gotlist == true ) {
+				output.push('</ul>');
+				gotlist = false;
+			}
+			output.push('<h4>' + line + '</h4>');
+		}
+	}
+	if ( gotlist == true ) {
+		output.push('</ul>');
+		gotlist = false;
+	}
+	output.push('</div>');
+
+	$(elem).replaceWith(output.join('\n'));
+
+});
+</script>
