@@ -1,5 +1,94 @@
 <h2>Changelog</h2>
 
+<h3>1.0.8 (Oct 24, 2011)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#205] Fixes invalid label rendering when text changes
+  - [#212] Fixes asynchronous loader when pygame is used
+  - [#216] Fixes window icon when filename for special charset
+  - [#220] Add audio support for Android
+  - [#221] Add video support for Android using ffmpeg-android project
+  - [#240] Fixes modules usage on android (pyo/pyc are accepted)
+  - Add kivy.resources.resource_remove_path
+  - Enhance event dispatching
+  - Enhance gobject support, reduced gstreamer lag
+  - Enhance UrlRequest to report download progression
+  - Fixes BoundedNumericProperty that wasn't working anymore
+  - Fixes configuration upgrade
+  - New GIF support, or images inside ZIP files
+  - New kivy.utils.format_bytes_to_human function
+  - New kivy.utils.platform to determine on which platform we are
+  - Rewrite video/gstreamer to use playbin2, no more issues with video/audio
+
+
+Graphics
+--------
+
+  - [#1] Add Bezier instruction
+  - [#201] Fixes deletion of vbo/fbo that happen outside main context
+  - [#207] Removed LineWidth instruction, wasn't working at all
+  - [#271] Fixes Line instruction crash when we have less than 2 x, y
+  - Add Batch.clear_data
+  - Enhance Bezier and Line to add a stipple mode
+  - Enhance graphics compilation
+  - Fixes for Ellipse angle_start/angle_end
+
+Input
+-----
+
+  - Enhance mouse provider to provide button index in touch event
+
+Lang
+----
+
+  - [#227] Add Builder.unload_file() to remove kv definitions
+  - Enhance lang by compile() part of the kv before eval/exec
+
+Widget
+------
+
+  - [#206] Fixes video eos property
+  - [#217] Fixes texture position when textinput widget is moving
+  - [#224] Add scroll_timeout/distance/friction configuration
+  - [#225] Allow stream url for Video widget
+  - [#276] Fixes scrollview with grabbed touch
+  - Add Button.background_color, Button.border
+  - Enhance Widget to add property introspection
+  - Fixes popup position when window size is changed
+  - New Accordion widget
+  - New Image.keep_ratio property
+  - New native support for mousewheel in ScrollView
+  - New ProgressBar widget
+  - New VKeyboard widget
+  - Fixes layout with conflicting usage of minimum_size and size_hint.
+    (Note: layout will not update its size if no size_hint are set.)
+
+Examples
+--------
+
+  - [#214] Add example of twister integration with kivy
+  - Add FboFloatFayout widget to demonstrate how to optimize widget tree
+  - New audio demo with 8bit sounds
+  - New demo with custom shape and custom collision func
+  - New Gesture example
+
+Modules
+-------
+
+  - Enhance touchring to support alpha and scale
+
+
+Documentation
+-------------
+
+  - Lots of documentation fixes, typo, rewording...
+  - Started translation for differents languages
+  - Add easing images in animation
+  - Add instructions about how to remove kivy
+</pre>
+
 <h3>1.0.7 (Jul 16, 2011)</h3>
 <a href="https://groups.google.com/d/topic/kivy-dev/feofn6ebhSs/discussion">Announcement</a>
 <pre class="changelog">
