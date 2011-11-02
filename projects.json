@@ -1,0 +1,75 @@
+[
+	{
+		"id": "kaleidoscope",
+		"title": "Kaleidoscope",
+		"media": "http://vimeo.com/29673059",
+		"featured": 1,
+		"description": [
+			"Educational project using 4 tablets and 1 table with projection.<br/>",
+			"Augmented knowledge table, that can be shared across tablet."
+		],
+		"footer": [
+			"<a href='http://github.com/tito/Kaleidoscope/'>Source Code</a>",
+			"- by <a href='http://erasme.org/'>Erasme</a>"
+		]
+	},
+
+	{
+		"id": "touchlive",
+		"title": "Touch Live",
+		"media": "http://www.youtube.com/watch?v=4a74AwaAheM",
+		"featured": 1,
+		"description": [
+			"Monome-like controller implemented in Kivy.</br>",
+			"Graham is creating his own music on it."
+		],
+		"footer": [
+			"Made by Graham Comerford"
+		]
+	},
+
+	{
+		"id": "touchcontinuum",
+		"title": "Icarus Touch",
+		"media": "http://www.youtube.com/watch?v=u4NRu7mBXtA",
+		"featured": 1,
+		"description": [
+			"Continuous keyboard implemented in Kivy.<br/>",
+			"Cyril is improvising over some backing tracks."
+		],
+		"footer": [
+			"Made by Cyril Stoller from <a href='http://www.liquidrain.net'>Liquid Rain</a> - ",
+			"<a href='https://github.com/stocyr/IcarusTouch'>Source Code</a>"
+		]
+	},
+
+	{
+		"id": "thenobooth",
+		"title": "The noBOOTH",
+		"media": "http://vimeo.com/25680681",
+		"featured": 1,
+		"description": [
+			"Interactive touchscreen using Kivy for taking<br/>",
+			"pictures and customize the photo with some gadgets."
+		],
+		"footer": [
+			"<a href='http://thenobooth.com/'>Website</a>",
+			"- by <a href='http://fresk.co/'>fresk interactive</a>"
+		]
+	},
+
+	{
+		"id": "planewhite",
+		"title": "Plane White",
+		"media": "http://www.youtube.com/watch?v=pI635uAppoU",
+		"featured": 1,
+		"description": [
+			"Interactive white surface for discovering art exhibition."
+		],
+		"footer": [
+			"<a href='https://github.com/theoo/planewhite'>Source Code</a> ",
+			"- by <a href='http://www.complex.ch'>Complex IT</a> and ",
+			"<a href='http://carinaow.com'>Carina Ow</a>"
+		]
+	}
+]

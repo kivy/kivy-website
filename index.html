@@ -54,73 +54,6 @@
 		<div class="panel" id="panel-home">
 			<div class="clear"></div>
 			<div id="slides" class="slideshow">
-				<div>
-					<div class="caption">
-						<h3>Kaleidoscope</h3>
-						<p>
-						Educational project in Kivy, directed by <a href="http://erasme.org/">Erasme</a>.</br>
-						Augmented knowledge table, that can be shared across tablet.
-						</p>
-						<p>
-							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
-						</p>
-					</div>
-					<a href="http://vimeo.com/29673059" rel="prettyPhoto[featured]"><img src="slides/kaleidoscope-featured.jpg" alt="Kaleidoscope"/></a>
-				</div>
-				<div>
-					<div class="caption">
-						<h3>Touch Live</h3>
-						<p>
-						Monome-like controller implemented in Kivy.</br>
-						Graham is creating his own music on it.
-						</p>
-						<p>
-							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
-						</p>
-					</div>
-					<a href="http://www.youtube.com/watch?v=4a74AwaAheM" rel="prettyPhoto[featured]"><img src="slides/touchlive-featured.jpg" alt="Touch Live"/></a>
-				</div>
-
-				<div>
-					<div class="caption">
-						<h3>IcarusTouch</h3>
-						<p>
-						Continuous keyboard implemented in Kivy.<br/>
-						Cyril is improvising over some backing tracks.
-						</p>
-						<p>
-							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
-						</p>
-					</div>
-					<a href="http://www.youtube.com/watch?v=u4NRu7mBXtA" rel="prettyPhoto[featured]"><img src="slides/touchcontinuum-featured.jpg" alt="Icarus Touch"/></a>
-				</div>
-
-				<div>
-					<div class="caption">
-						<h3>The noBOOTH</h3>
-						<p>
-							Interactive touchscreen using Kivy for taking<br/>pictures
-							and customize the photo with some gadgets.
-						</p>
-						<p>
-							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
-						</p>
-					</div>
-					<a href="http://vimeo.com/25680681" rel="prettyPhoto[featured]"><img src="slides/thenobooth-featured.jpg" alt="The noBOOTH"/></a>
-				</div>
-
-				<div>
-					<div class="caption">
-						<h3>PlaneWhite</h3>
-						<p>
-							Interactive white surface for discovering art exhibition.
-						</p>
-						<p>
-							<a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a>
-						</p>
-					</div>
-					<a href="http://www.youtube.com/watch?v=pI635uAppoU" rel="prettyPhoto[gallery1]" title="Test slide2"><img src="slides/planewhite-featured.jpg"/></a>
-				</div>
 			</div>
 
 			<h2 class="featured-description">
@@ -440,14 +373,35 @@
 
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function(){
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		overlay_gallery: false,
-		deeplinking: false
-	});
+	$.getJSON('projects.json', function(data) {
 
-	$(".slideshow").cycle({
-		timeout: 8000,
-		speed: 1000
+		// format all projects
+		$(data).each(function (index, element) {
+			if ( element['featured'] != 1 )
+				return
+			var html = [
+				'<div class="caption"><h3>', element['title'], '</h3>',
+				'<p>', element['description'].join(''), '</p>',
+				'<p><a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a></p>',
+				'</div>',
+				'<a href="', element['media'], '" rel="prettyPhoto[featured]">',
+				'<img src="slides/', element['id'], '-featured.jpg" alt="', element['title'], '"/>',
+				'</a>'
+			].join('');
+			var item = $('<div></div>').html(html);
+			$('#slides').append(item);
+		});
+
+		$("a[rel^='prettyPhoto']").prettyPhoto({
+			overlay_gallery: false,
+			deeplinking: false
+		});
+
+		$(".slideshow").cycle({
+			timeout: 8000,
+			speed: 1000
+		});
+
 	});
 });
 </script>

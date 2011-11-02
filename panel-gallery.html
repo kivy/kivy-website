@@ -24,98 +24,43 @@
 
 <h2>Selected Projects</h2>
 
-<div class="gallery">
-	<div class="gallery-item">
-		<a href="http://www.youtube.com/watch?v=4a74AwaAheM" rel="prettyPhoto">
-			<img src="slides/touchlive-thumb.jpg"/>
-		</a>
-		<div class="caption">
-			<h3>Touch Live</h3>
-			<p>
-			Monome-like controller implemented in Kivy.
-			</p>
-			<p>
-			Made by Graham Comerford
-			</p>
-		</div>
-	</div>
-
-	<div class="gallery-item right">
-		<a href="http://www.youtube.com/watch?v=u4NRu7mBXtA" rel="prettyPhoto">
-			<img src="slides/touchcontinuum-thumb.jpg"/>
-		</a>
-		<div class="caption">
-			<h3>TouchContinuum</h3>
-			<p>
-			Cyril is improvising on his continuous keyboard<br/>
-			</p>
-			<p>
-			Made by Cyril Stoller from <a href="http://www.liquidrain.net">Liquid Rain</a> - 
-			<a href="https://github.com/stocyr/IcarusTouch">Source Code</a>
-			</p>
-		</div>
-	</div>
-
-	<div class="gallery-clear"></div>
-
-	<div class="gallery-item">
-		<a href="http://vimeo.com/25680681" rel="prettyPhoto">
-			<img src="slides/thenobooth-thumb.jpg"/>
-		</a>
-		<div class="caption">
-			<h3>The noBOOTH</h3>
-			<p>
-			Interactive touchscreen using Kivy for taking<br/>
-			pictures and customize the photo with some gadgets.
-			</p>
-			<p>
-			<a href="http://thenobooth.com/">Website</a>
-			- by <a href="http://fresk.co/">fresk interactive</a>
-			</p>
-		</div>
-	</div>
-
-	<div class="gallery-item right">
-		<a href="http://www.youtube.com/watch?v=pI635uAppoU" rel="prettyPhoto">
-			<img src="slides/planewhite-thumb.jpg"/>
-		</a>
-		<div class="caption">
-			<h3>PlaneWhite</h3>
-			<p>
-			Interactive white surface for discovering art exhibition.
-			</p>
-			<p>
-			<a href="https://github.com/theoo/planewhite">Source Code</a>
-			- by <a href="http://www.complex.ch">Complex IT</a> and <a href="http://carinaow.com">Carina Ow</a>
-			</p>
-		</div>
-	</div>
-
-	<div class="gallery-clear"></div>
-
-	<div class="gallery-item">
-		<a href="http://vimeo.com/29673059" rel="prettyPhoto">
-			<img src="slides/kaleidoscope-thumb.jpg"/>
-		</a>
-		<div class="caption">
-			<h3>Kaleidoscope</h3>
-			<p>
-			Educational project using 4 tablets and 1 table with projection.
-			</p>
-			<p>
-			<a href="http://github.com/tito/Kaleidoscope/">Source Code</a>
-			- by <a href="http://erasme.org/">Erasme</a>
-			</p>
-		</div>
-	</div>
-
-	<div class="gallery-clear"></div>
+<div class="gallery" id="galleryproject">
+	Loading projects...
 </div>
 
 
 <script type="text/javascript" charset="utf-8">
+	$.getJSON('projects.json', function(data) {
+
+		$('#galleryproject').html('');
+
+		// format all projects
+		$(data).each(function (index, element) {
+			var html = [
+				// link
+				'<a href="', element['media'], '" rel="prettyPhoto">',
+				'<img src="slides/', element['id'], '-thumb.jpg"/>',
+				'</a>',
+				// description
+				'<div class="caption"><h3>', element['title'], '</h3>',
+				'<p>', element['description'].join(''), '</p>',
+				'<p>', element['footer'].join(''), '</p>'
+			].join('');
+			var right = '';
+			if ( index % 2 == 1 )
+				right = 'right';
+			var item = $('<div class="gallery-item' + right + '"></div>').html(html);
+			$('#galleryproject').append(item);
+
+			if ( index % 2 == 1 )
+				$('#galleryproject').append('<div class="gallery-clear"></div>');
+		});
+
+		$('#galleryproject').append('<div class="gallery-clear"></div>');
+
 		$(".gallery a[rel^='prettyPhoto']").prettyPhoto({
 			overlay_gallery: false,
 			deeplinking: false
 		});
+	});
 </script>
