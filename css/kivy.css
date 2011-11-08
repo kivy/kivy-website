@@ -401,3 +401,10 @@ div.changelog h4 {
 	font-size: 20px;
 	margin: 10px 0px;
 }
+
+/** Social panel in frontscreen
+ */
+table.social td {
+	width: 90px;
+	line-height: 90px;
+}
