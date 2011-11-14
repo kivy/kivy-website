@@ -1,5 +1,59 @@
 <h2>Changelog</h2>
 
+<h3>1.0.9 (Nov 14, 2011)</h3>
+Changelog - 1.0.9
+=================
+
+Core
+----
+
+  - [#307] Fixes invalid video start (play=True)
+  - [#308] Fixes memleak in gstreamer video providers
+  - Enhance properties for introspection
+  - Enhance Windows to use new Property from EventDispatcher
+  - Fixes crash when text rendering is 0 width
+  - Move properties discovery in EventDispatcher instead of Widget
+
+Graphics
+--------
+
+  - [#300] Use rgba mode for Line/Bezier dash mode
+
+Modules
+-------
+
+  - New inspector module (firebug like for Kivy)
+
+Input
+-----
+
+  - Disable mactouch input provider by default on OSX
+
+Lang
+----
+
+  - [#293] Fixes multiline properties
+
+Widget
+------
+
+  - [#287] Fixes invalid positioning of StackLayout with spacing
+  - [#292] Fixes Image iteration when anim_delay=-1
+  - [#303] Fixes for crash with ScrollView without viewport
+  - Add visibility of minimum_width/height/size for TextInput
+  - Fixes crash when text of textinput is None
+    
+Android
+-------
+
+  - [#294] Fixes android package for Android SDK rev14
+    
+Examples
+--------
+
+  - [#291] New Sequenced images examples
+
+
 <h3>1.0.8 (Oct 24, 2011)</h3>
 <pre class="changelog">
 Core
