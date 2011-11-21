@@ -55,7 +55,7 @@ a.selected {
 }
 
 #logo {
-		padding: 20px 0px;
+		padding: 25px 0px;
 		float: left;
 		width: 300px;
 }
@@ -407,4 +407,13 @@ div.changelog h4 {
 table.social td {
 	width: 90px;
 	line-height: 90px;
+}
+
+/** Logo panel
+ */
+table.logolist {
+	width: 100%;
+}
+table.logolist td {
+	text-align: center;
 }
