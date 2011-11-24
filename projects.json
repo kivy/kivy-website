@@ -1,5 +1,19 @@
 [
 	{
+		"id": "bargenius",
+		"title": "bargenius",
+		"media": "http://vimeo.com/29348760",
+		"featured": 1,
+		"description": [
+			"Interactive tablet menu with wine, beer, cocktail...<br/>",
+			"Clean design with cool touch interaction !"
+		],
+		"footer": [
+			"<a href='http://fresklabs.com/projects/bargenius'>Website</a>",
+			"- by <a href='http://fresk.co/'>fresk interactive</a>"
+		]
+	},
+	{
 		"id": "kaleidoscope",
 		"title": "Kaleidoscope",
 		"media": "http://vimeo.com/29673059",
@@ -24,7 +38,8 @@
 			"Graham is creating his own music on it."
 		],
 		"footer": [
-			"Made by Graham Comerford"
+			"<a href='http://github.com/grmcom/TouchLive/'>Source Code</a>",
+			"- by Graham Comerford"
 		]
 	},
 
