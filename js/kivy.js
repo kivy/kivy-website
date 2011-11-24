@@ -1,3 +1,59 @@
+// select panel
+function selectPanel(name) {
+	var panelname = 'panel-' + name;
+	var panelid = '#' + panelname;
+
+	if ( name == 'home' ) {
+		$('.slideshow-shadow').show();
+		$('#header').css({
+				'height': '440px'
+		});
+	} else {
+		$('.slideshow-shadow').hide();
+		$('#header').css({
+				'height': '120px'
+		});
+	}
+
+	if ( $(panelid).exists() ) {
+		$(panelid).show();
+		$('div.panel:not('+panelid+')').hide();
+	} else {
+		var panel = $('<div class="panel"></div>').attr('id', panelname);
+		$('#content .wrapper').append(panel);
+		panel.load('./panel-' + name + '.html', function() {
+			$('div.panel:not('+panelid+')').hide();
+			panel.show();
+		});
+	}
+}
+
+// handle nav selection
+function selectNav(event) {
+		var href = $(this).attr('href');
+		var name = 'home';
+		if ( href )
+				name = href.substring(1);
+
+		if (event)
+				event.preventDefault();
+
+		if ( $(this).hasClass('selected') && window.location.hash == '#' + name)
+				return;
+
+		window.location.hash = '#' + name;
+
+		$(this)
+			.parents('ul:first')
+					.find('a')
+					.removeClass('selected')
+					.end()
+			.end()
+			.addClass('selected');
+
+		selectPanel(name);
+}
+
 $(document).ready(function () {
 	jQuery.fn.exists = function(){return jQuery(this).length>0;}
 
@@ -5,63 +61,6 @@ $(document).ready(function () {
 	// PANELS
 	//
 	$('div.panel').hide()
-
-	// select panel
-	function selectPanel(name) {
-		var panelname = 'panel-' + name;
-		var panelid = '#' + panelname;
-
-		if ( name == 'home' ) {
-			$('.slideshow-shadow').show();
-			$('#header').css({
-					'height': '440px'
-			});
-		} else {
-			$('.slideshow-shadow').hide();
-			$('#header').css({
-					'height': '120px'
-			});
-		}
-
-		if ( $(panelid).exists() ) {
-			$(panelid).show();
-			$('div.panel:not('+panelid+')').hide();
-		} else {
-			var panel = $('<div class="panel"></div>').attr('id', panelname);
-			$('#content .wrapper').append(panel);
-			panel.load('./panel-' + name + '.html', function() {
-				$('div.panel:not('+panelid+')').hide();
-				panel.show();
-			});
-		}
-	}
-
-	// handle nav selection
-	function selectNav(event) {
-			var href = $(this).attr('href');
-			var name = 'home';
-			if ( href )
-					name = href.substring(1);
-
-			if (event)
-					event.preventDefault();
-
-			if ( $(this).hasClass('selected') && window.location.hash == '#' + name)
-					return;
-
-			window.location.hash = '#' + name;
-
-			$(this)
-				.parents('ul:first')
-						.find('a')
-						.removeClass('selected')
-						.end()
-				.end()
-				.addClass('selected');
-
-			selectPanel(name);
-	}
-
 	$('#menu .navigation').find('a[href^="#"]').click(selectNav);
 	$("a[rel^='panel']").click(selectNav);
 

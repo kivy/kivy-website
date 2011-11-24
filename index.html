@@ -396,7 +396,7 @@ $(document).ready(function(){
 			var html = [
 				'<div class="caption"><h3>', element['title'], '</h3>',
 				'<p>', element['description'].join(''), '</p>',
-				'<p><a href="#gallery" rel="panel">View more projects in the Gallery &raquo;</a></p>',
+				'<p><a href="#gallery" rel="panelg">View more projects in the Gallery &raquo;</a></p>',
 				'</div>',
 				'<a href="', element['media'], '" rel="prettyPhoto[featured]">',
 				'<img src="slides/', element['id'], '-featured.jpg" alt="', element['title'], '"/>',
@@ -405,6 +405,8 @@ $(document).ready(function(){
 			var item = $('<div></div>').html(html);
 			$('#slides').append(item);
 		});
+
+		$("a[rel^='panelg']").click(selectNav);
 
 		$("a[rel^='prettyPhoto']").prettyPhoto({
 			overlay_gallery: false,
