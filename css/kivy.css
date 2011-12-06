@@ -342,10 +342,6 @@ table.downloads tr.selected td {
 	border: 1px solid #ccc;
 }
 
-.devdesc {
-    clear: left;
-}
-
 .devprofile .social,
 .devprofile .name {
 	display: block;
@@ -369,6 +365,27 @@ table.downloads tr.selected td {
 .devpic {
 	float: left;
 	margin-right: 10px;
+	height: 80px;
+}
+
+dl.aboutus,
+dl.aboutus dd {
+	list-style-type: none;
+}
+
+dl.aboutus dt {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: #333;
+}
+
+dl.aboutus dd {
+	margin: 0px;
+	padding: 0px;
+}
+ul.devinfo li {
+	height: 80px;
 }
 
 .devcontact {
@@ -377,6 +394,10 @@ table.downloads tr.selected td {
 
 .ircnick {
 	font-style: italic;
+}
+
+ul.talks li {
+	margin-bottom: 10px;
 }
 
 
