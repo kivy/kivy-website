@@ -1,5 +1,17 @@
 [
 	{
+		"id": "tictactouch",
+		"title": "TicTacTouch",
+		"media": "http://www.youtube.com/watch?v=FhRXAD8-UkE",
+		"featured": 1,
+		"description": [
+			"Multitouch screen used for control a PLC hardware machine."
+		],
+		"footer": [
+			"By Dominique Burnand and Livio Conzett"
+		]
+	},
+	{
 		"id": "bargenius",
 		"title": "bargenius",
 		"media": "http://vimeo.com/29348760",
