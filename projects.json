@@ -1,5 +1,17 @@
 [
 	{
+		"id": "contest2012",
+		"title": "Programming Contest 2012",
+		"media": "",
+		"url": "#contest",
+		"featured": 1,
+		"description": [
+			"Are you afraid of 2012 ? Don't wait to make it fun."
+		],
+		"raw_link": "<a rel='panelg' href='#contest'>Join the contest now ! &raquo;</a>",
+		"footer": [""]
+	},
+	{
 		"id": "tictactouch",
 		"title": "TicTacTouch",
 		"media": "http://www.youtube.com/watch?v=FhRXAD8-UkE",

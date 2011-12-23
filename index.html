@@ -44,11 +44,12 @@
 	<div id="menu">
 		<ul class="navigation">
 			<li><a class="piwik_link" href="#home">Home</a></li>
+			<li><a class="piwik_link" href="#contest">Contest</a></li>
 			<li><a class="piwik_link" href="#download">Download</a></li>
 			<li><a class="piwik_link" href="#gallery">Gallery</a></li>
 			<li><a class="piwik_link" href="#support">Support</a></li>
 			<li><a class="piwik_link" href="#aboutus">About</a></li>
-			<li><a class="piwik_link" href="http://kivy.org/docs/">Documentation</a></li>
+			<li><a class="piwik_link" href="http://kivy.org/docs/">Docs</a></li>
 			<li><a class="piwik_link" href="http://kivy.org/planet">Blog</a></li>
 		</ul>
 	</div>
@@ -467,8 +468,9 @@
 			</p>
 			</div>
 
-	</div>
-</div>
+
+	</div> <!-- end of wrapper -->
+</div> <!-- end of content -->
 
 <div id="footer">
 	<div class="wrapper">
@@ -498,12 +500,17 @@ $(document).ready(function(){
 
 		// format all projects
 		$(data).each(function (index, element) {
+			var text_more = element['raw_link'];
 			if ( element['featured'] != 1 )
-				return
+				return;
+			text_more = element['raw_link'];
+			console.log(text_more);
+			if ( text_more == undefined )
+				text_more = '<p><a href="#gallery" rel="panelg">View more projects in the Gallery &raquo;</a></p>';
 			var html = [
 				'<div class="caption"><h3>', element['title'], '</h3>',
 				'<p>', element['description'].join(''), '</p>',
-				'<p><a href="#gallery" rel="panelg">View more projects in the Gallery &raquo;</a></p>',
+				text_more,
 				'</div>',
 				'<a href="', element['media'], '" rel="prettyPhoto[featured]">',
 				'<img src="slides/', element['id'], '-featured.jpg" alt="', element['title'], '"/>',
