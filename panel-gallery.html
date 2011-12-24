@@ -35,7 +35,11 @@
 		$('#galleryproject').html('');
 
 		// format all projects
-		$(data).each(function (index, element) {
+		var index = -1;
+		$(data).each(function (_index, element) {
+			if ( element['raw_link'] != undefined )
+				return;
+			index += 1;
 			var html = [
 				// link
 				'<a href="', element['media'], '" rel="prettyPhoto">',
