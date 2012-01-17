@@ -641,7 +641,6 @@ $('pre.changelog').each(function (i1, elem) {
 			if ( line.substr(0, 1) != '-' ) {
 				// append to previous element
 				var l2 = output.pop();
-				console.log(l2.substr(0, l2.length-5));
 				line = l2.substr(4, l2.length-5) + ' ' + line;
 			} else {
 				line = line.substr(2);
