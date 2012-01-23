@@ -17,6 +17,9 @@ img.toplogo {
 	height: 64px;
 	display: block;
 }
+#btnregister {
+	cursor: pointer;
+}
 
 </style>
 
@@ -69,14 +72,15 @@ img.toplogo {
 		Start of Contest, final rules published.
 	</td></tr>
 	<tr><th>
-		January 25th, 2012, 23:59 GMT
+		<span style="color: #df4532">
+			January 31st, 2012, 23:59 GMT
+		</span>
 	</th><td>
-		Final Registration Deadline.
-	</td></tr>
-	<tr><th>
-		January 31st, 2012, 23:59 GMT
-	</th><td>
-		Final Submission Deadline.
+		<span style="color: #df4532">
+			Final Registration and submission Deadline.
+		</span>
+		<br/>
+		<a id="btnregister">&raquo; I want to register !</a>
 	</td></tr>
 	<tr><th>
 		February 5th, 2012
@@ -216,8 +220,18 @@ Each part will be scored on 20 points, for a total of 100.
 
 <div style="clear: left;"></div>
 
+<a id="contestregistration"></a>
 <h2>Sign Up</h2>
 <iframe
 src="https://docs.google.com/spreadsheet/embeddedform?formkey=
 dEM4Zm81aS1zRExWYS1KeW5fYkhPb1E6MQ&bc=transparent" width="760" height="873" frameborder="0"
 marginheight="0" marginwidth="0">Loading...</iframe>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$('#btnregister').click(function() {
+		console.log('blok');
+		$.scrollTo('a#contestregistration', 800);
+	})
+});
+</script>
