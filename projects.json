@@ -1,18 +1,5 @@
 [
 	{
-		"id": "contest2012",
-		"title": "Programming Contest 2012",
-		"media": "",
-		"url": "#contest",
-		"featured": 1,
-		"description": [
-			"Get part of an awesome contest, and win NotionInk Tablet, Github plans,<br/>",
-			"and Kivy Tee-shirts! Register <span style='color: #ef3434'>before</span> the January 31st 2012, 23:59 GMT!"
-		],
-		"raw_link": "<a rel='panelg' href='#contest'>Join the contest now ! &raquo;</a>",
-		"footer": [""]
-	},
-	{
 		"id": "tictactouch",
 		"title": "TicTacTouch",
 		"media": "http://www.youtube.com/watch?v=FhRXAD8-UkE",
