@@ -1,6 +1,6 @@
 <style type="text/css">
 
-ol li {
+ol.rules li {
 	font-family: monospace;
 	padding-bottom: 20px;
 	width: 700px;
@@ -18,6 +18,18 @@ img.toplogo {
 	display: block;
 }
 
+div.rank1 {
+	background: transparent url('images/gold_medal.png') top right no-repeat;
+}
+
+div.rank2 {
+	background: transparent url('images/silver_medal.png') top right no-repeat;
+}
+
+div.rank3 {
+	background: transparent url('images/bronze_medal.png') top right no-repeat;
+}
+
 </style>
 
 <div class="toplogo">
@@ -31,12 +43,38 @@ img.toplogo {
 <h1>Kivy Programming Contest #1</h1>
 
 <p>
-	We are excited to announce the 1st ever Kivy programming contest. The Kivy
-	project and community have been growing.
-	You can help us make it even better and score sweet prizes at the same
-	time. Checkout below to learn about the rules, how to
-	participate, and the prizes you can win.
+	The Kivy programming contest #1 is over!
 </p>
+<p>
+	The winners are:
+</p>
+<ol>
+	<li>
+		<a href="https://github.com/stocyr/Deflectouch">Deflectouch</a>, from Cyril Stoller
+	</li>
+	<li>
+		<a href="https://github.com/Zogg/FishLife">FishLife</a>, from Zogg
+	</li>
+	<li>
+		<a href="https://github.com/niavlys/memoryKivy">memoryKivy</a>, from Niavlys
+	</li>
+	<li>
+		<a href="https://github.com/dcower/centripetal">Centripetal</a>, from Dilon Cower
+	</li>
+	<li>
+		<a href="https://github.com/wilsaj/flingy">Flingy</a>, from Andy Wilson
+	</li>
+</ol>
+<p>
+	Congratulations for everyone who entered in the contest, and thanks a lot to our sponsors:
+	<a href="http://www.notionink.com/">Notionink</a> and <a href="https://github.com/plans">Github</a>
+</p>
+
+<h2>Submissions</h2>
+<div class="gallery" id="gallerycontest">
+	Loading projects...
+</div>
+
 
 <h2>Goals of the Contest</h2>
 <ul>
@@ -131,7 +169,7 @@ img.toplogo {
 
 <h2>Rules</h2>
 
-<ol class-"contest">
+<ol class="rules">
 	<li>
 		The participant must create a game, solo or multiplayer. Be creative!
 	</li>
@@ -218,3 +256,45 @@ Each part will be scored on 20 points, for a total of 100.
 <a id="contestregistration"></a>
 <h2>Sign Up</h2>
 <p>The contest is over !</p>
+
+<script type="text/javascript" charset="utf-8">
+	$.getJSON('contest/1/submissions.json', function(data) {
+
+		$('#gallerycontest').html('');
+
+		// format all projects
+		var index = -1;
+		$(data).each(function (_index, element) {
+			if ( element['raw_link'] != undefined )
+				return;
+			index += 1;
+			var html = [
+				// link
+				'<a href="contest/1/screenshots/', element['id'], '.jpg" rel="prettyPhoto">',
+				'<img src="contest/1/screenshots/', element['id'], '-thumb.jpg"/>',
+				'</a>',
+				// description
+				'<div class="caption rank rank', element['rank'],'"><h3>',
+				'<a href="https://github.com/', element['github'], '">',
+				element['title'],
+				'</a> - ', element['author'], '</h3>',
+				'<p>Rank: #', element['rank'], ', Score: ', element['score'], '</p>'
+			].join('');
+			var right = '';
+			if ( index % 2 == 1 )
+				right = 'right';
+			var item = $('<div class="gallery-item' + right + '"></div>').html(html);
+			$('#gallerycontest').append(item);
+
+			if ( index % 2 == 1 )
+				$('#gallerycontest').append('<div class="gallery-clear"></div>');
+		});
+
+		$('#gallerycontest').append('<div class="gallery-clear"></div>');
+
+		$(".gallery a[rel^='prettyPhoto']").prettyPhoto({
+			overlay_gallery: false,
+			deeplinking: false
+		});
+	});
+</script>
