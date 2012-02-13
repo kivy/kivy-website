@@ -1,5 +1,94 @@
 <h2>Changelog</h2>
 
+<h3>1.1.0 (Feb 13, 2012)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#319] Allow dynamic changes to url in Loader
+  - [#371] Allow BoundedNumericProperty to have custom min/max per widget
+  - [#373] Allow Property.dispatch() to be called from Python
+  - [#376] Fix list.reverse() in ListProperty
+  - [#386] Fix GC with Clock triggered events
+  - [#306] Fix video uri support with gstreamer
+  - Add support for italic/bold text in core/text
+  - Better traceback when an exception happen within kv
+  - Enhance properties exceptions
+  - Fixes for camera frame update
+  - Fixes for python-for-android project
+  - Fixes list/dict properties on pop/popitem method
+  - Merged android-support branch to master
+  - New Atlas class for merging png/jpeg and acces with atlas://
+  - New SettingPath in settings
+  - New markup text rendering: "[b]Hello[/b] [color=ff0000]World[/color]"
+  - New on_pause handler in App: used in android for sleeping
+  - Removed text/cairo rendering, ttf doesn't work.
+  - Various speedup on cython files
+
+Graphics
+--------
+
+  - [#375] Fix clear_color in Fbo
+  - [#64] New Mesh instruction for custom 2D mesh
+  - Fix black screenshot on GLES devices
+  - Fix warnings of cython compilation + debian issues
+
+Modules
+-------
+
+  - [#389] Fix missing image for Touchring
+  - New recorder module: you can save and replay touch events
+
+Input
+-----
+
+  - [#366] Fix time_end never set for all providers except mouse
+  - [#377] Removed TUIO provider by default in configuration
+
+Lang
+----
+
+  - [#364] Fixes for unicode BOM in .kv
+  - Rewrite kvlang parser / builder: improved performance + fixes some design
+    issues.
+
+Widget
+------
+
+  - [#317,#334,#335] Fix AsyncImage when source is empty or already loaded
+  - [#318] Fix textinput auto scroll
+  - [#386] Scatter will not accept touches if none of transformations are enabled
+  - [#395] Enhance doc for label/textinput about unicode chars
+  - Enhance FileChooser for feedback when item is selected
+  - Enhance FileChooser to have a directory selection mode
+  - Enhance Popup with more properties for styling
+  - Fixes for Textinput focus
+  - Fixes Layout when parent are changing
+  - Fix for not propagating touch events in Popup
+  - Fix Textinput with invalid selection when releasing shift key
+  - New Bubble widget, for displaying contextual menu
+  - New Copy/Cut/Paste menu in Textinput using Bubble
+  - New RstDocument widget, for rendering RST text
+
+Examples
+--------
+
+  - New RST_Editor example for playing with RstDocument rendering
+  - Various examples fixes due to new kv lang restrictions
+
+Others
+------
+
+  - [#333] Fixes for allowing omnicompletion in vim
+  - [#361,#379,#381,#387] Lots of documentations fixes from contributors!
+  - [#367] Fixes for pip+virtualenv installation
+  - Fixes for pep8 and pyflakes
+  - New architecture diagram
+  - New documentation layout
+  - New pong tutorial
+  - Repository moved to github.com/kivy/kivy
+</pre>
+
 <h3>1.0.9 (Nov 14, 2011)</h3>
 <pre class="changelog">
 Core
