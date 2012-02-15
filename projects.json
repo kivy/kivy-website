@@ -3,6 +3,7 @@
 		"id": "contest2012-end",
 		"title": "Kivy Contest #1 - finished!",
 		"featured": 1,
+		"media": "http://kivy.org/slides/contest2012-end-featured.jpg",
 		"raw_link": "<a href='#contest' rel='panelg'>See the contest result &raquo;</a>",
 		"description": [
 			"Contest is over, and we have got awesome submissions!<br/>",
@@ -27,7 +28,7 @@
 	{
 		"id": "fishlife",
 		"title": "FishLife",
-		"media": "",
+		"media": "http://kivy.org/slides/fishlife.jpg",
 		"featured": 1,
 		"description": [
 			"Multitouch game, second place of the Kivy Contest #1"
@@ -41,6 +42,7 @@
 		"id": "memorykivy",
 		"title": "memoryKivy",
 		"featured": 1,
+		"media": "http://kivy.org/slides/memorykivy.jpg",
 		"description": [
 			"Multitouch game, third place of the Kivy Contest #1"
 		],
