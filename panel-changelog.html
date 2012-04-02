@@ -1,5 +1,69 @@
 <h2>Changelog</h2>
 
+<h3>1.2.0 (Apr 2, 2012)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#325] New Window.mouse_pos to get the main mouse position anytime
+  - [#427] Improved markup positioning with glpyhs+kerning
+  - Avoid rendering of empty text lines
+  - Fixed setter() and getter() EventDispatcher methods
+  - Implement new Dropfile event, to be able to open files on macosx
+  - Optimized texture upload from 3 to 1 upload in somes cases
+  - The system/Window can now "pause" the application if the app support it
+
+Graphics
+--------
+
+  - Disable mipmapping for people using Desktop GL kivy &lt; 3.0
+  - Enhanced graphics engine to support OpenGL reloading / context-lost
+  - Optimized shaders uniform upload if not used
+  - Optimized VBO drawing by using a GPU buffer for storing indices
+
+Modules
+-------
+
+  - [#415] Recorder now record keyboards events
+  - [#309] Fixes for inspector / memory leak
+  - New webdebugger module for having statistics on the current running app
+
+Widget
+------
+
+  - [#331] New VideoPlayer widget: Video + controls buttons, annotations and
+	fullscreen
+  - [#411] Propagate touchs to children for Label and Button
+  - [#412] Removed redundant background_texture on Bubble
+  - [#416] New background_color and foreground_color to TextInput
+  - [#429] New password mode to TextInput
+  - [#431] Fixes clipboard for linux, works perfect on linux, windows and mac
+  - [#439] Improve performance on TextInput dealing with large text
+  - Enhanced FileChooser to delay the file creation over the time, and display
+	a progression bar if it's too slow.
+  - Enhance FileChooser to animate when scrollwheel is used
+  - Enhance scrollview to animate when scrollwheel is used
+  - Fixed Bubble not listening to color changes
+  - New FileChooser.rootpath to restrict file browsing
+  - New scrollview scrollbar (not touchable)
+  - New ".. video::" directive in the RstDocument widget
+  - New Video.seek() method
+  - Updated filechooser icon theme
+
+Examples
+--------
+
+  - [#405] New examples dealing with unicode
+
+Others
+------
+
+  - [#404] Fixes for msvc9 compilation errors
+  - [#424] Fixed pyinstaller packaging for macosx
+  - Add installation instructions for mageia
+  - New instructions for packaging on iOS
+</pre>
+
 <h3>1.1.1 (Feb 15, 2012)</h3>
 <pre class="changelog">
 Core
@@ -137,12 +201,12 @@ Widget
   - [#303] Fixes for crash with ScrollView without viewport
   - Add visibility of minimum_width/height/size for TextInput
   - Fixes crash when text of textinput is None
-    
+
 Android
 -------
 
   - [#294] Fixes android package for Android SDK rev14
-    
+
 Examples
 --------
 
