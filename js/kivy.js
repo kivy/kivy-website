@@ -1,4 +1,17 @@
 // select panel
+
+var lastpanel = null;
+
+function checkPanelNavigation() {
+	if (window.location.hash) {
+		var hash = window.location.hash.substr(1);
+		if (hash != lastpanel) {
+			triggerNav({ id: hash });
+		}
+	}
+	setTimeout('checkPanelNavigation()', 150)
+}
+
 function selectPanel(name) {
 	var panelname = 'panel-' + name;
 	var panelid = '#' + panelname;
@@ -26,6 +39,8 @@ function selectPanel(name) {
 			panel.show();
 		});
 	}
+
+	lastpanel = panelid;
 }
 
 // handle nav selection
@@ -54,6 +69,15 @@ function selectNav(event) {
 		selectPanel(name);
 }
 
+function triggerNav(data) {
+	var el = $('#menu .navigation').find('a[href$="' + data.id + '"]').get(0);
+	if ( el )
+		selectNav.call(el);
+	else
+		selectPanel(data.id);
+}
+
+
 $(document).ready(function () {
 	jQuery.fn.exists = function(){return jQuery(this).length>0;}
 
@@ -64,16 +88,10 @@ $(document).ready(function () {
 	$('#menu .navigation').find('a[href^="#"]').click(selectNav);
 	$("a[rel^='panel']").click(selectNav);
 
-	function trigger(data) {
-		var el = $('#menu .navigation').find('a[href$="' + data.id + '"]').get(0);
-		if ( el )
-			selectNav.call(el);
-		else
-			selectPanel(data.id);
-	}
-
-	if (window.location.hash) {
-		trigger({ id : window.location.hash.substr(1) });
+	if (window.location.href.search('place=') > 0) {
+		triggerNav({ id : 'forum' });
+	} else if (window.location.hash) {
+		triggerNav({ id : window.location.hash.substr(1) });
 	} else {
 		$('ul.navigation a:first').click();
 	}
@@ -120,4 +138,5 @@ $(document).ready(function () {
 	});
 
 
+	checkPanelNavigation();
 });

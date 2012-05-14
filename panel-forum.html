@@ -1,0 +1,20 @@
+<h2>Kivy Users Forum</h2>
+
+<iframe id="forum_embed"
+ src="javascript:void(0)"
+ scrolling="no"
+ frameborder="0"
+ width="900"
+ height="700">
+</iframe>
+
+<script type="text/javascript">
+var hash = window.location.hash;
+window.location.hash = '';
+ document.getElementById("forum_embed").src =
+  "https://groups.google.com/forum/embed/?place=forum/kivy-users" +
+  "&hidesubject=true&hideforumtitle=true" + 
+  "&showsearch=true&showpopout=true&parenturl=" +
+  encodeURIComponent(window.location.href);
+window.location.hash = hash;
+</script>
