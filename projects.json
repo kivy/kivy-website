@@ -1,5 +1,15 @@
 [
 	{
+		"id": "kivy13",
+		"title": "Kivy 1.3.0 released!",
+		"featured": 1,
+		"media": "http://kivy.org/slides/kivy13-featured.jpg",
+		"raw_link": "<a href='#download' rel='panelg'>Download Now !</a>",
+		"description": [
+			"New UI theme, Tabbed Panel, REPL support"
+		]
+	},
+	{
 		"id": "contest2012-end",
 		"title": "Kivy Contest #1 - finished!",
 		"featured": 1,
