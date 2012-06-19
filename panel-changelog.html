@@ -1,5 +1,83 @@
 <h2>Changelog</h2>
 
+<h3>1.3.0 (Jun 19, 2012)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#420] Fix pygame error when texture is too large
+  - [#450] Updated Sound class to use Kivy properties
+  - [#467] New Sound.length
+  - [#484] New kivy.interactive module: doesn't break REPL anymore
+  - [#487] Make default values in properties optionals
+  - [#489] Replaced all relative import with absolute imports
+  - [#498] Fixes Image to allow re-loading of image from disk
+  - [#503] Renamed unicode parameter to codepoint in all on_key_*
+	events
+  - Changed default screenshot to be PNG instead of JPEG
+  - Enhance Kv lang rules lookup
+  - Enhance Label initialitazion
+  - Fixes crash on App when the configuration file cannot be read
+  - Fixes for graphics reloading mechanism, force the GC before
+	flushing GL
+  - New default UI theme
+  - New KIVY_NO_CONFIG, KIVY_NO_FILELOG, KIVY_NO_CONSOLELOG env
+	variables
+  - New kivy.utils.escape_markup() to escape untrusted text when
+	markup=True
+  - Support MacOSX clipboard
+
+Graphics
+--------
+
+  - [#118] Fixes for glColorMask on android
+  - [#447] Add new ClearColor and ClearBuffers instructions
+  - [#463] Fixes glGetIntegerv with new Cython
+  - [#479] Fixes for Translate instance when args passed in on
+	creation
+  - Avoid drawing of empty VBO
+  - Enhance Stencil instruction, you can nest up to 128 layers instead
+	of 8
+  - Fixes crash when texture is empty (0px width or height)
+  - Fixes Point instruction when new point is appended
+  - Fixes to enable support of NPOT texture on android/ios platform
+
+Widgets
+-------
+
+  - [#401] New Scatter.do_collide_after_children property
+  - [#419] New TabbedPanel widget
+  - [#437] New TextInput.readonly property
+  - [#447] Fix popup background resizing when Window resize
+  - [#480] Fixes StackLayout size_hint missing calculation
+  - [#485] Fixes VideoPlayer scrollbar with multitouch
+  - [#490] Fixes ToggleButton memory leak
+  - Add FileChooser.file_encodings for a better unicode conversion
+  - Better handling of mousewheel in Button
+  - Delayed Label texture creation
+  - Enhance RST widget to support :align: in image directive
+  - Fixes RST widget to use document root for loading images and
+	videos
+  - New Popup.dismiss(animation) attribute to disable the fadeout when
+	dismiss
+  - New RstDocument.goto(reference) for scrolling the document to a
+	specific section
+  - New Undo/Redo for TextInput
+
+Android
+-------
+
+  - Map BACK key to ESCAPE by default
+  - Partial fixes for black screen after wake-up
+
+Windows
+-------
+
+  - Fixes preference order for the camera provider
+  - Fixes some GL crash on Windows due to missing dynamic lookup of
+	some functions (glGenerateMipMap, glGenFramebuffers, ...)
+</pre>
+
 <h3>1.2.0 (Apr 2, 2012)</h3>
 <pre class="changelog">
 Core
