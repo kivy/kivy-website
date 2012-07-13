@@ -1,5 +1,19 @@
 [
 	{
+		"id": "processcraft",
+		"title": "ProcessCraft",
+		"featured": 1,
+		"media": "http://www.youtube.com/watch?v=9rk9OQLSoJw",
+		"description": [
+			"Commercial application for Business Process Modeling<br/>",
+			"Running on iOS, Android, and others desktop OS"
+		],
+		"footer": [
+			"<a href='http://showgen.com/'>Website</a>",
+			" - by Showgen Ltd."
+		]
+	},
+	{
 		"id": "kivy13",
 		"title": "Kivy 1.3.0 released!",
 		"featured": 1,
@@ -32,7 +46,7 @@
 		],
 		"footer": [
 			"<a href='http://github.com/stocyr/Deflectouch/'>Source Code</a>",
-			"- by Cyril Stoller"
+			" - by Cyril Stoller"
 		]
 	},
 	{
@@ -45,7 +59,7 @@
 		],
 		"footer": [
 			"<a href='http://github.com/Zogg/FishLife'>Source Code</a>",
-			"- by Zogg"
+			" - by Zogg"
 		]
 	},
 	{
@@ -58,7 +72,7 @@
 		],
 		"footer": [
 			"<a href='http://github.com/niavlys/memoryKivy/'>Source Code</a>",
-			"- by Niavlys"
+			" - by Niavlys"
 		]
 	},
 	{
@@ -84,7 +98,7 @@
 		],
 		"footer": [
 			"<a href='http://fresklabs.com/projects/bargenius'>Website</a>",
-			"- by <a href='http://fresk.co/'>fresk interactive</a>"
+			" - by <a href='http://fresk.co/'>fresk interactive</a>"
 		]
 	},
 	{
@@ -98,7 +112,7 @@
 		],
 		"footer": [
 			"<a href='http://github.com/tito/Kaleidoscope/'>Source Code</a>",
-			"- by <a href='http://erasme.org/'>Erasme</a>"
+			" - by <a href='http://erasme.org/'>Erasme</a>"
 		]
 	},
 
@@ -113,7 +127,7 @@
 		],
 		"footer": [
 			"<a href='http://github.com/grmcom/TouchLive/'>Source Code</a>",
-			"- by Graham Comerford"
+			" - by Graham Comerford"
 		]
 	},
 
@@ -143,7 +157,7 @@
 		],
 		"footer": [
 			"<a href='http://thenobooth.com/'>Website</a>",
-			"- by <a href='http://fresk.co/'>fresk interactive</a>"
+			" - by <a href='http://fresk.co/'>fresk interactive</a>"
 		]
 	},
 
@@ -157,7 +171,7 @@
 		],
 		"footer": [
 			"<a href='https://github.com/theoo/planewhite'>Source Code</a> ",
-			"- by <a href='http://www.complex.ch'>Complex IT</a> and ",
+			" - by <a href='http://www.complex.ch'>Complex IT</a> and ",
 			"<a href='http://carinaow.com'>Carina Ow</a>"
 		]
 	}
