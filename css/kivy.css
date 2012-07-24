@@ -385,7 +385,7 @@ dl.aboutus dd {
 	padding: 0px;
 }
 ul.devinfo li {
-	height: 80px;
+	height: 90px;
 }
 
 .devcontact {
@@ -400,6 +400,46 @@ ul.talks li {
 	margin-bottom: 10px;
 }
 
+.pageright {
+	float: left;
+	width: 350px;
+}
+
+.pageright h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: #333;
+	margin: 13px 0px;
+	padding: 0px;
+}
+
+.pageleft {
+	width: 550px;
+	float: left;
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #888888;
+}
+
+ul.talks {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul.talks li {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	padding-left: 70px;
+	margin-bottom: 15px;
+}
+
+ul.talks li img.preview {
+	position: absolute;
+	margin-left: -70px;
+}
 
 /** IE fixes
  */
