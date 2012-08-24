@@ -1,5 +1,19 @@
 [
 	{
+		"id": "yeco",
+		"title": "Yeco",
+		"featured": 1,
+		"media": "http://www.youtube.com/watch?v=KxkxRKY2Z4M",
+		"description": [
+			"Yeco is a multi touch controller for Ableton Live<br/>",
+			"Working on Windows 32/64, Mac soon"
+		],
+		"footer": [
+			"<a href='http://www.multitouchmusic.com/software-2/yeco/'>Website</a>",
+			" - by <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
+		]
+	},
+	{
 		"id": "processcraft",
 		"title": "ProcessCraft",
 		"featured": 1,
