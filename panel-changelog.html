@@ -1,5 +1,60 @@
 <h2>Changelog</h2>
 
+<h3>1.4.0 (Sep 02, 2012)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#513] Fix nested template
+  - [#547] Fix url loader with querystring
+  - [#576] Markup text can be vertically aligned
+  - [#585] Enhance add_widget() to raise an Exception on multiple parents
+  - [#642] Support of smb:// in url loader with pysmb
+  - Enhance AliasProperty to cache the result if use_cache is set to True
+  - Enhance App.get_application_config() to get a correct config filename on all platforms
+  - Fix Animation.stop_all() + new Animation.cancel()
+  - Fix Property.unbind() for bounded methods
+
+Graphics
+--------
+
+  - [#516] Fix crash when loading 1bit image
+  - [#546] Fix Quad() initialization
+
+Widgets
+-------
+
+  - [#543] Fix multiple content in TabbedPanel from Kv
+  - [#549] Enhance TabbedPanel to introduce default_tab_class
+  - [#562] Popup can now define the content in Kv
+  - [#593] Enhance TextInput with select_all() and select_text() methods
+  - [#658] Fix usage of Camera within Kv
+  - Enhanced VideoPlayer to have pause ability and state property
+  - Enhance Image widget to add keep_data for further pixel collision detection
+  - New Carousel widget
+  - New Checkbox widget
+  - New Dropdown widget
+  - New ModalView widget
+  - New RelativeLayout, identical from FloatLayout with relative coordinates
+  - New ScreenManager widget for changing views with transitions
+  - New Slider.step property
+  - New Spinner widget
+
+Windows
+-------
+
+  - [#621] Fix ghost touch due to a raise condition
+  - Add python scripts into the PATH
+  - Enhance input wm_touch/pen to be compatible with 64bits
+  - Severals fixes around window resizing
+
+Others
+------
+
+  - New Getting Started
+  - Tons of documentation typo, fixes. Really, a ton.
+</pre>
+
 <h3>1.3.0 (Jun 19, 2012)</h3>
 <pre class="changelog">
 Core
