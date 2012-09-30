@@ -1,5 +1,51 @@
 <h2>Changelog</h2>
 
+<h3>1.4.1 (Sep 30, 2012)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#625] Extend NumericProperty to support DPI notation
+  - [#660] Add callbacks support on ConfigParser for a (section, key)
+  - [#666] Fix Markup text disapear on GL reloading
+  - [#678] Enhance UrlRequest for small chunks, callbacks and GC
+  - [#679] New Audio.get_pos()
+  - [#680] Fix key translations on Keyboard
+  - Force on_parent dispatching for children in a kv rule
+  - Expose 'app' instance keyword in Kv language
+
+Graphics
+--------
+
+  - [#686] Added opacity support in the graphics pipeline
+  - Enhanced Line instruction that support width, joint, cap.
+  - Added Line.circle/ellipse/rectangle properties
+
+Widgets
+-------
+
+  - [#664] Fix TextInput crashes is some cases
+  - [#686] New Widget.opacity property
+  - [#690] New TextInput.background_normal/active
+  - [#694] Fix Slider value when min and step &gt; 0
+  - [#676] Fix Carousel.remove_widget()
+  - [#669] Fix SettingNumeric with int/float values
+  - [#698] Enhance BoxLayout to support pos_hint
+  - Fix ModalView background property
+
+
+Windows
+-------
+
+  - [#675] Fix WM_Touch / WM_Pen for 32 bits / 64 bits
+
+Others
+------
+
+  - [#462] Fixes gstreamer packaging with PyInstaller
+  - [#659] Updated documentation concerning PyInstaller 2.0
+</pre>
+
 <h3>1.4.0 (Sep 02, 2012)</h3>
 <pre class="changelog">
 Core
