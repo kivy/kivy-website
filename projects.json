@@ -1,5 +1,20 @@
 [
 	{
+		"id": "particlepanda",
+		"title": "Particle Panda",
+		"featured": 1,
+		"media": "/slides/particlepanda.jpg",
+		"description": [
+			"Create particle effect for particle systems<br/>",
+			"used in Starling, Kivy and Cocos2d<br/>",
+			"Working on Desktop and mobile."
+		],
+		"footer": [
+			"<a href='http://www.particlepanda.com'>Website</a>",
+			" - by <a href='http://www.chaosbuffalolabs.com/'>Chaos Buffalo Labs</a>"
+		]
+	},
+	{
 		"id": "yeco",
 		"title": "Yeco",
 		"featured": 1,
@@ -10,6 +25,7 @@
 		],
 		"footer": [
 			"<a href='http://www.multitouchmusic.com/software-2/yeco/'>Website</a>",
+			" - <a href='https://play.google.com/store/apps/details?id=org.cbl.particlepanda'>Google Play</a>",
 			" - by <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
 		]
 	},
