@@ -3,7 +3,7 @@
 		"id": "particlepanda",
 		"title": "Particle Panda",
 		"featured": 1,
-		"media": "/slides/particlepanda.jpg",
+		"media": "http://www.youtube.com/watch?v=MOYxeLdQinA",
 		"description": [
 			"Create particle effect for particle systems<br/>",
 			"used in Starling, Kivy and Cocos2d<br/>",
