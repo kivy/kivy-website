@@ -1,5 +1,81 @@
 <h2>Changelog</h2>
 
+<h3>1.5.0 (Dec 9, 2012)</h3>
+<pre class="changelog">
+Changelog - 1.4.0
+=================
+
+Core
+----
+
+  - [#731] BoundedNumericProperty can have float bounds
+  - [#755] Fix SetWindowLongPtr on 32/64 Windows
+  - [#768] Fix AsyncImage loader on iOS
+  - [#778] Prevent the Pygame parachute if we don't have the required
+    GL version. Instead, show a msgbox.
+  - [#779] Better DPI support, with new sp and dp units
+  - [#783] New screen module for simulating different DPI devices
+  - [#789] Fix on_resize dispatch on Windows and OSX
+  - Allow multiple providers in Kivy env variables
+  - Fix line off-by-one issue in Kv errors
+  - New errorhandler/errorvalue in Property class
+  - New experimental X11 window provider, that support transparent
+    window.
+  - Normalize android pressure and radius
+  - Reduce gstreamer audio/video out-of-sync
+  - Support ability to stop/restart the EventLoop
+
+
+Graphics
+--------
+
+  - [#481] Avoid error in case of multiple Canvas.rremove()
+  - [#610] Add more information when GLEW fail to initialize
+  - [#671] Allow source unicode filename in BindTexture
+  - [#790] Allow to change Stencil operators
+  - Avoid BGRA-&gt;RGBA conversion for OSX if the GPU support BRGA.
+  - Fix issue with Cython 0.14, "by" is now considered as a keyword
+  - Line: add bezier and bezier_precision properties
+  - Line: fix missing ellipse/circle/rectangle in the Line constructor
+  - Texture: always flip the texture vertically for Image and Label
+
+
+Widgets
+-------
+
+  - [#618] Raise exception if ScreenManager.start() is called twice
+  - [#648] Avoid touch event propagation on ScreenManager transition
+  - [#662] Enhance TextInput performance
+  - [#706] Fix pos_hint Boxlayout calculation
+  - [#725] Fix collapse management in Accordion
+  - [#734] Fix widget opacity when passed in the constructor
+  - [#736] Fix slider bug when min &lt; 0, max &lt; 0 and step &gt; 0
+  - [#737] Better swipe gesture detection for Carousel
+  - [#747] Honor index in Carousel.add_widget() (and Bubble)
+  - [#750] New CodeInput widget
+  - [#771] Dispatch modalview.on_open after animation
+  - [#785] Allow event binding in Widget constructor
+  - [#819] Fix canvas positioning when inserting at first position
+  - [#824] Add top-to-bottom + right-to-left Stacklayout orientations.
+  - [#832] Fix shorten routine
+  - Automatically register new Widget classes in Factory
+  - Enhance ScrollView scrolling
+  - Fix Carousel API, containers are now hidden, and
+    slides/current_slide/previous_slide/next_slide are the user
+    widgets.
+  - Fix Label.color property for markup labels
+  - Multiples fixes to TabbedPanel (tab_strip, unbind, tab selection)
+
+
+Others
+------
+
+  - [#670] New compass demo for Android using sensors
+  - Many many fixes on the documentation, thanks for all the PR!
+  - New KivyCatalog example: interactive Kv editor
+  - Started Guide 2.0
+</pre>
+
 <h3>1.4.1 (Sep 30, 2012)</h3>
 <pre class="changelog">
 Core
