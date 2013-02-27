@@ -229,11 +229,17 @@ h2.icon-gpu {
 		clear: both;
 }
 
+.features p {
+	margin-top: 40px;
+	margin-bottom: -30px;
+}
+
 .feature-item {
-		width: 280px;
+		-width: 280px;
+		width: 190px;
 		line-height: 180%;
 		float: left;
-		margin-right: 50px;
+		margin-right: 20px;
 }
 
 .feature-item.item-2-col {
@@ -242,6 +248,7 @@ h2.icon-gpu {
 
 .feature-item.last {
 		margin-right: 0px;
+		width: 260px;
 }
 
 /** Galery page
