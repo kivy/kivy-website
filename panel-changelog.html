@@ -1,5 +1,75 @@
 <h2>Changelog</h2>
 
+<h3>1.6.0 (Mar 10, 2013)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#1001] Add justify support for text alignment
+  - [#828] Fixed descriptor error in EventDispatcher.getattr
+  - [#886] Fixes memory leak when log_enable = 0 in config
+  - [#895] Fixes network image reloading
+  - [#902] Fixes Python strings for 2.6
+  - [#920] Fixes ImageIO crash if image cannot be loaded
+  - [#985] Fixes zip loader to skip errors
+  - Add support for GIF transparency in PIL
+  - Core logs are now reduced, and traceback is available only in trace
+  - Enhance Clock to accept only callable() in schedule methods
+  - EventDispatcher can be weak-referenced
+  - Fixes image reloading when Window is resized on OSX
+  - Fixes Window fullscreen, even when the config is "auto"
+  - Fixes Window.screenshot for rotated window
+  - Improve Kv: avoid to parse on_* expression, just exec them.
+  - New MotionEvent.is_mouse_scrolling
+  - Rework Loader internals, limit to 2 threads workers and images upload per frames
+
+Graphics
+--------
+
+  - [#913] Fixes Line.ellipse/circle instructions
+  - Add Texture support for paletted texture
+  - Add Texture support for PVRTC (iOS and PowerVR GPU only)
+  - Enhanced vertex format to allow custom format.
+  - Fixes crash on the Adreno 200 GPU / Android - force POT texture
+  - Reworked graphics vertex instructions to support custom format as well
+
+Widgets
+-------
+
+  - [#863] Improve ListView usage with Kv language
+  - [#865] New Bubble.limit_to for limiting the bubble position
+  - [#868] Fixes Slider positioning when padding is used
+  - [#883] Fixes empty markup rendering
+  - [#916] Fixes cursor positionning in CodeInput
+  - [#921] Fixes Scrollview scrolling with mousewheel if it's disabled
+  - [#928] Image log an error when an image cannot be loaded
+  - [#937] Fixes BoxLayout.pos_hint for children
+  - [#940] Enhance TextInput bubble for long-press and readonly
+  - [#941] Fixes ProgressBar value boundaries
+  - [#954] Fixes GridLayout children size_hint
+  - [#959] Add ListAdapter.data property to allow changing the data
+  - [#961] Fixes ScreenManager green color to black in ShaderTransition
+  - [#966] New TextInput placeholder
+  - [#989] Fixes Carousel positioning and reduce calculations
+  - Add mousewheel support on Slider
+  - Enhance TabbedPanel to allow no default tab
+  - Fixes for TextInput rendering glitch
+  - Fixes RelativeLayout.clear_widgets()
+  - Fixes ScrollView gesture ability on X when scrollview is Y only (and the inverse)
+  - Fixes TextInput wrapping
+  - New (Async)Image.nocache no prevent caching (data, texture)
+  - New Screen events: on_pre_enter/enter/pre_leave/leave
+  - New ScreenManager.has_screen() method
+
+Others
+------
+
+  - Fixes inspector crash
+  - iOS: Updated SDL, launch images are now supported
+  - New 3D rendering example with lightning and a monkey
+  - Tons of fixes on Documentation !
+</pre>
+
 <h3>1.5.1 (Dec 13, 2012)</h3>
 <pre class="changelog">
 Widgets
