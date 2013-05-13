@@ -1,5 +1,83 @@
 <h2>Changelog</h2>
 
+<h3>1.7.0 (May 13, 2013)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#1020] new App.user_data_dir, where user can store app state
+  - [#1047] new markup subscript/superscript
+  - [#1145] fix numpad keys mapping in Window
+  - Animation starts the timer at the first frame instead on start()
+  - Enhance clock calculation to have less glitch and be closer to 60 FPS.
+  - New VariableListProperty property that support 1, 2 or 4 values. used for padding, spacing...
+  - No more crash if no video core provider have been found
+  - Refactoring event declaration, use __events__ instead of register_event_type()
+  - Refactoring properties storage into a Cython class instead of a dict
+
+Graphics
+--------
+
+  - [#1014] force Context.gc() to dealloc gl resources
+  - add etc1 support for textures
+  - fix Buffer memory allocation for block with the same size
+  - fixes to support GL from Android emulator
+  - fix shader warning when both vertex and fragment are set
+  - new Fbo.pixels
+  - new Matrix.project() for 3d to 2d transformation
+  - new RenderContext use_parent_modelview and use_parent_projection
+  - new Texture.pixels and Texture.save(fn)
+
+Widgets
+-------
+
+  - [#1005] new Popup.title_size for title font size
+  - [#1018] better Slider support for padding
+  - [#1021] fix widget insertion with/without canvas.before
+  - [#1032] fix Carousel animation when looping between 2 slides
+  - [#1052] fix TextInput to allow ctrl+c work in readonly
+  - [#1091] fix StackLayout spacing in multiple orientations
+  - [#1122] improve splitter dragging
+  - [#1140] fix ScreenManager when rotation is applied
+  - [#1148] avoid freezing when a ModalView is open twice
+  - fix DPI issues on Slider
+  - introduce ScrollView effect, such as DampingScrollView and OpacityScrollview
+  - introducing ScatterLayout (which is same as RelativeLayout, but based on Scatter)
+  - new ColorPicker widget
+  - new Scatter.translation_touches to allow translation only with X touches
+  - refactoring RelativeLayout with only translation
+  - refactoring ScrollView, improved performance and behavior
+  - TextInput now use double and triple tap to select word and line
+  - TextInput select the whole text on 4 touches
+  - Various changes for padding, spacing, for supporting 1, 2 or 4 values
+
+Lang
+----
+
+  - introduce prefix '-' to avoid applying previous rules
+  - new Dynamic classes, Templates are now deprecated
+
+Inputs
+------
+
+  - fix doubletap behavior
+  - new tripletap post-processor module
+
+Others
+------
+
+  - [#1023] better inspector widget selection
+  - [#1024] add font-size demo to showcase
+  - [#1038] fix Gstreamer sound.seek()
+  - [#1125] more fixes on listview examples
+  - [#849] new kivywinescript to execute kivy python within wine
+  - Garden project! Including kivy.garden and garden script
+  - new kivy.storage api for storage abstraction (experimental)
+  - Refactoring documentation
+  - tons of documentation fixes by Zen-CODE!
+
+</pre>
+
 <h3>1.6.0 (Mar 10, 2013)</h3>
 <pre class="changelog">
 Core
