@@ -45,12 +45,12 @@
 	},
 	{
 		"id": "kivy13",
-		"title": "Kivy 1.6.0 released!",
+		"title": "Kivy 1.7.0 released!",
 		"featured": 1,
 		"media": "http://kivy.org/slides/kivy13-featured.jpg",
 		"raw_link": "<a href='#download' rel='panelg'>Download Now !</a>",
 		"description": [
-			"New UI theme, Tabbed Panel, REPL support"
+			"New ColorPicker, Improved Scrolling + effects, kivy.garden project"
 		]
 	},
 	{
