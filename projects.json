@@ -1,208 +1,207 @@
 [
-	{
-		"id": "particlepanda",
-		"title": "Particle Panda",
-		"featured": 1,
-		"media": "http://www.youtube.com/watch?v=MOYxeLdQinA",
-		"description": [
-			"Create particle effect for particle systems<br/>",
-			"used in Starling, Kivy and Cocos2d<br/>",
-			"Working on Desktop and mobile."
-		],
-		"footer": [
-			"<a href='http://www.particlepanda.com'>Website</a>",
-			" - <a href='https://play.google.com/store/apps/details?id=org.cbl.particlepanda'>Google Play</a>",
-			" - by <a href='http://www.chaosbuffalolabs.com/'>Chaos Buffalo Labs</a>"
-		]
-	},
-	{
-		"id": "yeco",
-		"title": "Yeco",
-		"featured": 1,
-		"media": "http://www.youtube.com/watch?v=KxkxRKY2Z4M",
-		"description": [
-			"Yeco is a multi touch controller for Ableton Live<br/>",
-			"Working on Windows 32/64, Mac soon"
-		],
-		"footer": [
-			"<a href='http://www.multitouchmusic.com/software-2/yeco/'>Website</a>",
-			" - by <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
-		]
-	},
-	{
-		"id": "processcraft",
-		"title": "ProcessCraft",
-		"featured": 1,
-		"media": "http://www.youtube.com/watch?v=9rk9OQLSoJw",
-		"description": [
-			"Commercial application for Business Process Modeling<br/>",
-			"Running on iOS, Android, and others desktop OS"
-		],
-		"footer": [
-			"<a href='http://showgen.com/'>Website</a>",
-			" - by Showgen Ltd."
-		]
-	},
-	{
-		"id": "kivy13",
-		"title": "Kivy 1.7.0 released!",
-		"featured": 1,
-		"media": "http://kivy.org/slides/kivy13-featured.jpg",
-		"raw_link": "<a href='#download' rel='panelg'>Download Now !</a>",
-		"description": [
-			"New ColorPicker, Improved Scrolling + effects, kivy.garden project"
-		]
-	},
-	{
-		"id": "contest2012-end",
-		"title": "Kivy Contest #1 - finished!",
-		"featured": 1,
-		"media": "http://kivy.org/slides/contest2012-end-featured.jpg",
-		"raw_link": "<a href='#contest' rel='panelg'>See the contest result &raquo;</a>",
-		"description": [
-			"Contest is over, and we have got awesome submissions!<br/>",
-			"Congratulations to all participants, ",
-			"<a href='http://notionink.com'>NotionInk</a> and ",
-			"<a href='http://github.com'>Github</a>"
-		]
-	},
-	{
-		"id": "deflectouch",
-		"title": "Deflectouch",
-		"media": "http://youtube.com/watch?v=1Qa98oSPgi0",
-		"featured": 1,
-		"description": [
-			"Multitouch game, first place of the Kivy Contest #1"
-		],
-		"footer": [
-			"<a href='http://github.com/stocyr/Deflectouch/'>Source Code</a>",
-			" - by Cyril Stoller"
-		]
-	},
-	{
-		"id": "fishlife",
-		"title": "FishLife",
-		"media": "http://kivy.org/slides/fishlife.jpg",
-		"featured": 1,
-		"description": [
-			"Multitouch game, second place of the Kivy Contest #1"
-		],
-		"footer": [
-			"<a href='http://github.com/Zogg/FishLife'>Source Code</a>",
-			" - by Zogg"
-		]
-	},
-	{
-		"id": "memorykivy",
-		"title": "memoryKivy",
-		"featured": 1,
-		"media": "http://kivy.org/slides/memorykivy.jpg",
-		"description": [
-			"Multitouch game, third place of the Kivy Contest #1"
-		],
-		"footer": [
-			"<a href='http://github.com/niavlys/memoryKivy/'>Source Code</a>",
-			" - by Niavlys"
-		]
-	},
-	{
-		"id": "tictactouch",
-		"title": "TicTacTouch",
-		"media": "http://www.youtube.com/watch?v=FhRXAD8-UkE",
-		"featured": 1,
-		"description": [
-			"Multitouch screen used for control a PLC hardware machine."
-		],
-		"footer": [
-			"By Dominique Burnand and Livio Conzett"
-		]
-	},
-	{
-		"id": "bargenius",
-		"title": "bargenius",
-		"media": "http://vimeo.com/29348760",
-		"featured": 1,
-		"description": [
-			"Interactive tablet menu with wine, beer, cocktail...<br/>",
-			"Clean design with cool touch interaction, on android !"
-		],
-		"footer": [
-			"<a href='http://fresklabs.com/projects/bargenius'>Website</a>",
-			" - by <a href='http://fresk.co/'>fresk interactive</a>"
-		]
-	},
-	{
-		"id": "kaleidoscope",
-		"title": "Kaleidoscope",
-		"media": "http://vimeo.com/29673059",
-		"featured": 1,
-		"description": [
-			"Educational project using 4 tablets and 1 table with projection.<br/>",
-			"Augmented knowledge table, that can be shared across tablet."
-		],
-		"footer": [
-			"<a href='http://github.com/tito/Kaleidoscope/'>Source Code</a>",
-			" - by <a href='http://erasme.org/'>Erasme</a>"
-		]
-	},
+    {
+        "id": "particlepanda",
+        "title": "Particle Panda",
+        "featured": 1,
+        "media": "http://www.youtube.com/watch?v=MOYxeLdQinA",
+        "description": [
+            "Create particle effect for particle systems<br/>",
+            "used in Starling, Kivy and Cocos2d<br/>",
+            "Working on Desktop and mobile."
+        ],
+        "footer": [
+            "<a href='https://github.com/chaosbuffalolabs/ParticlePanda'>Source Code</a>",
+            " - <a href='https://play.google.com/store/apps/details?id=org.cbl.particlepanda'>Google Play</a>",
+            " - by <a href='https://github.com/chaosbuffalolabs/'>Chaos Buffalo Labs</a>"
+        ]
+    },
+    {
+        "id": "yeco",
+        "title": "Yeco",
+        "featured": 1,
+        "media": "http://www.youtube.com/watch?v=KxkxRKY2Z4M",
+        "description": [
+            "Yeco is a multi touch controller for Ableton Live<br/>",
+            "Working on Windows 32/64, Mac soon"
+        ],
+        "footer": [
+            "By <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
+        ]
+    },
+    {
+        "id": "processcraft",
+        "title": "ProcessCraft",
+        "featured": 1,
+        "media": "http://www.youtube.com/watch?v=9rk9OQLSoJw",
+        "description": [
+            "Commercial application for Business Process Modeling<br/>",
+            "Running on iOS, Android, and others desktop OS"
+        ],
+        "footer": [
+            "<a href='http://showgen.com/'>Website</a>",
+            " - by Showgen Ltd."
+        ]
+    },
+    {
+        "id": "kivy13",
+        "title": "Kivy 1.7.0 released!",
+        "featured": 1,
+        "media": "http://kivy.org/slides/kivy13-featured.jpg",
+        "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
+        "description": [
+            "New ColorPicker, Improved Scrolling + effects, kivy.garden project"
+        ]
+    },
+    {
+        "id": "contest2012-end",
+        "title": "Kivy Contest #1 - finished!",
+        "featured": 1,
+        "media": "http://kivy.org/slides/contest2012-end-featured.jpg",
+        "raw_link": "<a href='#contest' rel='panelg'>See the contest result &raquo;</a>",
+        "description": [
+            "Contest is over, and we have got awesome submissions!<br/>",
+            "Congratulations to all participants, ",
+            "<a href='http://notionink.com'>NotionInk</a> and ",
+            "<a href='http://github.com'>Github</a>"
+        ]
+    },
+    {
+        "id": "deflectouch",
+        "title": "Deflectouch",
+        "media": "http://youtube.com/watch?v=1Qa98oSPgi0",
+        "featured": 1,
+        "description": [
+            "Multitouch game, first place of the Kivy Contest #1"
+        ],
+        "footer": [
+            "<a href='http://github.com/stocyr/Deflectouch/'>Source Code</a>",
+            " - by Cyril Stoller"
+        ]
+    },
+    {
+        "id": "fishlife",
+        "title": "FishLife",
+        "media": "http://kivy.org/slides/fishlife.jpg",
+        "featured": 1,
+        "description": [
+            "Multitouch game, second place of the Kivy Contest #1"
+        ],
+        "footer": [
+            "<a href='http://github.com/Zogg/FishLife'>Source Code</a>",
+            " - by Zogg"
+        ]
+    },
+    {
+        "id": "memorykivy",
+        "title": "memoryKivy",
+        "featured": 1,
+        "media": "http://kivy.org/slides/memorykivy.jpg",
+        "description": [
+            "Multitouch game, third place of the Kivy Contest #1"
+        ],
+        "footer": [
+            "<a href='http://github.com/niavlys/memoryKivy/'>Source Code</a>",
+            " - by Niavlys"
+        ]
+    },
+    {
+        "id": "tictactouch",
+        "title": "TicTacTouch",
+        "media": "http://www.youtube.com/watch?v=FhRXAD8-UkE",
+        "featured": 1,
+        "description": [
+            "Multitouch screen used for control a PLC hardware machine."
+        ],
+        "footer": [
+            "By Dominique Burnand and Livio Conzett"
+        ]
+    },
+    {
+        "id": "bargenius",
+        "title": "bargenius",
+        "media": "http://vimeo.com/29348760",
+        "featured": 1,
+        "description": [
+            "Interactive tablet menu with wine, beer, cocktail...<br/>",
+            "Clean design with cool touch interaction, on android !"
+        ],
+        "footer": [
+            "<a href='http://fresklabs.com/projects/bargenius'>Website</a>",
+            " - by <a href='http://fresk.co/'>fresk interactive</a>"
+        ]
+    },
+    {
+        "id": "kaleidoscope",
+        "title": "Kaleidoscope",
+        "media": "http://vimeo.com/29673059",
+        "featured": 1,
+        "description": [
+            "Educational project using 4 tablets and 1 table with projection.<br/>",
+            "Augmented knowledge table, that can be shared across tablet."
+        ],
+        "footer": [
+            "<a href='http://github.com/tito/Kaleidoscope/'>Source Code</a>",
+            " - by <a href='http://erasme.org/'>Erasme</a>"
+        ]
+    },
 
-	{
-		"id": "touchlive",
-		"title": "Touch Live",
-		"media": "http://www.youtube.com/watch?v=4a74AwaAheM",
-		"featured": 1,
-		"description": [
-			"Monome-like controller implemented in Kivy.</br>",
-			"Graham is creating his own music on it."
-		],
-		"footer": [
-			"<a href='http://github.com/grmcom/TouchLive/'>Source Code</a>",
-			" - by Graham Comerford"
-		]
-	},
+    {
+        "id": "touchlive",
+        "title": "Touch Live",
+        "media": "http://www.youtube.com/watch?v=4a74AwaAheM",
+        "featured": 1,
+        "description": [
+            "Monome-like controller implemented in Kivy.</br>",
+            "Graham is creating his own music on it."
+        ],
+        "footer": [
+            "<a href='http://github.com/grmcom/TouchLive/'>Source Code</a>",
+            " - by <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
+        ]
+    },
 
-	{
-		"id": "touchcontinuum",
-		"title": "Icarus Touch",
-		"media": "http://www.youtube.com/watch?v=u4NRu7mBXtA",
-		"featured": 1,
-		"description": [
-			"Continuous keyboard implemented in Kivy.<br/>",
-			"Cyril is improvising over some backing tracks."
-		],
-		"footer": [
-			"Made by Cyril Stoller from <a href='http://www.liquidrain.net'>Liquid Rain</a> - ",
-			"<a href='https://github.com/stocyr/IcarusTouch'>Source Code</a>"
-		]
-	},
+    {
+        "id": "touchcontinuum",
+        "title": "Icarus Touch",
+        "media": "http://www.youtube.com/watch?v=u4NRu7mBXtA",
+        "featured": 1,
+        "description": [
+            "Continuous keyboard implemented in Kivy.<br/>",
+            "Cyril is improvising over some backing tracks."
+        ],
+        "footer": [
+            "Made by Cyril Stoller from <a href='http://www.liquidrain.net'>Liquid Rain</a>",
+            " - <a href='https://github.com/stocyr/IcarusTouch'>Source Code</a>"
+        ]
+    },
 
-	{
-		"id": "thenobooth",
-		"title": "The noBOOTH",
-		"media": "http://vimeo.com/25680681",
-		"featured": 1,
-		"description": [
-			"Interactive touchscreen using Kivy for taking<br/>",
-			"pictures and customize the photo with some gadgets."
-		],
-		"footer": [
-			"<a href='http://thenobooth.com/'>Website</a>",
-			" - by <a href='http://fresk.co/'>fresk interactive</a>"
-		]
-	},
+    {
+        "id": "thenobooth",
+        "title": "The noBOOTH",
+        "media": "http://vimeo.com/25680681",
+        "featured": 1,
+        "description": [
+            "Interactive touchscreen using Kivy for taking<br/>",
+            "pictures and customize the photo with some gadgets."
+        ],
+        "footer": [
+            "<a href='http://thenobooth.com/'>Website</a>",
+            " - by <a href='http://fresk.co/'>fresk interactive</a>"
+        ]
+    },
 
-	{
-		"id": "planewhite",
-		"title": "Plane White",
-		"media": "http://www.youtube.com/watch?v=pI635uAppoU",
-		"featured": 1,
-		"description": [
-			"Interactive white surface for discovering art exhibition."
-		],
-		"footer": [
-			"<a href='https://github.com/theoo/planewhite'>Source Code</a> ",
-			" - by <a href='http://www.complex.ch'>Complex IT</a> and ",
-			"<a href='http://carinaow.com'>Carina Ow</a>"
-		]
-	}
+    {
+        "id": "planewhite",
+        "title": "Plane White",
+        "media": "http://www.youtube.com/watch?v=pI635uAppoU",
+        "featured": 1,
+        "description": [
+            "Interactive white surface for discovering art exhibition."
+        ],
+        "footer": [
+            "<a href='https://github.com/theoo/planewhite'>Source Code</a> ",
+            " - by <a href='http://www.complex.ch'>Complex IT</a> and ",
+            "<a href='http://carinaow.com'>Carina Ow</a>"
+        ]
+    }
 ]
