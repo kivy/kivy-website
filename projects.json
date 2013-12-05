@@ -1,4 +1,15 @@
 [
+	{
+		"id": "kivycrashcourse",
+		"title": "Kivy crash course",
+		"featured": 1,
+		"media": "https://www.youtube.com/watch?v=t8N_8WkALdE&list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq",
+        "raw_link": "<a href='https://www.youtube.com/playlist?list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq'>Watch the videos &raquo;</a>",
+		"description": [
+			"Learn how to make Kivy apps<br/>",
+			"with Alexander Tayler's videos."
+		]
+	},
     {
         "id": "particlepanda",
         "title": "Particle Panda",
