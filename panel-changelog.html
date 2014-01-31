@@ -1,5 +1,413 @@
 <h2>Changelog</h2>
 
+<h3>1.8.0 (Jan 30, 2014)</h3>
+<pre class="changelog">
+- Python 3.3 compatibility
+
+Core
+----
+
+  - [#1631] Extend core_select_lib to be used for other libs other than just kivy.core
+  - [#1678] Gracefully exit if no core provider is found
+  - [#1740] Dynamically lookup the class when a string is set for various widget with _cls properties
+
+  Audio
+
+  - [#1196] Fix sound looping issues
+  - [#1209] Fix audio issues on iOS
+  - [#1311, #1269] Fix volume property
+  - New GstPlayer backend
+
+  Camera
+
+  - [#1369, #1053, #65] New avfoundation Camera provider for Mac OSX
+
+  Clipboard
+
+  - Introduce native clipboard provider for Android
+  - Add only the correct provider depending on the platform
+
+  Image
+
+  - [#1696] Improve reload of images on context reload
+  - [#1809] Use resource_find to load images
+  - Image/texture: add `flipped` parameter for `save` method
+
+  Text
+
+  - [#1186] Various fixes for managing proper GL reload on GL context change
+  - [#1274] Fix unicode handling in shorten routine
+  - [#1334] Make shorten work with single words
+  - [#1376] Label: add `max_lines` to limit the number of lines rendered in a label
+  - [#796] Pygame provider: Try to use ftfont before font
+  - Fix for handling unicode font names
+
+  Video
+
+  - [#1490] Fix detection or uri
+  - Introduce GstPlayer backend replacing pygst and pygi
+  - Make sure video stop and play works on Windows
+
+  Window
+
+  - [#1253] Change default clearcolor to (0, 0, 0, 1)
+  - [#1408] Avoid multiple binding to keyboard
+  - [#1455, #1711] Improve screenshot method
+  - [#1667] Fix bad-looking icon on Windows 7
+  - [#1830] X11 window provider improvements. Introduction of KIVY_WINDOW_ABOVE and NETWM_PID
+  - Fix handling of escape key
+
+Base
+----
+
+  App
+
+  - [#1233] Fix title change not reflecting on ui after `build`
+  - [#1546] Raise a default exception when app.root is not of type `Widget`
+  - Adds new methods to display/configure Settings panel
+  - New properties for configuring Kv file search
+  - Changed to consistently use Properties for configuration
+
+  Animation
+
+  - [#1547, #1682] Avoid duration=0 animations from crashing the app
+  - Fix leak caused by cancel() not releasing widget reference
+
+  Atlas
+
+  - [#1285] Allow generation of an atlas with path info in the ids from the command line
+  - Update command line to allow padding and size specification with "WIDTHxHEIGHT"
+
+  Config
+
+  - Various fixes for default values on Windows and Linux.
+  - [#1084] Fix for allowing unicode string / path in Settings
+  - [#1537] Add option to not exit app on escape
+
+  Clock
+
+  - New properties for tracking frame time
+  - Introduce @mainthread decorator for working with threads
+  - Allow clock events to be canceled, utilizing `cancel` method
+
+  EventDispatcher
+
+  - [#1315] Make sure disabling multi-touch emulation works
+  - [#1335] Fix touch ring persistence when using multiple virtual keyboards
+  - [#1338] Reverse the order of dispatching event stack
+  - Introduce `events` and `get_property observers()` method that returns a dict of properties/events and a list of methods that are bound to them
+
+  Factory
+
+  - [#1223] Allow unregistering of widgets
+  - [#1726, #1729, #1277] Raise appropriate error when trying to access a non-existent class
+
+  Gesture
+
+  - [#1790] Use BytesIO for internal encoding/compression instead of StringIO
+
+  Graphics
+
+  - [#1199] Fix Python Bindings
+  - [#1337] Allow graphics instructions to be animated
+  - [#1345] Allow 3D picking
+  - [#1393] Texture fix repeating texture loss while GL context reload
+  - [#1422] FBO use memoryview instead of buffer
+  - [#1488] Added VBO support for glDrawElements and glVertexAttribute
+  - [#1529] Ellipse - Faster algorithm when drawing circle
+  - [#1551] Introduce segment_intersection
+  - [#1671] Support member for origin in rotate constructor
+  - [#1723] Use ctypes to display a dialog on win32 instead of win32ui
+  - [#955] Correctly deallocate shader sources
+  - Force npot texture allocation with GPUs that only support npot
+  - Shaders: Fix loss of precision that breaks rendering
+  - Shaders: Support array
+
+  Lang
+
+  - [#1028, #1734, #302] Allow app.kv_directory to work
+  - [#1234] Use resource_find to find the filename
+  - [#1388] Fix various memory leaks
+  - [#1519] Instead of creating an ObjectProperty for every new property declared in Kv lang, detect it’s type and instantiate relevant Numeric/String/List/DictProperty
+  - [#991] Add warning if Kv file is loaded multiple times
+  - Allow `_` to be checked as if it was a key.value property
+
+  Logger
+
+  - [#1721] Python3 compatibility fixes
+  - [#825] Ensure arguments to the logger are strings
+  - Force logging.root to use Kivy Logger instance. Fixes infinite loop
+
+  Network
+
+  - [#1248] Introduce `decode` property. Makes decoding optional
+  - [1316, #1224, #1221, #1286] UrlRequest: various improvements
+  - [#1457] Make sure parameters aren’t removed
+  - [#1719] OSC: Fix usage for client
+  - Introduce `file_path` argument
+
+  Properties
+
+  - [#1243] Make BoundedNumeric Property more accurate
+  - [#1389] Allow individual elements of ReferenceListProperty to be changed
+  - [#1468] Stop DictProperty from deleting key if value is None
+  - Introduce `VariableListProperty`
+  - Properly return result in ObservableDict.setdefault
+
+Input
+-----
+
+  - [#1119] Fix touch offset on various touch screen hardware
+  - [#1489] New input provider for Leap Motion
+  - Add support for tuio/2dblb(CCV 15)
+  - Introduce MotionEvent.`last__motion_event`
+
+  PostProc
+
+  - [#1204] Fix double tap and triple tap detection
+  - [#1348] Fix double and triple tap detection on Windows
+
+
+Modules
+-------
+
+  - [#1668] Add late configuration if module has been added manually before the window creation
+
+  Inspector
+
+  - [#1549, #1684] Fix inspection of elements in popup. by looking at ModalView before other elements
+  - [#1361, #1365] Allow position of inspector to be adjustable
+
+  Recorder
+
+  - [#1800] Introduce `F6` shortcut to play last record in a loop
+
+  Screen
+
+  - [#1448] Add support for scale
+  - [#1687, #1686] Fix all resolutions to be landscape
+  - Remove 25dp from height to simulate the Android systemui bar
+
+  WebDebugger
+
+  - [#1819] WebDebugger: Display instant value of each box
+
+Widgets
+-------
+
+  - [#1238] PageLayout: A simple multi-page layout allowing flipping through pages using borders
+  - [#1264] ActionBar: Mimics Android’s own ActionBar appearance and mechanisms
+  - [#1471] Behaviors: ButtonBehavior, ToggleButtonBehavior ,DragBehavior
+  - SandBox (experimental): Runs itself and its children in an exception-catching sandbox
+
+  Accordion
+
+  - [#1249] Stop empty accordion from accessing it’s first child
+  - [#1340] Fix select method
+
+  Bubble
+
+  - [#1273] Honor `arrow_pos` when passed as a arg in constructor.
+  - Introduce`show_arrow` property
+
+  Button
+
+  - [#1212] Introduce `trigger_action()` for triggering the button programmatically
+
+  Carousel
+
+  - Introduce `load_slide` method to animate the provided slide in/out
+  - Introduce `anim_type` property to be able to choose the type of animation
+
+  CheckBox
+
+  - [#1695] Fix active state in group
+
+  CodeInput
+
+  - Minor rendering fixes
+  - Use MonoSpace font by default
+
+  Dropdown
+
+  - Delay container binding, allow it to be used in Kv
+  - [#1450] Introduce `on_dismiss` event
+  - Pressing escape when dropdown is active now dismisses the dropdown
+  - Make auto-dismiss of dropdown optional. Introduces `auto_dismiss` property
+
+  FileChooser
+
+  - [#1476] Fix inability to browse up to the root path
+  - [#1758] Prevent infinite loop
+  - [#1780] Fix incorrect selections caused by touch offset
+  - [#1818, #1829] Fix unicode issues. Now, path defaults to a unicode string
+  - Abstracted filesystem access
+  - If a path is expected to contain non unicode-decodable characters, a bytes path string should be used. Otherwise, unicode paths are preferred
+
+  Image
+
+  - [#1561] Don’t crash if an invalid image is loaded
+
+  ListView
+
+  - [#1303, #1304] Set ListItemButton background_color
+  - [#1396, #1397] Accepts objects inheriting from list or tuple in SimpleListAdaptor
+  - [#1788] Fix None, int comparison
+
+  Popup
+
+  - Introduce `title_color` property
+
+  Progressbar
+
+  - Avoid dev/zero when max is zero
+
+  RstDoc
+
+  - Introduce `background_color` property
+
+  Scatter
+
+  - [#1459] Minor fixes for scaling
+  - [#1797] Fix div by 0 issue where touch itself was chosen as anchor
+  - [#947] Fix scale being dispatched again due to error in floating point calculation
+  - Various fixes for transformation
+
+  ScreenManager
+
+  - [#1750] Add NoTransition transition
+  - [#573, #1045] Introduce `switch_to` method fixes for
+  - Fix Shader-based transitions, allowing them to work in non-fullscreen mode
+  - New Screen transitions, mimicking Android
+  - Reduce default transition duration and set default transition to SlideTransition
+  - Set clear color to be transparent
+
+  ScrollView
+
+  - [#1387] Show scrollbars only when viewport is scrollable
+  - [#1463] Refactor kinect constants
+  - [#1478, #1567] Introduce bars scrolling for desktop type behavior
+  - [#1604] Fix overscroll on low FPS
+  - Accelerated scrolling by default using Matrix instead of moving the child
+  - Introduce `bar_pos`, `bar_side_x` and `bar_side_y` properties allowing the user to control where the the bars are displayed
+  - Introduce `scroll_wheel_distance` property
+
+  Slider, Spinner
+
+  - DPI fixes making the widget aware of screen metrics
+
+  Splitter
+
+  - [#1655, #1658] Make double tap on border alternate between max/min size
+  - [#1656, #1672, #1673, #1810, #1812] Miscellaneous fixes
+  - [#1657] Don’t allow negative sizes
+  - Make sure splitter remains between min/max_size when these properties are changing
+
+  Settings
+
+  - [#1228] Fix for allowing unicode path
+  - [#1556] Made SettingsString textinput scale independent
+  - [#1590] Prevent import of SettingsWithSpinner when custom class is used
+  - Fixes for SettingsPanel that allows it to adjust to mobile screens
+  - Fix handling of numeric input
+  - Made various behaviors (settings popups, fonts) more scale independent
+  - Make the default tab active in SettingsWithTabbedPanel
+  - Now includes different Settings widgets, suitable for different devices
+
+  StackLayout
+
+  - [#1390] Simply `do_layout`
+
+  TabbedPanel
+
+  - [#1402] Introduce `strip_image` and `strip_border` properties to allow skinning the TabbedPanelStrip
+  - [#1799] Honor index while inserting TabbedPanelHeader
+  - Fix bug when selected tab is removed before switching to it
+
+  TextInput
+
+  - [#1496] Introduce `allow_copy`,  to allow the user to choose whether Textinput allows copy or not
+  - [#1632, #1717] Fixes for selection offset issues
+  - [#1639, #1500] Make sure cursor remains inside TextInput
+  - [#1647] Introduction of  Handles for selection on mobile enabled by `use_handles`property
+  - [#1697] Introduce `Keyboard_mode` to allow custom management of keyboard
+  - [#1702] `copy`, `cut`, `paste` methods to allow the user to manage clipboard operations
+  - [#1774] Fixes for voice input
+  - Introduce `line_spacing`
+  - Introduce `minimum_height` property to be used in conjunction with scrollview
+  - Introduction of `input_type` property that is used to specify the kind of IME to request from the OS
+  - Introduction of `keyboard_suggestion` allowing native keyboards on Android to show word suggestions
+  - Various fixes for cut/copy/paste
+  - Various `Unicode` fixes. Textinput now maintains a unicode sandwich
+
+  Videoplayer
+
+  - [#1275] Fix looping
+  - [#1823] Ensure vdeo is loaded before loading the state
+
+  Vkeyboard
+
+  - [#958] Fix custom layout usage
+  - [#1333] Don’t dispatch touch to other widgets while moving
+  - [#1404] Introduce dual keyboard mode `systemanddock`and `systemandmulti`
+  - `Layout` property can directly point to a JSON file name now
+
+  Widget
+
+  - [#1209] Introduce `disabled` property
+  - [#1452] Add children= argument to clear_widgets()
+
+Platforms
+---------
+
+  RaspberryPi
+
+  - [#1241] Fix installation of vidcore_lite for RPi
+  - Add support for “relative” hid input as mouse
+  - Fix configuration generation, and fix hidinput provider for multitouch hardware
+  - Introduce new window provider specifically for RPi
+
+Tools
+-----
+
+  - [#1352] Improvements to highlighting file for emacs
+  - [#1527, #1538] Move Kivy Garden to it’s own repository
+  - [#1807] support for using hidinput to display mouse cursor
+  - Make Garden Tool Python 3 compatible
+
+Doc
+---
+
+  - Tons of doc fixes thanks to the awesome community
+  - Special Thanks to ZenCODE for his awesome work on improving the doc
+
+Examples
+--------
+
+  - Various redesign, fixes and improvements making examples fit better on mobile
+  - New Kivy Showcase, designed to fit much better on mobile devices
+  - New `Take Picture` example to demonstrate how to use startActivtyForResult and how to get the result with python-for-android android.activity module
+  - Rework compass example to work with py4a and remove all broken code
+
+Unit Tests
+----------
+
+  - [#1226] New test for testing unicode font names
+  - [#1544] Add unit tests for Vector class
+  - [#1828] Unicode Filechooser tests
+  - [#823] Add test case for issue
+  - Improve tests with new proxy_ref
+  - Various tests introduced to test Python3 port
+
+Packaging
+---------
+
+  - Tons of fixes and new packages for Python 3
+  - [#1540] Various fixes for Windows launcher
+  - [#1599] Various fixes for installation on 32 bit Mac OSX
+
+</pre>
+
 <h3>1.7.2 (Aug 4, 2013)</h3>
 <pre class="changelog">
   - [#1270] Fix slowdown in graphics pipeline during gc
@@ -1231,28 +1639,58 @@ $('pre.changelog').each(function (i1, elem) {
 	for ( var i = 0; i < lines.length; i++ ) {
 		var line = lines[i];
 		var firstchar = line.substr(0, 1);
-		var data = null
+		var data = null;
+		var empty = false;
+		var istitle = false;
 
 		if ( firstchar == ' ' ) {
 			line = line.substr(2);
+
+			if ( line.substr(0, 1) != '-' && !empty ) {
+				if ( gotlist )
+					output.push('</ul>');
+				output.push('<h5>' + line + '</h5>');
+				if ( gotlist )
+					output.push('<ul>');
+				empty = false;
+			} else {
+
 			if ( line.substr(0, 1) != '-' ) {
 				// append to previous element
 				var l2 = output.pop();
 				line = l2.substr(4, l2.length-5) + ' ' + line;
+				empty = false;
 			} else {
-				line = line.substr(2);
+				if ( line == '' )
+					empty = true;
+				else {
+					if ( empty == true )
+						istitle = true;
+					line = line.substr(2);
+				}
 			}
+			if ( istitle && line != '' ) {
+				output.push('<h5>' + line + '</h5>');
+				istitle = false;
+				empty = false;
+			}
+
 			if ( gotlist == false ) {
 				output.push('<ul>');
 				gotlist = true;
 			}
 			output.push('<li>' + line + '</li>');
-		} else if ( firstchar != '-' && firstchar != '\t'  && firstchar != '' ) {
-			if ( gotlist == true ) {
-				output.push('</ul>');
-				gotlist = false;
 			}
-			output.push('<h4>' + line + '</h4>');
+		} else {
+			if ( firstchar == '' ) {
+				empty = true;
+			} else if ( firstchar != '-' && firstchar != '\t'  && firstchar != '' ) {
+				if ( gotlist == true ) {
+					output.push('</ul>');
+					gotlist = false;
+				}
+				output.push('<h4>' + line + '</h4>');
+			}
 		}
 	}
 	if ( gotlist == true ) {
