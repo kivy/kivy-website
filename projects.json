@@ -1,15 +1,37 @@
 [
-	{
-		"id": "kivycrashcourse",
-		"title": "Kivy crash course",
-		"featured": 1,
-		"media": "https://www.youtube.com/watch?v=t8N_8WkALdE&list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq",
-        "raw_link": "<a href='https://www.youtube.com/playlist?list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq'>Watch the videos &raquo;</a>",
-		"description": [
-			"Learn how to make Kivy apps<br/>",
-			"with Alexander's Taylor videos."
-		]
-	},
+    {
+            "id": "contest2014_2",
+            "title": "Kivy contest 2014",
+            "featured": 1,
+            "media": "",
+            "raw_link": "<a href='http://kivy.org/index.html#contest'>Enter the contest &raquo;</a>",
+            "description": [
+                    "Kivy contest 2014 announcement<br/>",
+                    ""
+            ]
+    },
+    {
+            "id": "contest2014_1",
+            "title": "Kivy contest 2014",
+            "featured": 1,
+            "media": "",
+            "raw_link": "<a href='http://kivy.org/index.html#contest'>Enter the contest &raquo;</a>",
+            "description": [
+                    "Kivy contest2014 announcement.",
+                    ""
+            ]
+    },
+    {
+            "id": "kivycrashcourse",
+            "title": "Kivy crash course",
+            "featured": 1,
+            "media": "https://www.youtube.com/watch?v=t8N_8WkALdE&list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq",
+            "raw_link": "<a href='https://www.youtube.com/playlist?list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq'>Watch the videos &raquo;</a>",
+            "description": [
+                    "Learn how to make Kivy apps<br/>",
+                    "with Alexander's Taylor videos."
+            ]
+    },
     {
         "id": "particlepanda",
         "title": "Particle Panda",
