@@ -1,26 +1,37 @@
 [
-	{
-		"id": "contest2014",
-		"title": "Kivy App Contest 2014",
-		"featured": 1,
-		"media": "http://kivy.org/contest/2/snakerider.png",
-        "raw_link": "<a href="#contest">Enter the contest &raquo;</a>",
-		"description": [
-			"Kivy's second contest starts April 15th, <br/>",
-			"enter any app with an education theme!"
-		]
-	},
-	{
-		"id": "kivycrashcourse",
-		"title": "Kivy crash course",
-		"featured": 1,
-		"media": "https://www.youtube.com/watch?v=t8N_8WkALdE&list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq",
-        "raw_link": "<a href='https://www.youtube.com/playlist?list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq'>Watch the videos &raquo;</a>",
-		"description": [
-			"Learn how to make Kivy apps<br/>",
-			"with Alexander's Taylor videos."
-		]
-	},
+    {
+            "id": "contest2014_2",
+            "title": "Kivy contest 2014",
+            "featured": 1,
+            "media": "",
+            "raw_link": "<a href='file:///mnt/Data/code/kivy-website/index.html#contest'>Enter the contest &raquo;</a>",
+            "description": [
+                    "Kivy's second contest now open, enter<br/>",
+                    "any app with an education theme!"
+            ]
+    },
+    {
+            "id": "contest2014_1",
+            "title": "Kivy contest 2014",
+            "featured": 1,
+            "media": "",
+            "raw_link": "<a href='file:///mnt/Data/code/kivy-website/index.html#contest'>Enter the contest &raquo;</a>",
+            "description": [
+                    "Kivy's second contest now open, enter<br/>",
+                    "any app with an education theme!"
+            ]
+    },
+    {
+            "id": "kivycrashcourse",
+            "title": "Kivy crash course",
+            "featured": 1,
+            "media": "https://www.youtube.com/watch?v=t8N_8WkALdE&list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq",
+            "raw_link": "<a href='https://www.youtube.com/playlist?list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq'>Watch the videos &raquo;</a>",
+            "description": [
+                    "Learn how to make Kivy apps<br/>",
+                    "with Alexander's Taylor videos."
+            ]
+    },
     {
         "id": "particlepanda",
         "title": "Particle Panda",
