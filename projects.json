@@ -1,5 +1,16 @@
 [
 	{
+		"id": "contest2014",
+		"title": "Kivy App Contest 2014",
+		"featured": 1,
+		"media": "http://kivy.org/contest/2/snakerider.png",
+        "raw_link": "<a href="#contest">Enter the contest &raquo;</a>",
+		"description": [
+			"Kivy's second contest now open, enter<br/>",
+			"any app with an education theme!"
+		]
+	},
+	{
 		"id": "kivycrashcourse",
 		"title": "Kivy crash course",
 		"featured": 1,
