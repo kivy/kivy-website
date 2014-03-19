@@ -48,6 +48,10 @@ a.selected {
 		clear: left;
 }
 
+.clear {
+	clear: both;
+}
+
 /** Header
  */
 #header { 
@@ -125,6 +129,33 @@ h1, h2, h3, h4, h5 {
 .hl {
 	font-weight: bold;
 	font-size: 15px;
+}
+
+.bigger {
+	font-size: 120%;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: #aaa;
+}
+
+/** contest 2014
+ */
+
+.sponsors {
+	float: right;
+	width: 250px;
+	margin-left: 20px;
+}
+
+.sponsors img {
+	width: 100%;
+}
+
+.contest {
+	margin-right: 280px;
 }
 
 /** lightbox
