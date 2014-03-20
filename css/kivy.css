@@ -266,8 +266,7 @@ h2.icon-gpu {
 }
 
 .feature-item {
-		-width: 280px;
-		width: 205px;
+		width: 300px;
 		line-height: 180%;
 		float: left;
 		margin-right: 20px;
@@ -279,7 +278,6 @@ h2.icon-gpu {
 
 .feature-item.last {
 		margin-right: 0px;
-		width: 260px;
 }
 
 /** Galery page
@@ -523,4 +521,16 @@ table.logolist {
 }
 table.logolist td {
 	text-align: center;
+}
+
+/** Social toolbar
+ */
+#social-icons {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#social a, #social img {
+	border: 0;
 }
