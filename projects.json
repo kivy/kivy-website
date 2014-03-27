@@ -3,7 +3,7 @@
             "id": "contest2014_2",
             "title": "Kivy contest 2014",
             "featured": 1,
-            "media": "",
+            "media": "http://kivy.org/slides/contest2014_2-featured.jpg",
             "raw_link": "<a href='http://kivy.org/#contest'>Check it out &raquo;</a>",
             "description": [
                 "Kivy's second contest starts April 15th, <br/>",
@@ -14,7 +14,7 @@
             "id": "contest2014_1",
             "title": "Kivy contest 2014",
             "featured": 1,
-            "media": "",
+            "media": "http://kivy.org/slides/contest2014_1-featured.jpg",
             "raw_link": "<a href='http://kivy.org/#contest'>Check it out &raquo;</a>",
             "description": [
                 "Kivy's second contest starts April 15th, <br/>",
