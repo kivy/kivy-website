@@ -144,12 +144,15 @@ hr {
 /** contest 2014
  */
 
+.partners,
 .sponsors {
 	float: right;
 	width: 250px;
 	margin-left: 20px;
+	clear: both;
 }
 
+.partners img,
 .sponsors img {
 	width: 100%;
 }
