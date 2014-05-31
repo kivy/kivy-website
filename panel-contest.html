@@ -30,6 +30,13 @@ div.rank3 {
     background: transparent url('images/bronze_medal.png') top right no-repeat;
 }
 
+span.gallery-item {
+  width: 50%;
+  margin: auto 0;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
 </style>
 
 <div class="sponsors">
@@ -155,19 +162,13 @@ your entries and keep the love flowing.</p>
                 '<img src="contest/2/screenshots/', element['id'], '-thumb.png"/>',
                 '</a>',
                 // description
-                '<h3>',
+                '<p class="entry-title">',
                 '<a href="https://github.com/', element['github'], '">',
                 element['title'],
-                '</a> - ', element['author'], '</h3>'
+                '</a> <br>', element['author'], '</p>'
             ].join('');
-            var right = '';
-            if ( index % 2 == 1 )
-                right = 'right';
-            var item = $('<div class="gallery-item' + right + '"></div>').html(html);
+            var item = $('<span class="gallery-item"></span>').html(html);
             $('#gallerycontest').append(item);
-
-            if ( index % 2 == 1 )
-                $('#gallerycontest').append('<div class="gallery-clear"></div>');
         });
 
         $('#gallerycontest').append('<div class="gallery-clear"></div>');
