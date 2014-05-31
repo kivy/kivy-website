@@ -48,6 +48,12 @@
         "github": "https://bitbucket.org/GhislainHivon/learnyourphone_contest.git"
     },
     {
+        "id": "opolo",
+        "title": "Opolo",
+        "author": "Valentin Pratz",
+        "github": "https://github.com/valentin12/kivy_frogs"
+    },
+    {
         "id": "rememberthekivy",
         "title": "Remember The Kivy",
         "author": "guruyaya",
@@ -85,6 +91,18 @@
         "github": "http://github.com/rkram5424/RyanAndRobertosKivyApp"
     },
     {
+        "id": "arithmeticbricks",
+        "title": "Arithmetic Bricks",
+        "author": "Jan Kaliszewski (zuo)",
+        "github": "https://github.com/zuo/ArithmeBricks"
+    },
+    {
+        "id": "chillitrios",
+        "title": "Chilli Trios",
+        "author": "Chilli Team",
+        "github": "https://github.com/lopezz/kivy_contest_2014"
+    },
+    {
         "id": "frogit",
         "title": "Frogit: in the grand mathventure",
         "author": "Filip Radovic",
@@ -97,23 +115,35 @@
         "github": "https://github.com/suriyan/iWriteIt"
     },
     {
+        "id": "kivykloetze",
+        "title": "Kivy klotze",
+        "author": "CMSB",
+        "github": "https://github.com/acidicX/kivykloetze"
+    },
+    {
         "id": "familyquiz",
         "title": "Family Quiz",
         "author": "Gryzone",
         "github": "https://github.com/Harunx9/KivyContest"
     },
     {
-        "id": "arithmeticbricks",
-        "title": "Arithmetic Bricks",
-        "author": "Jan Kaliszewski (zuo)",
-        "github": "https://github.com/zuo/ArithmeBricks"
+        "id": "autiagenda",
+        "title": "Auti Agenda",
+        "author": "Rob Derksen",
+        "github": "https://bitbucket.org/boisei0/autiagenda"
     },
-	{
-		"id": "kivysandbox",
-		"title": "Kivy SandBox",
-		"author": "Gipzo",
-		"github": "https://github.com/Gipzo/kivy-physics-sandbox"
-	},
+    {
+        "id": "chessscorebook",
+        "title": "Chess Scorebook",
+        "author": "Terry Yanchynskyy",
+        "github": "https://github.com/onebit0fme/kivy-contest-2014"
+    },
+    {
+        "id": "kivysandbox",
+        "title": "Kivy SandBox",
+        "author": "Gipzo",
+        "github": "https://github.com/Gipzo/kivy-physics-sandbox"
+    },
     {
         "id": "expressioncollector",
         "title": "Expressin Collector",
@@ -169,22 +199,10 @@
         "github": "https://github.com/malinovsky239/funnychem"
     },
     {
-        "id": "kivykloetze",
-        "title": "Kivy klotze",
-        "author": "CMSB",
-        "github": "https://github.com/acidicX/kivykloetze"
-    },
-    {
         "id": "bunglon",
         "title": "BungLon",
         "author": "Lontong",
         "github": "https://github.com/lucernae/BungLon"
-    },
-    {
-        "id": "chillitrios",
-        "title": "Chilli Trios",
-        "author": "Chilli Team",
-        "github": "https://github.com/lopezz/kivy_contest_2014"
     },
     {
         "id": "taskapp",
@@ -241,12 +259,6 @@
         "github": "https://github.com/remip/symphonium"
     },
     {
-        "id": "autiagenda",
-        "title": "Auti Agenda",
-        "author": "Rob Derksen",
-        "github": "https://bitbucket.org/boisei0/autiagenda"
-    },
-    {
         "id": "therooms",
         "title": "The Rooms",
         "author": "nashr",
@@ -259,12 +271,6 @@
         "github": "https://github.com/synzh/kivy-kivy"
     },
     {
-        "id": "chessscorebook",
-        "title": "Chess Scorebook",
-        "author": "Terry Yanchynskyy",
-        "github": "https://github.com/onebit0fme/kivy-contest-2014"
-    },
-    {
         "id": "midimatch",
         "title": "Midi Match",
         "author": "tz 18",
@@ -275,12 +281,6 @@
         "title": "Micro Scada",
         "author": "Victor RENÉ",
         "github": "https://github.com/victor-rene/MicroScada"
-    },
-    {
-        "id": "opolo",
-        "title": "Opolo",
-        "author": "Valentin Pratz",
-        "github": "https://github.com/valentin12/kivy_frogs"
     },
     {
         "id": "pixelmate",
