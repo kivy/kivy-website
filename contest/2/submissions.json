@@ -1,0 +1,321 @@
+[
+    {
+        "id": "meowletters",
+        "title": "Meow Letters",
+        "author": "Meow Unicorn",
+        "github": "https://github.com/ana-balica/meow_letters"
+    },
+    {
+        "id": "cowskoalasandmaps",
+        "title": "Cows, Koalas and Maps!",
+        "author": "WhoCares Ltd.",
+        "github": "https://github.com/aq1/kivy_contest_game_2014"
+    },
+    {
+        "id": "hyunkapong",
+        "title": "Hyunkapong",
+        "author": "Lokiju",
+        "github": "https://github.com/Gotzillaz/Hyunkapong"
+    },
+    {
+        "id": "mathworldkids",
+        "title": "Math World Kids",
+        "author": "Jonas Pepperling",
+        "github": "https://github.com/achroit/MathWorldKids"
+    },
+    {
+        "id": "kc",
+        "title": "KC",
+        "author": "Dustin Chapman",
+        "github": "https://github.com/dustinrc/kc"
+    },
+    {
+        "id": "kuiz",
+        "title": "Kuiz",
+        "author": "Steve",
+        "github": "https://github.com/marksteve/kivy-contest"
+    },
+    {
+        "id": "catterpillars",
+        "title": "Catterpillars",
+        "author": "gromozeka?",
+        "github": "http://github.com/gromozeka1980/kivy_contest_2014"
+    },
+    {
+        "id": "learnyourphone",
+        "title": "Learn Your Phone",
+        "author": "Ghislain Hivon",
+        "github": "https://bitbucket.org/GhislainHivon/learnyourphone_contest.git"
+    },
+    {
+        "id": "opolo",
+        "title": "Opolo",
+        "author": "Valentin Pratz",
+        "github": "https://github.com/valentin12/kivy_frogs"
+    },
+    {
+        "id": "rememberthekivy",
+        "title": "Remember The Kivy",
+        "author": "guruyaya",
+        "github": "https://github.com/guruyaya/rememberthekivy"
+    },
+    {
+        "id": "fourbar",
+        "title": "Grashof's condition (fourbar)",
+        "author": "Ken Geronilla",
+        "github": "https://github.com/tygart/fourbar"
+    },
+    {
+        "id": "braingame",
+        "title": "Brain Game",
+        "author": "Jolly",
+        "github": "https://github.com/molnarjani/BrainGame"
+    },
+    {
+        "id": "scholaris",
+        "title": "Scholaris",
+        "author": "Tim Henning",
+        "github": "https://github.com/luminosuslight/scholaris"
+    },
+    {
+        "id": "classroomfeedback",
+        "title": "Classroom Feedback",
+        "author": "Tom Theile",
+        "github": "https://github.com/tomthe/kivycontest"
+    },
+
+    {
+        "id": "jumbalaya",
+        "title": "Jumbalaya",
+        "author": "ryBorg and Potato Man",
+        "github": "http://github.com/rkram5424/RyanAndRobertosKivyApp"
+    },
+    {
+        "id": "arithmeticbricks",
+        "title": "Arithmetic Bricks",
+        "author": "Jan Kaliszewski (zuo)",
+        "github": "https://github.com/zuo/ArithmeBricks"
+    },
+    {
+        "id": "chillitrios",
+        "title": "Chilli Trios",
+        "author": "Chilli Team",
+        "github": "https://github.com/lopezz/kivy_contest_2014"
+    },
+    {
+        "id": "frogit",
+        "title": "Frogit: in the grand mathventure",
+        "author": "Filip Radovic",
+        "github": "https://github.com/UlthaneFrostborn/kivy-contest-2014"
+    },
+    {
+        "id": "iwriteit",
+        "title": "iWriteIt - You Like?",
+        "author": "Suriyan Laohaprapanon",
+        "github": "https://github.com/suriyan/iWriteIt"
+    },
+    {
+        "id": "kivykloetze",
+        "title": "Kivy klotze",
+        "author": "CMSB",
+        "github": "https://github.com/acidicX/kivykloetze"
+    },
+    {
+        "id": "familyquiz",
+        "title": "Family Quiz",
+        "author": "Gryzone",
+        "github": "https://github.com/Harunx9/KivyContest"
+    },
+    {
+        "id": "autiagenda",
+        "title": "Auti Agenda",
+        "author": "Rob Derksen",
+        "github": "https://bitbucket.org/boisei0/autiagenda"
+    },
+    {
+        "id": "chessscorebook",
+        "title": "Chess Scorebook",
+        "author": "Terry Yanchynskyy",
+        "github": "https://github.com/onebit0fme/kivy-contest-2014"
+    },
+    {
+        "id": "kivysandbox",
+        "title": "Kivy SandBox",
+        "author": "Gipzo",
+        "github": "https://github.com/Gipzo/kivy-physics-sandbox"
+    },
+    {
+        "id": "expressioncollector",
+        "title": "Expressin Collector",
+        "author": "Abdullah Aghazadah",
+        "github": "https://github.com/MeLikeyCode/expressioncollector"
+    },
+    {
+        "id": "masteremergency",
+        "title": "Master Emergency",
+        "author": "HSA-IMS-Kivy-2",
+        "github": "https://github.com/HSA-IMS-Kivy-2/Master_Emergency_Situations"
+    },
+    {
+        "id": "volodaboy",
+        "title": "Voloda Boy",
+        "author": "Artur Yerameyeu",
+        "github": "http://github.com/arthurnum/voloda_boy"
+    },
+    {
+        "id": "visualkivy",
+        "title": "Visual Kivy(lite)",
+        "author": "Quino",
+        "github": "https://github.com/btcpar/contest"
+    },
+    {
+        "id": "logo",
+        "title": "Logo",
+        "author": "gkr",
+        "github": "https://github.com/gkrnours/logo.kv"
+    },
+    {
+        "id": "billygoestocollege",
+        "title": "Billy goes to college",
+        "author": "ChodeGames",
+        "github": "https://github.com/ChodeGames/kivycontest2014"
+    },
+    {
+        "id": "thinkpolice",
+        "title": "Think Police",
+        "author": "Synergy",
+        "github": "https://github.com/Synergistic/think-police"
+    },
+    {
+        "id": "lsystems",
+        "title": "Lsystems",
+        "author": "gromozeka?",
+        "github": "http://github.com/gromozeka1980/kivy_contest_2014"
+    },
+    {
+        "id": "chemistrywithfun",
+        "title": "Chemistry with Fun",
+        "author": "Ilia Malinovskii",
+        "github": "https://github.com/malinovsky239/funnychem"
+    },
+    {
+        "id": "bunglon",
+        "title": "BungLon",
+        "author": "Lontong",
+        "github": "https://github.com/lucernae/BungLon"
+    },
+    {
+        "id": "taskapp",
+        "title": "Task App",
+        "author": "Vinícius Ramos",
+        "github": "https://github.com/lifedotark/TaskApp/"
+    },
+    {
+        "id": "atomia",
+        "title": "Atomia",
+        "author": "Stacy Maillot",
+        "github": "https://github.com/Malakan/atomia"
+    },
+    {
+        "id": "devideandconquer",
+        "title": "Devide and Conquer",
+        "author": "metaxnet",
+        "github": "https://github.com/metaxnet/kivy"
+    },
+    {
+        "id": "rockkivy",
+        "title": "Rock Kivy",
+        "author": "code ninja",
+        "github": "https://bitbucket.org/lipt0n/kivy-contest"
+    },
+    {
+        "id": "kivyrun",
+        "title": "Kivy Run",
+        "author": "hilben",
+        "github": "http://github.com/hilben/kivy2"
+    },
+    {
+        "id": "squarepond",
+        "title": "Square Pond",
+        "author": "Mercury Labs",
+        "github": "https://github.com/kris-s/square-pond-kivy"
+    },
+    {
+        "id": "schoolorganised",
+        "title": "School Organized",
+        "author": "Pianist1119",
+        "github": "http://github.com/pianist1119/School-Organized"
+    },
+    {
+        "id": "ideastorm",
+        "title": "Idea Storm",
+        "author": "Cătălin Bălan",
+        "github": "https://github.com/laserbeam/idea-strom"
+    },
+    {
+        "id": "symphonium",
+        "title": "Symphonium",
+        "author": "ReMip",
+        "github": "https://github.com/remip/symphonium"
+    },
+    {
+        "id": "therooms",
+        "title": "The Rooms",
+        "author": "nashr",
+        "github": "http://github.com/nashr/The-Rooms"
+    },
+    {
+        "id": "eduapp",
+        "title": "EduApp",
+        "author": "Syn",
+        "github": "https://github.com/synzh/kivy-kivy"
+    },
+    {
+        "id": "midimatch",
+        "title": "Midi Match",
+        "author": "tz 18",
+        "github": "https://github.com/tz18/goodeargame"
+    },
+    {
+        "id": "scata",
+        "title": "Micro Scada",
+        "author": "Victor RENÉ",
+        "github": "https://github.com/victor-rene/MicroScada"
+    },
+    {
+        "id": "pixelmate",
+        "title": "Pixel Mate",
+        "author": "Anton Plyaskin (werton)",
+        "github": "https://github.com/werton/kivy-pixelmate"
+    },
+    {
+        "id": "kivame",
+        "title": "Kivame",
+        "author": "Sachin Railhan & Nitin Saroha",
+        "github": "https://github.com/sacsachin789/game"
+    },
+    {
+        "id": "physics",
+        "title": "Physics",
+        "author": "svineet (Sai Vineet)",
+        "github": "https://github.com/svineet/physics"
+    },
+    {
+        "id": "dysdroid",
+        "title": "DysDroidv",
+        "author": "Piotr Skonieczka",
+        "github": "https://github.com/phiotr/DysDroid"
+    },
+    {
+        "id": "trages",
+        "title": "Trages",
+        "author": "Max Sokolov; Kustareva Anna",
+        "github": "https://github.com/Somal/Trages"
+    },
+    {
+        "id": "numerickivy",
+        "title": "Numeric Kivy",
+        "author": "EnuriSoft",
+        "github": "https://github.com/mataeoh/kivy_contest"
+    }
+]
