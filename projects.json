@@ -1,5 +1,16 @@
 [
     {
+            "id": "contest2014_winnermontage",
+            "title": "Winners announced for Kivy Contest 2014!",
+            "featured": 1,
+            "media": "http://kivy.org/slides/contest2014_2-featured.jpg",
+            "raw_link": "<a href='http://kivy.org/#contest'>Check out the results &raquo;</a>",
+            "description": [
+                "Congratulations to all our great participants, <br/>",
+                "and thanks to our sponsors!"
+            ]
+    },
+    {
             "id": "contest2014_2",
             "title": "Kivy contest 2014",
             "featured": 1,
