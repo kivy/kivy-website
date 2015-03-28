@@ -5,9 +5,9 @@
   src: local('Nobile'), url('nobile.ttf') format('truetype');
 }
 
-body { 
+body {
 	margin: 0;
-	padding: 0; 
+	padding: 0;
 	font-family: 'Nobile', Arial, sans-serif;
 	font-size: 13px;
 	background: #000000 url('../images/bg.jpg') top left repeat;
@@ -54,7 +54,7 @@ a.selected {
 
 /** Header
  */
-#header { 
+#header {
 		height: 440px;
 }
 
@@ -312,7 +312,7 @@ h2.icon-gpu {
 
 /** Python highlight
  */
-	
+
 .highlight pre {
   background-color: #f0f0f0;
 	border: 1px solid #c2c2c2;
@@ -536,4 +536,12 @@ table.logolist td {
 
 #social a, #social img {
 	border: 0;
+}
+
+/** Donate button
+ */
+#donate {
+    position: absolute;
+    top: 75px;
+    right: 10px;
 }

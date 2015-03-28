@@ -49,6 +49,12 @@
 			<a href="https://www.facebook.com/kivyframework" class="icon-facebook"></a>
 			<a href="https://twitter.com/kivyframework" class="icon-twitter"></a>
 		</div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donate">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ZN5G75EG8PHNG">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+        </form>
         <div id="logo">
                 <a href="http://kivy.org/">
                         <img src="logos/kivy-logo-black-64.png" alt="Kivy logo" title="Kivy"/>
@@ -58,12 +64,11 @@
         <div id="menu">
                 <ul class="navigation">
                         <li><a class="piwik_link" href="#home">Home</a></li>
-                        <li><a class="piwik_link" href="#contest">Contest</a></li>
                         <li><a class="piwik_link" href="#download">Download</a></li>
                         <li><a class="piwik_link" href="#gallery">Gallery</a></li>
-                        <li><a class="piwik_link" href="#support">Support</a></li>
+                        <li><a class="piwik_link" href="#support">Help</a></li>
+                        <li><a class="piwik_link" href="#organization">Organization</a></li>
                         <li><a class="piwik_link" href="#aboutus">About</a></li>
-                        <li><a class="piwik_link" href="http://kivy.org/docs/gettingstarted/intro.html">Docs</a></li>
                         <li><a class="piwik_link" href="http://kivy.org/planet">Blog</a></li>
                 </ul>
         </div>
@@ -478,15 +483,24 @@
 
                 <!--
 
-                        Support panel
+                        Help panel
 
                 -->
                 <div class="panel" id="panel-support">
+                        <h2>Documentation</h2>
+                        <ul>
+                            <li>
+                                <a href="http://kivy.org/docs/gettingstarted/intro.html">Getting started into Kivy</a>
+                            </li>
+                            <li>
+                                <a href="http://kivy.org/docs/api-kivy.html">API Reference</a>
+                            </li>
+                            <li>
+                                Or see the <a href="https://github.com/kivy/kivy/wiki">Wiki</a> for a list of projects, snippets and more
+                            </li>
+                        </ul>
                         <h2>Community Support</h2>
                         <ul>
-                                <li>
-                                        Read our <a href="http://kivy.org/docs/">documentation</a>
-                                </li>
                                 <li>
                                         Report a bug or request a feature in our
                                         <a href="http://github.com/kivy/kivy/issues" rel="external">
@@ -506,10 +520,6 @@
                                         rel="external">read the IRC rules</a> before connecting.
                                 <a href="http://webchat.freenode.net?nick=kvuser.&amp;channels=kivy&amp;uio=d4"
                                         rel="external">Connect to Webchat</a>
-                        </p>
-                        <h2>Commercial Support</h2>
-                        <p>
-                                Available soon.
                         </p>
                 </div>
 
@@ -661,7 +671,7 @@
                                                         <div class="devdesc">
                                  Richard is a educational software developer (B.Sc, Hons) from South Africa. He likes being silly, meditating, music and hugging fluffy things. On IRC, he's <span class="ircnick">ZenCODE</span>.<br/>
                                                         </div>
-                                                </li>                                                
+                                                </li>
                                                 <li>
                                                         <img class="devpic" src="images/kived.png" alt="kived"/>
                                                         <div class="devinfo">
