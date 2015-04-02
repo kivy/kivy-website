@@ -1,5 +1,17 @@
 [
     {
+        "id": "kivy13",
+        "title": "Kivy 1.9.0 released!",
+        "featured": 1,
+        "media": "http://kivy.org/slides/kivy13-featured.jpg",
+        "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
+        "description": [
+            "New SDL2 provider, ffpyplayer, EffectWidget, FocusBehavior<br/>",
+            "2486 commits, 540 pull requests merged<br/>",
+            "104 commits for SDL2, 96 contributors."
+        ]
+    },
+    {
             "id": "contest2014_winnermontage",
             "title": "Winners announced for Kivy Contest 2014!",
             "featured": 1,
@@ -8,28 +20,6 @@
             "description": [
                 "Congratulations to all our great participants, <br/>",
                 "and thanks to our sponsors!"
-            ]
-    },
-    {
-            "id": "contest2014_2",
-            "title": "Kivy contest 2014",
-            "featured": 1,
-            "media": "http://kivy.org/slides/contest2014_2-featured.jpg",
-            "raw_link": "<a href='http://kivy.org/#contest'>Check it out &raquo;</a>",
-            "description": [
-                "Kivy's second contest starts April 15th, <br/>",
-                "sign up from April 2nd."
-            ]
-    },
-    {
-            "id": "contest2014_1",
-            "title": "Kivy contest 2014",
-            "featured": 1,
-            "media": "http://kivy.org/slides/contest2014_1-featured.jpg",
-            "raw_link": "<a href='http://kivy.org/#contest'>Check it out &raquo;</a>",
-            "description": [
-                "Kivy's second contest starts April 15th, <br/>",
-                "sign up from April 2nd."
             ]
     },
     {

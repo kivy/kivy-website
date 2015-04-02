@@ -1,5 +1,906 @@
 <h2>Changelog</h2>
 
+<h3>1.9.0 (Apr 3, 2015)</h3>
+<pre class="changelog">
+Core
+----
+
+  - [#2280] When core critically fails to load a lib, print all the exceptions.
+  - [#2488] Sdl2 support
+  - [#2800] core:core_register_lib: make sure libs are registered in order mentioned...
+
+
+    Audio
+
+  - [#1926] handle URL's with parameters
+  - [#2131] fix bug with sound state in audio_gstplayer.py
+  - [#2278] fix socket leak in gstplayer
+  - [#2125] gstplayer: fix audio/video volume handling, as setting only once in load() doesnt work after stop().
+  - [#3004] audio: Fixed the get_pos method
+  - core/audio: accept m4a as input format.
+  - core/audio: add pygame m4a for android
+  - audio: fix leak in SDL implementation (iOS)
+
+
+    Camera
+
+  - a couple of fixes for camera/avfoundation
+
+
+    Clipboard
+
+  - [#2258] Clipboard: move `copy` and `paste` methods from `TextInput` to `core.clipboard` implementation.
+  - [#2743] os specific clipboard
+  - core:clipboard_pygame is able to paste unicode text
+  - fix clipboard_pygame.py to encode only for py2
+
+
+    Image
+
+  - [#1963] texture: add icolorfmt parameters to define alternative color format storage.
+  - [#2085] add .jpe to the supported extensions for providers that supports jpeg
+  - [#2358] Add ffpyplayer provider for image
+  - [#2037] PIL: detect and use frame disposal method
+  - [#2556] core:img_io add py3 support, img_sdl2 add save support
+  - [#2232] convert image data to a bytearray to more consistently get color info
+  - [#2170] Fix image unicode issues
+  - [#2645] img_pil:check for attribute's existance before accessing it. closes #2641
+  - [#2695] add optional flipped param to pil image save
+  - [#2718] uix:Image introduce `anim_loop` property
+  - [#2826] allow In-memory image loading
+  - [#2834] fixes zip files not loaded by ImageLoaderPygame
+  - [#2836] core:Image:zip_loader start using the new functions for loading from memory
+  - [#2403] Update Imageio.pyx with fox for cython.21
+  - [#2282] core/imageio: dont advertise to support gif cause we are not able to animate it
+  - core/image: remove rowlength slot
+  - imageio: accelerate bgra->rgba conversion using Accelerate framework
+
+
+    Text
+
+  - [#1998] use a more natural method to check if self._text is unicode.
+  - [#2050] Workaround for pygame font issue with unicode filesnames.
+  - [#2166] Use correct options to finish of markup layout
+  - [#2259] Fixed issue where anchors not reporting correct position
+  - [#2248] [core/text] When stip is False allow space to remain on last line if it fits.
+  - [#2225] Use int for texture size, otherwise it'd never equal to the actual texture size.
+  - [#2677] fix stripping for wrapped text
+  - [#2696] add unicode error handling to core text
+  - [#2673] use available system fonts
+  - [#2840] Fix text stripping issues
+  - [#2891] Change the default font from DroidSans to Roboto
+  - [#2897] Update readme, font files and kv as part of moving to Roboto
+  - [#3014] core/text: allow others font extension to be loaded
+  - core.text: Make sure colorformat is specified while blitting texture.
+  - Align text flush with justify.
+
+
+    Video
+
+  - [#1629] Add ffpyplayer provider.
+  - [#2125] gstplayer: fix audio/video volume handling, as setting only once in load() doesnt work after stop().
+  - [#2275] video: fix video.unload called when position is changing.
+  - [#2962] Video fixes
+
+
+    Window
+
+  - [#1904] Exit on escape changes
+  - [#2130] Add on_request_close event to window to check before the window is closed
+  - [#2148] Add read-only tag to WindowBase width and height properties
+  - [#2329] Import glReadPixels from the correct place. Fixes #2032
+  - [#2359] add __self__ property to Window
+  - [#2384] Wrong 'F3' key value.
+  - [#2386] respect keyboard height when providing window height in softinput resize mode
+  - [#2564] joystick support with sdl2
+  - [#2662] Window.screenshot python 3 fix
+  - [#2688] Add `pause_on_minimize` config option
+  - [#2689] core: window_pygame fix conflict with command_mode and ctrl+a
+  - [#3047] Joystick support on WindowPygame
+  - [#3092] Don't add force to kwargs since it's not a prop.
+  - [#3115] X11: fix CWOverrideRedirect handling
+  - [#3147] `on_textinput` event for handling text input events from IME, and other custom input methods
+  - [#2590] Add maximize, minimize, restore, hide and show methods for SDL2 Window
+  - [#3200] Add window_state Config option
+
+
+Base
+----
+
+  - [#2528] allow customizing the location of the Kivy config data
+  - [#2873] environment: add an option to prevent parsing command line argument as kivy arguments.
+
+
+    App
+
+  - [#2171] Add root_window property to App class
+
+
+    Animation
+
+  - [#1959] animation: copy the original value to correctly animate list/tuple/dict.
+  - [#2739] unbind on_anim1_complete in Sequence
+  - [#3100] fix animation with new WeakProxy objects
+  - [#2458] animation: fix crash when widget is gone. (also #2561, #2676)
+
+
+    Atlas
+
+  - [#1841] atlas: Avoids the "Too many open files" error in case of a large number of input fil
+  - [#3042] Atlas fixes (#2822 and accept glob patterns)
+
+
+    Config
+
+  - [#1937] Add ConfigParserProperty
+  - [#1937] Add remove_callback method to ConfigParser
+  - [#2122] Config.set can now convert ints to string in Python3
+  - [#2030] Add warning about Settings.on_config_change() value type
+  - [#2127] Placement of import config critical to opening window size.
+  - [#2228] Add largs in config register func.
+  - [#2288] add upgrade method to ConfigParser
+  - [#2122] config: ensure python3 configparser will always set strings.
+  - [#2351] Get the configparse object when obj is created if it exists already.
+  - [#2932] Get the configparse object during linking if it exists already.
+  - Add ConfigParserProperty and remove_callback method to ConfigParser.
+
+
+    Clock
+
+  - [#2072] Only execute events that have not been removed.
+  - [#2310] Make Clock thread safe.
+  - [#2315] Use class object for hash instead of the class method
+  - [#2330] Use wrap to give correct name to mainthread wrapped func. Fixes #2027.
+
+
+    EventDispatcher
+
+  - [#2069] Add kwargs to dispatch.
+  - [#2566] Enable cyclic garbage collection to EventObservers.
+  - [#2724] assert that event callbacks are actually callable
+  - [#2797] Restore internal EventObservers to use python objects instead of structs.
+  - [#2899] Forward args when creating property.
+  - event: try to fix events compilation with older cython
+  - Make explicit dependance of event and properties pxd files.
+  - Propogate exceptions from EventObservers methods.
+  - _event only depends on prop.pxd and prop.pyx.
+  - Fix use after free when unbinding a currently dispatching function. Also, don;t dispatch callbacks added during a dispatch
+
+
+    Factory
+
+  - [#2052] Warn when factory tries to re-register an existing class with different bases
+
+
+    Gesture
+
+  - [#2058] Add bbox_margin as a property of GestureSurface
+
+
+    Graphics
+
+  - [#1899] Adding enforcement of the wanted graphics system (GL/GLES)
+  - [#1876] Fixed UnicodeDecodeError for bad closed-source Intel drivers
+  - [#1946] add a RoundedRectangle instruction
+  - [#1876] fix shader for intel drivers
+  - [#1996] created method flip_horizontal() for kivy.graphics.texture.Texture
+  - [#2186] Use memoryviews for blit_buffer
+  - [#2352] Fix cython shader 'python temp coercion' exception.
+  - [#2421] Fix line joints when doing a PI angle
+  - [#2430] Add gles_limits env variable.
+  - [#1600] texture: enforce the Texture.blit_* colorfmt/bufferfmt to be the same as the texture, if we have GLES_LIMITS activated
+  - [#2440] Tesselator
+  - [#2414] Add SmoothLine reload_observer. Fixes #2377
+  - [#2266] add debug method for recursive updates
+  - [#2554] fix line circle angles
+  - [#2170] Fix image unicode issues
+  - [#2428] Fix bgr conversion memory leak
+  - [#2630] fix size issue for 3D models loaded in kivy
+  - [#2809] Default gles_limits to whether we're on desktop.
+  - [#2784] Added property name setters in Color __init__
+  - [#3030] Matrix: add get method to retrieve the current matrix
+  - [#3040] Matrix: add a put method to directly set matrix value
+  - [#1600] texture: enforce the Texture.blit_* colorfmt/bufferfmt to be the same as the texture, if we have GLES_LIMITS activated
+  - graphics: fixes for cython 0.20.2 (old version) and remove gcc warning.
+  - [#2445] shader: correctly ask for the length of the info. Maybe this is why the odoo crash.
+  - sdl2/texture: fix compilation for older cython with python3
+  - texture: fix invalid color conversion for texture when introduced icolorfmt (need double check with SMAA).
+  - [#2857] graphics/context: release shaders the same way we do for others graphics
+  - shader: fix for python3
+
+
+    Interactive Launcher
+
+  - [#1847] interactive.py illegally lists instance methods in __slots__
+
+
+    Lang
+
+  - [#1920] Allows comments in kv after a root level decleration
+  - [#2094] Fixes to not include comments when binding kv properties.
+  - [#2083] create Observable class to allow creating bindable objects for kv
+  - [#2235] include inner traceback in BuilderException
+  - [#2269] Create BooleanProperty if a bool is given for the kv property.
+  - [#2174] Introduces rebind keyword for some properties to enable dynamic rebinding
+  - [#2317] Ignore key exceptions when binding kv rules.
+  - [#2533] kv binding optimization
+  - [#2639] fix unicode and Builder in Python 2
+  - [#2908] kvlang: Fix binding issues
+  - [#2864] lang: fix_double include. closes #2821
+  - [#3012] py3: Python 3 doesn't have ClassType anymore.
+  - [#3068] Improved error when canvas instructions are added after child widgets in kv
+  - lang: fixes invalid name (mixed typo between cache_match and match_case)
+
+
+    Loader
+
+  - [#1918] loaders: guess extension from mime type
+  - [#1928] Loader: allow override via URL fragment
+  - possibility to load image from a buffer, and make the loader GIL-free
+
+
+    Logger
+
+  - [#1660] Logger logs the version of python in use.
+  - [#1948] Fix displaying logs on debug level by default
+  - [#2169] Make log_dir absolute path checking cross-platform
+  - [#2167] Add config callback to change the log file when the config log_dir/log_name change.
+
+
+    Network
+
+  - [#1975] Decode byte string result when using Python 3
+
+
+    Properties
+
+  - [#2141] Made NumericProperty work with unicode strings.   References Issue #2078
+  - [#2321] add default read-only setter to AliasProperty
+  - [#2747] Add force_dispatch option to properties
+  - [#2812] prevent dispatch in ReferenceListProperty.setitem if values haven't changed
+  - [#3088] use WeakMethod for property bindings
+  - [#3106] raise AttributeError on missing property
+
+
+    Storage
+
+  - [#1938] Added persistence to DictStore using pickle
+  - [#2815] fix bad params for async storage
+
+
+Input
+-----
+
+    HIDInput
+
+  - [#2638] hidinput: add late import and fix closure error
+  - [#3072] Fixed two bugs with incompatibilities with python3 in hidinput.py.
+  - [#3109] keyboard management: add missing keys
+  - [#3124] keyboard: add alt as modifier
+
+
+    Keyboard
+
+  - [#1917] introduce `keyboard_height` and `softinput_mode` property that can be set to `''` or `pan` or
+  - [#1930] VKeyboard: add key repeat on long press
+  - [#1932] VKeyboard: add extended layouts
+  - [#1967] Fix setting exit_on_escape atribute on on_keyboard method
+
+
+    MTDev
+
+  - mtdev: fix a crash when a finger is already on the touchscreen at the application start
+  - mtdev: fix a race condition where we received 2 tracking code id for the same slot within the same SYN_REPORT
+
+
+    MotionEvent
+
+  - [#2292] handle weakproxy objects in MotionEvent.grab()
+
+
+    Mouse
+
+  - [#2132] Adds simulated touch as a profile option
+  - [#2333] Make multitouch sim enabled by default and add multitouch_on_demand to config to disable it
+
+
+    PostProc
+
+
+
+Modules
+-------
+
+    Inspector
+
+  - [#1897] Make property list draggable by scrollbar too [modules-inspector]
+  - [#1949] Make state normal on 'inspect' toggle button when inspector is deactivated
+  - [#2387] Inspector: handle bad properties/values
+  - [#2521] Fix inspector scrollview
+  - [#2618] let inspector view the Window object
+  - [#2720] fix inspector for touch devices
+
+
+    Recorder
+
+  - [#2344] fix recorder module imports
+
+
+Behaviors
+---------
+
+    ButtonBehavior
+
+  - [#2531] ButtonBehavior: enforce minimum down state time
+
+
+    CompoundSelectBehavior
+
+  - [#1957] Adds a CompoundSelection behavior class
+  - [#2154]  Fixes #2140  Syntax error
+  - [#3122] Fixes #3120 Keyboard behavior in select_for_key_down elides over pauses, combining keys
+
+
+    FocusBehavior
+
+  - [#1909] initial focus behavior
+  - [#2708] uix:FocusBehavior make sure changing focus for previous and next don't clash
+
+
+    ToggleButtonBehavior
+
+  - [#2557] uix:ToggleButton Behavior: make it consistent with ButtonBehavior
+
+
+Widgets
+-------
+
+  - [#1887] Added export_to_png method to Widget
+  - [#2452] Fix for stencil not being applied when using export_to_png()
+  - [#3098] add WeakProxy with comparison
+  - update add_widget exception message
+
+
+    ActionBar
+
+  - [#1839] fix android crash in ActionBar
+  - [#3107] make icons scale properly in actionbar
+
+
+    AnchorLayout
+
+  - [#1981] Add padding between layout and children
+  - [#2483] anchorlayout: fix positioning and remove size change when the children is bigger than the layout itself
+  - uix:AnchorLayout improve `do_layout` to account for changes in `padding`.
+
+
+    BoxLayout
+
+  - [#2588] BoxLayout honour padding when using pos_hint
+
+
+    Bubble
+
+  - [#2318] Bubble, makes arrow use soft pixels instead of hard ones, for device independant result
+  - [#2536] uix:bubble: don't assign to window when using limit_to
+
+
+    Carousel
+
+  - [#2542] Fix carousel crash on load_next if empty, replace float(nan) with None
+  - [#3067] Fixed carousel calculation that had switched w, h
+
+
+    CheckBox
+
+  - [#2336] Use ToggleButtonBehavior
+  - [#2424] Always change the CheckBox state on press
+  - [#2484] uix:checkbox introduce `allow_no_selection` property
+  - [#2880] Add background properties for checkbox
+
+
+    CodeInput
+
+  - [#2316] Use proper cid in codeinput cache.
+  - [#2874] add an easier way to use different pygments styles for the CodeInput widget.
+
+
+    Dropdown
+
+  - [#2429] Ensure that container is set before everything for dropdown. Fixes issue with dynamic declared dropbox in kv.
+  - [#2429] Ensure that container is set before everything for dropdown.
+  - [#2126] uix:DropDown check for collision with the widgets dropdown is attached to while dismissing.
+
+
+    EffectWidget
+
+  - [#2095] Added AdvancedEffectBase
+  - [#2095] Added source property to EffectBase
+  - [#2095] Add new EffectWidget uix module
+
+
+    FileChooser
+
+  - [#2106] Fix problem with list(bool) in filechooser.py
+  - [#2338] Catch None in filechooser when iterating files.
+  - [#2366] uix:FileChooser fix multiselect behavior consistent, honor dirselect.
+  - [#2523] FileChooserIconView: scroll to top when entries cleared
+  - [#2525] add multi-view file chooser
+  - [#3060] Fixed filechooser path incorrectly updated when going to parent directory
+  - uix:FileChooser make use of abspath to store current path.
+
+
+    Image
+
+  - [#2286] uix:Image delayed importing of loader. Import it only when used
+
+
+    Label
+
+  - [#1878] Label: Shorten the string only if it's larger than texture size.
+  - [#1935] Improve text rendering algorithm, fully implement padding, implement justify everywhere
+  - [#1907] Correct label padding to be positive, not negative.
+  - [#1944] Fix shorten to work the old way for now with the update text algo
+  - [#2175] Shorten fixes
+  - [#2251] Clear refs and anchors when clearing text. Fixes #2250.
+  - [#2238] Keep the markup color attribute after creation. Fixes #2210.
+
+
+    ListView
+
+  - [#1973] dictadapter update sorted_keys when data is updated
+  - [#2090] Allow VariableListProperty to accept any list derivative
+  - [#2091] Use dp for filechooserlistview instead of sp
+  - [#2420] Changed ListAdapter cls to accept string
+  - [#2598] fix ListItem* repr for python 2
+  - [#2782] bind listview adapter triggers on adapter change
+  - [#1972] dictadapter: fix unit tests related to it.
+
+
+    PageLayout
+
+  - [#1871] fix pagelayout assumes fullscreen for swipe threshold calculation
+  - [#3007] Fix PageLayout indexing issues.
+
+
+    Popup
+
+  - [#2825] allow horizontal align for popup title
+  - [#3104] Don't create a prop named popup in content. Fixes #3103.
+
+
+    RelativeLayout
+
+  - [#2444] Old kv rules for Relative Layout removed
+
+
+    RstDocument
+
+  - [#1989] Allow reloading rst files and allow source to be ''
+  - [#2162] make rst underline color configurable
+  - Allow setting source to empty string to clear text, if it wasnt empty before.
+
+
+    Scatter
+
+  - [#2206] Add on_bring_to_front event to Scatter
+  - [#2714] fixes Scatter crash on windows
+
+
+    ScatterPlaneLayout
+
+  - [#2682] widgets: add new ScatterPlaneLayout,
+
+
+    ScreenManager
+
+  - [#1943]  Add attribute to change fbo transparency in FadeTransition
+  - [#1985] moved `remove_screen(self.screen_out)` to `_on_complete`
+  - [#2005] Swap docstrings in screenmanager.py
+  - [#2804] provide better exception message when Screen is added to its current manager
+  - [#2946] screenmanager: swap up/down SlideTransition
+  - [#2749] prevent flicker when using shader transitions
+  - [#3080] screenmanager: screen's layout is fixed before on_enter is dispatched.
+  - fix initial screen position in screenmanager
+
+
+    ScrollView
+
+  - [#1866] Fix scrolling on empty scrollview.
+  - [#2296] Add bar_inactive_color property for ScrollView
+  - [#2328] When mouse scrolling, don't pass it on to children. Fixes #2031.
+  - [#2362] update _scroll_x_mouse and _scroll_y_mouse to fix scrollview jumping
+  - [#2371] fix nested scrollviews
+  - [#2526] Fix scrollbar scroll touches
+  - [#2522] fix horizontal scrolling with mouse wheel/touchpad
+  - [#3089] Fix scrollview crash on multitouch events
+  - [#3131] fix ScrollView._apply_transform
+  - increase scrollbar width
+
+
+    Settings
+
+  - [#2036]  Automatically focus SettingString textinput when popup opens
+  - [#2074] Made settings popup sizes dynamic and sensible
+
+
+    Slider
+
+  - [#2769] Minor fix in slider.py. slider.value now set to slider.min at init
+  - [#3021] change slider default padding to sp(16) to match sp(32) size of slider cursor.
+
+
+    Splitter
+
+  - [#2000] Splitter: Added rescale_with_parent property
+  - [#2000] Added splitter options to keep within parent bounds and to rescale with the parent
+  - fix `rescale_with_parent` property name in docstring
+
+
+    StackLayout
+
+  - [#2653] Fix stacklayout size hint
+  - [#2803] properly handle StackLayout size_hint and spacing
+
+
+    TextInput
+
+  - [#2332] Fix TextInput bubble not following cursor position on window resize.
+  - [#1954] TextInput space stripping fixed, should now account correctly for kerning in cursor positioning
+  - [#1913] use a blank 1x1 texture for empty line
+  - [#1954] Fix textinput space stripping
+  - [#1969] Fix TextInput padding_x being ignored when calculating cursor position
+  - [#1997] Add cursor_color property for TextInput
+  - [#2008] Selection handles
+  - [#2055]  Introduce input_filter to TextInput to allow only e.g. int, float inputs
+  - [#2267] minimum_height depends on line_height
+  - [#2302] Prevent cache clash for textinput width between password = True/False.
+  - [#2349] ensure _win is set when updating graphics
+  - [#2369] Fixed textinput height calculation based on padding
+  - [#2331] Keep correct cursor pos when resizing. Fixes #2018.
+  - [#2357] uix:TextInput move checking for command modes out of `insert_text`
+  - [#2283] correctly calculate texture coordinates when erasing at the end of a long line, fixes #508
+  - [#2389] fix textinput scroll direction
+  - [#2390] make textinput play nice in scatter and scrollview
+  - [#2332] uix:TextInput fix bubble positioning.
+  - [#2612] Update textinput.py to improve pg_move speed
+  - [#3063] move TextInput handles/bubble to window with transformation
+  - uix:TextInput use int not round, pageup/down was still crashing
+
+
+    TreeView
+
+  - [#1901] properly unset the selected_node attribute for TreeView
+
+
+    VideoPlayer
+
+  - [#1890] Fix VideoPlayer state inaccurate after end of stream
+  - [#1879] Fixes problems with seeking and length for the gst audio player
+  - [#1893] Fix VideoPlayer not responding to source change
+  - [#2275] Fix issue where a frame might load after video.unload() is called
+  - [#2866] image_overlay_play and image_loading attributes of VideoPlayer fixed
+
+
+Platforms
+---------
+
+    Android
+
+  - [#1869] Changing Sound.volume should now have an effect on Android
+  - [#1947] core:Clipboard ensure clipboard works on older android versions.
+  - [#2471] skip processing some about touch when not touching screen on android
+  - [#3119] Fixes crash using latest pyjnius
+  - [#2710] fix android and ios rotation
+
+
+    iOS
+
+  - [#2754] Fixes typo in system font directory path on iOS
+  - [#2413] ios/simulator: fix color inconsistency for text rendering
+  - [#2710] fix android and ios rotation
+  - [#1792] ios: fix initial window display / sizing issue / redisplay issue.
+
+
+    Linux
+
+  - [#1830] X11 compilation improvements
+
+
+    OSX
+
+  - [#2010] Added save flipped image implementation on MacOS
+
+
+    Raspberry Pi
+
+  - [#2382] Simple keyboard implementation for raspberry pi.
+  - [#2581] Solving issues #2373 and #2364 on rpi running archlinux
+  - [#2656] support rpi touchscreen
+  - [#1302] rpi: add stencil support when creating the egl context.
+
+
+Libs
+----
+
+    GSTPlayer
+
+  - [#2200] fix for #2129 automatic pause in gstplayer after a few frames
+  - [#2466] Made local variable reference to fix cython 0.21
+  - [#2722] gstplayer: fix invalid size passed when we have a row stride (width * 3 not a multiple of 4).
+  - [#2454] gstplayer: fix deadlock when changing the volume on linux / pulseaudio.
+
+
+    libtess2
+
+  - [#2440] added libtess2
+  - backport a libtess2 fixes found in others forks to prevent a infinite loop (not all of them :()
+
+
+    OSC
+
+  - [#2314] OscAPI: Changed error check on dispatch, to avoid hidding program errors as well as osc errors
+  - [#2806] various cleanup in osc.py
+  - [#3114] osc convert data to bytes before packing
+  - [#3149] Osc fixes
+
+
+Tools
+-----
+
+  - [#2621] Pep8 checker fix
+  - [#2960] Add new checks to kivy/tools/pep8.py
+  - [#3116] report.py sends report to https://gist.github.com/
+  - Add a tool to generate all the icons version your application needs, Google Play, App Store, Amazon Store, and for all devices (mdpi->xxxhdpi, iPhone/iPad/iTunes).
+  - texturecompress: use a POT size of PVRTC (same for width/height), otherwise the OSX texturecompress will fail.
+  - icons: fix icon generation for iPadx2
+
+
+Compatibility
+-------------
+
+    Twisted
+
+  - [#1805] better twisted integration
+  - [#1805] Multiple cycles of install/uninstall of Twisted Reactor
+
+    Sublime Text
+
+  - [#2033] Fix Syntax Highlighting for Sublime Text
+
+    Emacs
+
+  - [#2207] emacs integration: Disable indent-tabs-mode in kivy-mode.el.
+
+
+Examples
+--------
+
+  - [#1987] Python3 and pep8 fixes for 3d rendering example
+  - [#2007] Correct config example
+  - [#2020] Fix shadertree example for python3
+  - [#2066] make touchtracer use pressure if available
+  - [#2058] $N-Protractor multistroke recognizer and demo app
+  - [#2376] Added texture example, showcasing wrap and tex_coord manipulation
+  - [#2360] fix android/takepicture for samsung galaxy S4
+  - [#2742] Create app_suite demo
+  - [#2704] change video example so it works when tried on an android phone
+  - [#2813] Kivycatalog fix: prevent extra spinner events
+  - [#2814] handle invalid font paths in CodeInput example
+  - [#2886] Added miscellaneous examples folder and a first entry
+  - [#2924] KivyCatalog LabelContainer demo update, clearer labels
+  - [#2944] Fix escape exiting on unfocus in kivycatalog
+  - [#2956] Add documentation to examples/animation/animate.py
+  - [#2955] Add description to examples/3Drendering/main.py
+  - [#2957] Add documentation to examples/camera/main.py
+  - [#2963] Documentation for examples/canvas/bezier.py
+  - [#2964] Updated examples/audio/main.py docstring
+  - [#2965] Update examples/canvas/canvas_stress.py with docs and new button
+  - [#2966] Add examples/canvas/circle.py docstring
+  - [#2967] examples/canvas/clearbuffers.py changes and rename.
+  - [#2969] examples/canvas/lines.py Add docstring.
+  - [#2971] Added examples/canvas/lines_extended.py docstring
+  - [#2972] Add documentation to examples/canvas/mesh.py
+  - [#2976] Fix examples/ PEP8 errors. Mostly white space
+  - [#2979] examples/canvas/multitexture.py documentation
+  - [#2981] examples/canvas/rotation.py Added docstring
+  - [#2982] examples/canvas/tesselate.py: Add docstring, logging, update display.
+  - [#2973] Create and document examples/canvas/mesh_manipulation.py
+  - [#3008] py3 division fix in mesh example
+  - [#3125] multitexture example: Original texture is displayed along with combined texture
+  - [#1869] example: add slider volume for audio examples
+  - fix audio example
+  - shadereditor: allow to use another image in command line
+
+
+Unit Tests
+----------
+
+  - [#2422] fix test_keep_data so that it looks up the texture
+  - [#2862] Updated test of kivy.utils to 100% (platform detection)
+  - [#2950] Update testing and documentation of utils.py
+  - [#2953] Get kivy/tests/test_graphics.py to clean up results.png
+  - tests: add the possibility to run tests without internet (use NONETWORK=1 make test)
+  - python 3 tests fixes (Fix filechooser unicode test,  vector test)
+  - fix benchmarks, update benchmark.py
+  - Audio tests were failing on OSX/Windows
+
+
+Packaging
+---------
+
+  - [#2855] add .pxd and .pxi files to package
+  - [#2867] Use the correct build path when generating files in setup.py
+  - [#2883] Print warning when executed shell command does not return code 0
+  - [#2888] avoid make distclean to error when git is missing
+  - [#2914] show warning/error for cython versions
+  - [#2911] packaging: Fix licensing and extras
+  - [#2959] Simplify pip install (resolves kivy/kivy#2958)
+  - [#3015] fixes #3011 some files always rebuilt at make
+  - [#3041] Use distutils for cython version comparision.
+  - [#2934] Add both src and build paths to setup.py for generating setupconfig and co.
+  - [#3101] handle LooseVersion == str comparisons in py3
+  - Fixes for Cython 0.21
+  - setup: fix python3
+  - py3 compatibility fix for osx packaging
+  - setup.py: changes to not force SDL2 or GStreamer if they are explicitly disabled + reduce the code that generates configuration.
+  - [#2879] setup: fixes issues with gstreamer autodetection / compilation.
+  - osx packaging fixes
+  - Don't remove debian subdirectory if it exists on git cleanup.
+  - [#2299] [#2324] conflict with debian repository
+
+
+Miscellaneous
+-------------
+
+  - [#2760] Style Guide/Pep8 fixes
+  - [#2961] Fix spacing and long lines. 'make style' is now clean.
+  - [#2975] Modify Makefile's 'make style' to check entire tree
+  - python 3 fixes (unich/chr), throughout codebase
+
+
+Doc
+---
+
+  - [#2679] doc: add a Common Pitfalls section to RelativeLayout
+  - [#2751] Doc fix to clarify kv property behaviour (fixes #2374)
+  - [#2763] doc: corrected and improved size_hint doc
+  - [#2785] doc: Clarified button background_color
+  - [#2764] remove old doc about fixed fmt, short explanations of fmt param
+  - [#2787] doc: colour -> color fixes
+  - [#2824] Removed experimental tag from pause mode, screenmanager
+  - [#2893] fix default font_size value in docstring
+  - [#2909] doc: Added clarification to Color docstring
+  - [#2919] rebuild cython code to build up to date doc
+  - [#2922] Close Issue #2921 - build doc failure
+  - [#2950] Update testing and documentation of utils.py
+  - [#2927] Fix the default of border property (in PageLayout) in the documentation
+  - [#3022] Create gallery of examples.
+  - [#3043] Document combining behavior with other widgets. Fixes #2995.
+  - [#3082] doc: Add links to source, Circle and Rectangle in the pong tutorial
+  - [#3031] document automatic dependencies some more.
+  - make doc autobuild.py work under python 3
+  - Added scroll effect info to scrollview doc
+  - added explanation for AsyncImage
+  - added background example to uix.widget
+  - revisions to uix/relativelayout.py
+  - fixed typos in uix/widget.py
+  - add argument for code-block
+  - Document TextInput filtering.
+  - Rst fixes
+  - pagelayout: fix documentation
+  - Added custom keyboard example
+  - Improved coverage of dynamic classes
+  - added warning for ordering of dynamic classes
+  - Minor improvements to stencil_instructions
+  - Added appropriate documentaion for eos
+  - Updated garden to explain kivy-garden module
+  - revisions to graphics/vertex_instructions.pyx
+  - Add more details in stacklayout doc
+  - add instructions for Raspberry Pi
+  - update gettingstarted image to add raspberry pi
+  - grammar correction in uix/widget.py
+  - changed to standard version tagging
+  - restored python highlighting to remove red error surrounds
+  - layout/tag fixes to uix/gridlayout.py
+  - corrected versionchanged spacing + small grammar corrections
+  - Make the doc makefile work on windows.
+  - update settings documentation
+  - revisions to sources/guide/lang.rst
+  - autobuild: Return an empty string for missing summary lines. Can't compare None to string
+  - replace template documentation in guide by dynamic class one
+  - made function names more obvious in kivy/_event.pyx
+  - Replaced jquery-ui.min.js with uniminified versions.
+  - Document fixes to label padding.
+  - Document that widgets created before load_file was called doesn't have styling.
+  - Document line_height vs minimum_height of TextInput
+  - added event bubbling explanation to the widget class
+  - examples: add a camera example (easy for testing the camera widget)
+  - added observation for on_touch_move and on_touch_up events
+  - fixed code example for the storage module
+  - Fixed a typo in the firstwidget.rst tutorial.
+  - fixed typo in kivy.storage example
+  - uix:Image improve FullImage Example
+  - corrected canvas descriptions and link
+  - added warning note, to help others not to waste 2 hours on a pygame bug on OSX
+  - Mention <app_name> folder creation in user_data_dir docs
+  - Added matrix docs
+  - Add note about twisted on iOS
+  - Add Contribution section to readme
+  - Fix label ref example
+  - Update supported python version.
+  - Add note about fully qualified path for iOS packaging
+  - Add dt description on Clock docs
+  - Clarify Config.set corner case
+  - add notes on packaging re py2/py3
+  - Links for Twisted echo server examples were broken, fixed the links
+  - Changing the sample json url
+  - fix obstrusive versionadded
+  - Adding instructions how to install Pygame for python3
+  - Add note about mouse_pos to motion event
+  - example: add slider volume for audio examples. #1869
+  - corrected inaccuracies in uix/widget.py
+  - added link to selection_mode in adapter/listadapter.py
+  - revisions to adapters/models.py
+  - more concise introduction for uix/listview.py
+  - simplified example in uix/listview.py
+  - fixed example, made more minimal
+  - revisions to uix/listview.py
+  - removed extraneous code from example in uix/listview.py
+  - grammar tweaks to uix/listview.py
+  - tweaks to uix/listview.py
+  - linked property names to property docs for uix/listview.py
+  - fixed args_converter link in uix/listview.py
+  - added links to uix/listview.py docs
+  - Fix EventDispatcher docs.
+  - added link, clarified cls/ctx in uix/listview.py
+  - tweaked example, removed repeated explanations in uix/listview.py
+  - stripped out invalid referral, inessential detail, added link to uix/listview.py
+  - stripped out repetition, more concise wording to uix/listview.py
+  - corrected imports in example in uix/listview.py
+  - tweaks to uix/listview.py
+  - added note on intializing selection for the ListAdapter
+  - corrected explanation for multiple selection
+  - pep8 in example in uix/listview.py
+  - property name in docstring
+  - typo fix in splitter.py
+  - doc autobuild.py work under python 3
+  - fixed list numbering, clarified wording in lang.py
+  - changed examples redefining Widget in lang.py
+  - eloborated on ids in lang.py
+  - added dot sytax for ids to lang.py
+  - escaped backslash, spelling corrections to lang.py
+  - added proper escaping to example in graphics/texture.py
+  - added warning about animation the same property to animation.py
+  - removed redundant space in animation.py
+  - doc syntax error for relativelayout
+  - rt "fix doc syntax error for relativelayout"
+  - moved addition note to the corresponding property
+  - Fixed defaultvalue name in docstrings
+  - tweaks to uix/pagelayout.py
+  - fixed formatting in graphics/vertex_instructions.pyx
+  - docs to use focused vs focus. Fixes #2725.
+  - refinements to uix/__init__.py
+  - clarified bahaviors in uix/__init__.py
+  - grammar tweaks to README.md
+  - tweaks to CONTRIBUTING.md
+  - revisions to CONTRIBUTING.md
+  - fixed unmatched string literal in core/text/__init__py
+  - added missing layouts to uix/__init__.py
+  - added missing comma to uix/__init__.py
+  - specify icon spec for various OS
+  - added PageLayout to 'getting started' guide
+  - added ScatterLayout to 'getting started' guide
+  - integrated layout links into descriptions
+  - added links, gramma improvements to kivy/weakmethod.py
+  - revisions to vector.py
+  - added module description
+  - grammar tweaks to utils.py
+  - explanded on utils docs, simplified platform
+  - explained preference for ObjectProperty
+
+</pre>
+
 <h3>1.8.0 (Jan 30, 2014)</h3>
 <pre class="changelog">
 - Python 3.3 compatibility
