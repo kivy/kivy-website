@@ -1,14 +1,17 @@
 [
     {
         "id": "kivy13",
-        "title": "Kivy 1.9.0 released!",
+        "title": "Kivy 1.9.1 released!",
         "featured": 1,
         "media": "http://kivy.org/slides/kivy13-featured.jpg",
         "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
         "description": [
-            "New SDL2 provider, ffpyplayer, EffectWidget, FocusBehavior<br/>",
-            "2486 commits, 540 pull requests merged<br/>",
-            "104 commits for SDL2, 96 contributors."
+            "New Wheels for OSX and Linux</br>",
+            "Optional Python3 embedded package for osx<br/>",
+            "packaged using SDL2.0.4 rc<br/>",
+            "Python3 embedded option for kivy sdk on osx</br>",
+            "981 commits<br/>",
+            "345 files changed, 7074 insertions(+), 13023 deletions(-)"
         ]
     },
     {
@@ -74,16 +77,6 @@
         "footer": [
             "<a href='https://play.google.com/store/apps/details?id=com.showgen.processcraft'>ProcessCraft on Google Play</a>",
             " - by Tabtou Ltd."
-        ]
-    },
-    {
-        "id": "kivy13",
-        "title": "Kivy 1.8.0 released!",
-        "featured": 1,
-        "media": "http://kivy.org/slides/kivy13-featured.jpg",
-        "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
-        "description": [
-            "New ColorPicker, Improved Scrolling + effects, kivy.garden project"
         ]
     },
     {
