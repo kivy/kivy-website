@@ -6,12 +6,12 @@
         "media": "http://kivy.org/slides/kivy13-featured.jpg",
         "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
         "description": [
-            "New Wheels for OSX and Linux</br>",
-            "Optional Python3 embedded package for osx<br/>",
-            "packaged using SDL2.0.4 rc<br/>",
-            "Python3 embedded option for kivy sdk on osx</br>",
+            "New wheels for Windows</br>",
+            "optional Python 3 embedded package for OS X<br/>",
+            "packaged using SDL 2.0.4<br/>",
+            "Python 3 embedded option for the Kivy SDK on OS X</br>",
             "981 commits<br/>",
-            "345 files changed, 7074 insertions(+), 13023 deletions(-)"
+            "345 files changed, 7074 insertions(+), 13023 deletions(-)."
         ]
     },
     {
