@@ -2,7 +2,7 @@
 
 <div class="gallery">
 	<div class="gallery-item">
-		<a href="http://vimeo.com/22725621" rel="prettyPhoto">
+		<a href="http://vimeo.com/22725621" rel="prettyPhoto" title="Kivy on Android">
 			<img src="slides/kivyandroid-thumb.jpg"/>
 		</a>
 		<div class="caption">
@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="gallery-item right">
-		<a href="slides/kivypictures.jpg" rel="prettyPhoto">
+		<a href="slides/kivypictures.jpg" rel="prettyPhoto" title="Pictures demo">
 			<img src="slides/kivypictures-thumb.jpg"/>
 		</a>
 		<div class="caption">
@@ -42,7 +42,8 @@
 			index += 1;
 			var html = [
 				// link
-				'<a href="', element['media'], '" rel="prettyPhoto">',
+				'<a href="', element['media'], '" title="',
+				element['title'], '" rel="prettyPhoto">',
 				'<img src="slides/', element['id'], '-thumb.jpg"/>',
 				'</a>',
 				// description
