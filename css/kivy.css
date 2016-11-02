@@ -126,6 +126,12 @@ h1, h2, h3, h4, h5 {
 	float: left;
 }
 
+#footer .col2 img {
+  padding-top: 6px;
+	height: 32px;
+	width: auto;
+}
+
 .hl {
 	font-weight: bold;
 	font-size: 15px;
