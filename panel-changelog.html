@@ -1,5 +1,700 @@
 <h2>Changelog</h2>
 
+<h3>1.10.0 (May 7, 2017)</h3>
+<pre class="changelog">
+Highlights
+==========
+
+Python 3.5/3.6+ support on Windows
+----------------------------------
+
+Python 3.5+ support is finally here for Windows using the same codebase! These versions are currently only supported with Visual Studio 2015. We also provide self-contained wheels for them. See https://kivy.org/docs/installation/installation-windows.html#installation.
+
+Kivy Clock
+----------
+
+The Kivy Clock has been moved to cython to improve performance [#4412]. Even better, scheduling is now deterministic and will always execute callbacks in the order they were scheduled. Finally, all Clock scheduling and unscheduling is now thread-safe. To get the best out of this, the recommended pattern is to save Clock events and later call their cancel method instead of calling the inefficient Clock.unschedule() method. We also added multiple new Clock types for advanced users [#4436].
+
+Graphics
+--------
+
+[#4343, #4385, #3906] The graphics backends have been refactored. Graphics modules now call the central `kivy.graphics.cgl` subpackage for all OpenGL calls instead of direct API calls. The `cgl` package can switch between multiple GL backends on each platform at startup-time based on the `KIVY_GL_BACKEND` variable (https://kivy.org/docs/api-kivy.graphics.cgl.html#module-kivy.graphics.cgl).
+
+Available backends are (gl, sdl2) on unix and (glew, sdl2, angle_sdl2) on windows. When no GL is available, the mock backend which is a NOOP backend can be used to when compiling Kivy e.g. to run tests. Further, `KIVY_GL_DEBUG=1` is used to force all GL calls to be logged.
+
+With the addition of the angle_sdl2 backend for windows, Kivy now supports environments with no or old OpenGL drivers as long as they have Direct3D 9+ support.
+
+New Widgets
+-----------
+
+  - [#4108] RecycleView has been merged from garden and with new and improved API. It's now fully integrated with layouts and can be used in place of e.g. BoxLayout or GridLayout. See https://kivy.org/docs/api-kivy.uix.recycleview.html and the PR for examples.
+  - [#3900] CoverBehavior, similar to CSS cover, has been added to be used with images. It ensures that the image is sized so that it is as small as possible while ensuring that both dimensions are greater than or equal to the corresponding size of the widget.
+
+New features
+------------
+
+  - [#4617] Add size_hint_min/max to widgets. Widgets that use size hints can now specify the maximum and minimum size of the widget and it'll be respected by the layouts (https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_min_x).
+  - Many new Window features for sdl2, see that section below.
+
+Deprecations
+------------
+
+In light of RecycleView being added, ListView and its associated adaptors are being deprecated and slated to be removed in the next release:
+
+- AbstractView (kivy.uix.abstractview)
+- Adapters (kivy.adapters)
+- DictAdapter (kivy.adapters.dictadapter)
+- ListAdapter (kivy.adapters.listadapter)
+- List Item View Argument Converters (kivy.adapters.args_converter)
+- ListView (kivy.uix.listview)
+- SelectableDataItem (kivy.adapters.models)
+- SelectableView (kivy.uix.selectableview)
+- SimpleListAdapter (kivy.adapters.simplelistadapter)
+
+Other:
+
+- Interactive launcher (kivy.interactive)
+
+Breaking changes
+----------------
+
+- [#3891] ButtonBehavior.always_release defaults to False, so by default a release outside the button is ignored.
+- [#4132] ButtonBehavior.MIN_STATE_TIME was removed and instead has been added to the config. Each button and dropdown now has their own configurable min_state_time property that defaults to the config value.
+- [#4168] kivy.metrics.metrics was removed, use kivy.metrics.Metrics instead.
+- [#4211] TextInput.background_disabled_active was removed, the normal background is used instead.
+- [#4254] kivy.utils.platform is now a string describing the platform and not a callable.
+- [#4603] Made App.on_pause default to return True.
+- [#4819] Remove kivy module extension support - it wasn't used.
+- [#4224] Remove pygst (audio, video, camera), gi (audio, video) and videocapture (camera) providers. Use gstplayer or ffpyplayer instead (https://kivy.org/docs/guide/environment.html#restrict-core-to-specific-implementation)
+- [#5011, #4828] added support for opencv 2 and 3 (camera)
+- [#5033] Clock trigger call doesn’t return True (or anything) anymore, use `is_triggered` instead.
+- [#5088] Change the auto scale option in BorderImage from bool to string with multiple scaling options.
+
+Installation
+------------
+
+- To reduce the Kivy install size, the Kivy examples have been split from the main Windows wheels and should now be installed manually if desired using `pip install kivy_examples`.
+
+- [#4392] Fallback with pkg-config to search both for gstreamer and sdl2 if frameworks are not installed on macOS.
+
+
+Changelog - 1.10.0
+==================
+
+Core
+----
+
+  Audio
+
+  - Add FLAC to GstPlayer extensions
+  - [#4372] Added pitch shifting to audio using sdl2
+  - [#4853] Add 'mp4' support to audio with gstplayer
+  - [#4875] Added note that to seek, sound must be playing
+
+  Clipboard
+
+  - Detect correct Activity regardless of bootstrap (android)
+  - [#3990] Store clipboard contents for gtk3 (ClipboardManager spec)
+  - [#4093] Make clipboard_android work for both old and new toolchain
+  - [#4371] Fix version warning for clipboard_gtk3
+  - Fix Python 3.5-x64 Windows clipboard, see asweigart/pyperclip#25
+  - [#5152] Fixed crash on python3, due to items not being subscriptable
+
+  Image
+
+  - Add JPE to supported sdl2 image extensions
+  - [#3971] Fix stopping an image animation with value of -1 for anim_delay
+  - [#4186] Accept data URIs for image filename
+  - [#4708] Get actual image format instead of extension (imghdr)
+  - [#4728] Use PILImage.frombytes when PILImage.fromstring gives an exception
+  - [#4753, #4727] Image saving using 'save()' throws error
+  - [#5155] Fix unicode image source in Python 2
+
+  Text
+
+  - [#3888] Fix PIL deprecated tostring() scrambling the text
+  - [#3896] Add font rendering options - hinting, kerning, blending (sdl2)
+  - [#3914] Add underline and strikethrough styling for Label and MarkupLabel
+  - [#4265, #3816] Implement text outline for sdl2
+  - [#4012] Fix label color handling
+  - [#4047, #4043] Fix alpha rendering of text color for pygame
+  - [#4063] Performance improved for comparing an entire string for Label
+    halign and valign
+  - Add 'center' as an alias of 'middle' for Label.valign
+  - Register all /usr/share/fonts subfolders
+  - [#4625] Add ellipsis styling for markup label
+  - [#4813, #2412] Change default font to core.text.DEFAULT_FONT
+  - [#4846] Allow skipping italic, bold and bolditalic for the default_font
+    config option
+  - [#4858, #4589, #3753] Add is_shortened to Label
+
+  Video
+
+  - [#4345] ffpyplayer provider was updated to work with the latest FFPyPlayer codebase.
+  - [#5052] Fix ffpyplayer img.to_memoryview returning None
+
+  Window
+
+  - [#3890] turn Window.focus into a read-only property
+  - set Window.focus to false when the window is started in a hidden state
+  - [#3919] SDL2/Android: fixes pause/resume crash using sdl2 bootstrap on
+    android
+  - sdl2/android: redo fix on_pause/on_resume for SDL2 bootstrap. No more
+    freeze on resume.
+  - [#3947] release gil when polling for sdl events
+  - [#4104] window_sdl2: fix title and icon_filename to accept bytes or str
+  - [#4207] add map_key/unmap_key, automatically map android back key
+  - [#4209] Add SDL2 window events
+  - [#4217] Fix Window resizing for X11
+  - [#4239] X11: honor borderless configuration
+  - [#4310] X11: implement on_title
+  - [#4316] Animate the window content based on `softinput_mode`, introducing
+    keyboard_padding and keyboard_anim_args
+  - [#4403, #4377] Take care to account for `density` for mouse_pos
+  - [#4468] Prevent buffer crash on RPi if window was closed
+  - [#4631, #4423] Fixes keycode typo
+  - [#4665] Add softinput_mode handling for SDL2
+  - [#4707] Add grab mouse in sdl2 window
+  - [#4851] Add Window position manipulation
+  - [#4919] Disable SDL2's accelerometer-as-joystick behaviour
+  - [#4921] Add an allow_screensaver property for Window
+  - [#4952] Add multiple joysticks support
+  - [#5019] Add note for elevated use of on_dropfile
+  - [#5048] Fix missing sys.stdout.encoding when piped or frozen
+
+Data
+----
+
+  Keyboards
+
+  - [#4334] Add German keyboard layout
+
+  Style.kv
+
+  - Fix disabled_color for markup
+  - [#3925, #3922] Fix FileListEntry text alignment
+  - [#3864] Avoid end-dev setting ColorWheel internal values
+  - [#4176] Change TextInput images for selection handles
+  - [#4364] Fix missing sp() in style.kv
+  - [#4447, #4416] Fix filechooser size text align
+  - Filechooser: Align size labels with the table header
+  - [#4558] Separate image and button in Switch
+  - [#4732] Hide Image if no app_icon in ActionPrevious
+
+Base
+----
+
+  - [#3955] Deprecate the interactive launcher
+  - [#4427, #4361] Fix multiprocessing.freeze_support()
+  - [#4449] Store kivy_home_dir as a unicode string in python 2
+  - Make gif loader last (Gif loader is slow and should be used if PIL or FFPY
+    providers don't work)
+  - Gst should be imported first since it cannot use sdl2's zlib but sdl2 can
+    use gst's zlib
+  - [#4737] Remove sdl2 presplash after initialised (needs android package)
+  - [#4874] Add Include folder to get_includes()
+  - [#4949] Normalize version
+
+  Animation
+
+  - [#4223, #4222] Implement cancel_property on animation's Sequence
+  - [#4494] Update ClutterAlpha URL in AnimationTransition
+  - [#4563] Draw animation every frame by default, use step=0 instead of
+    1 / 60.0
+  - [#4643] Animation object is passed with the event docs <<< REMOVE?
+  - [#4696, #4695] Remove sequential animations from Animation._instances when
+    complete
+
+  App
+
+  - [#4075] Fix missing path separator
+  - [#4636, #4634] App.stop() clear window children only if window exists
+
+  Compat
+
+  - [#4617] Add isclose to compat based on py3.5 function
+
+  Clock
+
+  - [#3603] Add clock to compat
+  - Include clock changes for freebsd
+  - [#4531] Bump max_iteration to 20
+
+  Config
+
+  - [#4813] Add variable for default_font
+  - [#4921] Add variable for allow_screensaver
+
+  EventDispatcher
+
+  - [#3736, #3118] Make widget kwargs passing higher priority than kv
+
+  Factory
+
+  - [#3975] Remove duplicate definition of SelectableView
+  - [#4046] Register missing properties in factory
+  - [#4108] Update factory registers (RecycleView, RecycleBoxLayout)
+
+  Graphics
+
+  - [#3866] Allow Line.points definition to be a mix of lists/tuples
+  - [#3970] Fix upload uniform without calling useprogram
+  - [#4208] Fix error in Line.rectangle documentation
+  - [#4554] Allow requesting graphics instruction update
+  - [#4556] Segmenats is 180 everywhere and in the docs
+  - what is that? -> a37c8dd, 6dd8c5e
+  - [#4700, #4683] Reactivate free calls in smoothline
+  - [#4837] Restore gl/gles selection at compile-time
+  - [#4873] path changes for config.pxi
+  - [#4913, #4912] Fix missing 'return' in get method for Mesh `mode` property
+  - [#5030] Fix BorderImage border ordering description
+  - [#5091] Fix get_pixel_color for py3
+  
+  Lang
+
+  - [#3909] Add apply_rules to BuilderBase
+  - [#3984] Refactored lang.py - moved into its own module
+  - Fix missing global_idmap in new kivy.lang refactor
+  - [#4013] New ColorProperty and rgba function
+  - [#4015] More robust kv string detection
+  - [#4073, #4072] Split imports on all whitespace
+  - [#4187] Fix Parser.execute_directive() not using resource_find() for
+    including directive
+  - [#4301] Fix parser not continuing after warning
+  - [#4358] Allow spaces before colons for classes, properties
+  - [#4583] Use consistent 'Lang' for logs instead of 'Warning'
+  - [#4615] Fix profiling tool HTML output generation
+  - Catch TypeError in dump_builder_stats
+  - [#5054] Fix inconistent naming if kv files are not unloaded
+  - [#5068] Unload matching rules
+  - [#5153] Fix KV include for quoted paths
+
+  Lib
+
+  - [#4122] Add 'with oscLock' in sendBundle to always release lock
+  - Correctly use oscLock in sendMsg
+  - [#3695] Extend OSC library
+  - Fix py2 print in OSC
+  - [#4433] OSC - convert to bytes for python3
+  - Ctypes supported on Android
+
+  Loader
+
+  - [#4359] Fix Exception on remote image
+  - [#4545, #4366] Fix Asyncimage on error
+
+  Logger
+
+  - [#4057, #4039] Properly format log text
+  - [#4375] Fix handling of PermissionError for logger.purge_logs
+  - [#4400] Recognize {rxvt,rxvt-unicode}-256color as color capable
+  - [#4404] Use a shorter field width for non-colored output
+  - [#4538] Fix "no isatty() method" errors
+  - [#5067] Replace hardcoded value `maxfiles` with config setting
+
+
+  Multistroke
+
+  - [#4803] Fix a silly multistroke crash
+
+  Network
+
+  - [#2772] Handle proxy servers in UrlRequest
+  - [#4297] Fix py3 returning wrong results
+  - [#4448] Fix url in UrlRequest
+
+  Parser
+
+  - [#4011] List supported input formats for parse_color
+  - [#4021] Append alpha for 3 digit hex colors
+
+  Properties
+
+  - [#4013] New ColorProperty and rgba function
+  - [#4304] AliasProperty should update when underlying prop changes even if
+    cache is True
+  - [#4314] Don't cache until first dispatch, otherwise it's never dispatched
+    if read before the dispatch
+  - [#4623] Fix grammar in exceptions
+  - [#4627] Allow conversion from strings without trailing units
+  - [#5135] Add py3 object.__init__() reference to properties
+
+  Resources
+
+  - [#4490] Return `abspath` in `resource_find`.
+
+Input
+-----
+
+  - [#3915, #2701] Don't offset WM_TOUCH with caption size when fullscreen
+  - [#4045, #4040] Late import window for wm_touch
+  - [#4318, #4309] Fix touch scaling for WM_TOUCH
+  - [#4468] Fix HIDinput to dispatch events from main thread and don't eat
+    escape
+  - [#4501] Add on_stop to recorder
+  - [#4621] Fix mtdev provider max_touch_minor option
+  - Fix MTDev crashing if 'x' and 'y' are not in args
+  - Fix MTDev crashing if touch not in last_touches
+  - [#4725, #4413, #4682] Catch permission errors in MTDev
+  - [#4923] Prevent an attempt to import AndroidJoystick with SDL2  
+
+Modules
+-------
+
+  - [#5143] Fix listing modules via `-m list`
+
+  Monitor
+
+  - [#4567] Fix monitor drawing issues after window resize
+  - Code cleanup
+
+  Screen
+
+  - [#4396] Add a lot of new devices
+
+  Touchring, Cursor
+
+  - [#4721, #3097] Touchring and Cursor are now two modules
+
+  WebDebugger
+
+  - Use events size function instead of list comprehension
+
+  Joycursor
+
+  - [#5094] Add JoyCursor module
+
+Storage
+-------
+
+  - [#4269] Fix clear() not syncing the storage file
+  - [#4722] Add JSON dump indention and sort_keys option to JSONStorage
+
+Widgets
+-------
+
+  - Deprecate ListView
+  - [#4944] Deprecate modules pertaining to ListView (AbstractView, Adapters)
+  - [#4108] Integrate Recycleview into Kivy
+  - Add warnings about RecycleView being experimental
+  - [#4617] Adds size_hint_min/max to widgets
+
+  ActionBar
+
+  - [#3128] Introduce ActionGroup.dropdown_width property
+  - [#4347, #4119] Fix ActionView layout more dense/packed after increase of
+    width
+  - [#4441] Fix dismiss in ActionGroup
+  - [#4891, #4867] Fix Actionview window maximize/minimize bug
+  - [#5049] Fix ActionDropDown.on_touch_down
+
+  AnchorLayout
+
+  - [#4628] Fix asymmetric padding list
+
+  Behaviors
+
+  - [#3900] Add CoverBehavior
+  - [#4258] Allow keeping direct ref in knspace, fix crash when child knspace
+    attr is None but parent doesn't have attr
+  - [#4509] Fix CompoundSelectionBehavior example
+  - [#4598, #4593] Fix ToggleButton released with allow_no_selection=False in
+    CompoundSelection
+  - [#4599] Add text_entry_timeout to CompoundSelection
+  - [#4600] Allow all chars that are not e.g. arrow, and fix holding down key
+    in CompoundSelection
+  - Don't return true when already selected in CompoundSelection
+  - [#4782, #4484] Allow unselect an item when multiselect is False in
+    CompoundSelection
+  - [#4850, #4817] Add CompoundSelectionBehavior.touch_deselect_last property
+  - [#4897, #4816] Make _get_focus_* methods public in FocusBehavior
+  - [#4981, #4979] Fix typo in CompoundSelection
+
+  Carousel
+
+  - [#4081, #2087] Fix repeating addition of widget
+  - Use is operator for identity comparison
+  - [#4522] Fix carousel scrollview children touch_move
+  
+  CheckBox
+
+  - [#4266] Add checkbox color
+
+  CodeInput
+
+  - [#3806] Add EmacsBehavior to CodeInput
+  - [#3894] Rename active_key_bindings to key_bindings
+  - [#3898] Remove CodeInput.key_binding
+
+  Dropdown
+
+  - [#4112, #4092] Convert absolute coordinates of the touch.pos to relative
+    coordinates of self.attach_to(dropdown's button)
+  - [#4511] Fix dropdown and spinner dismissing issue
+  - [#4550, #4353] Rework of #4353 DropDown.max_height
+  - [#4805, #4730] Fix first click in ActionGroup
+
+  FileChooser
+
+  - [#3710] Fix directory selection double-selecting
+  - [#4200] Handle children's size_hints equal to zero
+  - [#5010] Fix a crash when using a file as the path
+
+  GestureSurface
+
+  - [#3945] Remove line_width
+  - [#4779] Fix collision check for on_touch_move
+  - [#4034] Don't limit size to cols/rows_minimum, but treat it as real min.
+  - [#4035] Respect size_hint in gridlayout
+
+  Image
+
+  - [#4510] Fix py2 ASCII error
+  - [#4534] Removed long tracebacks
+  - [#4545, #4549] Asyncimage on error
+
+  Label
+
+  - [#3946] Fix label rendering options
+  - [#3963, #3959] Show disabled_color when disabled=True for markup label
+
+  ListView
+
+  - Include ListItemReprMixin
+  - Add note about possible deprecation of ListView
+  - [#2729] Don't require a text argument for CompositeListItems
+
+  ModalView
+
+  - [#4136] Fix model center not syncing with window center
+  - [#4149, #4148] Fix modal background not resizing
+  - [#4156] Fix incorrect ModalView position after window resize
+  - [#4261] Don't return ModalView instance in open and dismiss methods
+
+  PageLayout
+
+  - [#4042] Fixed bug if zero or one widgets are in pagelayout
+  - Code style improvement
+
+  ScreenManager
+
+  - [#4107] Fix Screen removal leaving screen.parent property != None
+  - [#3924] Don't generate a new screen name for existing screens
+  - [#4111, #4107, #2655] Remove the last screen and leave ScreenManager in
+    a valid state
+  - Don't check the Screen parent type, it can only be a ScreenManager
+  - [#4464] Fix SwapTransition not scaling
+  - Add missing import of Scale
+  - [#5032] Add CardTransition to ScreenManager
+
+  ScrollView
+
+  - [#3926, #3783] Fix scroll distance bug
+  - [#4014] Revert accidental non-pep8 scrollview changes
+  - [#4032] Fix ScrollView not properly ignoring touch_up
+  - [#4067] All touches that don't scroll should be skipped in touch move
+  - [#4180] Scroll to touch pos if the touch is within the scrollbar but does
+    not collide with the handle
+  - [#4235] Make sure import does not load a window
+  - [#4455, #4399] Focused widget inside ScrollView should unfocus on tap
+  - [#4508, #4477] Always pop the touch
+  - [#4565, #4564] Fix scrollview click registering on PC
+  - [#4633] Postpone scroll_to if the viewport has pending layout operation
+  - [#4646] Fix on_scroll_move to obey scroll_distance
+  - [#4653] Add checks to start scroll if do_scroll enabled for axis
+  - Add size_hint_min/max support to ScrollView
+  - Use viewport's size_hint
+  - Fix ScrollView ignoring scroll_y, scroll_x being set from outside 
+
+  Settings
+
+  - Fix string_types double import
+  - [#3625] Add show_hidden and dirselect to SettingPath
+
+  Slider
+
+  - [#4028] Fix Slider.value exceeding Slider.max
+  - [#4127, #4124, #4125] Change use of dimension conversion in Slider
+  - Add styling properties for Slider widget
+  - Added value_track* properties
+
+  Spinner
+
+  - Ensure Spinner text is updated when text_autoupdate changes
+  - Autoupdate spinner text only if the current text is not between the new
+    values
+  - [#4022] Add option to sync Spinner dropdown children heights
+  - Update Spinner.text if empty, without comparing values
+  - [#4511] Don't re add all widgets upon resize, it just lead to infinite size
+    calc.
+  - Fix type and don't used children directly since it could be modified
+  - [#4547] Fixes opening for empty values
+
+  StackLayout
+
+  - [#4236] Fix stacklayout not sizing if children is empty
+  - [#4579, #4504] Fix stackLayout children rearranging themselves unexpectedly
+    when their parent's size changes
+
+  TabbedPanel
+
+  - [#4559] Fix scrolling in TabbedPanel
+  - [#4601] Remove tab limit
+  
+  TextInput
+
+  - [#3935] Altered get_cursor_from_xy to intuitively place cursor
+  - [#3962] Add TextInput.password_mask to customize the password placeholder
+  - [#4009] hint_text in TextInput shows when focused and no text entered
+  - [#4024] Always show the textinput cursor at the moment of touch
+  - [#4048] Use a trigger when resetting the textinput cursor state
+  - [#4055] Implement wrapping of continuous text in textinput
+  - [#4088, #4069] Fix disabled backspace
+  - Fix infinite loop when width is negative
+  - Don't reset focus when focus changes
+  - [#4204] hint_text decode text by default
+  - [#4227, #4169] Push flags correctly for linebreak in _split_smart
+  - [#4367, #4244] Don't try to split lines shorter than 1px
+  - [#4445] Prevent an infinite loop when trying to fit an overlong word
+  - [#4453] Fix text going off-screen while wrapping
+  - [#4560, #3765] Fix app crashing on do_cursor_movement('cursor_end') on
+    empty text
+  - [#4632, #4331] Clear selection_text directly
+  - [#4712] Fixed space input under SDL2 for some Android keyboards
+  - [#4745] Add cursor_width to TextInput
+  - [#4762, #4736] Prevent setting suggestion_text crashes if text is empty
+    string and canvas is not setup yet
+  - [#4784] Made sure Selector gets on_touch_down only once
+  - [#4836] Fix Bubble not reachable on Android when touch in textinput is near
+    the borders
+  - [#4844, #3961] Fix not working BubbleButton on_touch_up
+  - [#5100] Fix TextInput crash when text, focus is set and enter pressed at same time
+
+  TreeView
+
+  - [#4561] Add TreeView.deselect_node()
+
+  Video
+
+  - [#4961] Fix on_duration_change typo
+
+  Videoplayer
+
+  - [#4920] Replace old video with CC0 licensed video
+
+  VKeyboard
+
+  - [#4900] Add font_size for key text size
+  - [#5020] Fix file/kblayout opening
+
+  Widget
+
+  - [#4121, #3589] Check if canvas was found in parent canvas for export_to_png
+  - [#3529] Rebind Widget.parent by default
+  - [#4584, #4497] Avoid being behind parent's canvas when inserting a widget
+    at last index
+
+Tools
+-----
+
+  Highlighting
+
+  - Update Emacs mode to modern way of enabling newline and indent
+
+  Packaging
+
+  - [#4840, #4811] Fixed get_deps_minimal crash in Python3
+
+  PEP8checker
+
+  - Add shebang again
+  - [#4798] Update pep8.py to version 2.2.0
+  - Add E402 to pep8 ignore list
+  - Normalize paths excluded from style checks
+  - Match start of folder paths during pep8 check
+  - Ignore E741 and E731
+  - Exclude dir kivy/tools/pep8checker
+  - Delete sample_for_pep8.py
+  - Remove stylereport target from Makefile
+  - Print error count during style check instead of passing it as exit code
+  - Ignore style issues in kivy/deps
+
+  Report
+
+  - Fix StringIO for py2, raw_input/input, crash if GL not available. Add more
+    detailed platform checking. Warn the user the gist is pasted anonymously.
+  - Made ConfigParser py2/3 compatible
+
+Doc
+---
+
+  - [#4271, #2596] Fix docs build on Windows
+  - [#4237] Add screenshots for widgets
+  + Tons of doc fixes thanks to the awesome community
+  + Special Thanks to ZenCODE for his awesome work on improving the doc
+
+Examples
+--------
+
+  - [#3806] Add EmacsBehavior example
+  - [#3866] Fix examples/canvas/lines.py example
+  - [#4268] Fix takepicture requirements, use android.mActivity instead of autoclass
+  - Add RecycleView example
+  - [#4573] Add clipboard example
+  - [#4513] Add an examples for Window.on_dropfile
+  - [#4807] Add example for various color input
+  - [#4862] Add joystick example
+  - [#4883] Fix attribution in examples/widgets/lists
+  - [#4925] Replace images with CC0
+  - Fix KVrun example
+  - Fix Settings example
+  - Fix tabbed showcase example
+  - [#5022] Revert SmoothLine in example
+  - [#5027] Fix unicode error in KeyboardListener example
+  - [#5035] Added KV example for CoverBehavior
+  - Fix camera example - save image with extension
+  - [#5079] Add shape collision example
+  - Fix examples gallery
+  - Fix SVG example - scale with only one value
+
+  + [#5075, #4987] Split examples into separate wheel for windows
+
+Unit Tests
+----------
+
+  - Adapt ListView selection test to new behavior
+  - Add test for TextInput focused while being disabled
+  - [#4223, #4222] Add a test for issue #4222
+  - [#4227] Add test case for word break
+  - [#4321, #4314] Internal alias property details should not be assumed and
+    tested
+  - [#4624] Fix test_wordbreak fail on Retina Mac
+  - Add simple tests for JsonStore options
+  - [#4821] Fix test_fonts file deleting
+  - Use almost equal for float assert
+  - Clipboard should only accept unicode
+  - [#5115] Replace Pygame with SDL2 for image comparing test
+  - [#5111] Add test for Fbo.get_pixel_color
+
+Packaging
+---------
+Tons of more fixes that weren’t mentioned here, details of which can be
+gathered from http://github.com/kivy/kivy
+
+
+Migration
+=========
+
+  - [#3594] Remove KEX (extension) support
+  - [#3891, #3312] ButtonBehavior.always_release default to False
+  - [#4132] Include a min delay before dismissing
+  - [#4168] Remove deprecated kivy.metrics.metrics
+  - [#4211] Remove TextInput.background_disabled_active
+  - [#4224] Remove deprecated video and audio providers: pygst, pyglet and pygi
+  - [#4254] kivy.utils.platform is a string and it's not callable anymore
+  - [#4603, #4796] Made on_pause default to True
+</pre>
+
 <h3>1.9.1 (Jan 1, 2016)</h3>
 Changelog published <a href="https://groups.google.com/forum/#!topic/kivy-users/7LTIHnRCuG4">here</a>
 
