@@ -1,17 +1,16 @@
 [
     {
-        "id": "kivy13",
-        "title": "Kivy 1.9.1 released!",
+        "id": "kivy110",
+        "title": "Kivy 1.10.0 released!",
         "featured": 1,
-        "media": "https://kivy.org/slides/kivy13-featured.jpg",
+        "media": "https://vimeo.com/206290310",
         "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
         "description": [
-            "New wheels for Windows</br>",
-            "optional Python 3 embedded package for OS X<br/>",
-            "packaged using SDL 2.0.4<br/>",
-            "Python 3 embedded option for the Kivy SDK on OS X</br>",
-            "981 commits<br/>",
-            "345 files changed, 7074 insertions(+), 13023 deletions(-)."
+            "Python 2.7 - 3.4 - 3.5 - 3.6<br/>",
+            "Added steroid: New Clock, Recyleview<br/>",
+            "Experimental: Direct3D support via ANGLE<br/>",
+            "1537 commits<br/>",
+            "514 files changed, 22909 insertions, 12323 deletions."
         ]
     },
     {
