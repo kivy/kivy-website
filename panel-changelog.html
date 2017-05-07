@@ -2,84 +2,20 @@
 
 <h3>1.10.0 (May 7, 2017)</h3>
 <pre class="changelog">
-Highlights
-==========
-
-Python 3.5/3.6+ support on Windows
-----------------------------------
-
-Python 3.5+ support is finally here for Windows using the same codebase! These versions are currently only supported with Visual Studio 2015. We also provide self-contained wheels for them. See https://kivy.org/docs/installation/installation-windows.html#installation.
-
-Kivy Clock
-----------
-
-The Kivy Clock has been moved to cython to improve performance [#4412]. Even better, scheduling is now deterministic and will always execute callbacks in the order they were scheduled. Finally, all Clock scheduling and unscheduling is now thread-safe. To get the best out of this, the recommended pattern is to save Clock events and later call their cancel method instead of calling the inefficient Clock.unschedule() method. We also added multiple new Clock types for advanced users [#4436].
-
-Graphics
---------
-
-[#4343, #4385, #3906] The graphics backends have been refactored. Graphics modules now call the central `kivy.graphics.cgl` subpackage for all OpenGL calls instead of direct API calls. The `cgl` package can switch between multiple GL backends on each platform at startup-time based on the `KIVY_GL_BACKEND` variable (https://kivy.org/docs/api-kivy.graphics.cgl.html#module-kivy.graphics.cgl).
-
-Available backends are (gl, sdl2) on unix and (glew, sdl2, angle_sdl2) on windows. When no GL is available, the mock backend which is a NOOP backend can be used to when compiling Kivy e.g. to run tests. Further, `KIVY_GL_DEBUG=1` is used to force all GL calls to be logged.
-
-With the addition of the angle_sdl2 backend for windows, Kivy now supports environments with no or old OpenGL drivers as long as they have Direct3D 9+ support.
-
-New Widgets
------------
-
-  - [#4108] RecycleView has been merged from garden and with new and improved API. It's now fully integrated with layouts and can be used in place of e.g. BoxLayout or GridLayout. See https://kivy.org/docs/api-kivy.uix.recycleview.html and the PR for examples.
-  - [#3900] CoverBehavior, similar to CSS cover, has been added to be used with images. It ensures that the image is sized so that it is as small as possible while ensuring that both dimensions are greater than or equal to the corresponding size of the widget.
-
-New features
-------------
-
-  - [#4617] Add size_hint_min/max to widgets. Widgets that use size hints can now specify the maximum and minimum size of the widget and it'll be respected by the layouts (https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.size_hint_min_x).
-  - Many new Window features for sdl2, see that section below.
-
-Deprecations
-------------
-
-In light of RecycleView being added, ListView and its associated adaptors are being deprecated and slated to be removed in the next release:
-
-- AbstractView (kivy.uix.abstractview)
-- Adapters (kivy.adapters)
-- DictAdapter (kivy.adapters.dictadapter)
-- ListAdapter (kivy.adapters.listadapter)
-- List Item View Argument Converters (kivy.adapters.args_converter)
-- ListView (kivy.uix.listview)
-- SelectableDataItem (kivy.adapters.models)
-- SelectableView (kivy.uix.selectableview)
-- SimpleListAdapter (kivy.adapters.simplelistadapter)
-
-Other:
-
-- Interactive launcher (kivy.interactive)
-
 Breaking changes
 ----------------
 
-- [#3891] ButtonBehavior.always_release defaults to False, so by default a release outside the button is ignored.
-- [#4132] ButtonBehavior.MIN_STATE_TIME was removed and instead has been added to the config. Each button and dropdown now has their own configurable min_state_time property that defaults to the config value.
-- [#4168] kivy.metrics.metrics was removed, use kivy.metrics.Metrics instead.
-- [#4211] TextInput.background_disabled_active was removed, the normal background is used instead.
-- [#4254] kivy.utils.platform is now a string describing the platform and not a callable.
-- [#4603] Made App.on_pause default to return True.
-- [#4819] Remove kivy module extension support - it wasn't used.
-- [#4224] Remove pygst (audio, video, camera), gi (audio, video) and videocapture (camera) providers. Use gstplayer or ffpyplayer instead (https://kivy.org/docs/guide/environment.html#restrict-core-to-specific-implementation)
-- [#5011, #4828] added support for opencv 2 and 3 (camera)
-- [#5033] Clock trigger call doesn’t return True (or anything) anymore, use `is_triggered` instead.
-- [#5088] Change the auto scale option in BorderImage from bool to string with multiple scaling options.
-
-Installation
-------------
-
-- To reduce the Kivy install size, the Kivy examples have been split from the main Windows wheels and should now be installed manually if desired using `pip install kivy_examples`.
-
-- [#4392] Fallback with pkg-config to search both for gstreamer and sdl2 if frameworks are not installed on macOS.
-
-
-Changelog - 1.10.0
-==================
+  - [#3891] ButtonBehavior.always_release defaults to False, so by default a release outside the button is ignored.
+  - [#4132] ButtonBehavior.MIN_STATE_TIME was removed and instead has been added to the config. Each button and dropdown now has their own configurable min_state_time property that defaults to the config value.
+  - [#4168] kivy.metrics.metrics was removed, use kivy.metrics.Metrics instead.
+  - [#4211] TextInput.background_disabled_active was removed, the normal background is used instead.
+  - [#4254] kivy.utils.platform is now a string describing the platform and not a callable.
+  - [#4603] Made App.on_pause default to return True.
+  - [#4819] Remove kivy module extension support - it wasn't used.
+  - [#4224] Remove pygst (audio, video, camera), gi (audio, video) and videocapture (camera) providers. Use gstplayer or ffpyplayer instead (https://kivy.org/docs/guide/environment.html#restrict-core-to-specific-implementation)
+  - [#5011, #4828] added support for opencv 2 and 3 (camera)
+  - [#5033] Clock trigger call doesn’t return True (or anything) anymore, use `is_triggered` instead.
+  - [#5088] Change the auto scale option in BorderImage from bool to string with multiple scaling options.
 
 Core
 ----
@@ -187,10 +123,8 @@ Base
   - [#3955] Deprecate the interactive launcher
   - [#4427, #4361] Fix multiprocessing.freeze_support()
   - [#4449] Store kivy_home_dir as a unicode string in python 2
-  - Make gif loader last (Gif loader is slow and should be used if PIL or FFPY
-    providers don't work)
-  - Gst should be imported first since it cannot use sdl2's zlib but sdl2 can
-    use gst's zlib
+  - Make gif loader last (Gif loader is slow and should be used if PIL or FFPY providers don't work)
+  - Gst should be imported first since it cannot use sdl2's zlib but sdl2 can use gst's zlib
   - [#4737] Remove sdl2 presplash after initialised (needs android package)
   - [#4874] Add Include folder to get_includes()
   - [#4949] Normalize version
@@ -199,8 +133,7 @@ Base
 
   - [#4223, #4222] Implement cancel_property on animation's Sequence
   - [#4494] Update ClutterAlpha URL in AnimationTransition
-  - [#4563] Draw animation every frame by default, use step=0 instead of
-    1 / 60.0
+  - [#4563] Draw animation every frame by default, use step=0 instead of 1 / 60.0
   - [#4643] Animation object is passed with the event docs <<< REMOVE?
   - [#4696, #4695] Remove sequential animations from Animation._instances when
     complete
@@ -249,7 +182,7 @@ Base
   - [#4913, #4912] Fix missing 'return' in get method for Mesh `mode` property
   - [#5030] Fix BorderImage border ordering description
   - [#5091] Fix get_pixel_color for py3
-  
+
   Lang
 
   - [#3909] Add apply_rules to BuilderBase
@@ -258,8 +191,7 @@ Base
   - [#4013] New ColorProperty and rgba function
   - [#4015] More robust kv string detection
   - [#4073, #4072] Split imports on all whitespace
-  - [#4187] Fix Parser.execute_directive() not using resource_find() for
-    including directive
+  - [#4187] Fix Parser.execute_directive() not using resource_find() for including directive
   - [#4301] Fix parser not continuing after warning
   - [#4358] Allow spaces before colons for classes, properties
   - [#4583] Use consistent 'Lang' for logs instead of 'Warning'
@@ -311,10 +243,8 @@ Base
   Properties
 
   - [#4013] New ColorProperty and rgba function
-  - [#4304] AliasProperty should update when underlying prop changes even if
-    cache is True
-  - [#4314] Don't cache until first dispatch, otherwise it's never dispatched
-    if read before the dispatch
+  - [#4304] AliasProperty should update when underlying prop changes even if cache is True
+  - [#4314] Don't cache until first dispatch, otherwise it's never dispatched if read before the dispatch
   - [#4623] Fix grammar in exceptions
   - [#4627] Allow conversion from strings without trailing units
   - [#5135] Add py3 object.__init__() reference to properties
@@ -329,14 +259,13 @@ Input
   - [#3915, #2701] Don't offset WM_TOUCH with caption size when fullscreen
   - [#4045, #4040] Late import window for wm_touch
   - [#4318, #4309] Fix touch scaling for WM_TOUCH
-  - [#4468] Fix HIDinput to dispatch events from main thread and don't eat
-    escape
+  - [#4468] Fix HIDinput to dispatch events from main thread and don't eat escape
   - [#4501] Add on_stop to recorder
   - [#4621] Fix mtdev provider max_touch_minor option
   - Fix MTDev crashing if 'x' and 'y' are not in args
   - Fix MTDev crashing if touch not in last_touches
   - [#4725, #4413, #4682] Catch permission errors in MTDev
-  - [#4923] Prevent an attempt to import AndroidJoystick with SDL2  
+  - [#4923] Prevent an attempt to import AndroidJoystick with SDL2
 
 Modules
 -------
@@ -382,8 +311,7 @@ Widgets
   ActionBar
 
   - [#3128] Introduce ActionGroup.dropdown_width property
-  - [#4347, #4119] Fix ActionView layout more dense/packed after increase of
-    width
+  - [#4347, #4119] Fix ActionView layout more dense/packed after increase of width
   - [#4441] Fix dismiss in ActionGroup
   - [#4891, #4867] Fix Actionview window maximize/minimize bug
   - [#5049] Fix ActionDropDown.on_touch_down
@@ -395,17 +323,13 @@ Widgets
   Behaviors
 
   - [#3900] Add CoverBehavior
-  - [#4258] Allow keeping direct ref in knspace, fix crash when child knspace
-    attr is None but parent doesn't have attr
+  - [#4258] Allow keeping direct ref in knspace, fix crash when child knspace attr is None but parent doesn't have attr
   - [#4509] Fix CompoundSelectionBehavior example
-  - [#4598, #4593] Fix ToggleButton released with allow_no_selection=False in
-    CompoundSelection
+  - [#4598, #4593] Fix ToggleButton released with allow_no_selection=False in CompoundSelection
   - [#4599] Add text_entry_timeout to CompoundSelection
-  - [#4600] Allow all chars that are not e.g. arrow, and fix holding down key
-    in CompoundSelection
+  - [#4600] Allow all chars that are not e.g. arrow, and fix holding down key in CompoundSelection
   - Don't return true when already selected in CompoundSelection
-  - [#4782, #4484] Allow unselect an item when multiselect is False in
-    CompoundSelection
+  - [#4782, #4484] Allow unselect an item when multiselect is False in CompoundSelection
   - [#4850, #4817] Add CompoundSelectionBehavior.touch_deselect_last property
   - [#4897, #4816] Make _get_focus_* methods public in FocusBehavior
   - [#4981, #4979] Fix typo in CompoundSelection
@@ -415,7 +339,7 @@ Widgets
   - [#4081, #2087] Fix repeating addition of widget
   - Use is operator for identity comparison
   - [#4522] Fix carousel scrollview children touch_move
-  
+
   CheckBox
 
   - [#4266] Add checkbox color
@@ -480,8 +404,7 @@ Widgets
 
   - [#4107] Fix Screen removal leaving screen.parent property != None
   - [#3924] Don't generate a new screen name for existing screens
-  - [#4111, #4107, #2655] Remove the last screen and leave ScreenManager in
-    a valid state
+  - [#4111, #4107, #2655] Remove the last screen and leave ScreenManager in a valid state
   - Don't check the Screen parent type, it can only be a ScreenManager
   - [#4464] Fix SwapTransition not scaling
   - Add missing import of Scale
@@ -493,8 +416,7 @@ Widgets
   - [#4014] Revert accidental non-pep8 scrollview changes
   - [#4032] Fix ScrollView not properly ignoring touch_up
   - [#4067] All touches that don't scroll should be skipped in touch move
-  - [#4180] Scroll to touch pos if the touch is within the scrollbar but does
-    not collide with the handle
+  - [#4180] Scroll to touch pos if the touch is within the scrollbar but does not collide with the handle
   - [#4235] Make sure import does not load a window
   - [#4455, #4399] Focused widget inside ScrollView should unfocus on tap
   - [#4508, #4477] Always pop the touch
@@ -504,7 +426,7 @@ Widgets
   - [#4653] Add checks to start scroll if do_scroll enabled for axis
   - Add size_hint_min/max support to ScrollView
   - Use viewport's size_hint
-  - Fix ScrollView ignoring scroll_y, scroll_x being set from outside 
+  - Fix ScrollView ignoring scroll_y, scroll_x being set from outside
 
   Settings
 
@@ -521,26 +443,23 @@ Widgets
   Spinner
 
   - Ensure Spinner text is updated when text_autoupdate changes
-  - Autoupdate spinner text only if the current text is not between the new
-    values
+  - Autoupdate spinner text only if the current text is not between the new values
   - [#4022] Add option to sync Spinner dropdown children heights
   - Update Spinner.text if empty, without comparing values
-  - [#4511] Don't re add all widgets upon resize, it just lead to infinite size
-    calc.
+  - [#4511] Don't re add all widgets upon resize, it just lead to infinite size calc.
   - Fix type and don't used children directly since it could be modified
   - [#4547] Fixes opening for empty values
 
   StackLayout
 
   - [#4236] Fix stacklayout not sizing if children is empty
-  - [#4579, #4504] Fix stackLayout children rearranging themselves unexpectedly
-    when their parent's size changes
+  - [#4579, #4504] Fix stackLayout children rearranging themselves unexpectedly when their parent's size changes
 
   TabbedPanel
 
   - [#4559] Fix scrolling in TabbedPanel
   - [#4601] Remove tab limit
-  
+
   TextInput
 
   - [#3935] Altered get_cursor_from_xy to intuitively place cursor
@@ -557,16 +476,13 @@ Widgets
   - [#4367, #4244] Don't try to split lines shorter than 1px
   - [#4445] Prevent an infinite loop when trying to fit an overlong word
   - [#4453] Fix text going off-screen while wrapping
-  - [#4560, #3765] Fix app crashing on do_cursor_movement('cursor_end') on
-    empty text
+  - [#4560, #3765] Fix app crashing on do_cursor_movement('cursor_end') on empty text
   - [#4632, #4331] Clear selection_text directly
   - [#4712] Fixed space input under SDL2 for some Android keyboards
   - [#4745] Add cursor_width to TextInput
-  - [#4762, #4736] Prevent setting suggestion_text crashes if text is empty
-    string and canvas is not setup yet
+  - [#4762, #4736] Prevent setting suggestion_text crashes if text is empty string and canvas is not setup yet
   - [#4784] Made sure Selector gets on_touch_down only once
-  - [#4836] Fix Bubble not reachable on Android when touch in textinput is near
-    the borders
+  - [#4836] Fix Bubble not reachable on Android when touch in textinput is near the borders
   - [#4844, #3961] Fix not working BubbleButton on_touch_up
   - [#5100] Fix TextInput crash when text, focus is set and enter pressed at same time
 
@@ -591,8 +507,7 @@ Widgets
 
   - [#4121, #3589] Check if canvas was found in parent canvas for export_to_png
   - [#3529] Rebind Widget.parent by default
-  - [#4584, #4497] Avoid being behind parent's canvas when inserting a widget
-    at last index
+  - [#4584, #4497] Avoid being behind parent's canvas when inserting a widget at last index
 
 Tools
 -----
@@ -621,8 +536,7 @@ Tools
 
   Report
 
-  - Fix StringIO for py2, raw_input/input, crash if GL not available. Add more
-    detailed platform checking. Warn the user the gist is pasted anonymously.
+  - Fix StringIO for py2, raw_input/input, crash if GL not available. Add more detailed platform checking. Warn the user the gist is pasted anonymously.
   - Made ConfigParser py2/3 compatible
 
 Doc
@@ -630,8 +544,8 @@ Doc
 
   - [#4271, #2596] Fix docs build on Windows
   - [#4237] Add screenshots for widgets
-  + Tons of doc fixes thanks to the awesome community
-  + Special Thanks to ZenCODE for his awesome work on improving the doc
+  - Tons of doc fixes thanks to the awesome community
+  - Special Thanks to ZenCODE for his awesome work on improving the doc
 
 Examples
 --------
@@ -656,8 +570,7 @@ Examples
   - [#5079] Add shape collision example
   - Fix examples gallery
   - Fix SVG example - scale with only one value
-
-  + [#5075, #4987] Split examples into separate wheel for windows
+  - [#5075, #4987] Split examples into separate wheel for windows
 
 Unit Tests
 ----------
@@ -666,8 +579,7 @@ Unit Tests
   - Add test for TextInput focused while being disabled
   - [#4223, #4222] Add a test for issue #4222
   - [#4227] Add test case for word break
-  - [#4321, #4314] Internal alias property details should not be assumed and
-    tested
+  - [#4321, #4314] Internal alias property details should not be assumed and tested
   - [#4624] Fix test_wordbreak fail on Retina Mac
   - Add simple tests for JsonStore options
   - [#4821] Fix test_fonts file deleting
@@ -678,12 +590,12 @@ Unit Tests
 
 Packaging
 ---------
-Tons of more fixes that weren’t mentioned here, details of which can be
-gathered from http://github.com/kivy/kivy
+
+  - Tons of more fixes that weren’t mentioned here, details of which can be gathered from http://github.com/kivy/kivy
 
 
 Migration
-=========
+---------
 
   - [#3594] Remove KEX (extension) support
   - [#3891, #3312] ButtonBehavior.always_release default to False
