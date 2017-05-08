@@ -32,7 +32,7 @@
     "id": "nienie",
     "title": "Nie Nie",
     "featured": 1,
-    "media": "https://lh3.googleusercontent.com/skkA8iRUWCyLbfvIx9IHnEF3K3pbsRR56OOJuNOWVZd4K4SJ7ahDkq3-HqfKQMEP5Dg=h310-rw",
+    "media": "images/project/nie-nie.png",
     "description": [
       "Casual puzzle/brain teaser with simple gameplay<br/>",
       "Multiple game modes<br/>",
@@ -74,7 +74,7 @@
     "id": "barly",
     "title": "Barly",
     "featured": 1,
-    "media": "https://lh3.googleusercontent.com/6Jq0flCYqmq_MYUB6WlDVzdScvB4e_PNrSr72ljfemEm7W-fl5B5SpZ4QCj0D3HCWWk=h900-rw",
+    "media": "images/project/barly.png",
     "description": [
       "Decipher all of those crazy names and <br/>",
       "tell you which beers you’ll be glad you tried.<br/>",
@@ -88,7 +88,7 @@
     "id": "myspaint",
     "title": "Simple Peinture",
     "featured": 1,
-    "media": "https://lh3.googleusercontent.com/Zw3zgb6qqLBU_6FMs8Xyp9NpdRiA4ELWjBP9RqnlQCeZsk68TNEFKyq5WR2zOTDSL9E=h900-rw",
+    "media": "images/project/peinture.png",
     "description": [
       "Kid drawing application<br/>",
       "Undo system, one touch to change tool.<br/>",
@@ -130,7 +130,7 @@
     "id": "rocketkite",
     "title": "Rocket Kite",
     "featured": 1,
-    "media": "https://lh3.googleusercontent.com/KcJ3-qENhheqaOIUslDGQaZTValSGkutuoRItLB3_e73VYgQ9lVBtkNG0vRdfVzEKnyi=h900-rw",
+    "media": "images/project/rocket_kite.png",
     "description": [
       "Fly your rocket kite among the planets<br/>",
       "Use gravity to your advantage, collect all checkpoints<br/>",
