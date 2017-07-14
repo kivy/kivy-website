@@ -163,10 +163,11 @@
     "media": "https://www.youtube.com/watch?v=aa9LXpg_gd0",
     "description": [
       "Yeco is a multi touch controller for Ableton Live<br/>",
-      "Working on Windows 32/64, Mac soon"
+      "Available for Windows and macOS"
     ],
     "footer": [
-      "By <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
+      "<a href='http://yeco.io/'>Website</a>",
+      " - by <a href='mailto:grmcomm@gmail.com'>Graham Comerford</a>"
     ]
   },
   {
