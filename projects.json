@@ -7,7 +7,7 @@
     "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
     "description": [
       "Python 2.7 - 3.4 - 3.5 - 3.6<br/>",
-      "140 Pull Requests merged<br\>",
+      "140 Pull Requests merged<br/>",
       "422 commits<br/>",
       "202 files changed, 7409 insertions, 1554 deletions"
     ]
@@ -17,10 +17,10 @@
     "featured": 1,
     "media": "slides/snu_capture-featured.png",
     "description": [
-      "A feature-rich photo manager and editor.",
-      "Photo and video database with folders, albums, tags and favorites.",
-      "Color editing: brightness, contrast, saturation, gamma, color curves, tinting.",
-      "Filters: sharpen, soften, vignette, edge blur.",
+      "A feature-rich photo manager and editor.<br/>",
+      "Photo and video database with folders, albums, tags and favorites.<br/>",
+      "Color editing: brightness, contrast, saturation, gamma, color curves, tinting.<br/>",
+      "Filters: sharpen, soften, vignette, edge blur.<br/>",
       "and much more…"
     ],
     "footer": [
@@ -32,8 +32,8 @@
     "featured": 1,
     "media": "slides/meccano_rubiks_debugscreen.png",
     "description": [
-      "An electro-mecanical project to solve Rubik's cubes",
-      "using Meccano, Arduino, a Raspberry pi and Kivy"
+      "An electro-mecanical project to solve Rubik's cubes<br/>",
+      "using Meccano, Arduino, a Raspberry pi and Kivy<br/>"
     ],
     "footer": [
       "<a href='https://meccanokinematics.net/meccano-rubiks-shrine/'>Website</a>"
@@ -44,8 +44,8 @@
     "featured": 1,
     "media": "slides/tf_process_montage.png",
     "description": [
-      "Phylogenomic data gathering, processing and visualization for everyone!",
-      "Detection and exploration of orthologs across multiple species... made easy!",
+      "Phylogenomic data gathering, processing and visualization for everyone!<br/>",
+      "Detection and exploration of orthologs across multiple species... made easy!<br/>",
       "Convert, manipulate and export thousands of multiple sequence alignments in a breeze"
     ],
     "footer": [
@@ -57,10 +57,10 @@
     "featured": 1,
     "media": "slides/capture_metropole.png",
     "description": [
-      "A custom application to present the Marseille métropole",
-      "Map with POI selection and basket",
-      "Custom dynamic object menu",
-      "RstDocument used to display converted docx documents"
+      "A custom application to present the Marseille métropole<br/>",
+      "Map with POI selection and basket<br/>",
+      "Custom dynamic object menu<br/>",
+      "RstDocument used to display converted docx documents<br/>"
     ],
     "footer": [
       "<a href='https://vimeo.com/272219637'>video</a> <a href='http://tangibledisplay.com'>Website</a>"
@@ -71,7 +71,7 @@
     "featured": 1,
     "media": "slides/mission_pinball_2.png",
     "description": [
-      "A free Python-based pinball framework used to run real pinball machines.",
+      "A free Python-based pinball framework used to run real pinball machines.<br/>",
       "Allows builders and programmers to create software for their pinball machines."
     ],
     "footer": [
@@ -80,11 +80,11 @@
   },{
     "id": "kircy",
     "title": "Kircy",
-    "featured": 0,
+    "featured": 1,
     "media": "images/kircy_client.png",
     "description": [
-     "An IRC client being used through an SSH Server.",
-     "Aims to make it possible to discuss from multiple devices on local network."
+     "An IRC client being used through an SSH Server.<br/>",
+     "Aims to make it possible to discuss from multiple devices on local network.<br/>"
     ]
   },{
     "id": "digitalstories",
@@ -97,7 +97,7 @@
       "discover and interact on video games and movies."
     ],
     "footer": [
-      "<a href='http://www.digital-stories.fr/'>Website</a>",
+      "<a href='http://www.digital-stories.fr/'>Website</a><br/>",
       " - by <a href='http://www.rencontres-audiovisuelles.org/'>Les rencontres audiovisuelles</a>"
     ]
   },
