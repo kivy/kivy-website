@@ -92,15 +92,6 @@
       "<a href='http://missionpinball.org/'>Website</a>"
     ]
   },{
-    "id": "kircy",
-    "title": "Kircy",
-    "featured": 0,
-    "media": "slides/kircy_client.png",
-    "description": [
-     "An IRC client being used through an SSH Server.<br/>",
-     "Aims to make it possible to discuss from multiple devices on local network.<br/>"
-    ]
-  },{
     "id": "digitalstories",
     "title": "Digital Stories",
     "featured": 1,
