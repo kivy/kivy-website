@@ -27,6 +27,20 @@
       "<a href='https://github.com/snuq/Snu-Photo-Manager'>Website</a>"
     ]
   },{
+    "id": "learn_python",
+    "title": "Learn Python Offline & IDE",
+    "featured": 1,
+    "media": "slides/learn_python.png",
+    "description": [
+      "An application to learn and experiment with Python",
+      "Read and search documentation & tutorials.",
+      "Includes an editor and offline compiler in the pro version"
+    ],
+    "footer": [
+      "<a href='https://play.google.com/store/apps/details?id=com.prog.ders.eng'>Learn Python Offline</a>",
+      "<a href='https://play.google.com/store/apps/details?id=com.prog.ders.eng1'>Learn Python & IDE Pro</a>"
+    ]
+  },{
     "id": "meccano_rubiks_shrine",
     "title": "Meccano Rubik's Shrine",
     "featured": 1,
