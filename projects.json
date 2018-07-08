@@ -15,7 +15,7 @@
     "id": "snu_photo_manager",
     "title": "Snu Photo Manager",
     "featured": 1,
-    "media": "slides/snu_capture-featured.png",
+    "media": "slides/snu_photo-featured.png",
     "description": [
       "A feature-rich photo manager and editor.<br/>",
       "Photo and video database with folders, albums, tags and favorites.<br/>",
@@ -30,10 +30,10 @@
     "id": "learn_python",
     "title": "Learn Python Offline & IDE",
     "featured": 1,
-    "media": "slides/learn_python.png",
+    "media": "slides/learn_python-featured.png",
     "description": [
-      "An application to learn and experiment with Python",
-      "Read and search documentation & tutorials.",
+      "An application to learn and experiment with Python<br>",
+      "Read and search documentation & tutorials.<br>",
       "Includes an editor and offline compiler in the pro version"
     ],
     "footer": [
@@ -83,7 +83,7 @@
     "id": "missionpinball",
     "title": "Mission Pinball Framework",
     "featured": 1,
-    "media": "slides/mission_pinball_2.png",
+    "media": "slides/mission_pinball_2.jpg",
     "description": [
       "A free Python-based pinball framework used to run real pinball machines.<br/>",
       "Allows builders and programmers to create software for their pinball machines."
@@ -94,8 +94,8 @@
   },{
     "id": "kircy",
     "title": "Kircy",
-    "featured": 1,
-    "media": "images/kircy_client.png",
+    "featured": 0,
+    "media": "slides/kircy_client.png",
     "description": [
      "An IRC client being used through an SSH Server.<br/>",
      "Aims to make it possible to discuss from multiple devices on local network.<br/>"
