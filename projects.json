@@ -41,18 +41,6 @@
       "<a href='https://play.google.com/store/apps/details?id=com.prog.ders.eng1'>Learn Python & IDE Pro</a>"
     ]
   },{
-    "id": "meccano_rubiks_shrine",
-    "title": "Meccano Rubik's Shrine",
-    "featured": 1,
-    "media": "slides/meccano_rubiks_debugscreen.png",
-    "description": [
-      "An electro-mecanical project to solve Rubik's cubes<br/>",
-      "using Meccano, Arduino, a Raspberry pi and Kivy<br/>"
-    ],
-    "footer": [
-      "<a href='https://meccanokinematics.net/meccano-rubiks-shrine/'>Website</a>"
-    ]
-  },{
     "id": "trifusion",
     "title": "TriFusion",
     "featured": 1,
@@ -64,6 +52,18 @@
     ],
     "footer": [
       "<a href='https://odiogosilva.github.io/TriFusion/'>Website</a>"
+    ]
+  },{
+    "id": "meccano_rubiks_shrine",
+    "title": "Meccano Rubik's Shrine",
+    "featured": 1,
+    "media": "slides/meccano_rubiks_debugscreen.png",
+    "description": [
+      "An electro-mecanical project to solve Rubik's cubes<br/>",
+      "using Meccano, Arduino, a Raspberry pi and Kivy<br/>"
+    ],
+    "footer": [
+      "<a href='https://meccanokinematics.net/meccano-rubiks-shrine/'>Website</a>"
     ]
   },{
     "id": "metropole",
