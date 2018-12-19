@@ -550,4 +550,14 @@ table.logolist td {
     position: absolute;
     top: 75px;
     right: 10px;
+    border-radius: 22px;
+    border-style: inset;
+    font: 20px bold;
+    padding: 3px;
+    background-color: #ffff50;
+    color: black;
+}
+
+#donate a {
+    color: black;
 }
