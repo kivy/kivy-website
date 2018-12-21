@@ -33,7 +33,7 @@ function selectPanel(name) {
 		$('div.panel:not('+panelid+')').hide();
 	} else {
 		var panel = $('<div class="panel"></div>').attr('id', panelname);
-		$('#content .wrapper').append(panel);
+		$('#content .wrapper-container').append(panel);
 		panel.load('./panel-' + name + '.html', function() {
 			$('div.panel:not('+panelid+')').hide();
 			panel.show();
