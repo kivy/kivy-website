@@ -49,12 +49,6 @@
 			<a href="https://www.facebook.com/kivyframework" class="icon-facebook"></a>
 			<a href="https://twitter.com/kivyframework" class="icon-twitter"></a>
 		</div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donate">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ZN5G75EG8PHNG">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-        </form>
         <div id="logo">
                 <a href="//kivy.org/">
                         <img src="logos/kivy-logo-black-64.png" alt="Kivy logo" title="Kivy"/>
@@ -67,7 +61,7 @@
                         <li><a class="piwik_link" href="#download">Download</a></li>
                         <li><a class="piwik_link" href="#gallery">Gallery</a></li>
                         <li><a class="piwik_link" href="#support">Help</a></li>
-                        <li><a class="piwik_link" href="#organization">Organization</a></li>
+                        <li><a class="piwik_link" href="https://opencollective.com/kivy">Donate</a></li>
                         <li><a class="piwik_link" href="#aboutus">About</a></li>
                         <li><a class="piwik_link" href="//kivy.org/planet">Blog</a></li>
                 </ul>
@@ -79,7 +73,7 @@
         <div class="slideshow-shadow"></div>
 
         <!-- global wrapper -->
-        <div class="wrapper">
+        <div class="wrapper-container">
 
                 <!--
 
@@ -87,6 +81,7 @@
 
                 -->
                 <div class="panel" id="panel-home">
+                        <div class="wrapper">
                         <div class="clear"></div>
                         <div id="slides" class="slideshow">
                         </div>
@@ -139,8 +134,39 @@
                                 </div>
                         </div>
 
+                </div>
+                <div class="wrapper-opencollective">
+                        <div class="wrapper">
+                                <h2>Become a sponsor !</h2>
+                                <script src="https://opencollective.com/kivy/banner.js"></script>
+                        </div>
+                </div>
+                <div class="wrapper">
                         <div class="clear"></div>
-						<br/><br/>
+                        <div class="features">
+                                <div class="feature-item item-2-col">
+                                        <h2>Usage example</h2>
+                                        <p>See how easy it is to create a simple <em>Hello World</em> application that shows an actionable button:<br/><br/></p>
+
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
+
+<span class="k">class</span> <span class="nc">TestApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
+
+<span class="n">TestApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div></div>
+                                </div>
+                                <div class="feature-item last">
+                                        <h2>Result</h2>
+                                        <img src="images/helloworld.png" alt="Result of the example: A window with the text 'hello world' positioned in the middle."/>
+                                </div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+
+                        <div class="clear"></div>
                         <h2>Be social !</h2>
                         <div>
                                 <!--
@@ -170,29 +196,8 @@
                                 </table>
                         </div>
 
-                        <div class="clear"></div>
-                        <div class="features">
-                                <div class="feature-item item-2-col">
-                                        <h2>Usage example</h2>
-                                        <p>See how easy it is to create a simple <em>Hello World</em> application that shows an actionable button:<br/><br/></p>
 
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
-<span class="kn">from</span> <span class="nn">kivy.uix.button</span> <span class="kn">import</span> <span class="n">Button</span>
-
-<span class="k">class</span> <span class="nc">TestApp</span><span class="p">(</span><span class="n">App</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
-
-<span class="n">TestApp</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div></div>
-                                </div>
-                                <div class="feature-item last">
-                                        <h2>Result</h2>
-                                        <img src="images/helloworld.png" alt="Result of the example: A window with the text 'hello world' positioned in the middle."/>
-                                </div>
-                        </div>
-
-                        <div style="clear: both;"></div>
+                </div>
                 </div>
 
                 <!--
@@ -201,6 +206,7 @@
 
                 -->
                 <div class="panel" id="panel-download">
+                        <div class="wrapper">
                         <h2>Download</h2>
                         <p>
                         The current version is <span class="hl">1.10.1</span>, released on July 8th, 2018.
@@ -460,6 +466,7 @@
                                 of the development version</a>.
                         </p>
                 </div>
+                </div>
 
                 <!--
 
@@ -467,6 +474,7 @@
 
                 -->
                 <div class="panel" id="panel-support">
+                        <div class="wrapper">
                         <h2>Documentation</h2>
                         <ul>
                             <li>
@@ -501,9 +509,11 @@
                                 <a href="https://chat.kivy.org"
                                         rel="external">Connect to Discord</a>
                         </p>
+                        </div>
                 </div>
 
                 <div class="panel" id="panel-license">
+                        <div class="wrapper">
                         <h2>Licenses</h2>
                         <p>
                                 <a href="#logo" rel="panel">The Kivy logo</a> was made by
@@ -521,9 +531,11 @@
                                         rel="panel">Gallery</a> are from their respective owners.
                                 Contact them first if you want to use the content.
                         </p>
+                        </div>
                 </div>
 
                 <div class="panel" id="panel-aboutus">
+                        <div class="wrapper">
                         <h2>About us</h2>
                         <p>
                                 Kivy is a community project, led by professional software developers.
@@ -867,10 +879,10 @@
                         </div>
                         <div class="clear"></div>
                         </div>
-
-
-        </div> <!-- end of wrapper -->
-</div> <!-- end of content -->
+                </div>
+                </div> <!-- end of wrapper -->
+        </div> <!-- end of content -->
+</div>
 
 <div id="footer">
         <div class="wrapper">

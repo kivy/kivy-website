@@ -551,3 +551,20 @@ table.logolist td {
     top: 75px;
     right: 10px;
 }
+
+
+/** Opencollective
+ */
+
+.wrapper-opencollective {
+    background: white;
+    padding: 10px;
+    clear: both;
+    top: 50px;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.wrapper-opencollective h2 {
+	text-align: center;
+}
