@@ -476,7 +476,7 @@ function socialbutton_facebook_like(target, options, defaults, index, max_index)
 		'height': height
 	});
 
-	var tag = '<iframe src="http://www.facebook.com/plugins/like.php?' + params + '" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:' + width + 'px; height:' + height + 'px;" allowTransparency="true"></iframe>';
+	var tag = '<iframe src="https://www.facebook.com/plugins/like.php?' + params + '" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:' + width + 'px; height:' + height + 'px;" allowTransparency="true"></iframe>';
 
 	$(target).html(tag);
 }
@@ -495,7 +495,7 @@ function socialbutton_facebook_share(target, options, defaults, index, max_index
 	var tag = '<a name="fb_share"' + attr + '>' + text + '</a>';
 
 	if(index == 0) {
-		tag += '<script type="text/javascript" src="http://static.ak.fbcdn.net/connect.php/js/FB.Share"></script>';
+		tag += '<script type="text/javascript" src="https://static.ak.fbcdn.net/connect.php/js/FB.Share"></script>';
 	}
 
 	$(target).html(tag);
@@ -520,12 +520,12 @@ function socialbutton_twitter(target, options, defaults, index, max_index)
 		'data-related': related
 	});
 
-	var tag = '<a href="http://twitter.com/share" class="twitter-share-button"' + attr + '>Tweet</a>';
+	var tag = '<a href="https://twitter.com/share" class="twitter-share-button"' + attr + '>Tweet</a>';
 
 	$(target).html(tag);
 
 	if (index == max_index) {
-		$('body').append('<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>');
+		$('body').append('<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>');
 	}
 }
 
