@@ -5,79 +5,41 @@
 Installation notes
 ------------------
 
-Windows
--------
+  Windows
 
-  - [#6324]: We are transitioning the kivy Windows dependencies from the `kivy.deps.xxx`
-    namespace stored under `kivy/deps/xxx` to the `kivy_deps.xxx` namespace stored under `kivy_deps/xxx`.
-    Pip is sometimes not able to distinguish between these two formats, so follow the instructions below.
-    - If you're **not upgrading** Kivy, please make sure to pin your `kivy.deps.xxx==x.y.z` dependencies 
-      to the versions that was on pypi when your Kivy was released so that you don't get newer incompatible
-      dependencies.
-    - If you're **upgrading** Kivy, manually uninstall all the `kivy.deps.xxx` dependencies because pip
-      will not uninstall them when you're upgrading. Then re-install the `kivy_deps.xxx` dependencies as
-      instructed on the Kivy website.
-    - If you're installing the **first time**, simply follow the instructions on Kivy's website.
+  - [#6324]: We are transitioning the kivy Windows dependencies from the `kivy.deps.xxx` namespace stored under `kivy/deps/xxx` to the `kivy_deps.xxx` namespace stored under `kivy_deps/xxx`. Pip is sometimes not able to distinguish between these two formats, so follow the instructions below.
+  - If you're **not upgrading** Kivy, please make sure to pin your `kivy.deps.xxx==x.y.z` dependencies to the versions that was on pypi when your Kivy was released so that you don't get newer incompatible dependencies.
+  - If you're **upgrading** Kivy, manually uninstall all the `kivy.deps.xxx` dependencies because pip will not uninstall them when you're upgrading. Then re-install the `kivy_deps.xxx` dependencies as instructed on the Kivy website.
+  - If you're installing the **first time**, simply follow the instructions on Kivy's website.
 
-Linux and macOS
----------------
+  Linux and macOS
 
-  - The new Linux wheels (#6248) can be installed with just `pip install kivy`, however, just like on
-    macOS it comes without the Gstreamer dependencies so it has no video and minor audio support.
-    For video/audio support, please install ffpyplayer and set `KIVY_VIDEO=ffpyplayer` in the environment,
-    or install kivy using an alternative method that provides these dependencies.
+  - The new Linux wheels (#6248) can be installed with just `pip install kivy`, however, just like on macOS it comes without the Gstreamer dependencies so it has no video and minor audio support. For video/audio support, please install ffpyplayer and set `KIVY_VIDEO=ffpyplayer` in the environment, or install kivy using an alternative method that provides these dependencies.
 
 Highlights
 ----------
 
-Support
--------
+  Support
 
-  - [#5947]: We have moved from IRC to Discord. However, there's matrix integration if you are unable
-    to use Discord. See https://kivy.org/doc/master/contact.html#discord.
+  - [#5947]: We have moved from IRC to Discord. However, there's matrix integration if you are unable to use Discord. See https://kivy.org/doc/master/contact.html#discord.
 
-Configuration
--------------
+  Configuration
 
-  - [#6192]: Support for environmental variables that control the config in the form of 
-    `KCFG_SECTION_KEY` has been added. E.g. setting `KCFG_KIVY_LOG_LEVEL=warning` in the environment
-    is the same as calling `Config.set("kivy", "log_level", "warning")` or setting the `log_level` in
-    the `kivy` section of the config to `warning`. Note that underscores are not allowed in the section names.
+  - [#6192]: Support for environmental variables that control the config in the form of `KCFG_SECTION_KEY` has been added. E.g. setting `KCFG_KIVY_LOG_LEVEL=warning` in the environment is the same as calling `Config.set("kivy", "log_level", "warning")` or setting the `log_level` in the `kivy` section of the config to `warning`. Note that underscores are not allowed in the section names.
+  - Any key set this will way will take precedence on the loaded `config.ini` file. Support for this can be disabled by setting the enviornmental variable `KIVY_NO_ENV_CONFIG=1` and the environment will not be read for configuration options.
 
-    Any key set this will way will take precedence on the loaded `config.ini` file. Support for this can be
-    disabled by setting the enviornmental variable `KIVY_NO_ENV_CONFIG=1` and the environment will not be
-    read for configuration options.
+  KV lang
 
-KV lang
--------
+  - [#6257]: A new KV-Python integration event that fires when all the KV rules of the widget has been applied, `on_kv_post`, has been added to the `Widget` class. This event fires for a widget when all the KV rules it participates in has been applied and `ids` has been initialized. Binding to this event will let you execute code for your widget without having to schedule the code for the next clock cycle.
+  - Similarly, a new `apply_class_lang_rules` method was added to `Widget` that is called in order to apply the KV rules of that widget class. Inheriting and overwriting that method will give you the oppertunity to execute code before any KV rules are applied.
 
-  - [#6257]: A new KV-Python integration event that fires when all the KV rules of the widget has been
-    applied, `on_kv_post`, has been added to the `Widget` class. This event fires for a widget when all the
-    KV rules it participates in has been applied and `ids` has been initialized. Binding to this event will
-    let you execute code for your widget without having to schedule the code for the next clock cycle.
+  Garden
 
-    Similarly, a new `apply_class_lang_rules` method was added to `Widget` that is called in order to apply
-    the KV rules of that widget class. Inheriting and overwriting that method will give you the oppertunity
-    to execute code before any KV rules are applied.
+  - We are transitioning the Kivy garden flowers from the `kivy.garden.flower` namespace stored under `kivy/garden/flower` or `~/.kivy/garden` to the normal python package format `kivy_garden.flower` namespace stored under `kivy_garden/flower`. With the new configuration, garden flowers will be `pip` installable, support cython flowers, and not require the custom garden tool.
+  - We're hoping to transition all flowers to the new format, however, for now many flowers still require installation by the garden tool.
+  - For users, see https://kivy-garden.github.io/index.html#generalusageguidelines. For developers, see https://kivy-garden.github.io/index.html#developmentguidelines for how to start a new flower, and https://kivy-garden.github.io/index.html#guideformigratingflowersfromlegacystructure for how to migrate existing flowers to the new format.
 
-Garden
-------
-
-  - We are transitioning the Kivy garden flowers from the `kivy.garden.flower` namespace stored under
-    `kivy/garden/flower` or `~/.kivy/garden` to the normal python package format `kivy_garden.flower`
-    namespace stored under `kivy_garden/flower`. With the new configuration, garden flowers will be `pip`
-    installable, support cython flowers, and not require the custom garden tool.
-
-    We're hoping to transition all flowers to the new format, however, for now many flowers still require
-    installation by the garden tool.
-
-    For users, see https://kivy-garden.github.io/index.html#generalusageguidelines. For developers, see
-    https://kivy-garden.github.io/index.html#developmentguidelines for how to start a new flower, and
-    https://kivy-garden.github.io/index.html#guideformigratingflowersfromlegacystructure for how to
-    migrate existing flowers to the new format.
-
-Other
------
+  Other
 
   - [#6186]: Live resizing has been added for desktop platforms that use the SDL2 window backend.
 
@@ -85,11 +47,8 @@ Other
 Deprecated
 ----------
 
-  - [#6313]: Pygame has been deprecated. We urge users who have been using pygame to try SDL2 and
-    our other providers. If there are any reasons why Pygame is used instead of SDL2 please let
-    us know so we can fix them.
-
-    Deprecation warnings have also been added to everything that has been deprecated in the past.
+  - [#6313]: Pygame has been deprecated. We urge users who have been using pygame to try SDL2 and our other providers. If there are any reasons why Pygame is used instead of SDL2 please let us know so we can fix them.
+  - Deprecation warnings have also been added to everything that has been deprecated in the past.
 
 Breaking changes
 ----------------
