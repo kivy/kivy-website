@@ -3,7 +3,7 @@
 <h3>1.11.0 (June 1, 2019)</h3>
 <pre class="changelog">
 Installation notes
-===================
+------------------
 
 Windows
 -------
@@ -22,13 +22,13 @@ Windows
 Linux and macOS
 ---------------
 
-The new Linux wheels (#6248) can be installed with just `pip install kivy`, however, just like on
-macOS it comes without the Gstreamer dependencies so it has no video and minor audio support.
-For video/audio support, please install ffpyplayer and set `KIVY_VIDEO=ffpyplayer` in the environment,
-or install kivy using an alternative method that provides these dependencies.
+  - The new Linux wheels (#6248) can be installed with just `pip install kivy`, however, just like on
+    macOS it comes without the Gstreamer dependencies so it has no video and minor audio support.
+    For video/audio support, please install ffpyplayer and set `KIVY_VIDEO=ffpyplayer` in the environment,
+    or install kivy using an alternative method that provides these dependencies.
 
 Highlights
-==========
+----------
 
 Support
 -------
@@ -63,18 +63,18 @@ KV lang
 Garden
 ------
 
-We are transitioning the Kivy garden flowers from the `kivy.garden.flower` namespace stored under
-`kivy/garden/flower` or `~/.kivy/garden` to the normal python package format `kivy_garden.flower`
-namespace stored under `kivy_garden/flower`. With the new configuration, garden flowers will be `pip`
-installable, support cython flowers, and not require the custom garden tool.
+  - We are transitioning the Kivy garden flowers from the `kivy.garden.flower` namespace stored under
+    `kivy/garden/flower` or `~/.kivy/garden` to the normal python package format `kivy_garden.flower`
+    namespace stored under `kivy_garden/flower`. With the new configuration, garden flowers will be `pip`
+    installable, support cython flowers, and not require the custom garden tool.
 
-We're hoping to transition all flowers to the new format, however, for now many flowers still require
-installation by the garden tool.
+    We're hoping to transition all flowers to the new format, however, for now many flowers still require
+    installation by the garden tool.
 
-For users, see https://kivy-garden.github.io/index.html#generalusageguidelines. For developers, see
-https://kivy-garden.github.io/index.html#developmentguidelines for how to start a new flower, and
-https://kivy-garden.github.io/index.html#guideformigratingflowersfromlegacystructure for how to
-migrate existing flowers to the new format.
+    For users, see https://kivy-garden.github.io/index.html#generalusageguidelines. For developers, see
+    https://kivy-garden.github.io/index.html#developmentguidelines for how to start a new flower, and
+    https://kivy-garden.github.io/index.html#guideformigratingflowersfromlegacystructure for how to
+    migrate existing flowers to the new format.
 
 Other
 -----
@@ -83,16 +83,16 @@ Other
 
 
 Deprecated
-==========
+----------
 
   - [#6313]: Pygame has been deprecated. We urge users who have been using pygame to try SDL2 and
-  our other providers. If there are any reasons why Pygame is used instead of SDL2 please let
-  us know so we can fix them.
+    our other providers. If there are any reasons why Pygame is used instead of SDL2 please let
+    us know so we can fix them.
 
     Deprecation warnings have also been added to everything that has been deprecated in the past.
 
 Breaking changes
-================
+----------------
 
   - [#6095]: Changed the Android version to use `App.user_data_dir` for the configuration and added a missing dot to the config file name.
   - [#5340]: Removed DropDown.dismiss in on_touch_down so it is only dismissed in on_touch_up.
@@ -100,40 +100,37 @@ Breaking changes
   - [#5968]: Listview and all its associated modules has finally be removed in favor of RecycleView.
 
 
-Changelog
-=========
-
 Base
 ----
 
-Cache
+  Cache
 
   - [#5995]: : use Logger.trace to prevent the purge flooding terminal in debug
   - [#5988]: Removed cache print statements
 
-Config
+  Config
 
   - [#6333]: Properly chceck that KIVY_NO_ENV_CONFIG is not set to zero.
 
-Inspector
+  Inspector
 
   - [#5919]: Let the Inspector browse into WeakProxy'd widgets
 
-Logger
+  Logger
 
   - [#6322]: PermissionError is not defined in py2.
 
-Multistroke
+  Multistroke
 
   - [#5821]: Increase timeout/sleep to increase test robustness
 
-Network
+  Network
 
   - [#6256]: Set cookie header workaround
   - [#6083]: Added the ability to stop (kill) the UrlRequest thread
   - [#5964]: Allow setting url agent for async image and urlrequest
 
-Properties
+  Properties
 
   - [#6223]: Fix handling None values in DictProperty and ListProperty
   - [#6055]: Cache values of AliasProperty where possible
@@ -141,16 +138,16 @@ Properties
   - [#5856]: Update AliasProperty to cache value only if "cache" argument is set to True
   - [#5841]: fix issues with `disabled` aliasproperty
 
-Storage
+  Storage
 
   - [#6230]: Update jsonstore.py
 
-Tools
+  Tools
 
   - [#6330]: Create changelog_parser.py
   - [#5797]: fix syntax table for emacs kivy-mode
 
-Utils
+  Utils
 
   - [#6175]: kivy.utils.rgba function bug fix for python 3 (used to crash)
 
@@ -172,7 +169,7 @@ CI
 Core
 ----
 
-Camera
+  Camera
 
   - [#6168]: fix broken update to avfoundation
   - [#6156]: Adding fixes to support ios camera
@@ -184,11 +181,11 @@ Camera
   - [#5940]: Set android camera to autofocus
   - [#5922]: Updated camera_opencv.py to use reshape(-1) instead of tostring()
 
-Clipboard
+  Clipboard
 
   - [#6178]: Clipboard: fixes for nspaste
 
-Image
+  Image
 
   - [#6194]: imageio: fix jpg/png saving
   - [#6193]: Image: don't force iteration if we reuse the cache
@@ -196,22 +193,22 @@ Image
   - [#6122]: Allow saving a core Image into BytesIO
   - [#5822]: AsyncImage test fix for Windows py2.7
 
-Spelling
+  Spelling
 
   - [#5951]: Add a warning about support for pyenchant on windows
 
-Text
+  Text
 
   - [#5970]: fix styles from latests PR
   - [#5962]: Pango + fontconfig/freetype2 text provider
 
-Video
+  Video
 
   - [#6270]: Suggest how to fix unable to create playbin error.
   - [#6246]: Disabled set_volume() in core.video.ffpyplayer play() function. Fix for #6210
   - [#5959]: Issue 5945
 
-Window
+  Window
 
   - [#6283]: Limit live resize to desktop
   - [#6179]: window: fix multiple resize sent, and always sent the GL size, never …
@@ -368,77 +365,77 @@ Packaging
 Widgets
 -------
 
-Bubble
+  Bubble
 
   - [#6043]: Configure Bubble's BackgroundImage's auto scale property
 
-Carousel
+  Carousel
 
   - [#5975]: fix missing touchModeChange renaming to touch_mode_change
   - [#5958]: Fix 5783 carousel looping
   - [#5837]: carousel - update add_widget with 'canvas' parameter
 
-Checkbox
+  Checkbox
 
   - [#6317]: Fix checkbox state issues.
   - [#6287]: Fix CheckBox Python2 compatibility.
   - [#6273]: Fix "Object no attribute active" (Bug introduced via PR #4898)
 
-Colorpicker
+  Colorpicker
 
   - [#5961]: ColorPicker refactor to prevent multiples event firing
 
-Filechooser
+  Filechooser
 
   - [#6050]: correction of a malfunctioning with ..\ in Windows platforms (function _generate_file_entries)
   - [#6044]: Limited FileChooserProgress text size to widget size
 
-Modalview
+  Modalview
 
   - [#5781]: Add 'on_pre_open' and 'on_pre_dismiss' events to ModalView
 
-Pagelayout
+  Pagelayout
 
   - [#5868]: anim_kwargs in PageLayout
 
-Recycleview
+  Recycleview
 
   - [#5963]: Fix 5913 recycle view steals data
 
-Scatter
+  Scatter
 
   - [#5983]: Issue #5773: Ensure to dispatch on_transform_with_touch event when the angle change
 
-Screen
+  Screen
 
   - [#6347]: add tests for #6338
   - [#6346]: Make switch_to accept already added screens.
   - [#6344]: Revert "[widgets/screen]Fix #3143"
   - [#6279]: Fix #3143
 
-Scrollview
+  Scrollview
 
   - [#6294]: [ScrollView] Touch is in wrong coordinates
   - [#6255]: Fix " object has no attribute 'startswith' "
   - [#6252]: Attempt to fix nested scrollviews
   - [#6020]: Add smooth_scroll_end
 
-Tabbedpanel
+  Tabbedpanel
 
   - [#6291]: Fix bug in TabbedPanel.remove_widget method
 
-Textinput
+  Textinput
 
   - [#6309]: Fix TextInput shortcuts
   - [#6249]: Fix issues #6226 and #6227 in multiline-enabled TextInput
   - [#6120]: Corrected textinput key input detection to only use on_textinput
   - [#6113]: Made textinput ignore space keydown/keyup for space input
 
-Treeview
+  Treeview
 
   - [#5844]: fix #5815 uncomplete node unselection in treeview
 
-Widget
+  Widget
 
   - [#5972]: fix widget tests for python2
   - [#5954]: Scale export to png
