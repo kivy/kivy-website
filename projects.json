@@ -1,9 +1,9 @@
 [
   {
-    "id": "kivy111.0",
+    "id": "kivy1110",
     "title": "Kivy 1.11.0 released!",
     "featured": 1,
-    "media": "slides/kivy1101-featured.png",
+    "media": "slides/kivy1110-featured.png",
     "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
     "description": [
       "Python 2.7 - 3.5 - 3.6 - 3.7<br/>",
