@@ -1,15 +1,15 @@
 [
   {
-    "id": "kivy110.1",
-    "title": "Kivy 1.10.1 released!",
+    "id": "kivy111.0",
+    "title": "Kivy 1.11.0 released!",
     "featured": 1,
     "media": "slides/kivy1101-featured.png",
     "raw_link": "<a href='#download' rel='panelg'>Download Now!</a>",
     "description": [
-      "Python 2.7 - 3.4 - 3.5 - 3.6<br/>",
-      "140 Pull Requests merged<br/>",
-      "422 commits<br/>",
-      "202 files changed, 7409 insertions, 1554 deletions"
+      "Python 2.7 - 3.5 - 3.6 - 3.7<br/>",
+      "200 Pull Requests merged<br/>",
+      "607 commits<br/>",
+      "477 files changed, 11262 insertions, 10102 deletions"
     ]
   },{
     "id": "snu_photo_manager",
