@@ -51,20 +51,20 @@ summaryLength = "10"
 
 
 [params]
-logo = "images/logo.png"
+logo = "images/logo-kivy.png"
 home = "Home"
 # Meta data
 description = "This is meta description"
-author = "Themefisher"
+author = "Kivy developers"
 # Google Analitycs
-googleAnalitycsID = "Your ID"
+# googleAnalitycsID = "Your ID"
 
   # Preloader
   [params.preloader]
   enable = true
 
   [params.contact]
-  enable = true
+  enable = false
   formAction = "#" #contact form works with formspree.io
 
   [params.footer]
