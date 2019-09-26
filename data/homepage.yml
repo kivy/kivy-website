@@ -200,3 +200,11 @@ clientSlider:
 # blog
 blog:
   enable : true
+
+
+opencollective:
+  donate: true
+  profile: kivy
+  verb: contribute
+  color: white
+  banner: true

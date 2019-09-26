@@ -1,0 +1,6 @@
+{{ if .donate }}
+  <script src="https://opencollective.com/{{ .profile }}/{{ .verb }}/button.js" color="{{ .color }}"></script>
+{{ end }}
+{{ if .banner }}
+  <script src="https://opencollective.com/{{ .profile }}/banner.js"></script>
+{{ end }}
