@@ -71,7 +71,7 @@ community:
   enable: true
   content: |
     The Kivy community prides itself in being welcoming and caring. Please
-    read our [code of conduct](/code_of_conduct) and discover our very friendly members.
+    read our [code of conduct](/code_of_conduct) and meet our very friendly members.
 
   button:
     btnText: "Community"
