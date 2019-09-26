@@ -15,80 +15,94 @@ banner:
       URL : "https://www.youtube.com/user/kivyframework"
 
 
-# Presentation
 presentation:
   enable : true
   content : |
     Since 2009, we have been working toward our vision to run beautiful, fast, Python application on all modern platforms, including Android and iOS.
-    The Kivy org is the home of a family of project to achieve this vision.
+    The Kivy org is the home of a family of projects to achieve this vision.
 
   button:
     btnText : "know more"
     URL : "/about"
 
-# Kivy presentation
 kivy:
   enable: true
   content: The Kivy framework, to develop cross platform applications.
+  button:
+    btnText: "Build awesome Applications"
+    URL: "/kivy"
 
-# Packaging
 packaging:
   enable: true
   content: |
     Python For Android, Kivy IOS, and Buildozer: to package these applications on the target platforms.
 
+  button:
+    btnText: "Package your application"
+    URL: "/packaging"
 
-# Hardware APIs
 apis:
   enable: true
   content: |
     PyJNIus, PyOBJus, and Plyer: to abstract common hardware features found on these platforms and use them easily.
 
+  button:
+    btnText: "Use platform APIs"
+    URL: "/apis"
 
-# garden
 garden:
   content: |
     Kivy Garden: a collection of widgets and tools developped by the community.
 
-# kivent
+  button:
+    btnText: "Discover garden flowers"
+    URL: "/apis"
+
 kivent:
   enable: true
   content: |
     Kivent: a 2D oriented game framework, based on Kivy.
 
-# skill
-skill:
-  enable : false
-  skillbar:
-    - title : "Web Design"
-      progress : "90%"
-      color : "#fdb157"
-    - title : "Logo Design"
-      progress : "60%"
-      color : "#9473e6"
-    - title : "After Effects"
-      progress : "80%"
-      color : "#bdecf6"
-    - title : "Web App"
-      progress : "70%"
-      color : "#ffbcaa"
+  button:
+    btnText: "Build impressive video games"
+    URL: "/kivent"
+
+community:
+  enable: true
+  content: |
+    The Kivy community prides itself in being welcoming and caring. Please
+    read our [code of conduct](/code_of_conduct) and discover our very friendly members.
+
+  button:
+    btnText: "Community"
+    URL: "/community"
 
 # experience
-experience:
-  enable : true
+features:
+  enable: true
   item:
     - logo : "images/experience/icon-1.png"
-      title : "Junior UX Designer"
-      company : "WEBEX"
-      duration : "Jan 2007 - Feb 2009"
+      title : "Fast"
+      description : |
+        By using OpenGL to render Widgets, and Cython where it matters, Kivy
+        achieves very good performances on desktop and handlet devices.
     - logo : "images/experience/icon-2.png"
-      title : "UX & UI Designer"
-      company : "AUGMEDIX"
-      duration : "Mar 2009 - Aug 2014"
-    - logo : "images/experience/icon-1.png"
-      title : "Senior UI Designer"
-      company : "THEMEFISHER"
-      duration : "Sep 2014 - Present"
+      title : "Pythonic"
+      description : |
+        Kivy is built in Python, which means the api is pythonic, and you have
+        all the flexibility to extend and build upon.
+    - logo : "images/experience/icon-3.png"
+      title : "Cross platfrom"
+      description : |
+        Write once, run everywhere, for real. Same code, same look, same
+        behavior everywhere. Only implement platform-specific things if you
+        want to.
+    - logo : "images/experience/icon-4.png"
+      title : "100% Free and Open Source"
+      description : |
+        Kivy is distributed under the MIT license. One of the least restrictive
+        licence out there. No licence fee or restriction on the things you can
+        build with it.
 
 # education
 education:
@@ -110,7 +124,7 @@ education:
 # service
 service:
   enable : true
-  item : 
+  item :
     - title : "UI Design"
       icon : "ti-palette"
       content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

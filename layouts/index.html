@@ -24,37 +24,9 @@
   {{ partial "description" .Site.Data.homepage.packaging }}
   {{ partial "description" .Site.Data.homepage.garden }}
   {{ partial "description" .Site.Data.homepage.kivent }}
+  {{ partial "description" .Site.Data.homepage.community }}
 
-  {{ if .Site.Data.homepage.education.enable }}
-  <!-- education -->
-  <section class="section position-relative">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-title">Education</h2>
-        </div>
-        {{ range .Site.Data.homepage.education.item }}
-        <div class="col-lg-6 col-md-6 mb-80">
-          <div class="d-flex">
-            <div class="mr-lg-5 mr-3">
-              <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-            </div>
-            <div>
-              <p class="text-dark mb-1">{{.year}}</p>
-              <h4>{{ .title }}</h4>
-              <p class="mb-0 text-light">{{.academy}}</p>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-    <!-- bg image -->
-    <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="bg-image">
-  </section>
-  <!-- /education -->
-  {{ end }}
-
+  {{ partial "features" .Site.Data.homepage.features }}
 
   {{ if .Site.Data.homepage.service.enable }}
   <!-- services -->
@@ -181,6 +153,5 @@
   </section>
   <!-- /blog -->
   {{ end }}
-
 
 {{ end }}

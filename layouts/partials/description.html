@@ -3,11 +3,17 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
-          {{ with . }}
-          <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
+          <p class="font-secondary lead text-dark">
+            {{ with .image_left }}
+              <img src="{{ . }}" />
+            {{ end }}
+            {{.content | markdownify}}
+            {{ with .image_right }}
+              <img src="{{ . }}" />
+            {{ end }}
+          </p>
           {{ with .button }}
           <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.btnText}}</a>
-          {{ end }}
           {{ end }}
         </div>
       </div>
