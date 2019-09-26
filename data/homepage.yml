@@ -15,13 +15,46 @@ banner:
       URL : "https://www.youtube.com/user/kivyframework"
 
 
-# about
-about:
+# Presentation
+presentation:
   enable : true
-  content : "Since 2009, we're working toward our vision to run Python application on all platforms, including Android and iOS."
+  content : |
+    Since 2009, we have been working toward our vision to run beautiful, fast, Python application on all modern platforms, including Android and iOS.
+    The Kivy org is the home of a family of project to achieve this vision.
+
   button:
     btnText : "know more"
     URL : "/about"
+
+# Kivy presentation
+kivy:
+  enable: true
+  content: The Kivy framework, to develop cross platform applications.
+
+# Packaging
+packaging:
+  enable: true
+  content: |
+    Python For Android, Kivy IOS, and Buildozer: to package these applications on the target platforms.
+
+
+# Hardware APIs
+apis:
+  enable: true
+  content: |
+    PyJNIus, PyOBJus, and Plyer: to abstract common hardware features found on these platforms and use them easily.
+
+
+# garden
+garden:
+  content: |
+    Kivy Garden: a collection of widgets and tools developped by the community.
+
+# kivent
+kivent:
+  enable: true
+  content: |
+    Kivent: a 2D oriented game framework, based on Kivy.
 
 # skill
 skill:

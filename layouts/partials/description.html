@@ -1,0 +1,18 @@
+{{ if .enable }}
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          {{ with . }}
+          <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
+          {{ with .button }}
+          <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.btnText}}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+
