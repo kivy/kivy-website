@@ -5,9 +5,9 @@
   src: local('Nobile'), url('nobile.ttf') format('truetype');
 }
 
-body { 
+body {
 	margin: 0;
-	padding: 0; 
+	padding: 0;
 	font-family: 'Nobile', Arial, sans-serif;
 	font-size: 13px;
 	background: #000000 url('../images/bg.jpg') top left repeat;
@@ -48,9 +48,13 @@ a.selected {
 		clear: left;
 }
 
+.clear {
+	clear: both;
+}
+
 /** Header
  */
-#header { 
+#header {
 		height: 440px;
 }
 
@@ -122,9 +126,45 @@ h1, h2, h3, h4, h5 {
 	float: left;
 }
 
+#footer .col2 img {
+  padding-top: 6px;
+	height: 32px;
+	width: auto;
+}
+
 .hl {
 	font-weight: bold;
 	font-size: 15px;
+}
+
+.bigger {
+	font-size: 120%;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: #aaa;
+}
+
+/** contest 2014
+ */
+
+.partners,
+.sponsors {
+	float: right;
+	width: 250px;
+	margin-left: 20px;
+	clear: both;
+}
+
+.partners img,
+.sponsors img {
+	width: 100%;
+}
+
+.contest {
+	margin-right: 280px;
 }
 
 /** lightbox
@@ -235,8 +275,7 @@ h2.icon-gpu {
 }
 
 .feature-item {
-		-width: 280px;
-		width: 205px;
+		width: 300px;
 		line-height: 180%;
 		float: left;
 		margin-right: 20px;
@@ -248,7 +287,6 @@ h2.icon-gpu {
 
 .feature-item.last {
 		margin-right: 0px;
-		width: 260px;
 }
 
 /** Galery page
@@ -280,7 +318,7 @@ h2.icon-gpu {
 
 /** Python highlight
  */
-	
+
 .highlight pre {
   background-color: #f0f0f0;
 	border: 1px solid #c2c2c2;
@@ -329,6 +367,10 @@ table.downloads th {
 
 table.downloads tr.selected td {
 	background-color: #f0f0f0;
+}
+
+table.downloads tr th.os {
+	width: 250px;
 }
 
 /** About
@@ -468,6 +510,19 @@ body {
 div.changelog h4 {
 	font-size: 20px;
 	margin: 10px 0px;
+    text-align: left;
+    padding: 0px 10px;
+}
+div.changelog h5 {
+	font-size: 16px;
+	margin: 10px 0px;
+    text-align: left;
+    padding: 0px 30px;
+}
+
+div.changelog li {
+    text-align: left;
+    padding: 0px 10px;
 }
 
 /** Social panel in frontscreen
@@ -483,5 +538,42 @@ table.logolist {
 	width: 100%;
 }
 table.logolist td {
+	text-align: center;
+}
+
+/** Social toolbar
+ */
+#social-icons {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#social a, #social img {
+	border: 0;
+}
+
+/** Donate button
+ */
+#donate {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+}
+
+
+/** Opencollective
+ */
+
+.wrapper-opencollective {
+    background: white;
+    padding: 10px;
+    clear: both;
+    top: 50px;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.wrapper-opencollective h2 {
 	text-align: center;
 }

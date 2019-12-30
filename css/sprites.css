@@ -1,0 +1,35 @@
+.icon-facebook, .icon-github, .icon-gplus, .icon-twitter, .icon-youtube{
+	background: url(sprites.png) no-repeat;
+	display: inline-block;
+}
+
+.icon-facebook{
+	background-position: -76px 0;
+	width: 24px;
+	height: 24px;
+}
+
+.icon-github{
+	background-position: -51px 0;
+	width: 24px;
+	height: 24px;
+}
+
+.icon-gplus{
+	background-position: -24px 0;
+	width: 24px;
+	height: 24px;
+}
+
+.icon-twitter{
+	background-position: -100px 0;
+	width: 24px;
+	height: 24px;
+}
+
+.icon-youtube{
+	background-position: 0 0;
+	width: 24px;
+	height: 24px;
+}
+
