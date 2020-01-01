@@ -530,6 +530,7 @@ div.changelog li {
 table.social td {
 	width: 90px;
 	line-height: 90px;
+	vertical-align: top;
 }
 
 /** Logo panel
