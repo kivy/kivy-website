@@ -12,6 +12,50 @@
       "477 files changed, 11262 insertions, 10102 deletions"
     ]
   },{
+    "id": "morse_code_jam",
+    "title": "Morse Code Jam",
+    "featured": 1,
+    "media": "slides/morse_code_jam.png",
+       "description": [
+      "Winner of the <a href='https://pythondiscord.com/pages/code-jams/code-jam-6/'>Python Discord Code Jam VI!</a>.<br>",
+      "A morse code app, allowing you to decode, encode, ",
+      "train your ear or your morse tapping skills, and even ",
+      "to send and receive messages in morse code! The decoder ",
+      "can even use your microphone to <a href='https://www.youtube.com/watch?v=GcwQwayqzTg'>",
+      "decode morse code from audio on the fly</a>."
+    ],
+    "footer": [
+      "<a href='https://github.com/python-discord/code-jam-6/tree/master/tactless-tricksters'>Project on Github</a>"
+    ]
+  },{
+    "id": "chisel_code_jam",
+    "title": "Chisel",
+    "featured": 1,
+    "media": "slides/chisel_code_jam.jpg",
+    "description": [
+      "Second place for the <a href='https://pythondiscord.com/pages/code-jams/code-jam-6/'>Python Discord Code Jam VI!</a>.<br>",
+      "Being an artist in the stone age wasn't easy.<br>",
+      "Take you chisel and express your primal emotions<br>",
+      "smashing a rock to create art."
+    ],
+    "footer": [
+      "<a href='https://github.com/python-discord/code-jam-6/tree/master/circumstantial-companions'>Project on Github</a>"
+    ]
+  },{
+    "id": "rex_code_jam",
+    "title": "Rex",
+    "featured": 1,
+    "media": "slides/rex_code_jam.png",
+    "description": [
+      "Third place for the <a href='https://pythondiscord.com/pages/code-jams/code-jam-6/'>Python Discord Code Jam VI!</a>.<br>",
+      "Ever miss your trusty midnight commander?<br>",
+      "Wish it time traveled to this age of multitouchand opengl?<br>",
+      "Explore, manage directories, edit text files and view images."
+    ],
+    "footer": [
+      "<a href='https://github.com/python-discord/code-jam-6/tree/master/inquisitive-investigators'>Project on Github</a>"
+    ]
+  },{
     "id": "snu_photo_manager",
     "title": "Snu Photo Manager",
     "featured": 1,
