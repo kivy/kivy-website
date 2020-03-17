@@ -16,7 +16,7 @@
     "title": "Morse Code Jam",
     "featured": 1,
     "media": "slides/morse_code_jam.png",
-       "description": [
+    "description": [
       "Winner of the <a href='https://pythondiscord.com/pages/code-jams/code-jam-6/'>Python Discord Code Jam VI!</a>.<br>",
       "A morse code app, allowing you to decode, encode, ",
       "train your ear or your morse tapping skills, and even ",
@@ -61,11 +61,10 @@
     "featured": 1,
     "media": "slides/snu_photo-featured.png",
     "description": [
-      "A feature-rich photo manager and editor.<br/>",
-      "Photo and video database with folders, albums, tags and favorites.<br/>",
-      "Color editing: brightness, contrast, saturation, gamma, color curves, tinting.<br/>",
-      "Filters: sharpen, soften, vignette, edge blur.<br/>",
-      "and much more…"
+      "A feature-rich photo manager with photo and video editing capabilities. ",
+      "Sort photos and videos with a database, easily import files from your camera or phone. ",
+      "Edit photos and videos with color adjustments, filters, rotation, cropping, and more. ",
+      "Export your photos for websites, create collages, or convert your videos."
     ],
     "footer": [
       "<a href='https://github.com/snuq/Snu-Photo-Manager'>Website</a>"
@@ -90,8 +89,8 @@
     "featured": 1,
     "media": "slides/tf_process_montage.png",
     "description": [
-      "Phylogenomic data gathering, processing and visualization for everyone!<br/>",
-      "Detection and exploration of orthologs across multiple species... made easy!<br/>",
+      "Phylogenomic data gathering, processing and visualization for everyone! ",
+      "Detection and exploration of orthologs across multiple species... made easy! ",
       "Convert, manipulate and export thousands of multiple sequence alignments in a breeze"
     ],
     "footer": [
@@ -115,9 +114,8 @@
     "featured": 1,
     "media": "slides/capture_metropole.png",
     "description": [
-      "A custom application to present the Marseille métropole<br/>",
-      "Map with POI selection and basket<br/>",
-      "Custom dynamic object menu<br/>",
+      "A custom application to present the Marseille métropole ",
+      "Map with POI selection and basket, custom dynamic object menu<br/>",
       "RstDocument used to display converted docx documents<br/>"
     ],
     "footer": [
