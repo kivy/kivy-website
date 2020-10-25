@@ -1,4 +1,4 @@
-.icon-facebook, .icon-github, .icon-gplus, .icon-twitter, .icon-youtube{
+.icon-facebook, .icon-github, .icon-gplus, .icon-twitter, .icon-youtube, .icon-discord{
 	background: url(sprites.png) no-repeat;
 	display: inline-block;
 }
@@ -29,6 +29,11 @@
 
 .icon-youtube{
 	background-position: 0 0;
+	width: 24px;
+	height: 24px;
+}
+.icon-discord{
+	background-position: -124px 0;
 	width: 24px;
 	height: 24px;
 }
