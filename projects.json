@@ -436,5 +436,19 @@
       " - by <a href='http://www.complex.ch'>Complex IT</a> and ",
       "<a href='http://carinaow.com'>Carina Ow</a>"
     ]
+  },
+  {
+    "id": "epidemy",
+    "title": "Epidemy: The Outbreak",
+    "featured": 1,
+    "media": "images/project/epidemy_outbreak.png",
+    "description": [
+      "Board-like strategy free game<br/>",
+      "Research and use various methods to defeat the epidemy<br/>",
+      "7 game modes, 4 infections, 27 methods, 13 countries"
+    ],
+    "footer": [
+      "<a href='https://play.google.com/store/apps/details?id=com.legeartisgames.epidemy'>Google Play</a>"
+    ]
   }
 ]
