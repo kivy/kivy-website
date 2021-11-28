@@ -441,7 +441,7 @@
     "id": "epidemy",
     "title": "Epidemy: The Outbreak",
     "featured": 1,
-    "media": "images/project/epidemy_outbreak.png",
+    "media": "https://kivy.org/slides/epidemy.jpg",
     "description": [
       "Board-like strategy free game<br/>",
       "Research and use various methods to defeat the epidemy<br/>",
