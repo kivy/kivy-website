@@ -12,6 +12,20 @@
       "261 files changed, 14413 insertions, 5480 deletions"
     ]
   },{
+    "id": "snake_by_andy_russo",
+    "title": "Snake by Andy Russo",
+    "featured": 1,
+    "media": "slides/snake_by_andy_russo.png",
+    "description": [
+      "Snake remake with adapted for smartphones controls, that make the game even more exciting.<br>",
+      "Hearts system makes it even more fun to play!<br>",
+      "3 languages localization: English, Chinese, Russian.<br>",
+      "Have a good game!<br>"
+    ],
+    "footer": [
+      "<a href='https://play.google.com/store/apps/details?id=org.andyrusso.sbar'>Google Play</a>"
+    ]
+  },{
     "id": "morse_code_jam",
     "title": "Morse Code Jam",
     "featured": 1,
