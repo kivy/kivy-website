@@ -6,3 +6,7 @@
 .pydevproject
 .settings/
 python-env/
+venv/
+node_modules/
+dist/
+.vscode/

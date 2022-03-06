@@ -1,0 +1,1131 @@
+{
+    "pages": [
+        {
+            "template": "index.html",
+            "env": {}
+        },
+        {
+            "template": "about.html",
+            "env": {
+                "core_developers": [
+                    {
+                        "name": "Mathieu Virbel",
+                        "image": "./static/images/coredev/mathieu.png",
+                        "description": "He became a programming expert from working in IT for years before starting with Kivy.<br>He's French, and founded Melting Rocks.<br> On Discord, he's known as @tito."
+                    },
+                    {
+                        "name": "Gabriel Pettier",
+                        "image": "./static/images/coredev/gabriel.png",
+                        "description": "He is an Information Systems engineer. He's from France, but currently lives in the Netherlands.<br>On Discord, he's known as @tshirtman."
+                    },
+                    {
+                        "name": "Akshay Arora",
+                        "image": "./static/images/coredev/quanon.png",
+                        "description": "He is a freelance developer. He is from India.<br>On Discord, he's known as @quanon."
+                    },
+                    {
+                        "name": "Alexander Taylor",
+                        "image": "./static/images/coredev/inclement.png",
+                        "description": "He is a software engineer, with a little time to make fun graphical interfaces. He lives in the UK.<br>On Discord, he's known as @inclement."
+                    },
+                    {
+                        "name": "Matthew Einhorn",
+                        "image": "./static/images/coredev/matham.png",
+                        "description": "He is a developer using Kivy with Python to automate scientific research. He lives in the eastern USA.<br>On Discord, he's known as @matham."
+                    },
+                    {
+                        "name": "Richard Larkin",
+                        "image": "./static/images/coredev/zencode.png",
+                        "description": "Richard is an educational software developer (B.Sc, Hons) from South Africa. He likes being silly, meditating, music and hugging fluffy things.<br>On Discord, he's known as @ZenCODE."
+                    },
+                    {
+                        "name": "Andre Miras",
+                        "image": "./static/images/coredev/andre.png",
+                        "description": "Linux geek and open source addict, he works as a software architect and lives in Spain.<br>On Discord, he's known as @AndreMiras."
+                    },
+                    {
+                        "name": "Mirko Galimberti",
+                        "image": "./static/images/coredev/misl6.png",
+                        "description": "He is a Full Stack Developer and lives in Italy. Kivy helped him to speed up the App development process while keeping high standards.<br>On Discord, he's known as @m1sl6."
+                    }
+                ],
+                "talks": [
+                    {
+                        "title": "Interfaces tactiles et mobiles avec Kivy",
+                        "image": "./static/images/talks/talk-robert-niederreiter-17.png",
+                        "date": "15 April 2017",
+                        "location": "Meetup Innsbruck, Austria",
+                        "speakers": [
+                            {
+                                "name": "Robert Niederreiter"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "http://canalc2.u-strasbg.fr/video.asp?idVideo=12342&voir=oui"
+                            },
+                            {
+                                "name": "Slides",
+                                "url": "https://www.slideshare.net/RobertNiederreiter/kivy-talk-python-meetup-innsbruck-20170425"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Interfaces tactiles et mobiles avec Kivy",
+                        "image": "./static/images/talks/talk-pyconfr13.png",
+                        "date": "27 October 2013",
+                        "location": "Pycon-fr, Strasbourg, France",
+                        "speakers": [
+                            {
+                                "name": "Gabriel Pettier"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "http://canalc2.u-strasbg.fr/video.asp?idVideo=12342&voir=oui"
+                            },
+                            {
+                                "name": "Slides",
+                                "url": "http://www.slideshare.net/GabrielPettier/pres-27623747"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Our journey to Kivy",
+                        "image": "./static/images/talks/talk-pyconza13.png",
+                        "date": "3 October 2013",
+                        "location": "PyconZA 2013 in Cape Town, South Africa",
+                        "speakers": [
+                            {
+                                "name": "Richard Larkin"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "https://youtu.be/Nn5Mms4oyGM"
+                            },
+                            {
+                                "name": "Slides",
+                                "url": "https://github.com/Zen-CODE/kivybits/tree/master/PyCon/ZA%202013"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Utah Python August 2013 meeting",
+                        "image": "./static/images/talks/talk-utha-august.png",
+                        "date": "August 2013",
+                        "location": "Python meeting in Utah, USA",
+                        "speakers": [
+                            {
+                                "name": "Jacob Kovac"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "https://youtu.be/3gzZbsKlFMs"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Kivy Intro and Tutorial",
+                        "image": "./static/images/talks/talk-grdevday13-br.png",
+                        "date": "2 March 2013",
+                        "location": "GrDevDay 2013 in Grand Rapids, MI, USA.",
+                        "speakers": [
+                            {
+                                "name": "Ben Rousch"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "https://youtu.be/3gzZbsKlFMs"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "OpenGL and Python on computer and embed devices",
+                        "image": "./static/images/talks/talk-ep2011-mv.png",
+                        "date": "24 July 2012",
+                        "location": "EuroPython 2012 in Florence, Italia.",
+                        "speakers": [
+                            {
+                                "name": "Mathieu Virbel"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "https://www.youtube.com/watch?v=UjdU77m1228"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Kivy - Python UI Library for Any OS",
+                        "image": "./static/images/talks/talk-28apr12-ra.png",
+                        "date": "28 April 2012",
+                        "location": "PyCon LT 2012 in Vilnius",
+                        "speakers": [
+                            {
+                                "name": "Rokas Aleksi\u016bnas"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video",
+                                "url": "https://www.youtube.com/watch?v=fc1GZXRWy_A"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "NIU en Python: Kivy",
+                        "image": "./static/images/talks/talk-28nov11-gp.png",
+                        "date": "28 November 2011",
+                        "location": "La Cantine in Paris, France",
+                        "speakers": [
+                            {
+                                "name": "Gabriel Pettier"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Video (Starts at 2:28:00)",
+                                "url": "http://lacantine.ubicast.eu/videos/python-conf/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Spa\u00df mit Natural User Interfaces und Python",
+                        "image": "./static/images/talks/talk-oct11-ers.png",
+                        "date": "October 2011",
+                        "location": "PyCon DE 2011",
+                        "speakers": [
+                            {
+                                "name": "Ernesto Rico Schmidt"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Slides",
+                                "url": "http://speakerdeck.com/u/nnrcschmdt/p/kivy-spass-mit-natural-user-interfaces-und-python"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Quick Multitouch Apps using Kivy and Python",
+                        "image": "./static/images/talks/talk-sep11-kps.png",
+                        "date": "September 2011",
+                        "location": "PyCon India 2011",
+                        "speakers": [
+                            {
+                                "name": "KP Singh (kpsfoo), N Chadha"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "PyCon India 2011 Blog Post",
+                                "url": "http://in.pycon.org/2011/talks/68-quick-multitouch-apps-using-kivy-and-python"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "GLES2 Python framework for NUI",
+                        "image": "./static/images/talks/talk-19jul11-mv.png",
+                        "date": "9 July 2011",
+                        "location": "RMLL 2011 in Strasbourg, France",
+                        "speakers": [
+                            {
+                                "name": "Mathieu Virbel"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Slides",
+                                "url": "https://speakerdeck.com/u/mathieuvirbel/p/kivy-gles2-python-framework-for-nui-fr"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Lightning talk about Kivy ",
+                        "image": "",
+                        "date": "22 June 2011",
+                        "location": "Europython 2011 in Florence, Italia",
+                        "speakers": [
+                            {
+                                "name": "Mathieu Virbel"
+                            }
+                        ],
+                        "links": [
+                            {
+                                "name": "Blog Post",
+                                "url": "http://txzone.net/2011/06/kivy-at-europython-lightning-explanation/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "template": "gallery.html",
+            "env": {
+                "projects": [
+                    {
+                        "title": "Snake by Andy Russo",
+                        "image": "./static/images/projects_gallery/snake_by_andy_russo-thumb.jpg",
+                        "description": "Snake remake with adapted for smartphones controls, that make the game even more exciting. Hearts system makes it even more fun to play! 3 languages localization: English, Chinese, Russian. Have a good game!",
+                        "links": [
+                            {
+                                "name": "Google Play",
+                                "url": "https://play.google.com/store/apps/details?id=org.andyrusso.sbar"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Morse Code Jam",
+                        "image": "./static/images/projects_gallery/morse_code_jam-thumb.jpg",
+                        "description": "Winner of the Python Discord Code Jam VI! A morse code app, allowing you to decode, encode, train your ear or your morse tapping skills, and even to send and receive messages in morse code! The decoder can even use your microphone to decode morse code from audio on the fly.",
+                        "links": [
+                            {
+                                "name": "Python Discord Code Jam VI",
+                                "url": "https://pythondiscord.com/pages/code-jams/code-jam-6/"
+                            },
+                            {
+                                "name": "Youtube Video",
+                                "url": "https://www.youtube.com/watch?v=GcwQwayqzTg"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Chisel",
+                        "image": "./static/images/projects_gallery/chisel_code_jam-thumb.jpg",
+                        "description": "Second place for the Python Discord Code Jam VI!.Being an artist in the stone age wasn't easy.Take you chisel and express your primal emotionssmashing a rock to create art.",
+                        "links": [
+                            {
+                                "name": "Python Discord Code Jam VI",
+                                "url": "https://pythondiscord.com/pages/code-jams/code-jam-6/"
+                            },
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/salt-die/Chisel"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Rex",
+                        "image": "./static/images/projects_gallery/rex_code_jam-thumb.jpg",
+                        "description": "Third place for the Python Discord Code Jam VI!.Ever miss your trusty midnight commander?Wish it time traveled to this age of multitouchand opengl?Explore, manage directories, edit text files and view images.",
+                        "links": [
+                            {
+                                "name": "Python Discord Code Jam VI",
+                                "url": "https://pythondiscord.com/pages/code-jams/code-jam-6/"
+                            },
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/python-discord/code-jam-6/tree/master/inquisitive-investigators"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Snu Photo Manager",
+                        "image": "./static/images/projects_gallery/snu_photo_manager-thumb.jpg",
+                        "description": "A feature-rich photo manager with photo and video editing capabilities. Sort photos and videos with a database, easily import files from your camera or phone. Edit photos and videos with color adjustments, filters, rotation, cropping, and more. Export your photos for websites, create collages, or convert your videos.",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/snuq/Snu-Photo-Manager"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Learn Python Offline & IDE",
+                        "image": "./static/images/projects_gallery/learn_python-thumb.jpg",
+                        "description": "An application to learn and experiment with PythonRead and search documentation & tutorials.Includes an editor and offline compiler in the pro version",
+                        "links": []
+                    },
+                    {
+                        "title": "TriFusion",
+                        "image": "./static/images/projects_gallery/trifusion-thumb.jpg",
+                        "description": "Phylogenomic data gathering, processing and visualization for everyone! Detection and exploration of orthologs across multiple species... made easy! Convert, manipulate and export thousands of multiple sequence alignments in a breeze",
+                        "links": [
+                            {
+                                "name": "Website",
+                                "url": "https://odiogosilva.github.io/TriFusion/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Meccano Rubik's Shrine",
+                        "image": "./static/images/projects_gallery/meccano_rubiks_shrine-thumb.jpg",
+                        "description": "An electro-mecanical project to solve Rubik's cubesusing Meccano, Arduino, a Raspberry pi and Kivy",
+                        "links": [
+                            {
+                                "name": "Website",
+                                "url": "https://meccanokinematics.net/meccano-rubiks-shrine/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "M\u00e9tropole de Marseille",
+                        "image": "./static/images/projects_gallery/metropole-thumb.jpg",
+                        "description": "A custom application to present the Marseille m\u00e9tropole Map with POI selection and basket, custom dynamic object menuRstDocument used to display converted docx documents",
+                        "links": [
+                            {
+                                "name": "Vimeo",
+                                "url": "https://vimeo.com/272219637"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Mission Pinball Framework",
+                        "image": "./static/images/projects_gallery/missionpinball-thumb.jpg",
+                        "description": "A free Python-based pinball framework used to run real pinball machines.Allows builders and programmers to create software for their pinball machines.",
+                        "links": [
+                            {
+                                "name": "Website",
+                                "url": "http://missionpinball.org/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Digital Stories",
+                        "image": "./static/images/projects_gallery/digitalstories-thumb.jpg",
+                        "description": "Collaborative interaction endeavoursusing laser pointers to collectivelydiscover and interact on video games and movies.",
+                        "links": [
+                            {
+                                "name": "Vimeo",
+                                "url": "https://vimeo.com/80051846"
+                            },
+                            {
+                                "name": "Website",
+                                "url": "http://www.digital-stories.fr/"
+                            },
+                            {
+                                "name": "Les rencontres audiovisuelle",
+                                "url": "http://www.rencontres-audiovisuelles.org/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Nie Nie",
+                        "image": "./static/images/projects_gallery/nienie-thumb.jpg",
+                        "description": "Casual puzzle/brain teaser with simple gameplayMultiple game modesFriends and global leaderboard!.",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": ""
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Gravity Ride",
+                        "image": "./static/images/projects_gallery/gravityride-thumb.jpg",
+                        "description": "Arcade spaceship simulatorUse gravity in travel through the space94 unique challenging levels",
+                        "links": [
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=8SfPk5Dfeow"
+                            },
+                            {
+                                "name": "Google Play",
+                                "url": "https://play.google.com/store/apps/details?id=org.test.spaceadv"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "KOGNITIVO - Brain Training",
+                        "image": "./static/images/projects_gallery/kognitivo-thumb.jpg",
+                        "description": "Analyse your cognitive activityon the basis of some short games!See your daily and weekly productivity in graphs",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/eviltnan/kognitivo"
+                            },
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=6kxeXzfPJ-Q"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Barly",
+                        "image": "./static/images/projects_gallery/barly-thumb.jpg",
+                        "description": "Decipher all of those crazy names and tell you which beers you\u2019ll be glad you tried.Beers recommendation based on your personal taste!",
+                        "links": []
+                    },
+                    {
+                        "title": "Simple Peinture",
+                        "image": "./static/images/projects_gallery/myspaint-thumb.jpg",
+                        "description": "Kid drawing applicationUndo system, one touch to change tool.Multitouch supported!",
+                        "links": []
+                    },
+                    {
+                        "title": "Tangible Media",
+                        "image": "./static/images/projects_gallery/tangiblemedia-thumb.jpg",
+                        "description": "Explore data with objectCombine them for advanced visualisation.Single or collaborative mode!",
+                        "links": [
+                            {
+                                "name": "Vimeo",
+                                "url": "https://vimeo.com/206290310"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "PyDelhi Conf 2017",
+                        "image": "./static/images/projects_gallery/pydelhiconf2017-thumb.jpg",
+                        "description": "Official App for PyDelhi Conf 2017Used on 18-19 March 2017",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/pydelhi/pydelhi_mobile"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Rocket Kite",
+                        "image": "./static/images/projects_gallery/rocketkite-thumb.jpg",
+                        "description": "Fly your rocket kite among the planetsUse gravity to your advantage, collect all checkpointsExperience space flight in this colorful simulator",
+                        "links": []
+                    },
+                    {
+                        "title": "Particle Panda",
+                        "image": "./static/images/projects_gallery/particlepanda-thumb.jpg",
+                        "description": "Create particle effect for particle systemsused in Starling, Kivy and Cocos2dWorking on Desktop and mobile.",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/chaosbuffalolabs/ParticlePanda"
+                            },
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=MOYxeLdQinA"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Yeco",
+                        "image": "./static/images/projects_gallery/yeco-thumb.jpg",
+                        "description": "Yeco is a multi touch controller for Ableton LiveAvailable for Windows and macOS",
+                        "links": [
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=aa9LXpg_gd0"
+                            },
+                            {
+                                "name": "Website",
+                                "url": "http://yeco.io/"
+                            },
+                            {
+                                "name": "Graham Comerford",
+                                "url": "mailto:grmcomm@gmail.com"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "ProcessCraft",
+                        "image": "./static/images/projects_gallery/processcraft-thumb.jpg",
+                        "description": "Commercial application for Business Process ModelingRunning on iOS, Android, and others desktop OS",
+                        "links": [
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=9rk9OQLSoJw"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deflectouch",
+                        "image": "./static/images/projects_gallery/deflectouch-thumb.jpg",
+                        "description": "Multitouch game, first place of the Kivy Contest #1",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/stocyr/Deflectouch/"
+                            },
+                            {
+                                "name": "YouTube",
+                                "url": "https://youtube.com/watch?v=1Qa98oSPgi0"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "FishLife",
+                        "image": "./static/images/projects_gallery/fishlife-thumb.jpg",
+                        "description": "Multitouch game, second place of the Kivy Contest #1",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/Zogg/FishLife"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "memoryKivy",
+                        "image": "./static/images/projects_gallery/memorykivy-thumb.jpg",
+                        "description": "Multitouch game, third place of the Kivy Contest #1",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/niavlys/memoryKivy/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "TicTacTouch",
+                        "image": "./static/images/projects_gallery/tictactouch-thumb.jpg",
+                        "description": "Multitouch screen used for control a PLC hardware machine.",
+                        "links": [
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=FhRXAD8-UkE"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "bargenius",
+                        "image": "./static/images/projects_gallery/bargenius-thumb.jpg",
+                        "description": "Interactive tablet menu with wine, beer, cocktail...Clean design with cool touch interaction, on android !",
+                        "links": [
+                            {
+                                "name": "Vimeo",
+                                "url": "https://vimeo.com/29348760"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Kaleidoscope",
+                        "image": "./static/images/projects_gallery/kaleidoscope-thumb.jpg",
+                        "description": "Educational project using 4 tablets and 1 table with projection.Augmented knowledge table, that can be shared across tablet.",
+                        "links": [
+                            {
+                                "name": "Vimeo",
+                                "url": "https://vimeo.com/29673059"
+                            },
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/tito/Kaleidoscope/"
+                            },
+                            {
+                                "name": "Erasme",
+                                "url": "https://erasme.org/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Touch Live",
+                        "image": "./static/images/projects_gallery/touchlive-thumb.jpg",
+                        "description": "Monome-like controller implemented in Kivy.Graham is creating his own music on it.",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/grmcom/TouchLive/"
+                            },
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=4a74AwaAheM"
+                            },
+                            {
+                                "name": "Graham Comerford",
+                                "url": "mailto:grmcomm@gmail.com"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Icarus Touch",
+                        "image": "./static/images/projects_gallery/touchcontinuum-thumb.jpg",
+                        "description": "Continuous keyboard implemented in Kivy.Cyril is improvising over some backing tracks.",
+                        "links": [
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=u4NRu7mBXtA"
+                            },
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/stocyr/IcarusTouch"
+                            },
+                            {
+                                "name": "Liquidrain",
+                                "url": "http://www.liquidrain.net"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "The noBOOTH",
+                        "image": "./static/images/projects_gallery/thenobooth-thumb.jpg",
+                        "description": "Interactive touchscreen using Kivy for takingpictures and customize the photo with some gadgets.",
+                        "links": [
+                            {
+                                "name": "Vimeo",
+                                "url": "https://vimeo.com/25680681"
+                            },
+                            {
+                                "name": "Facebook",
+                                "url": "https://www.facebook.com/noBooth/"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Plane White",
+                        "image": "./static/images/projects_gallery/planewhite-thumb.jpg",
+                        "description": "Interactive white surface for discovering art exhibition.",
+                        "links": [
+                            {
+                                "name": "YouTube",
+                                "url": "https://www.youtube.com/watch?v=pI635uAppoU"
+                            },
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/theoo/planewhite"
+                            },
+                            {
+                                "name": "Complex IT",
+                                "url": "http://www.complex.ch"
+                            },
+                            {
+                                "name": "Carina Ow",
+                                "url": "http://www.carinaow.com"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Epidemy: The Outbreak",
+                        "image": "./static/images/projects_gallery/epidemy-thumb.jpg",
+                        "description": "Board-like strategy free gameResearch and use various methods to defeat the epidemy7 game modes, 4 infections, 27 methods, 13 countries",
+                        "links": [
+                            {
+                                "name": "Google Play",
+                                "url": "https://play.google.com/store/apps/details?id=com.legeartisgames.epidemy"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "template": "contest-2012.html",
+            "env": {
+                "submissions": [
+                    {
+                        "id": "deflectouch",
+                        "title": "Deflectouch",
+                        "author": "Cyril Stoller",
+                        "github": "stocyr/Deflectouch",
+                        "rank": 1,
+                        "score": 81.6
+                    },
+                    {
+                        "id": "fishlife",
+                        "title": "FishLife",
+                        "author": "Zogg",
+                        "github": "Zogg/FishLife",
+                        "rank": 2,
+                        "score": 73.6
+                    },
+                    {
+                        "id": "memorykivy",
+                        "title": "memoryKivy",
+                        "author": "Niavlys",
+                        "github": "niavlys/memoryKivy",
+                        "rank": 3,
+                        "score": 73
+                    },
+                    {
+                        "id": "centripetal",
+                        "title": "Centripetal",
+                        "author": "Dilon Cower",
+                        "github": "dcower/Centripetal",
+                        "rank": 4,
+                        "score": 71.2
+                    },
+                    {
+                        "id": "flingy",
+                        "title": "Flingy",
+                        "author": "Andy Wilson",
+                        "github": "wilsaj/flingy",
+                        "rank": 5,
+                        "score": 65.8
+                    },
+                    {
+                        "id": "transmutation",
+                        "title": "Transmutation",
+                        "author": "RemiP",
+                        "github": "remip/transmutation",
+                        "rank": 6,
+                        "score": 62.2
+                    },
+                    {
+                        "id": "escadron-t42",
+                        "title": "Escadron-T42",
+                        "author": "Dabou",
+                        "github": "dabou/escadron-t42",
+                        "rank": 7,
+                        "score": 60.2
+                    },
+                    {
+                        "id": "landingzone",
+                        "title": "LandingZone",
+                        "author": "Kobr4",
+                        "github": "kobr4/LandingZone",
+                        "rank": 8,
+                        "score": 51.4
+                    },
+                    {
+                        "id": "kurve",
+                        "title": "Kron",
+                        "author": "Pranav Rao P N",
+                        "github": "pnpranavrao/kivycontest",
+                        "rank": 9,
+                        "score": 50.4
+                    },
+                    {
+                        "id": "touchhockey",
+                        "title": "TouchHockey",
+                        "author": "Nicolas Niemczycki",
+                        "github": "minou/TouchHockey",
+                        "rank": 10,
+                        "score": 47.6
+                    },
+                    {
+                        "id": "cocaine",
+                        "title": "Cocaine",
+                        "author": "Hiren",
+                        "github": "metalfinger/Cocaine",
+                        "rank": 11,
+                        "score": 35.2
+                    }
+                ]
+            }
+        },
+        {
+            "template": "contest-2014.html",
+            "env": {
+                "submissions": [
+                    {
+                        "id": "meowletters",
+                        "title": "Meow Letters",
+                        "author": "Meow Unicorn",
+                        "github": "https://github.com/ana-balica/meow_letters"
+                    },
+                    {
+                        "id": "cowskoalasandmaps",
+                        "title": "Cows, Koalas and Maps!",
+                        "author": "WhoCares Ltd.",
+                        "github": "https://github.com/aq1/kivy_contest_game_2014"
+                    },
+                    {
+                        "id": "hyunkapong",
+                        "title": "Hyunkapong",
+                        "author": "Lokiju",
+                        "github": "https://github.com/Gotzillaz/Hyunkapong"
+                    },
+                    {
+                        "id": "mathworldkids",
+                        "title": "Math World Kids",
+                        "author": "Jonas Pepperling",
+                        "github": "https://github.com/achroit/MathWorldKids"
+                    },
+                    {
+                        "id": "kc",
+                        "title": "KC",
+                        "author": "Dustin Chapman",
+                        "github": "https://github.com/dustinrc/kc"
+                    },
+                    {
+                        "id": "kuiz",
+                        "title": "Kuiz",
+                        "author": "Steve",
+                        "github": "https://github.com/marksteve/kivy-contest"
+                    },
+                    {
+                        "id": "catterpillars",
+                        "title": "Catterpillars",
+                        "author": "gromozeka",
+                        "github": "http://github.com/gromozeka1980/kivy_contest_2014"
+                    },
+                    {
+                        "id": "learnyourphone",
+                        "title": "Learn Your Phone",
+                        "author": "Ghislain Hivon",
+                        "github": "https://bitbucket.org/GhislainHivon/learnyourphone_contest.git"
+                    },
+                    {
+                        "id": "opolo",
+                        "title": "Opolo",
+                        "author": "Valentin Pratz",
+                        "github": "https://github.com/valentin12/kivy_frogs"
+                    },
+                    {
+                        "id": "rememberthekivy",
+                        "title": "Remember The Kivy",
+                        "author": "guruyaya",
+                        "github": "https://github.com/guruyaya/rememberthekivy"
+                    },
+                    {
+                        "id": "fourbar",
+                        "title": "Grashof's condition (fourbar)",
+                        "author": "Ken Geronilla",
+                        "github": "https://github.com/tygart/fourbar"
+                    },
+                    {
+                        "id": "braingame",
+                        "title": "Brain Game",
+                        "author": "Jolly",
+                        "github": "https://github.com/molnarjani/BrainGame"
+                    },
+                    {
+                        "id": "scholaris",
+                        "title": "Scholaris",
+                        "author": "Tim Henning",
+                        "github": "https://github.com/luminosuslight/scholaris"
+                    },
+                    {
+                        "id": "classroomfeedback",
+                        "title": "Classroom Feedback",
+                        "author": "Tom Theile",
+                        "github": "https://github.com/tomthe/kivycontest"
+                    },
+                    {
+                        "id": "jumbalaya",
+                        "title": "Jumbalaya",
+                        "author": "ryBorg and Potato Man",
+                        "github": "http://github.com/rkram5424/RyanAndRobertosKivyApp"
+                    },
+                    {
+                        "id": "arithmebricks",
+                        "title": "ArithmeBricks",
+                        "author": "Jan Kaliszewski (zuo)",
+                        "github": "https://github.com/zuo/ArithmeBricks"
+                    },
+                    {
+                        "id": "chillitrios",
+                        "title": "Chilli Trios",
+                        "author": "Chilli Team",
+                        "github": "https://github.com/lopezz/kivy_contest_2014"
+                    },
+                    {
+                        "id": "frogit",
+                        "title": "Frogit: in the grand mathventure",
+                        "author": "Filip Radovic",
+                        "github": "https://github.com/UlthaneFrostborn/kivy-contest-2014"
+                    },
+                    {
+                        "id": "iwriteit",
+                        "title": "iWriteIt - You Like?",
+                        "author": "Suriyan Laohaprapanon",
+                        "github": "https://github.com/suriyan/iWriteIt"
+                    },
+                    {
+                        "id": "kivykloetze",
+                        "title": "Kivy klotze",
+                        "author": "CMSB",
+                        "github": "https://github.com/acidicX/kivykloetze"
+                    },
+                    {
+                        "id": "familyquiz",
+                        "title": "Family Quiz",
+                        "author": "Gryzone",
+                        "github": "https://github.com/Harunx9/KivyContest"
+                    },
+                    {
+                        "id": "autiagenda",
+                        "title": "Auti Agenda",
+                        "author": "Rob Derksen",
+                        "github": "https://bitbucket.org/boisei0/autiagenda"
+                    },
+                    {
+                        "id": "chessscorebook",
+                        "title": "Chess Scorebook",
+                        "author": "Terry Yanchynskyy",
+                        "github": "https://github.com/onebit0fme/kivy-contest-2014"
+                    },
+                    {
+                        "id": "kivyphysicssandbox",
+                        "title": "Kivy Physics Sandbox",
+                        "author": "Gipzo",
+                        "github": "https://github.com/Gipzo/kivy-physics-sandbox"
+                    },
+                    {
+                        "id": "expressioncollector",
+                        "title": "Expressin Collector",
+                        "author": "Abdullah Aghazadah",
+                        "github": "https://github.com/MeLikeyCode/expressioncollector"
+                    },
+                    {
+                        "id": "masteremergency",
+                        "title": "Master Emergency",
+                        "author": "HSA-IMS-Kivy-2",
+                        "github": "https://github.com/HSA-IMS-Kivy-2/Master_Emergency_Situations"
+                    },
+                    {
+                        "id": "volodaboy",
+                        "title": "Voloda Boy",
+                        "author": "Artur Yerameyeu",
+                        "github": "http://github.com/arthurnum/voloda_boy"
+                    },
+                    {
+                        "id": "visualkivy",
+                        "title": "Visual Kivy(lite)",
+                        "author": "Quino",
+                        "github": "https://github.com/btcpar/contest"
+                    },
+                    {
+                        "id": "logo",
+                        "title": "Logo",
+                        "author": "gkr",
+                        "github": "https://github.com/gkrnours/logo.kv"
+                    },
+                    {
+                        "id": "billygoestocollege",
+                        "title": "Billy goes to college",
+                        "author": "ChodeGames",
+                        "github": "https://github.com/ChodeGames/kivycontest2014"
+                    },
+                    {
+                        "id": "thinkpolice",
+                        "title": "Think Police",
+                        "author": "Synergy",
+                        "github": "https://github.com/Synergistic/think-police"
+                    },
+                    {
+                        "id": "lsystems",
+                        "title": "Lsystems",
+                        "author": "gromozeka",
+                        "github": "http://github.com/gromozeka1980/kivy_contest_2014"
+                    },
+                    {
+                        "id": "chemistrywithfun",
+                        "title": "Chemistry with Fun",
+                        "author": "Ilia Malinovskii",
+                        "github": "https://github.com/malinovsky239/funnychem"
+                    },
+                    {
+                        "id": "bunglon",
+                        "title": "BungLon",
+                        "author": "Lontong",
+                        "github": "https://github.com/lucernae/BungLon"
+                    },
+                    {
+                        "id": "taskapp",
+                        "title": "Task App",
+                        "author": "Vinícius Ramos",
+                        "github": "https://github.com/lifedotark/TaskApp/"
+                    },
+                    {
+                        "id": "atomia",
+                        "title": "Atomia",
+                        "author": "Stacy Maillot",
+                        "github": "https://github.com/Malakan/atomia"
+                    },
+                    {
+                        "id": "devideandconquer",
+                        "title": "Divide and Conquer",
+                        "author": "metaxnet",
+                        "github": "https://github.com/metaxnet/kivy"
+                    },
+                    {
+                        "id": "rockkivy",
+                        "title": "Rockivy",
+                        "author": "Mark Vasilkov",
+                        "github": "https://github.com/mvasilkov/kivy-2014"
+                    },
+                    {
+                        "id": "kivyrun",
+                        "title": "Kivy Run",
+                        "author": "hilben",
+                        "github": "http://github.com/hilben/kivy2"
+                    },
+                    {
+                        "id": "squarepond",
+                        "title": "Square Pond",
+                        "author": "Mercury Labs",
+                        "github": "https://github.com/kris-s/square-pond-kivy"
+                    },
+                    {
+                        "id": "schoolorganised",
+                        "title": "School Organized",
+                        "author": "Pianist1119",
+                        "github": "http://github.com/pianist1119/School-Organized"
+                    },
+                    {
+                        "id": "ideastorm",
+                        "title": "Idea Storm",
+                        "author": "Cătălin Bălan",
+                        "github": "https://github.com/laserbeam/idea-strom"
+                    },
+                    {
+                        "id": "symphonium",
+                        "title": "Symphonium",
+                        "author": "ReMip",
+                        "github": "https://github.com/remip/symphonium"
+                    },
+                    {
+                        "id": "therooms",
+                        "title": "The Rooms",
+                        "author": "nashr",
+                        "github": "http://github.com/nashr/The-Rooms"
+                    },
+                    {
+                        "id": "eduapp",
+                        "title": "EduApp",
+                        "author": "Syn",
+                        "github": "https://github.com/synzh/kivy-kivy"
+                    },
+                    {
+                        "id": "midimatch",
+                        "title": "Midi Match",
+                        "author": "tz 18",
+                        "github": "https://github.com/tz18/goodeargame"
+                    },
+                    {
+                        "id": "scata",
+                        "title": "Micro Scada",
+                        "author": "Victor RENÉ",
+                        "github": "https://github.com/victor-rene/MicroScada"
+                    },
+                    {
+                        "id": "pixelmate",
+                        "title": "Pixel Mate",
+                        "author": "Anton Plyaskin (werton)",
+                        "github": "https://github.com/werton/kivy-pixelmate"
+                    },
+                    {
+                        "id": "kivame",
+                        "title": "Kivame",
+                        "author": "Sachin Railhan & Nitin Saroha",
+                        "github": "https://github.com/sacsachin789/game"
+                    },
+                    {
+                        "id": "physics",
+                        "title": "Physics",
+                        "author": "svineet (Sai Vineet)",
+                        "github": "https://github.com/svineet/physics"
+                    },
+                    {
+                        "id": "dysdroid",
+                        "title": "DysDroidv",
+                        "author": "Piotr Skonieczka",
+                        "github": "https://github.com/phiotr/DysDroid"
+                    },
+                    {
+                        "id": "trages",
+                        "title": "Trages",
+                        "author": "Max Sokolov; Kustareva Anna",
+                        "github": "https://github.com/Somal/Trages"
+                    },
+                    {
+                        "id": "numerickivy",
+                        "title": "Numeric Kivy",
+                        "author": "EnuriSoft",
+                        "github": "https://github.com/mataeoh/kivy_contest"
+                    }
+                ]
+            }
+        },
+        {
+            "template": "kivy-launcher-privacy.html",
+            "env": {}
+        }
+    ]
+}
