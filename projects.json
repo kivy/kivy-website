@@ -1,15 +1,15 @@
 [
   {
     "id": "kivy1110",
-    "title": "Kivy 2.0.0 released!",
+    "title": "Kivy 2.1.0 released!",
     "featured": 1,
     "media": "slides/kivy1110-featured.png",
     "raw_link": "<a href='https://kivy.org/doc/stable/gettingstarted/installation.html'>Install Now!</a>",
     "description": [
-      "Python 3.6 - 3.9<br/>",
-      "220 Pull Requests merged<br/>",
-      "562 commits<br/>",
-      "261 files changed, 14413 insertions, 5480 deletions"
+      "Python 3.7 - 3.10<br/>",
+      "202 Pull Requests merged<br/>",
+      "320 commits<br/>",
+      "291 files changed, 10768 insertions, 4649 deletions"
     ]
   },{
     "id": "snake_by_andy_russo",
