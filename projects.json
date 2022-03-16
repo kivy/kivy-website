@@ -42,6 +42,19 @@
       "<a href='https://github.com/python-discord/code-jam-6/tree/master/tactless-tricksters'>Project on Github</a>"
     ]
   },{
+    "id": "kivymaker",
+    "title": "KivyMaker",
+    "featured": 1,
+    "media": "slides/kivymaker_by_srgambiarra.png",
+    "description": [
+      "KivyMaker is an app to reload any application at runtime. ",
+      "Designed to make app development easy with Kivy. ",
+      "Easy to use and very useful!! "
+    ],
+    "footer": [
+      "<a href='https://github.com/SrGambiarra/KivyMaker'>Source Code</a>"
+    ]
+  },{
     "id": "chisel_code_jam",
     "title": "Chisel",
     "featured": 1,
