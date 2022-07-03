@@ -57,23 +57,35 @@ Also TailwindCSS comes with an extensive documentation, and offers a lot of exam
     git clone https://github.com/kivy/kivy-website.git
     cd kivy-website
     ```
--  Install `tailwindcss` via `npm`
+-  Install `node` requirements (`tailwindcss`)
     ```bash
-    npm install -D tailwindcss
+    npm install
     ```
 - Install the required `python` deps to build the website templates. (a virtualenv is recommended)
     ```bash
     pip install -r requirements.txt
     ```
 
-### During development:
+## Building the website (output is placed in the `dist` folder)
 
-Both **tailwindcss** and the **build tool** have a `--watch` option, to help during website development. (So you don't have to launch the build everytime).
+### Development mode
+
+Both **tailwindcss** and the **build tool** come with autoreload option, in order to speed-up the website development.
 
 ```bash
-npx tailwindcss -i ./content/static/css/new-kivy.css -o ./content/static/css/main.css --minify --watch
+npm run develop
 ```
 
 ```bash
 python tools/build.py --watch
+```
+
+### Building for production
+
+```bash
+npm run build
+```
+
+```bash
+python tools/build.py
 ```
