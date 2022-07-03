@@ -149,94 +149,9 @@
 
   <script src="https://unpkg.com/vue@3"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./static/js/opencollective_app.js"></script>
   <script>
-    let opencollective_graphql_url = "https://api.opencollective.com/graphql/v2";
-    const graphql_query =
-        `
-        query fetchContributors($account_type: [AccountType]!, $profile_image_height: Int!){
-          account(slug: "kivy") {
-            name
-            slug
-            members(role: BACKER, accountType: $account_type, limit:9999999) {
-              nodes {
-                account {
-                  id
-                  slug
-                  name
-                  imageUrl(height:$profile_image_height, format: jpg)
-                }
-                tier {
-                  name
-                }
-                totalDonations {
-                  value
-                  currency
-                }
-              }
-            }
-          }
-        }`;
-
-    function filter_duplicated_profiles(arr) {
-      return arr.filter((value, index, self) =>
-        index === self.findIndex((t) => (
-          t.account.id === value.account.id
-        ))
-      )
-    }
-
-    const { createApp } = Vue;
-    var opencollective_app = createApp({
-      el: '#opencollective_app',
-      data() {
-        return {
-          organizations: [],
-          individuals: []
-        };
-      },
-      computed: {
-      },
-      mounted() {
-        let self = this;
-
-        axios({
-          url: 'https://api.opencollective.com/graphql/v2',
-          method: 'post',
-          data: {
-            operationName: "fetchContributors",
-            query: graphql_query,
-            variables: {
-              account_type: 'ORGANIZATION',
-              profile_image_height: 256
-            }
-          }
-        }).then((response) => {
-          let organizations = filter_duplicated_profiles(response.data.data.account.members.nodes);
-          organizations.sort((firstItem, secondItem) => firstItem.totalDonations.value - secondItem.totalDonations.value);
-          organizations.reverse();
-          this.organizations = organizations.filter(individual => individual.totalDonations.value > 0);
-        });
-
-        axios({
-          url: 'https://api.opencollective.com/graphql/v2',
-          method: 'post',
-          data: {
-            operationName: "fetchContributors",
-            query: graphql_query,
-            variables: {
-              account_type: 'INDIVIDUAL',
-              profile_image_height: 32
-            }
-          }
-        }).then((response) => {
-          let individuals = filter_duplicated_profiles(response.data.data.account.members.nodes);
-          individuals.sort((firstItem, secondItem) => firstItem.totalDonations.value - secondItem.totalDonations.value);
-          individuals.reverse();
-          this.individuals = individuals.filter(individual => individual.totalDonations.value > 0);
-        });
-
-      }
-    }).mount("#opencollective_app");
+    
   </script>
 </body>
 
