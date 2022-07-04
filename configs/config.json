@@ -10,42 +10,43 @@
                 "core_developers": [
                     {
                         "name": "Mathieu Virbel",
-                        "image": "./static/images/coredev/mathieu.png",
+                        "image_fallback": "./static/images/coredev/mathieu.png",
                         "description": "He became a programming expert from working in IT for years before starting with Kivy.<br>He's French, and founded Melting Rocks.<br> On Discord, he's known as @tito."
                     },
                     {
                         "name": "Gabriel Pettier",
-                        "image": "./static/images/coredev/gabriel.png",
+                        "image_fallback": "./static/images/coredev/gabriel.png",
                         "description": "He is an Information Systems engineer. He's from France, but currently lives in the Netherlands.<br>On Discord, he's known as @tshirtman."
                     },
                     {
                         "name": "Akshay Arora",
-                        "image": "./static/images/coredev/quanon.png",
+                        "image_fallback": "./static/images/coredev/quanon.png",
                         "description": "He is a freelance developer. He is from India.<br>On Discord, he's known as @quanon."
                     },
                     {
                         "name": "Alexander Taylor",
-                        "image": "./static/images/coredev/inclement.png",
+                        "image_fallback": "./static/images/coredev/inclement.png",
                         "description": "He is a software engineer, with a little time to make fun graphical interfaces. He lives in the UK.<br>On Discord, he's known as @inclement."
                     },
                     {
                         "name": "Matthew Einhorn",
-                        "image": "./static/images/coredev/matham.png",
+                        "image_fallback": "./static/images/coredev/matham.png",
                         "description": "He is a developer using Kivy with Python to automate scientific research. He lives in the eastern USA.<br>On Discord, he's known as @matham."
                     },
                     {
                         "name": "Richard Larkin",
-                        "image": "./static/images/coredev/zencode.png",
+                        "image_fallback": "./static/images/coredev/zencode.png",
                         "description": "Richard is an educational software developer (B.Sc, Hons) from South Africa. He likes being silly, meditating, music and hugging fluffy things.<br>On Discord, he's known as @ZenCODE."
                     },
                     {
                         "name": "Andre Miras",
-                        "image": "./static/images/coredev/andre.png",
+                        "image_webp": "./static/images/coredev/andremiras.webp",
+                        "image_fallback": "./static/images/coredev/andremiras.jpg",
                         "description": "Linux geek and open source addict, he works as a software architect and lives in Spain.<br>On Discord, he's known as @AndreMiras."
                     },
                     {
                         "name": "Mirko Galimberti",
-                        "image": "./static/images/coredev/misl6.png",
+                        "image_fallback": "./static/images/coredev/misl6.png",
                         "description": "He is a Full Stack Developer and lives in Italy. Kivy helped him to speed up the App development process while keeping high standards.<br>On Discord, he's known as @m1sl6."
                     }
                 ],
