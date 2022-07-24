@@ -2,11 +2,14 @@
     "pages": [
         {
             "template": "index.html",
-            "env": {}
+            "env": {
+                "pagetitle": "Kivy: Cross-platform Python Framework for GUI apps Development"
+            }
         },
         {
             "template": "about.html",
             "env": {
+                "pagetitle": "About us | Kivy: Cross-platform Python Framework for GUI apps Development",
                 "core_developers": [
                     {
                         "name": "Mathieu Virbel",
@@ -274,6 +277,7 @@
         {
             "template": "gallery.html",
             "env": {
+                "pagetitle": "Gallery | Kivy: Cross-platform Python Framework for GUI apps Development",
                 "projects": [
                     {
                         "title": "Snake by Andy Russo",
@@ -708,6 +712,7 @@
         {
             "template": "contest-2012.html",
             "env": {
+                "pagetitle": "Contest 2012 | Kivy: Cross-platform Python Framework for GUI apps Development",
                 "submissions": [
                     {
                         "id": "deflectouch",
@@ -803,6 +808,7 @@
         {
             "template": "contest-2014.html",
             "env": {
+                "pagetitle": "Contest 2014 | Kivy: Cross-platform Python Framework for GUI apps Development",
                 "submissions": [
                     {
                         "id": "meowletters",
@@ -1127,7 +1133,9 @@
         },
         {
             "template": "kivy-launcher-privacy.html",
-            "env": {}
+            "env": {
+                "pagetitle": "Kivy Launcher Privacy Policy"
+            }
         }
     ]
 }
