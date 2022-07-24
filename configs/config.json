@@ -46,7 +46,8 @@
                     },
                     {
                         "name": "Mirko Galimberti",
-                        "image_fallback": "./static/images/coredev/misl6.png",
+                        "image_webp": "./static/images/coredev/misl6.webp",
+                        "image_fallback": "./static/images/coredev/misl6.jpg",
                         "description": "He is a Full Stack Developer and lives in Italy. Kivy helped him to speed up the App development process while keeping high standards.<br>On Discord, he's known as @m1sl6."
                     }
                 ],
