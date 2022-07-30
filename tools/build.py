@@ -2,6 +2,7 @@ import shutil
 import os
 import sys
 import json
+import uuid
 
 from renoir import Renoir
 from watchdog.observers import Observer
@@ -35,6 +36,7 @@ class ConfigReloaderHandler(FileSystemEventHandler):
         build_templates()
 
 def build_templates():
+    build_uuid = uuid.uuid4()
     config = json.loads(open("configs/config.json").read())
     templates = Renoir(path="templates", delimiters=("[[", "]]"))
 
@@ -42,7 +44,8 @@ def build_templates():
         with open(os.path.join(OUTPUT_FOLDER, page["template"]), "w") as f:
             f.write(
                 templates.render(
-                    page["template"], dict(HTMLWrapper=HTMLWrapper, **page["env"])
+                    page["template"],
+                    dict(HTMLWrapper=HTMLWrapper, build_uuid=build_uuid, **page["env"]),
                 )
             )
 
