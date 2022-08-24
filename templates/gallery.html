@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    [[ include "components/head.html" ]]
+</head>
+
+<body>
+    [[ include "components/header.html" ]]
+    <div class="bg-[#ffffff]">
+        <div class="mt-32 container py-4 px-5 sm:px-10 sm:mx-auto">
+            <h1 class="text-3xl pb-5">
+                Selected Projects
+            </h1>
+            <p class="pb-5 font-light text-base">
+                What is the best way to learn more about the Kivy framework potential?
+                A list of projects built via Kivy, curated by the community itself!<br><br>
+                Want to feature your project here? <a class="text-sm underline" href="https://www.github.com/kivy/kivy-website">Feel free to open a PR!</a>
+            </p>
+            <div class="flex flex-wrap">
+                [[ for project in projects: ]]
+                <div class="w-full md:w-1/2 lg:w-1/3 md:h-72 font-light py-1 md:px-1">
+                    <div class="w-full h-full rounded-lg bg-slate-100">
+                        <img class="bg-slate-400 w-full h-2/4 object-cover"
+                            src="[[ =project['image'] ]]">
+                        <p class="p-1"><b>[[ =project['title'] ]]</b></p>
+                        <p class="text-xs px-1">[[ =project['description'] ]]</p>
+                        <div class="text-sm md:text-xs underline p-1">
+                            [[ for p_link in project['links']: ]]
+                                <a class="mr-1" href="[[ =p_link['url'] ]]">[[ =p_link['name'] ]]</a>
+                            [[ pass ]]
+                        </div>
+                    </div>
+                </div>
+                [[ pass ]]
+            </div>
+        </div>
+    </div>
+    [[ include "components/support_kivy_banner.html" ]]
+    [[ include "components/need_help.html" ]]
+    [[ include "components/footer.html" ]]
+</body>
+
+</html>

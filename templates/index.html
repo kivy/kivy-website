@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  [[ include "components/head.html" ]]
+</head>
+<body>
+  [[ include "components/header.html" ]]
+  <div class="mt-32 container py-4 px-5 sm:px-10 md:mx-auto">
+    <div class="flex flex-wrap">
+      <div class="w-full lg:w-1/2">
+        <h1>
+          <span class="text-6xl font-extrabold">Kivy:</span>
+          <p class="text-4xl font-extrabold">
+            The Open Source Python App development Framework.
+          </p>
+        </h1>
+        <h2 class="text-lg font-bold mt-2">
+          Build and distribute beautiful Python cross-platform GUI apps with ease.
+        </h2>
+        <p class="text-sm my-3">
+          Kivy runs on Android, iOS, Linux, macOS and Windows.
+        </p>
+        <div class="flex">
+          <img class="h-5" src="./static/images/icons/scale-balanced.svg" />
+          <p class="px-3">MIT License</p>
+          <img class="h-5" src="./static/images/icons/star.svg" />
+          <p class="px-3">14.8K Stars</p>
+        </div>
+      </div>
+      <div class="hidden lg:flex lg:w-1/2">
+        <img class="object-cover h-full w-full rounded-lg" src="./static/images/kivy-colorwheel-examples.jpg">
+      </div>
+      <div class="w-full flex justify-center py-6">
+        <a href="https://kivy.org/doc/stable/gettingstarted/intro.html"
+          class="px-6 py-4 bg-gradient-to-br from-sky-500 to-fuchsia-500 rounded-md text-3xl font-bold text-white">
+          Get started!
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#f8f8f8]">
+    <div class="container mx-auto py-10 px-2">
+      <p class="text-3xl md:text-4xl font-light text-center pb-5">
+        <b>Kivy</b> has been built to be <b>easy to use</b>,
+        <b>cross-platform</b> and <b>fast</b>.
+      </p>
+      <p class="text-lg md:text-xl font-light text-center">
+        With a <b>single codebase</b>, you will be able to deploy apps on
+        <b>Windows</b>, <b>Linux</b>, <b>macOS</b>, <b>iOS</b> and <b>Android</b>.
+      </p>
+    </div>
+  </div>
+  <div class="bg-[#c8c8c8] h-20 sm:h-28 md:h-36 lg:h-60">
+    <picture>
+      <source type="image/webp" srcset="./static/images/homepage-fast.webp">
+      <img src="./static/images/homepage-fast.jpg" class="object-cover h-full w-full">
+    </picture>
+  </div>
+  <div class="bg-[#f8f8f8]">
+    <div class="container mx-auto py-10 flex items-center flex-wrap">
+      <div class="w-full sm:w-2/3 sm:pr-10 px-2">
+        <p class="text-3xl md:text-4xl font-light text-center pb-5">
+          <b>Business Friendly</b>
+        </p>
+        <p class="text-lg md:text-xl font-light text-center">
+          <b>Kivy</b> is released under the <b>MIT License</b> and is
+          <b>100%</b> free to use and is professionally developed, backed and
+          mantained.<br /><br />
+          <b>Companies</b> and <b>individual</b> are using Kivy for their
+          projects <b>everyday</b>.
+        </p>
+      </div>
+      <div class="w-full sm:w-1/3 pt-4 sm:pt-0">
+        <picture>
+          <source type="image/webp" srcset="./static/images/homepage-company.webp">
+          <img src="./static/images/homepage-company.jpg" class="object-cover rounded-lg h-40 sm:h-80 w-full">
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto">
+    <p class="text-3xl font-light text-center pt-10 pb-5 px-2">
+      <b>Kivy</b> is kept <b>open source</b> thanks to its <b>contributors</b> and
+      <b>backers</b>.
+    </p>
+    <div id="opencollective_app" class="flex px-5 flex-wrap justify-center">
+      <p class="w-full text-xl font-light text-center pb-5">
+        {{organizations.length}} <b>organizations</b> are <b>supporting Kivy</b>
+      </p>
+      <a v-bind:href="organization.profile" class="w-1/2 md:w-1/3 lg:w-1/5 p-2 xl:p-5"
+        v-for="organization in organizations.slice(0, 5)">
+        <div class="bg-[#e8e8e8] shadow-xl rounded-lg w-full p-4">
+          <div class="flex justify-center">
+            <img class="w-24 h-24" v-bind:src="organization.account.imageUrl" />
+          </div>
+          <div class="flex justify-center items-center h-14">
+            <p class="text-center text-lg font-bold">
+              {{ organization.account.name }}
+            </p>
+          </div>
+          <div class="flex justify-center h-10 items-center">
+            <p class="text-lg text-lime-600 uppercase">
+              <span v-if="organization.tier">{{organization.tier.name}}</span>
+            </p>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <p class="text-2xl">
+              ${{organization.totalDonations.value}}
+            </p>
+            <p class="text-xs">
+              Amount contributed
+            </p>
+          </div>
+        </div>
+      </a>
+      <div class="w-full flex text-center justify-end">
+        <a href="https://opencollective.com/kivy"
+          class="text-sm md:text-base font-light md:pr-2 xl:pr-5 pt-3 pb-5 underline">
+          <b>See all the {{organizations.length}} organizations supporting Kivy on OpenCollective</b>
+        </a>
+      </div>
+
+      <p class="w-full text-xl font-light text-center pt-10 pb-5">
+        {{individuals.length}} <b>individuals</b> are <b>supporting Kivy</b>
+      </p>
+      <a v-bind:href="'https://www.opencollective.com/' + individual.account.slug"
+        v-bind:title="individual.account.name + ', Total contributed: ' + individual.totalDonations.value + ' ' + individual.totalDonations.currency"
+        v-for="individual in individuals">
+        <div class="bg-[#e8e8e8] w-8 h-8 rounded-full flex justify-center items-center">
+          <img class="h-full w-full object-cover rounded-full" v-bind:src="individual.account.imageUrl" />
+        </div>
+      </a>
+      <div class="w-full flex text-center justify-end">
+        <a href="https://opencollective.com/kivy"
+          class="text-sm md:text-base font-light md:pr-2 xl:pr-5 pt-3 pb-5 underline">
+          <b>See all the {{individuals.length}} individuals supporting Kivy on OpenCollective</b>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  [[ include "components/support_kivy_banner.html" ]]
+  [[ include "components/need_help.html" ]]
+  [[ include "components/footer.html" ]]
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./static/js/opencollective_app.js"></script>
+  <script>
+    
+  </script>
+</body>
+
+</html>

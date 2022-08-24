@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npx tailwindcss -i ./content/static/css/kivy-input.css -o ./content/static/css/main.css --minify",
+    "develop": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}

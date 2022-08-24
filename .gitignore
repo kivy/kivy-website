@@ -6,3 +6,8 @@
 .pydevproject
 .settings/
 python-env/
+venv/
+node_modules/
+dist/
+.vscode/
+content/static/css/main.css

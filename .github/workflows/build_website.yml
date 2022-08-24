@@ -1,0 +1,32 @@
+name: Build website
+
+on: [push, pull_request]
+
+jobs:
+  build_website:
+    name: "Build website"
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: Checkout kivy-website
+      uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+    - name: Set up node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Install python dependencies via requirements.txt
+      run: pip install -r requirements.txt
+    - name: Install node dependencies
+      run: npm ci
+    - name: Build (minified) main.css via tailwindcss
+      run: npm run build
+    - name: Build website
+      run: python tools/build.py
+    - name: Upload website as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist
