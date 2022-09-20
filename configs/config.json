@@ -23,8 +23,7 @@
                     },
                     {
                         "name": "Akshay Arora",
-                        "image_webp": "./static/images/coredev/quanon.webp",
-                        "image_fallback": "./static/images/coredev/quanon.jpg",
+                        "image_fallback": "./static/images/coredev/quanon.png",
                         "description": "He is a freelance developer. He is from India.<br>On Discord, he's known as @quanon."
                     },
                     {
