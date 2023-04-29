@@ -2,25 +2,25 @@
 
 ## Folder structure
 - `configs` : contains the configurations needed to build the page templates via the **build** tool (during development and also distribution).
-- `content` : This folder will be copied as-is to the website distribution (`dist`) during **build**. _Please make sure that everything included in this folder is expected to be publicily accessibile via kivy.org_
+- `content` : This folder will be copied as-is to the website distribution (`dist`) during **build**. _Please make sure that everything included in this folder is expected to be publicly accessible via kivy.org._
 - `templates` : All the HTML templates needed to build the Kivy website are here.
 - `tools`: Contains `build.py`, which is needed in order to build the website.
 
 
-## How it works the page generation via templates?
+## How do we generate the page from templates?
 
-The **build tool** (`tools/build.py`) uses the `config/config.json` file in order to know what and how pages should be built.
+The **build tool** (`tools/build.py`) uses the `config/config.json` file in order to know which pages should be built and how to build them.
 
-As you can see, in `config/config.json` there are multiple pages defined, and each page have its own `template` and an `env`.
+Multiple pages are defined in `config/config.json`, and each page has its own `template` and `env`.
 
-### Yeah, but in `templates/index.html`, there's a `[[ include "components/header.html" ]]` what that does mean? And how we should use the `env` ?
+### But in `templates/index.html`, there's an `[[ include "components/header.html" ]]`. What that does mean? And how we should use `env`?
 
-The **build tool** uses [Renoir](https://github.com/emmett-framework/renoir) under the hood as a templating engine, is easy, production-ready and have a quite complete [documentation](https://github.com/emmett-framework/renoir/blob/master/docs/quickstart.md).
+The **build tool** uses [Renoir](https://github.com/emmett-framework/renoir) under the hood as a templating engine. Renoir is easy, production-ready and has quite complete [documentation](https://github.com/emmett-framework/renoir/blob/master/docs/quickstart.md).
 
 `env` should contain all the variables that need to be accessed during the page generation.
 
 As an example, with the following configuration:
-```
+```json
 ...
 {
     "template": "index.html",
@@ -31,23 +31,21 @@ As an example, with the following configuration:
 ...
 ```
 And the following snippet in `index.html`
-```
+```html
 <p>Hi, [[ =name ]]</p>
 ```
 
 Will produce the following output, when the template has been built:
 
-```
+```html
 <p>Hello, Kivy</p>
 ```
 
-## And how about the styling (CSS)?
+## How about the styling (CSS)?
 
-Writing CSS code from scratch could be boring, stressful and sometimes a pain to mantain.
+Writing CSS code from scratch can be boring and stressful, and sometimes it is a pain to maintain.
 
-[TailwindCSS](https://github.com/tailwindlabs/tailwindcss) fills this gap, marking itself as a utility-first CSS framework for rapidly building custom user interfaces.
-
-Also TailwindCSS comes with an extensive documentation, and offers a lot of examples: [Getting Started with Tailwind CSS](https://tailwindcss.com/docs)
+[TailwindCSS](https://github.com/tailwindlabs/tailwindcss) fills this gap, marking itself as a utility-first CSS framework for rapidly building custom user interfaces. It also comes with an extensive documentation and offers a lot of examples: [Getting Started with Tailwind CSS](https://tailwindcss.com/docs).
 
 ## Quick start:
 
@@ -70,7 +68,7 @@ Also TailwindCSS comes with an extensive documentation, and offers a lot of exam
 
 ### Development mode
 
-Both **tailwindcss** and the **build tool** come with autoreload option, in order to speed-up the website development.
+Both **tailwindcss** and the **build tool** come with auto-reload options in order to speed up site development.
 
 ```bash
 npm run develop
