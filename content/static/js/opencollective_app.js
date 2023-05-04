@@ -5,7 +5,7 @@ const graphql_query =
           account(slug: "kivy") {
             name
             slug
-            members(role: BACKER, accountType: $account_type, limit:9999999) {
+            members(role: BACKER, accountType: $account_type, limit:1000) {
               nodes {
                 account {
                   id
