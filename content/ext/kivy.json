@@ -1,8 +1,8 @@
 {
   "framework": "Kivy",
   "url": "http://kivy.org",
-  "framework_current_version" : "2.1.0",
-  "comparison_data_last_update" : "2022-03-06",
+  "framework_current_version" : "2.2.0",
+  "comparison_data_last_update" : "2023-05-20",
 
   "tutorial_url": "http://kivy.org/docs/tutorials/pong.html",
   "license": "mit-license",
