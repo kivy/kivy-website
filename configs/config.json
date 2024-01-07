@@ -705,6 +705,25 @@
                                 "url": "https://play.google.com/store/apps/details?id=com.legeartisgames.epidemy"
                             }
                         ]
+                    },
+                    {
+                        "title": "Sideband",
+                        "image": "./static/images/projects_gallery/sideband-thumb.jpg",
+                        "description": "A messaging application for Reticulum mesh network software. Allows communication using LoRA, internet and other interfaces.",
+                        "links": [
+                            {
+                                "name": "Website",
+                                "url": "https://unsigned.io/software/Sideband.html"
+                            },
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/markqvist/Sideband"
+                            },
+                            {
+                                "name": "Reticulum Project",
+                                "url": "https://reticulum.network/"
+                            }
+                        ]
                     }
                 ]
             }
