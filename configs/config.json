@@ -705,6 +705,17 @@
                                 "url": "https://play.google.com/store/apps/details?id=com.legeartisgames.epidemy"
                             }
                         ]
+                    },
+                    {
+                        "title": "2D Action Game Sample",
+                        "image": "./static/images/projects_gallery/2dactiongame-thumb.jpg",
+                        "description": "2D Action Game sample using Kivy",
+                        "links": [
+                            {
+                                "name": "GitHub",
+                                "url": "https://github.com/hbscorpion8823/Dev0001"
+                            }
+                        ]
                     }
                 ]
             }
