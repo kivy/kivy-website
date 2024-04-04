@@ -280,6 +280,17 @@
                 "pagetitle": "Gallery | Kivy: Cross-platform Python Framework for GUI apps Development",
                 "projects": [
                     {
+                        "title": "Cydrea Music",
+                        "image": "./static/images/projects_gallery/cydrea_music-thumb.jpg",
+                        "description": "Cydrea Music combines AI with Procedural Generation to bring you a virtual music catalog of 65 quadrillion songs in 70+ genres, that you can use for free on content creation, game development or music production. CC-BY licensed. Edit any song with simple tools. The free tier lets you access 100+ songs per day, forever.",
+                        "links": [
+                            {
+                                "name": "Website",
+                                "url": "https://www.cydrea.com"
+                            }
+                        ]
+                    },
+                    {
                         "title": "Snake by Andy Russo",
                         "image": "./static/images/projects_gallery/snake_by_andy_russo-thumb.jpg",
                         "description": "Snake remake with adapted for smartphones controls, that make the game even more exciting. Hearts system makes it even more fun to play! 3 languages localization: English, Chinese, Russian. Have a good game!",
