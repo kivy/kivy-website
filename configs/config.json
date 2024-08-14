@@ -280,6 +280,25 @@
                 "pagetitle": "Gallery | Kivy: Cross-platform Python Framework for GUI apps Development",
                 "projects": [
                     {
+                        "title": "Mathpath: Math Solver",
+                        "image": "./static/images/projects_gallery/mathpath_solver-thumb.jpg",
+                        "description": "MathPath: Math Solver developing for students. It is a pure and advanced mathematical solver and console. It have simple interface and do not need to any internet connection for solve any problem. (Except step-by-step solutions) Also Mathpath developed by Kivy, KivyMD and it is full open-source on Github.",
+                        "links": [
+                            {
+                                "name": "Website", 
+                                "url": "https://mathpathconsole.github.io/"
+                            },
+                            {
+                                "name": "Youtube Video",
+                                "url": "https://www.youtube.com/@mathpathsolver/shorts"
+                            },
+                            {
+                                "name": "Google Play",
+                                "url": "https://play.google.com/store/apps/details?id=org.mathconsole_lite.mathconsole_lite&gl=TR"
+                            }
+                        ]
+                    },
+                    {
                         "title": "Cydrea Music",
                         "image": "./static/images/projects_gallery/cydrea_music-thumb.jpg",
                         "description": "Cydrea Music combines AI with Procedural Generation to bring you a virtual music catalog of 65 quadrillion songs in 70+ genres, that you can use for free on content creation, game development or music production. CC-BY licensed. Edit any song with simple tools. The free tier lets you access 100+ songs per day, forever.",
