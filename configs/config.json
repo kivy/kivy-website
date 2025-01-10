@@ -52,6 +52,11 @@
                         "image_webp": "./static/images/coredev/misl6.webp",
                         "image_fallback": "./static/images/coredev/misl6.jpg",
                         "description": "He is a Full Stack Developer and lives in Italy. Kivy helped him to speed up the App development process while keeping high standards.<br>On Discord, he's known as @m1sl6."
+                    },
+                    {
+                        "name": "Guillaume Brun",
+                        "image_fallback": "./static/images/coredev/cheaterman.png",
+                        "description": "He is a software and electronics engineer, as well as a Gentoo &amp; vim user, from France. He develops industrial, business and retail applications.<br>He's founder &amp; CTO of Digital Factory Paris.<br>On Discord, he's known as @Cheaterman."
                     }
                 ],
                 "talks": [
