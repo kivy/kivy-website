@@ -57,6 +57,11 @@
                         "name": "Guillaume Brun",
                         "image_fallback": "./static/images/coredev/cheaterman.png",
                         "description": "He is a software and electronics engineer, as well as a Gentoo &amp; vim user, from France. He develops industrial, business and retail applications.<br>He's founder &amp; CTO of Digital Factory Paris.<br>On Discord, he's known as @Cheaterman."
+                    },
+                    {
+                        "name": "Mathias Lindström",
+                        "image_fallback": "./static/images/coredev/kuzeyron.jpg",
+                        "description": "Passionate developer from Finland who enjoys creating prototypes.<br>On Discord, he's known as @kuzeyron."
                     }
                 ],
                 "talks": [
