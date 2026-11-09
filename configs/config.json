@@ -764,6 +764,21 @@
                                 "url": "https://reticulum.network/"
                             }
                         ]
+                    },
+                    {
+                        "title": "Puzzular",
+                        "image": "./static/images/projects_gallery/puzzular-thumb.jpg",
+                        "description": "A puzzle game where you hear the solution; modules, cables, and a melody to find. Welcome to modular synth world.",
+                        "links": [
+                            {
+                                "name": "Gitlab",
+                                "url": "https://gitlab.com/dtharmo/puzzular"
+                            },
+                            {
+                                "name": "Itch.io",
+                                "url": "https://harmo.itch.io/puzzular"
+                            }
+                        ]
                     }
                 ]
             }
